@@ -1,0 +1,22 @@
+﻿<section style="width: 100%">
+    <!--<i class="fa fa-question-circle" style="cursor: pointer;"></i>-->
+    <div style="margin-bottom: 5px">
+        <label ng-click="help(data)" style="display: inline; border-bottom: 1px dashed black; cursor: pointer;">
+            {{::data.ElementTitle}}
+        </label>
+    </div>
+    <div style="width: 100%;" class="input-group" id="date">
+        <input class="form-control" ng-model="pcr[data.ngModel + '_date']" placeholder="default value here" />
+
+        <span class="input-group-btn" ng-show="showInputIcon">
+            <button class="btn default" type="button"><i id="inputGroupIcon" class="fa fw fa-calendar"></i></button>
+        </span>
+    </div>
+    <div style="width: 100%;" class="input-group" id="time">
+        <input class="form-control" ng-model="pcr[data.ngModel + '_time']" placeholder="default value here" />
+
+        <span class="input-group-btn" ng-show="showInputIcon">
+            <button class="btn default" type="button"><i id="inputGroupIcon" class="fa fw fa-clock-o"></i></button>
+        </span>
+    </div>
+</section>

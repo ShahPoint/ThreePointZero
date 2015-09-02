@@ -197,9 +197,11 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Classes\NemsisDefinitionObject.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HtmlRenderController.cs" />
+    <Compile Include="Controllers\PcrOperationsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -13112,6 +13114,7 @@
     <Folder Include="Scripts\Metronic_v4.1.0\theme\assets\global\plugins\angularjs\plugins\angular-file-upload\uploads\" />
     <Folder Include="Scripts\Metronic_v4.1.0\theme_rtl\assets\global\plugins\angularjs\plugins\angular-file-upload\uploads\" />
     <Folder Include="Views\PcrFormRender\" />
+    <Folder Include="Views\PcrOperations\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

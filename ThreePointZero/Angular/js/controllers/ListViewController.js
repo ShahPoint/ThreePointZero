@@ -1,8 +1,17 @@
 ﻿angular.module('CloudPcr').controller("ListViewController", ['$scope', '$filter', '$timeout', function ($scope, $filter, $timeout) {
 
+    $scope.ajaxObject;
+    $.ajax({
+        type: "GET",
+        url: "/api/PcrOperations/xmlData"
+    }).done(function (data) {
+        $scope.ajaxObject = data;
+        parse();
+    });
+
     var json;
     $scope.nemsisJson = "";
-    parse();
+    //parse();
     function parse() {
         var elements = [];
         var attributes = [];
@@ -46,7 +55,7 @@
                 NemsisNumber: line[2].replace(/'/, ""),
                 NemsisName: line[3].replace(/'/, ""),
                 ElementTitle: line[3].replace(/'/, ""),
-                ngModel: line[3].replace(/'/, "").replace(/[ ]*/g, ""),
+                ngModel: line[3].replace(/'/, "").replace(/[ '\\\/\(\)\[\],\-]*/g, "").replace(/^([0-9])/, "_$1"),
                 V2Number: line[4].replace(/'/, ""),
                 National: line[5].replace(/'/, ""),
                 State: line[6].replace(/'/, ""),
@@ -74,11 +83,13 @@
                 options: getElementList(line[2].replace(/'/, "")),
                 attributes: getAttributeList(line[2].replace(/'/, ""))
             }
+            ob.exportPath = $scope.ajaxObject[ob.ngModel];
             //json.push(ob);
             json[ob.ngModel] = ob;
         }
 
         queryData(true);
+        generateObjects();
 
         function getElementList(elementNumber) {
             var ret = [];
@@ -110,9 +121,18 @@
         if (ob === true) {
             $timeout(function () {
                 $scope.nemsisJson = JSON.parse(JSON.stringify(json));
-                if (!$scope.query)
+                if (!$scope.query) {
+                    if ($scope.cs)
+                        $scope.nemsisJson = "#region json string\n@\"" + $filter("json")($scope.nemsisJson).replace(/"(.*)":/g, "\"\"$1\"\":").replace(/: "(.*)"/g, ": \"\"$1\"\"").replace(/\\"(.*)\\"/g, "\\\"\"$1\\\"\"").replace(/ "([^"]*[^"])"([,\r\n])/g, " \"\"$1\"\"$2") + "\";\n#endregion";
+                    else
+                        $scope.nemsisJson = $filter("json")($scope.nemsisJson);
                     return;
+                }
                 $scope.nemsisJson = queryData($scope.nemsisJson);
+                if ($scope.cs)
+                    $scope.nemsisJson = "#region json string\n@\"" + $filter("json")($scope.nemsisJson).replace(/"(.*)":/g, "\"\"$1\"\":").replace(/: "(.*)"/g, ": \"\"$1\"\"").replace(/\\"(.*)\\"/g, "\\\"\"$1\\\"\"").replace(/ "([^"]*[^"])"([,\r\n])/g, " \"\"$1\"\"$2") + "\";\n#endregion";
+                else
+                    $scope.nemsisJson = $filter("json")($scope.nemsisJson);
             });
         } else if (!angular.isObject(ob)) {
             if (ob.toLowerCase().indexOf($scope.query.toLowerCase()) != -1)
@@ -135,6 +155,39 @@
         }
     }
 
+    function generateObjects() {
+        var NemsisDataElement;
+        var optionsClass;
+        var masterClass = "private class NemsisMasterObject\n{";
+        var keys = [];
+        
+        var generatedSubclasses = false;
+        for (var attr in json) {
+            if (!generatedSubclasses) {
+                if (json[attr].options.length > 0) {
+                    NemsisDataElement = "private class NemsisDataElement\n{";
+                    for (var subattr in json[attr]) {
+                        if (angular.isString(json[attr][subattr]))
+                            NemsisDataElement += "\n\tpublic string " + subattr + "{ get; set; }";
+                    }
+                    NemsisDataElement += "\n\tpublic List<object> options { get; set; }";
+                    NemsisDataElement += "\n\tpublic List<string> attributes { get; set; }";
+                    NemsisDataElement += "\n}";
+                    optionsClass = "private class NemsisOptions\n{";
+                    for (var subattr in json[attr].options[0]) {
+                        optionsClass += "\n\tpublic string " + subattr + "{ get; set; }";
+                    }
+                    optionsClass += "\n}";
+                    generatedSubclasses = true;
+                }
+            }
+            keys.push("\"" + attr + "\"");
+            masterClass += "\n\tpublic NemsisDataElement " + attr + " { get; set; }";
+        }
+        masterClass += "\n\n\tpublic static List<string> Keys = new List<string>() { " + keys.join(", ") + " }";
+        masterClass += "\n}";
+        $scope.objects = optionsClass + "\n\n" + NemsisDataElement + "\n\n" + masterClass;
+    }
 }]);
 
 

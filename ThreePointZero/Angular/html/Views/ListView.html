@@ -3,6 +3,9 @@
         <div class="col-xs-10">
             <input class="form-control" ng-model="query" ng-change="queryData(true)" />
         </div>
+        <button class="btn col-xs-2" ng-click="cs = !cs; queryData(true)"><span ng-show="cs">C#</span><span ng-hide="cs">JSON</span></button>
     </div>
-    <pre>{{nemsisJson | json}}</pre>
+    <textarea>{{ajaxObject | json}}</textarea>
+    <textarea>{{nemsisJson}}</textarea>
+    <textarea>{{objects}}</textarea>
 </div>

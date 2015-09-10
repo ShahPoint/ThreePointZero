@@ -9,7 +9,6 @@ namespace ThreePointZero.Classes
 {
     public static class NemsisDefinitionObject
     {
-        private static List<string> Keys = new List<string>() { "StateRequiredElement", "CustomDataElementTitle", "CustomDefinition", "CustomDataType", "CustomDataElementRecurrence", "CustomDataElementUsage", "CustomDataElementPotentialValues", "CustomDataElementPotentialNOTValuesNV", "CustomDataElementPotentialPertinentNegativeValuesPN", "CustomDataElementGroupingID", "EMSAgencyUniqueStateID", "EMSAgencyNumber", "EMSAgencyName", "EMSAgencyState", "EMSAgencyServiceAreaStates", "EMSAgencyServiceAreaCountyies", "EMSAgencyCensusTracts", "EMSAgencyServiceAreaZIPCodes", "PrimaryTypeofService", "OtherTypesofService", "LevelofService", "OrganizationStatus", "OrganizationalType", "EMSAgencyOrganizationalTaxStatus", "StatisticalCalendarYear", "TotalPrimaryServiceAreaSize", "TotalServiceAreaPopulation", "_911EMSCallCenterVolumeperYear", "EMSDispatchVolumeperYear", "EMSPatientTransportVolumeperYear", "EMSPatientContactVolumeperYear", "EMSBillableCallsperYear", "EMSAgencyTimeZone", "EMSAgencyDaylightSavingsTimeUse", "NationalProviderIdentifier", "FireDepartmentIDNumber", "AgencyContactType", "AgencyContactLastName", "AgencyContactFirstName", "AgencyContactMiddleNameInitial", "AgencyContactAddress", "AgencyContactCity", "AgencyContactState", "AgencyContactZIPCode", "AgencyContactCountry", "AgencyContactPhoneNumber", "AgencyContactEmailAddress", "EMSAgencyContactWebAddress", "AgencyMedicalDirectorDegree", "AgencyMedicalDirectorBoardCertificationType", "MedicalDirectorCompensation", "EMSMedicalDirectorFellowshipTrainedStatus", "StateAssociatedwiththeCertificationLicensureLevels", "StateCertificationLicensureLevels", "ProceduresPermittedbytheState", "MedicationsPermittedbytheState", "ProtocolsPermittedbytheState", "EMSCertificationLevelsPermittedtoPerformEachProcedure", "EMSAgencyProcedures", "EMSCertificationLevelsPermittedtoAdministerEachMedication", "EMSAgencyMedications", "EMSAgencyProtocols", "EMSAgencySpecialtyServiceCapability", "BillingStatus", "EmergencyMedicalDispatchEMDProvidedtoEMSAgencyServiceArea", "EMDVendor", "PatientMonitoringCapabilityies", "CrewCallSign", "DispatchCenterCADNameorID", "EMSLocationType", "EMSLocationName", "EMSLocationNumber", "EMSLocationGPS", "EMSLocationUSNationalGridCoordinates", "EMSLocationAddress", "EMSLocationCity", "EMSLocationState", "EMSStationorLocationZIPCode", "EMSLocationCounty", "EMSLocationCountry", "EMSLocationPhoneNumber", "UnitVehicleNumber", "VehicleIdentificationNumber", "EMSUnitCallSign", "VehicleType", "CrewStateCertificationLicensureLevels", "NumberofEachEMSPersonnelLevelonNormal911AmbulanceResponse", "NumberofEachEMSPersonnelLevelonNormal911ResponseNonTransportVehicle", "NumberofEachEMSPersonnelLevelonNormalMedicalNon911TransportAmbulance", "VehicleInitialCost", "VehicleModelYear", "YearMilesKilometersHoursAccrued", "AnnualVehicleHours", "AnnualVehicleMilesKilometers", "EMSPersonnelsLastName", "EMSPersonnelsFirstName", "EMSPersonnelsMiddleNameInitial", "EMSPersonnelsMailingAddress", "EMSPersonnelsCityofResidence", "EMSPersonnelsState", "EMSPersonnelsZIPCode", "EMSPersonnelsCountry", "EMSPersonnelsPhoneNumber", "EMSPersonnelsEmailAddress", "EMSPersonnelsDateofBirth", "EMSPersonnelsGender", "EMSPersonnelsRace", "EMSPersonnelsCitizenship", "EMSPersonnelsHighestEducationalDegree", "EMSPersonnelsDegreeSubjectFieldofStudy", "EMSPersonnelsMotorVehicleLicenseType", "EMSPersonnelsImmunizationStatus", "EMSPersonnelsImmunizationYear", "EMSPersonnelsForeignLanguageAbility", "EMSPersonnelsAgencyIDNumber", "EMSPersonnelsStateofLicensure", "EMSPersonnelsStatesLicensureIDNumber", "EMSPersonnelsStateEMSCertificationLicensureLevel", "EMSPersonnelsStateEMSCurrentCertificationDate", "EMSPersonnelsInitialStatesLicensureIssueDate", "EMSPersonnelsCurrentStatesLicensureExpirationDate", "EMSPersonnelsNationalRegistryNumber", "EMSPersonnelsNationalRegistryCertificationLevel", "EMSPersonnelsCurrentNationalRegistryExpirationDate", "EMSPersonnelsEmploymentStatus", "EMSPersonnelsEmploymentStatusDate", "EMSPersonnelsHireDate", "EMSPersonnelsPrimaryEMSJobRole", "EMSPersonnelsOtherJobResponsibilities", "EMSPersonnelsTotalLengthofServiceinYears", "EMSPersonnelsDateLengthofServiceDocumented", "EMSPersonnelsPracticeLevel", "DateofPersonnelsCertificationorLicensureforAgency", "MedicalDeviceSerialNumber", "MedicalDeviceNameorID", "MedicalDeviceType", "MedicalDeviceManufacturer", "MedicalDeviceModelNumber", "MedicalDevicePurchaseDate", "TypeofFacility", "FacilityName", "FacilityLocationCode", "HospitalDesignations", "FacilityNationalProviderIdentifier", "FacilityRoomSuiteorApartment", "FacilityStreetAddress", "FacilityCity", "FacilityState", "FacilityZIPCode", "FacilityCounty", "FacilityCountry", "FacilityGPSLocation", "FacilityUSNationalGridCoordinates", "FacilityPhoneNumber", "CustomDataElementResult", "CustomElementIDReferenced", "CorrelationIDofDemographicReportElementorGroup", "PatientCareReportNumber", "SoftwareCreator", "SoftwareName", "SoftwareVersion", "IncidentNumber", "EMSResponseNumber", "TypeofServiceRequested", "StandbyPurpose", "PrimaryRoleoftheUnit", "TypeofDispatchDelay", "TypeofResponseDelay", "TypeofSceneDelay", "TypeofTransportDelay", "TypeofTurnAroundDelay", "EMSVehicleUnitNumber", "LevelofCareofThisUnit", "VehicleDispatchLocation", "VehicleDispatchGPSLocation", "VehicleDispatchLocationUSNationalGridCoordinates", "BeginningOdometerReadingofRespondingVehicle", "OnSceneOdometerReadingofRespondingVehicle", "PatientDestinationOdometerReadingofRespondingVehicle", "EndingOdometerReadingofRespondingVehicle", "ResponseModetoScene", "AdditionalResponseModeDescriptors", "ComplaintReportedbyDispatch", "EMDPerformed", "EMDCardNumber", "DispatchCenterNameorID", "DispatchPriorityPatientAcuity", "UnitDispatchedCADRecordID", "CrewMemberID", "CrewMemberLevel", "CrewMemberResponseRole", "PSAPCallDateTime", "DispatchNotifiedDateTime", "UnitNotifiedbyDispatchDateTime", "DispatchAcknowledgedDateTime", "UnitEnRouteDateTime", "UnitArrivedonSceneDateTime", "ArrivedatPatientDateTime", "TransferofEMSPatientCareDateTime", "UnitLeftSceneDateTime", "ArrivalatDestinationLandingAreaDateTime", "PatientArrivedatDestinationDateTime", "DestinationPatientTransferofCareDateTime", "UnitBackinServiceDateTime", "UnitCanceledDateTime", "UnitBackatHomeLocationDateTime", "EMSCallCompletedDateTime", "EMSPatientID", "LastName", "FirstName", "MiddleInitialName", "PatientsHomeAddress", "PatientsHomeCity", "PatientsHomeCounty", "PatientsHomeState", "PatientsHomeZIPCode", "PatientsCountryofResidence", "PatientHomeCensusTract", "SocialSecurityNumber", "Gender", "Race", "Age", "AgeUnits", "DateofBirth", "PatientsPhoneNumber", "PatientsEmailAddress", "StateIssuingDriversLicense", "DriversLicenseNumber", "PrimaryMethodofPayment", "PhysicianCertificationStatement", "DatePhysicianCertificationStatementSigned", "ReasonforPhysicianCertificationStatement", "HealthcareProviderTypeSigningPhysicianCertificationStatement", "LastNameofIndividualSigningPhysicianCertificationStatement", "FirstNameofIndividualSigningPhysicianCertificationStatement", "PatientResidesinServiceArea", "InsuranceCompanyID", "InsuranceCompanyName", "InsuranceCompanyBillingPriority", "InsuranceCompanyAddress", "InsuranceCompanyCity", "InsuranceCompanyState", "InsuranceCompanyZIPCode", "InsuranceCompanyCountry", "InsuranceGroupID", "InsurancePolicyIDNumber", "LastNameoftheInsured", "FirstNameoftheInsured", "MiddleInitialNameoftheInsured", "RelationshiptotheInsured", "InsuranceGroupName", "ClosestRelativeGuardianLastName", "ClosestRelativeGuardianFirstName", "ClosestRelativeGuardianMiddleInitialName", "ClosestRelativeGuardianStreetAddress", "ClosestRelativeGuardianCity", "ClosestRelativeGuardianState", "ClosestRelativeGuardianZIPCode", "ClosestRelativeGuardianCountry", "ClosestRelativeGuardianPhoneNumber", "ClosestRelativeGuardianRelationship", "PatientsEmployer", "PatientsEmployersAddress", "PatientsEmployersCity", "PatientsEmployersState", "PatientsEmployersZIPCode", "PatientsEmployersCountry", "PatientsEmployersPrimaryPhoneNumber", "ResponseUrgency", "PatientTransportAssessment", "SpecialtyCareTransportCareProvider", "AmbulanceTransportReasonCode", "RoundTripPurposeDescription", "StretcherPurposeDescription", "AmbulanceConditionsIndicator", "MileagetoClosestHospitalFacility", "ALSAssessmentPerformedandWarranted", "CMSServiceLevel", "EMSConditionCode", "CMSTransportationIndicator", "TransportAuthorizationCode", "PriorAuthorizationCodePayer", "SupplyItemUsedName", "NumberofSupplyItemsUsed", "PayerType", "FirstEMSUnitonScene", "OtherEMSorPublicSafetyAgenciesatScene", "OtherEMSorPublicSafetyAgencyIDNumber", "TypeofOtherServiceatScene", "DateTimeInitialResponderArrivedonScene", "NumberofPatientsatScene", "MassCasualtyIncident", "TriageClassificationforMCIPatient", "IncidentLocationType", "IncidentFacilityCode", "SceneGPSLocation", "SceneUSNationalGridCoordinates", "IncidentFacilityorLocationName", "MilePostorMajorRoadway", "IncidentStreetAddress", "IncidentApartmentSuiteorRoom", "IncidentCity", "IncidentState", "IncidentZIPCode", "SceneCrossStreetorDirections", "IncidentCounty", "IncidentCountry", "IncidentCensusTract", "DateTimeofSymptomOnset", "PossibleInjury", "ComplaintType", "Complaint", "DurationofComplaint", "TimeUnitsofDurationofComplaint", "ChiefComplaintAnatomicLocation", "ChiefComplaintOrganSystem", "PrimarySymptom", "OtherAssociatedSymptoms", "ProvidersPrimaryImpression", "ProvidersSecondaryImpressions", "InitialPatientAcuity", "WorkRelatedIllnessInjury", "PatientsOccupationalIndustry", "PatientsOccupation", "PatientActivity", "DateTimeLastKnownWell", "CauseofInjury", "MechanismofInjury", "TraumaCenterCriteria", "VehicularPedestrianorOtherInjuryRiskFactor", "MainAreaoftheVehicleImpactedbytheCollision", "LocationofPatientinVehicle", "UseofOccupantSafetyEquipment", "AirbagDeployment", "HeightofFallfeet", "OSHAPersonalProtectiveEquipmentUsed", "ACNSystemCompanyProvidingACNData", "ACNIncidentID", "ACNCallBackPhoneNumber", "DateTimeofACNIncident", "ACNIncidentLocation", "ACNIncidentVehicleBodyType", "ACNIncidentVehicleManufacturer", "ACNIncidentVehicleMake", "ACNIncidentVehicleModel", "ACNIncidentVehicleModelYear", "ACNIncidentMultipleImpacts", "ACNIncidentDeltaVelocity", "ACNHighProbabilityofInjury", "ACNIncidentPDOF", "ACNIncidentRollover", "ACNVehicleSeatLocation", "SeatOccupied", "ACNIncidentSeatbeltUse", "ACNIncidentAirbagDeployed", "CardiacArrest", "CardiacArrestEtiology", "ResuscitationAttemptedByEMS", "ArrestWitnessedBy", "CPRCareProvidedPriortoEMSArrival", "WhoProvidedCPRPriortoEMSArrival", "AEDUsePriortoEMSArrival", "WhoUsedAEDPriortoEMSArrival", "TypeofCPRProvided", "FirstMonitoredArrestRhythmofthePatient", "AnyReturnofSpontaneousCirculation", "NeurologicalOutcomeatHospitalDischarge", "DateTimeofCardiacArrest", "DateTimeResuscitationDiscontinued", "ReasonCPRResuscitationDiscontinued", "CardiacRhythmonArrivalatDestination", "EndofEMSCardiacArrestEvent", "DateTimeofInitialCPR", "BarrierstoPatientCare", "LastNameofPatientsPractitioner", "FirstNameofPatientsPractitioner", "MiddleNameInitialofPatientsPractitioner", "AdvanceDirectives", "MedicationAllergies", "EnvironmentalFoodAllergies", "MedicalSurgicalHistory", "MedicalHistoryObtainedFrom", "ThePatientsTypeofImmunization", "ImmunizationYear", "CurrentMedications", "CurrentMedicationDose", "CurrentMedicationDosageUnit", "CurrentMedicationAdministrationRoute", "PresenceofEmergencyInformationForm", "AlcoholDrugUseIndicators", "Pregnancy", "LastOralIntake", "PatientCareReportNarrative", "DateTimeVitalSignsTaken", "ObtainedPriortothisUnitsEMSCare", "CardiacRhythmElectrocardiographyECG", "ECGType", "MethodofECGInterpretation", "SBPSystolicBloodPressure", "DBPDiastolicBloodPressure", "MethodofBloodPressureMeasurement", "MeanArterialPressure", "HeartRate", "MethodofHeartRateMeasurement", "PulseOximetry", "PulseRhythm", "RespiratoryRate", "RespiratoryEffort", "EndTidalCarbonDioxideETCO2", "CarbonMonoxideCO", "BloodGlucoseLevel", "GlasgowComaScoreEye", "GlasgowComaScoreVerbal", "GlasgowComaScoreMotor", "GlasgowComaScoreQualifier", "TotalGlasgowComaScore", "Temperature", "TemperatureMethod", "LevelofResponsivenessAVPU", "PainScaleScore", "PainScaleType", "StrokeScaleScore", "StrokeScaleType", "ReperfusionChecklist", "APGAR", "RevisedTraumaScore", "DateTimeofLaboratoryorImagingResult", "StudyResultPriortothisUnitsEMSCare", "LaboratoryResultType", "LaboratoryResult", "ImagingStudyType", "ImagingStudyResults", "ImagingStudyFileorWaveformGraphicType", "ImagingStudyFileorWaveformGraphic", "EstimatedBodyWeightinKilograms", "LengthBasedTapeMeasure", "DateTimeofAssessment", "SkinAssessment", "HeadAssessment", "FaceAssessment", "NeckAssessment", "ChestLungsAssessment", "HeartAssessment", "AbdominalAssessmentFindingLocation", "AbdomenAssessment", "PelvisGenitourinaryAssessment", "BackandSpineAssessmentFindingLocation", "BackandSpineAssessment", "ExtremityAssessmentFindingLocation", "ExtremitiesAssessment", "EyeAssessmentFindingLocation", "EyeAssessment", "MentalStatusAssessment", "NeurologicalAssessment", "StrokeCVASymptomsResolved", "ProtocolsUsed", "ProtocolAgeCategory", "DateTimeMedicationAdministered", "MedicationAdministeredPriortothisUnitsEMSCare", "MedicationGiven", "MedicationAdministeredRoute", "MedicationDosage", "MedicationDosageUnits", "ResponsetoMedication", "MedicationComplication", "MedicationCrewHealthcareProfessionalsID", "RoleTypeofPersonAdministeringMedication", "MedicationAuthorization", "MedicationAuthorizingPhysician", "DateTimeProcedurePerformed", "ProcedurePerformedPriortothisUnitsEMSCare", "Procedure", "SizeofProcedureEquipment", "NumberofProcedureAttempts", "ProcedureSuccessful", "ProcedureComplication", "ResponsetoProcedure", "ProcedureCrewMembersID", "RoleTypeofPersonPerformingtheProcedure", "ProcedureAuthorization", "ProcedureAuthorizingPhysician", "VascularAccessLocation", "IndicationsforInvasiveAirway", "DateTimeAirwayDevicePlacementConfirmation", "AirwayDeviceBeingConfirmed", "AirwayDevicePlacementConfirmedMethod", "TubeDepth", "TypeofIndividualConfirmingAirwayDevicePlacement", "AirwayComplicationsEncountered", "SuspectedReasonsforFailedAirwayManagement", "DateTimeDecisiontoManagethePatientwithanInvasiveAirway", "DateTimeInvasiveAirwayPlacementAttemptsAbandoned", "DateTimeofEventperMedicalDevice", "MedicalDeviceEventType", "MedicalDeviceWaveformGraphicType", "MedicalDeviceWaveformGraphic", "MedicalDeviceModeManualAEDPacingCO2O2etc", "MedicalDeviceECGLead", "MedicalDeviceECGInterpretation", "TypeofShock", "ShockorPacingEnergy", "TotalNumberofShocksDelivered", "PacingRate", "DestinationTransferredToName", "DestinationTransferredToCode", "DestinationStreetAddress", "DestinationCity", "DestinationState", "DestinationCounty", "DestinationZIPCode", "DestinationCountry", "DestinationGPSLocation", "DestinationLocationUSNationalGridCoordinates", "NumberofPatientsTransportedinthisEMSUnit", "IncidentPatientDisposition", "HowPatientWasMovedtoAmbulance", "PositionofPatientDuringTransport", "HowPatientWasTransportedFromAmbulance", "EMSTransportMethod", "TransportModefromScene", "AdditionalTransportModeDescriptors", "FinalPatientAcuity", "ReasonforChoosingDestination", "TypeofDestination", "HospitalInPatientDestination", "HospitalCapability", "DestinationTeamPreArrivalAlertorActivation", "DateTimeofDestinationPrearrivalAlertorActivation", "DispositionInstructionsProvided", "EmergencyDepartmentDisposition", "HospitalDisposition", "ExternalReportIDNumberType", "ExternalReportIDNumber", "OtherReportRegistryType", "EmergencyDepartmentChiefComplaint", "FirstEDSystolicBloodPressure", "EmergencyDepartmentRecordedCauseofInjury", "EmergencyDepartmentProcedures", "EmergencyDepartmentDiagnosis", "DateTimeofHospitalAdmission", "HospitalProcedures", "HospitalDiagnosis", "TotalICULengthofStay", "TotalVentilatorDays", "DateTimeofHospitalDischarge", "OutcomeatHospitalDischarge", "CorrelationIDofPatientCareReportElementorGroup", "ReviewRequested", "PotentialSystemofCareSpecialtyRegistryPatient", "PersonalProtectiveEquipmentUsed", "EMSProfessionalCrewMemberID", "SuspectedEMSWorkRelatedExposureInjuryorDeath", "TheTypeofWorkRelatedInjuryDeathorSuspectedExposure", "NaturalSuspectedIntentionalorUnintentionalDisaster", "CrewMemberCompletingthisReport", "ExternalElectronicDocumentType", "FileAttachmentType", "FileAttachmentImage", "TypeofPersonSigning", "SignatureReason", "TypeOfPatientRepresentative", "SignatureStatus", "SignatureFileName", "SignatureFileType", "SignatureGraphic", "DateTimeofSignature", "SignatureLastName", "SignatureFirstName" };
 
         public class NemsisOptions
         {
@@ -31,8 +30,8 @@ namespace ThreePointZero.Classes
             public string Definition { get; set; }
             public string Usage { get; set; }
             public string V3Changes { get; set; }
-            public string MinOccurs { get; set; }
-            public string MaxOccurs { get; set; }
+            public bool isRequired { get; set; }
+            public bool isList { get; set; }
             public string IsNillable { get; set; }
             public string DataType { get; set; }
             public string NV { get; set; }
@@ -49,6 +48,7 @@ namespace ThreePointZero.Classes
             public string totalDigits { get; set; }
             public string fractionDigits { get; set; }
             public string pattern { get; set; }
+            public string exportPath { get; set; }
             public List<object> options { get; set; }
             public List<string> attributes { get; set; }
         }
@@ -638,16 +638,18 @@ namespace ThreePointZero.Classes
                 }
             }
 
-            public Dictionary<string, NemsisDataElement> toDictionary()
+            // All Element definition properties go above this line, custom properties go below
+
+            public IEnumerator<string> GetEnumerator()
             {
-                var dict = new Dictionary<string, NemsisDataElement>();
-                for (int i = 0, len = Keys.Count; i < len; i++)
-                    dict.Add(Keys[i], this[Keys[i]]);
-                return dict;
+                return Keys.GetEnumerator();
             }
+
+            private readonly static IEnumerable<string> Keys = typeof(NemsisMasterObject).GetProperties().TakeWhile((prop, index) => prop.Name != "Item").Select(prop => prop.Name);
+
         }
 
-        public static string definitionString =
+        public static readonly string definitionString =
         #region json string
  @"{
   ""StateRequiredElement"": {
@@ -663,8 +665,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indicates which elements are required by the state"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""StateRequiredElement"",
     ""NV"": """",
@@ -684,7 +686,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""TIMESTAMP""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/eState""
   },
   ""CustomDataElementTitle"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -699,8 +702,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""This is the title of the custom data element created to collect information that is not defined formally in NEMSIS Version 3."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": ""Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CustomTitle"",
     ""NV"": """",
@@ -720,7 +723,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""nemsisElement""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup""
   },
   ""CustomDefinition"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -735,8 +739,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The definition of the custom element and how it should be used."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CustomDefinition"",
     ""NV"": """",
@@ -754,7 +758,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup""
   },
   ""CustomDataType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -769,8 +774,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The data type of the custom element."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CustomDataType"",
     ""NV"": """",
@@ -813,7 +818,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Boolean""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup""
   },
   ""CustomDataElementRecurrence"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -828,8 +834,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication if the data element will accept multiple values."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": ""Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""YesNoValues"",
     ""NV"": """",
@@ -856,7 +862,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Yes""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup""
   },
   ""CustomDataElementUsage"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -871,8 +878,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Usage (Mandatory, Required, Recommended or Optional) for the Custom Data Element."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": ""Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ElementUsage"",
     ""NV"": """",
@@ -907,7 +914,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Optional""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup""
   },
   ""CustomDataElementPotentialValues"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -922,8 +930,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The values which are associated with the Custom Data Element. Values would be the choices provided to the user when they document the Custom Data Element"",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""CustomValue"",
     ""NV"": """",
@@ -944,7 +952,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""nemsisCode"",
       ""customValueDescription""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup""
   },
   ""CustomDataElementPotentialNOTValuesNV"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -959,8 +968,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""NOT Values (NV) associated with the custom element"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""NV"",
     ""NV"": """",
@@ -991,7 +1000,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Not Reporting""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup""
   },
   ""CustomDataElementPotentialPertinentNegativeValuesPN"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -1006,8 +1016,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Pertinent Negative Values (PN) associated with the custom element"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""PN"",
     ""NV"": """",
@@ -1070,7 +1080,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Unable to Complete""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup""
   },
   ""CustomDataElementGroupingID"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -1085,8 +1096,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""ID for custom element grouping."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CorrelationID"",
     ""NV"": """",
@@ -1104,7 +1115,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup""
   },
   ""EMSAgencyUniqueStateID"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -1119,8 +1131,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The unique ID assigned to the EMS Agency which is associated with all state licensure numbers and information."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EMSAgencyStateID"",
     ""NV"": """",
@@ -1138,7 +1150,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/DemographicGroup""
   },
   ""EMSAgencyNumber"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -1153,8 +1166,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The state-assigned provider number of the responding agency"",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EMSAgencyNumber"",
     ""NV"": """",
@@ -1172,7 +1185,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse/eResponse.AgencyGroup""
   },
   ""EMSAgencyName"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -1187,8 +1201,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""EMS Agency Name"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EMSAgencyName"",
     ""NV"": ""NV"",
@@ -1208,7 +1222,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse/eResponse.AgencyGroup""
   },
   ""EMSAgencyState"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -1223,8 +1238,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The state/territory which assigned the EMS agency number."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSIStateCode"",
     ""NV"": """",
@@ -1242,7 +1257,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/DemographicGroup""
   },
   ""EMSAgencyServiceAreaStates"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -1257,8 +1273,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The states in which the EMS Agency provides services including the state associated with the EMS Agency Number."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSIStateCode"",
     ""NV"": """",
@@ -1276,7 +1292,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSAgencyServiceAreaCountyies"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -1291,8 +1308,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The county(ies) within each state for which the agency formally provides service."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""ANSICountyCode"",
     ""NV"": """",
@@ -1312,7 +1329,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSAgencyCensusTracts"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -1327,8 +1345,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The US census tracts in which the EMS agency formally provides service."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CensusTracts"",
     ""NV"": ""NV"",
@@ -1349,7 +1367,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSAgencyServiceAreaZIPCodes"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -1364,8 +1383,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The ZIP codes for the EMS Agency's service area."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ZIP"",
     ""NV"": ""NV"",
@@ -1386,7 +1405,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""CorrelationID"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""PrimaryTypeofService"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -1401,8 +1421,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The primary service type provided by the agency."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""TypeOfService"",
     ""NV"": """",
@@ -1457,7 +1477,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Critical Care (Ground)""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""OtherTypesofService"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -1472,8 +1493,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The other service type(s) which are provided by the agency."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""TypeOfService"",
     ""NV"": ""NV"",
@@ -1531,7 +1552,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""CorrelationID"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""LevelofService"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -1546,8 +1568,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The level of service which the agency provides EMS care for every request for service (the minimum certification level). This may be the license level granted by the state EMS office."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""StateCertificationLicensureLevels"",
     ""NV"": """",
@@ -1626,7 +1648,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Registered Nurse""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""OrganizationStatus"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -1641,8 +1664,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The primary organizational status of the agency. The definition of Volunteer or Non-Volunteer is based on state or local definitions."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""OrganizationStatus"",
     ""NV"": """",
@@ -1673,7 +1696,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Volunteer""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""OrganizationalType"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -1688,8 +1712,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The organizational structure from which EMS services are delivered (fire, hospital, county, etc.)"",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""OrganizationalType"",
     ""NV"": """",
@@ -1728,7 +1752,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Tribal""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSAgencyOrganizationalTaxStatus"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -1743,8 +1768,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The EMS Agencies business/corporate organizational tax status"",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""AgencyOrganizationalTaxStatus"",
     ""NV"": """",
@@ -1775,7 +1800,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Not For Profit""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""StatisticalCalendarYear"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -1790,8 +1816,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The calendar year to which the information pertains for the EMS Agency and the specific EMS Agency Number (dAgency.02)."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""Year"",
     ""NV"": """",
@@ -1809,7 +1835,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""TotalPrimaryServiceAreaSize"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -1824,8 +1851,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The total square miles in the agency's service area."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AnnualAgencyStatistics"",
     ""NV"": ""NV"",
@@ -1845,7 +1872,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""TotalServiceAreaPopulation"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -1860,8 +1888,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The total population in the agency's service area based if possible on year 2010 census data."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AnnualAgencyStatistics"",
     ""NV"": ""NV"",
@@ -1881,7 +1909,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""_911EMSCallCenterVolumeperYear"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -1896,8 +1925,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The number of 911 calls received by the call center during the last calendar year"",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Name Clarified with \""Call Center\"""",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AnnualAgencyStatistics"",
     ""NV"": ""NV"",
@@ -1917,7 +1946,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSDispatchVolumeperYear"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -1932,8 +1962,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The number of EMS dispatches during the last calendar year"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AnnualAgencyStatistics"",
     ""NV"": ""NV"",
@@ -1953,7 +1983,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPatientTransportVolumeperYear"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -1968,8 +1999,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The number of EMS transports per year based on last calendar year."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AnnualAgencyStatistics"",
     ""NV"": ""NV"",
@@ -1989,7 +2020,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPatientContactVolumeperYear"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2004,8 +2036,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The number of EMS patient contacts per year based on last calendar year."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AnnualAgencyStatistics"",
     ""NV"": ""NV"",
@@ -2025,7 +2057,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSBillableCallsperYear"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2040,8 +2073,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The number of EMS patient encounters which are billable based on the last calendar year."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AnnualAgencyStatistics"",
     ""NV"": ""NV"",
@@ -2061,7 +2094,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSAgencyTimeZone"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2076,8 +2110,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The time zone for the EMS Agency."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EMSAgencyTimeZone"",
     ""NV"": """",
@@ -2132,7 +2166,8 @@ namespace ThreePointZero.Classes
         ""text"": ""GMT-11:00 Midway Island, Samoa""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSAgencyDaylightSavingsTimeUse"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2147,8 +2182,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indicate if the EMS Agency conforms to Daylight Savings Time."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""YesNoValues"",
     ""NV"": """",
@@ -2175,7 +2210,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Yes""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""NationalProviderIdentifier"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2190,8 +2226,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The National Provider Identifier issued by CMS."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""NationalProviderIdentifier"",
     ""NV"": ""NV"",
@@ -2212,7 +2248,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""FireDepartmentIDNumber"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2227,8 +2264,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The state assigned Fire Department ID Number for EMS Agency(ies) operating within a Fire Department."",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Added to better associate Fire and EMS licensure and operational identifiers."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""FireDepartmentIDNumber"",
     ""NV"": ""NV"",
@@ -2249,7 +2286,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""AgencyContactType"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2264,8 +2302,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The contact type within the EMS agency."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AgencyContactType"",
     ""NV"": ""NV"",
@@ -2322,7 +2360,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""AgencyContactLastName"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2337,8 +2376,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Last Name of the agency's primary contact."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""PersonLastName"",
     ""NV"": ""NV"",
@@ -2358,7 +2397,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""AgencyContactFirstName"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2373,8 +2413,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The first name of the agency's primary contact."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""PersonFirstName"",
     ""NV"": ""NV"",
@@ -2394,7 +2434,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""AgencyContactMiddleNameInitial"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2409,8 +2450,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The middle name or initial of the agency's primary contact."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonMiddleName"",
     ""NV"": """",
@@ -2428,7 +2469,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""AgencyContactAddress"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2443,8 +2485,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The street address of the agency contact's mailing address."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""StreetAddress"",
     ""NV"": ""NV"",
@@ -2465,7 +2507,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""StreetAddress2""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""AgencyContactCity"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2480,8 +2523,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The city of the EMS contact's mailing address."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CityGnisCode"",
     ""NV"": ""NV"",
@@ -2501,7 +2544,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""AgencyContactState"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2516,8 +2560,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The state of the Agency contact's mailing address."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ANSIStateCode"",
     ""NV"": ""NV"",
@@ -2537,7 +2581,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""AgencyContactZIPCode"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2552,8 +2597,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The ZIP code of the Agency's contact's mailing address."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ZIP"",
     ""NV"": ""NV"",
@@ -2573,7 +2618,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""AgencyContactCountry"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2588,8 +2634,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Country code of the Agency's contact's mailing address."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSICountryCodesCAMXUS"",
     ""NV"": """",
@@ -2620,7 +2666,8 @@ namespace ThreePointZero.Classes
         ""text"": ""United States""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""AgencyContactPhoneNumber"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2635,8 +2682,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Agency contact phone number."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""PhoneNumber"",
     ""NV"": ""NV"",
@@ -2658,7 +2705,8 @@ namespace ThreePointZero.Classes
       ""PhoneNumberType"",
       ""CorrelationID"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""AgencyContactEmailAddress"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2673,8 +2721,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The primary email address of the Agency contact."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EmailAddress"",
     ""NV"": ""NV"",
@@ -2696,7 +2744,8 @@ namespace ThreePointZero.Classes
       ""NV"",
       ""EmailAddressType"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSAgencyContactWebAddress"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2711,8 +2760,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The primary website address of the agency."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""WebAddress"",
     ""NV"": ""NV"",
@@ -2732,7 +2781,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""AgencyMedicalDirectorDegree"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2747,8 +2797,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The medical school degree type of the EMS Medical Director."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AgencyMedicalDirectorDegree"",
     ""NV"": ""NV"",
@@ -2777,7 +2827,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""AgencyMedicalDirectorBoardCertificationType"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2792,8 +2843,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Documentation of the type of board certification of the EMS Agency Medical Director."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AgencyMedicalDirectorBoardCertificationType"",
     ""NV"": ""NV"",
@@ -2903,7 +2954,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""MedicalDirectorCompensation"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2918,8 +2970,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication of Medical Director's Compensation."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""MedicalDirectorCompensation"",
     ""NV"": """",
@@ -2946,7 +2998,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Non-Compensated""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSMedicalDirectorFellowshipTrainedStatus"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -2961,8 +3014,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication if the EMS Medical Director is Fellowship trained."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""YesNoValues"",
     ""NV"": """",
@@ -2989,7 +3042,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Yes""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""StateAssociatedwiththeCertificationLicensureLevels"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -3004,8 +3058,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The state associated with the state certification/licensure levels."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSIStateCode"",
     ""NV"": """",
@@ -3023,7 +3077,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""StateCertificationLicensureLevels"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -3038,8 +3093,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""All of the potential levels of certification/licensure for EMS personnel recognized by the state."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""LicensureLevels"",
     ""NV"": """",
@@ -3124,7 +3179,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""ProceduresPermittedbytheState"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -3139,8 +3195,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""A list of all of the procedures permitted by the EMS Agency's licensing state."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""snomed"",
     ""NV"": ""NV"",
@@ -3161,7 +3217,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""MedicationsPermittedbytheState"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -3176,8 +3233,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""A list of all of the medications permitted by the state to be used by each EMS state certification/licensure level."",
     ""Usage"": ""Required"",
     ""V3Changes"": ""State EMS systems which have regulatory authority to identify medications to be administered within the state may identify specific RxNorm codes based on medical direction and their own need. \t\t\t\t\t\t\t\t\t\t<br/><br/>List of medications based on RxNorm (RXCUI) code.  \t\t\t\t\t\t\t\t\t\t<br/><br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html\t\t\t\t\t\t\t\t\t\t\t \t\t\t\t\t\t\t\t\t\t<br/><br/>RxNorm \t\t\t\t\t\t\t\t\t\t<br/>Website - http://uts.nlm.nih.gov \t\t\t\t\t\t\t\t\t\t \t\t\t\t\t\t\t\t\t\t<br/><br/>Product - UMLS Metathesaurus \t\t\t\t\t\t\t\t\t\t<br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html \t\t\t\t\t\t\t\t\t\t<br/>Product - RxNorm Full Monthly Release"",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""Medication"",
     ""NV"": ""NV"",
@@ -3198,7 +3255,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""ProtocolsPermittedbytheState"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -3213,8 +3271,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""A list of all of the protocols permitted by the state."",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Added to better identify states with statewide protocols and define state EMS capability and care."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ProtocolsUsed"",
     ""NV"": ""NV"",
@@ -3684,7 +3742,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSCertificationLevelsPermittedtoPerformEachProcedure"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -3699,8 +3758,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""EMS certification levels which are permitted to perform the procedure listed in dConfiguration.07."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""StateCertificationLicensureLevels"",
     ""NV"": """",
@@ -3779,7 +3838,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Registered Nurse""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSAgencyProcedures"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -3794,8 +3854,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""A list of all procedures that the agency has implemented and available for use by any/all EMS certification levels."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""snomed"",
     ""NV"": """",
@@ -3815,7 +3875,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSCertificationLevelsPermittedtoAdministerEachMedication"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -3830,8 +3891,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""All EMS certification levels which are permitted to administer the medications listed in dConfiguration.09 (EMS Agency Medications)."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""StateCertificationLicensureLevels"",
     ""NV"": """",
@@ -3910,7 +3971,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Registered Nurse""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSAgencyMedications"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -3925,8 +3987,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""A list of all medications the agency has implemented and have available for use."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""Medication"",
     ""NV"": """",
@@ -3946,7 +4008,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSAgencyProtocols"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -3961,8 +4024,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""A list of all of the EMS field protocols that the agency has in place and available for use."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""ProtocolsUsed"",
     ""NV"": """",
@@ -4431,7 +4494,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSAgencySpecialtyServiceCapability"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -4446,8 +4510,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Special training or services provided by the EMS Agency and available to the EMS service area/community."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""AgencySpecialtyServiceCapability"",
     ""NV"": """",
@@ -4540,7 +4604,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""BillingStatus"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -4555,8 +4620,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication of whether the EMS agency routinely bills for any segment of the patient population."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""YesNoValues"",
     ""NV"": """",
@@ -4583,7 +4648,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Yes""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EmergencyMedicalDispatchEMDProvidedtoEMSAgencyServiceArea"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -4598,8 +4664,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication as to whether Emergency Medical Dispatch is provided to the EMS Agency's service area."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EMDtoAgencyServiceArea"",
     ""NV"": """",
@@ -4630,7 +4696,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Yes, Less than 100% of the EMS Agency's Service Area""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMDVendor"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -4645,8 +4712,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The vendor or company associated with the EMD Card set and algorithms."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EMDVendorType"",
     ""NV"": ""NV"",
@@ -4667,7 +4734,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""PatientMonitoringCapabilityies"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -4682,8 +4750,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The EMS Agency's patient monitoring capability which can be provided to any/all patients presenting to EMS."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""PatientMonitoringCapability"",
     ""NV"": """",
@@ -4744,7 +4812,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""CrewCallSign"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -4759,8 +4828,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The EMS crew call sign used to dispatch and communicate with the unit.  This may be the same as the EMS Unit/Vehicle Number in many agencies."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""AgencyCallSign"",
     ""NV"": """",
@@ -4780,7 +4849,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""DispatchCenterCADNameorID"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -4795,8 +4865,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The name or ID of the dispatch center (Primary or Secondary Service Answering Point - PSAP) that dispatches the EMS agency."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to the dataset to assist in identifying the CAD / dispatch center providing information to the EMS agency and ePCR when there are multiple dispatch centers sending resources to the same EMS incident."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""DispatchCenterCADNameorID"",
     ""NV"": """",
@@ -4816,7 +4886,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSLocationType"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -4831,8 +4902,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of EMS Location which could be a fixed station or a pre-determined staging area."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to allow multiple locations to be documented for an EMS Agency."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""LocationType"",
     ""NV"": """",
@@ -4867,7 +4938,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Other""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSLocationName"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -4882,8 +4954,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The name of the EMS Location."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""StationName"",
     ""NV"": """",
@@ -4901,7 +4973,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSLocationNumber"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -4916,8 +4989,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The ID number of the EMS Location."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""StationNumber"",
     ""NV"": """",
@@ -4935,7 +5008,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSLocationGPS"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -4950,8 +5024,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The GPS coordinate of  the EMS location."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""GPSLocation"",
     ""NV"": """",
@@ -4969,7 +5043,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""(\\+|-)?(90(\\.[0]{1,6})?|([1-8][0-9]|[0-9])(\\.[0-9]{1,6})?),(\\+|-)?(180(\\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\\.[0-9]{1,6})?)"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSLocationUSNationalGridCoordinates"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -4984,8 +5059,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The US National Grid Coordinates of the EMS location."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""USNG"",
     ""NV"": """",
@@ -5003,7 +5078,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[1][0-9][RSTU][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSLocationAddress"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5018,8 +5094,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The address of the EMS Location."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""StreetAddress"",
     ""NV"": """",
@@ -5039,7 +5115,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""StreetAddress2""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSLocationCity"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5054,8 +5131,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The city of the EMS location type (e.g., Fixed station, sub-station, staging area, etc.)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CityGnisCode"",
     ""NV"": """",
@@ -5073,7 +5150,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSLocationState"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5088,8 +5166,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The state of the EMS Location."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSIStateCode"",
     ""NV"": """",
@@ -5107,7 +5185,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSStationorLocationZIPCode"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5122,8 +5201,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The ZIP code of the EMS Location."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ZIP"",
     ""NV"": """",
@@ -5141,7 +5220,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSLocationCounty"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5156,8 +5236,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The county of the EMS Location"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSICountyCode"",
     ""NV"": """",
@@ -5175,7 +5255,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{5}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSLocationCountry"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5190,8 +5271,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The country of the EMS location."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to improve international implementations."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSICountryCodesCAMXUS"",
     ""NV"": """",
@@ -5222,7 +5303,8 @@ namespace ThreePointZero.Classes
         ""text"": ""United States""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSLocationPhoneNumber"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5237,8 +5319,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The phone number of the EMS Location."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""PhoneNumber"",
     ""NV"": """",
@@ -5259,7 +5341,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PhoneNumberType"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""UnitVehicleNumber"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5274,8 +5357,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The unique ID number for the unit which is specific for each vehicle. This ID number may be the state's vehicle's permit number."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""VehicleNumber"",
     ""NV"": ""NV"",
@@ -5295,7 +5378,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""VehicleIdentificationNumber"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5310,8 +5394,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The manufacturer's VIN associated with the vehicle."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""VehicleIdentificationNumber"",
     ""NV"": """",
@@ -5329,7 +5413,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSUnitCallSign"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -5344,8 +5429,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The EMS unit number used to dispatch and communicate with the unit. This may be the same as the EMS Unit/Vehicle Number in many agencies."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EMSUnitCallSign"",
     ""NV"": """",
@@ -5363,7 +5448,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""VehicleType"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5378,8 +5464,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The vehicle type of the unit (ambulance, fire, truck, etc.)."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""VehicleType"",
     ""NV"": ""NV"",
@@ -5452,7 +5538,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""CrewStateCertificationLicensureLevels"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5467,8 +5554,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The certification/licensure level of the ambulance by the state or the certification/licensure level at which the vehicle is most commonly staffed."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""StateCertificationLicensureLevels"",
     ""NV"": """",
@@ -5547,7 +5634,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Registered Nurse""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""NumberofEachEMSPersonnelLevelonNormal911AmbulanceResponse"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5562,8 +5650,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The number of each personnel level associated with the vehicle crew."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""NumberofPersonnel"",
     ""NV"": """",
@@ -5581,7 +5669,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""NumberofEachEMSPersonnelLevelonNormal911ResponseNonTransportVehicle"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5596,8 +5685,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The number of each personnel level for your EMS Agency's Medical (Non-911) Non-Transport Ambulance."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""NumberofPersonnel"",
     ""NV"": """",
@@ -5615,7 +5704,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""NumberofEachEMSPersonnelLevelonNormalMedicalNon911TransportAmbulance"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5630,8 +5720,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The number of each personnel level for your EMS Agency's Medical (Non-911) Transport Ambulance."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""NumberofPersonnel"",
     ""NV"": """",
@@ -5649,7 +5739,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""VehicleInitialCost"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5664,8 +5755,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Initial costs of vehicles held by agency excluding all medical and other equipment not associated with the vehicle. This cost should be inclusive of all sources of funding including grants, donations, and any other capital."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""VehicleInitialCost"",
     ""NV"": """",
@@ -5683,7 +5774,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""VehicleModelYear"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5698,8 +5790,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The year the vehicle was manufactured."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""Year"",
     ""NV"": ""NV"",
@@ -5719,7 +5811,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""YearMilesKilometersHoursAccrued"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5734,8 +5827,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The year the hours and miles/kilometers were accumulated."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""Year"",
     ""NV"": """",
@@ -5753,7 +5846,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""AnnualVehicleHours"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5768,8 +5862,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The number of hours the vehicle was in service for the agency for the defined year."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""VehicleHours"",
     ""NV"": """",
@@ -5787,7 +5881,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""AnnualVehicleMilesKilometers"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5802,8 +5897,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The number of miles/kilometers the vehicle accumulated in service for the agency for the defined year (Odometer Reading)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""AnnualOdometerReading"",
     ""NV"": """",
@@ -5823,7 +5918,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""DistanceUnit""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsLastName"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5838,8 +5934,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The last name of the personnel."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""PersonLastName"",
     ""NV"": ""NV"",
@@ -5859,7 +5955,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsFirstName"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5874,8 +5971,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The first name of the personnel."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""PersonFirstName"",
     ""NV"": ""NV"",
@@ -5895,7 +5992,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsMiddleNameInitial"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5910,8 +6008,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The middle name or initial of the personnel."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""PersonMiddleName"",
     ""NV"": ""NV"",
@@ -5931,7 +6029,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsMailingAddress"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5946,8 +6045,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Street or PO Box of the personnel's mailing address."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""StreetAddress"",
     ""NV"": """",
@@ -5967,7 +6066,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""StreetAddress2""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsCityofResidence"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -5982,8 +6082,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The city of the personnel's mailing address."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CityGnisCode"",
     ""NV"": """",
@@ -6001,7 +6101,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsState"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -6016,8 +6117,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The state of the personnel's mailing address."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSIStateCode"",
     ""NV"": """",
@@ -6035,7 +6136,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsZIPCode"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -6050,8 +6152,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The ZIP code of the personnel's mailing address."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ZIP"",
     ""NV"": """",
@@ -6069,7 +6171,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsCountry"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -6084,8 +6187,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The country of the personnel mailing address."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSICountryCodesCAMXUS"",
     ""NV"": """",
@@ -6116,7 +6219,8 @@ namespace ThreePointZero.Classes
         ""text"": ""United States""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsPhoneNumber"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -6131,8 +6235,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The phone number for the personnel."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""PhoneNumber"",
     ""NV"": """",
@@ -6153,7 +6257,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PhoneNumberType"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsEmailAddress"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -6168,8 +6273,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The primary email address of the personnel."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""EmailAddress"",
     ""NV"": """",
@@ -6190,7 +6295,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""EmailAddressType"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsDateofBirth"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -6205,8 +6311,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The personnel's date of birth."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateType"",
     ""NV"": ""NV"",
@@ -6226,7 +6332,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsGender"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -6241,8 +6348,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The personnel's gender."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""Gender"",
     ""NV"": ""NV"",
@@ -6275,7 +6382,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsRace"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -6290,8 +6398,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The personnel's race as defined by the OMB (US Office of Management and Budget)."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DemographicRace"",
     ""NV"": ""NV"",
@@ -6337,7 +6445,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsCitizenship"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -6352,8 +6461,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The documentation of the personnel's citizenship."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSICountryCode"",
     ""NV"": """",
@@ -6371,7 +6480,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsHighestEducationalDegree"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -6386,8 +6496,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The highest educational degree completed by the personnel."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonnelHighestEducationalDegree"",
     ""NV"": """",
@@ -6470,7 +6580,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Doctorate Degree (i.e. PhD, EdD)""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsDegreeSubjectFieldofStudy"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -6485,8 +6596,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The area of the personnel's post high-school (post-secondary) degree."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""PersonnelDegreeFieldofStudy"",
     ""NV"": """",
@@ -6651,7 +6762,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsMotorVehicleLicenseType"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -6666,8 +6778,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of motor vehicle license (i.e. Class A, B, Pilot, etc.) of the EMS personnel."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""PersonnelVehicleLicenseType"",
     ""NV"": """",
@@ -6736,7 +6848,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsImmunizationStatus"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -6751,8 +6864,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of immunization status."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ImmunizationType"",
     ""NV"": """",
@@ -6875,7 +6988,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Yellow Fever""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsImmunizationYear"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -6890,8 +7004,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The year associated with each immunization type."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""Year"",
     ""NV"": """",
@@ -6909,7 +7023,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsForeignLanguageAbility"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -6924,8 +7039,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The languages spoken (other than English) by the personnel with at least an elementary level of proficiency."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better describe the EMS workforce."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""PersonnelForeignLanguageAbility"",
     ""NV"": """",
@@ -7146,7 +7261,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsAgencyIDNumber"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7161,8 +7277,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The local agency ID number for the personnel."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonnelAgencyIDNumber"",
     ""NV"": """",
@@ -7180,7 +7296,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsStateofLicensure"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7195,8 +7312,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The state of the certification/licensure ID number assigned to the personnel member."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ANSIStateCode"",
     ""NV"": ""NV"",
@@ -7216,7 +7333,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsStatesLicensureIDNumber"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7231,8 +7349,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The state's licensure/certification ID number for the personnel."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""StateLicensureID"",
     ""NV"": ""NV"",
@@ -7252,7 +7370,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsStateEMSCertificationLicensureLevel"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7267,8 +7386,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The personnel's state EMS certification level."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""MemberLevel"",
     ""NV"": ""NV"",
@@ -7365,7 +7484,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsStateEMSCurrentCertificationDate"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7380,8 +7500,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date of the personnel's current EMS certification/licensure."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateType"",
     ""NV"": """",
@@ -7399,7 +7519,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsInitialStatesLicensureIssueDate"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7414,8 +7535,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date on which the EMS personnel's state's EMS certification/licensure was originally issued. This is the date of the first certification/licensure for the EMS level."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateType"",
     ""NV"": """",
@@ -7433,7 +7554,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsCurrentStatesLicensureExpirationDate"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7448,8 +7570,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date on which the EMS personnel's (highest) state EMS certification/licensure expires."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateType"",
     ""NV"": """",
@@ -7467,7 +7589,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsNationalRegistryNumber"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7482,8 +7605,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The National Registry number associated with the level of certification/licensure obtained through NREMT."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""NationalRegistryNumber"",
     ""NV"": """",
@@ -7501,7 +7624,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[A-Z][A-Z0-9][0-9]{6}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsNationalRegistryCertificationLevel"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7516,8 +7640,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The level of the current National Registry of Emergency Medical Technicians (NREMT) certification."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""NationalRegistryCertificationLevel"",
     ""NV"": """",
@@ -7568,7 +7692,8 @@ namespace ThreePointZero.Classes
         ""text"": ""First Responder""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsCurrentNationalRegistryExpirationDate"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7583,8 +7708,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date on which the EMS Personnel's National Registry of EMTs certification/licensure expires"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateType"",
     ""NV"": """",
@@ -7602,7 +7727,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsEmploymentStatus"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7617,8 +7743,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The personnel's primary employment status for this agency."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EmploymentStatus"",
     ""NV"": ""NV"",
@@ -7655,7 +7781,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsEmploymentStatusDate"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7670,8 +7797,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The personnel's employment status date."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateType"",
     ""NV"": ""NV"",
@@ -7691,7 +7818,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsHireDate"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7706,8 +7834,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date the employee was hired by the EMS agency for this current job."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateType"",
     ""NV"": """",
@@ -7725,7 +7853,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsPrimaryEMSJobRole"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7740,8 +7869,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The individuals primary/main EMS role at the EMS agency. This is the function which is performed the majority of the time for the EMS personnel."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""JobResponsibilities"",
     ""NV"": ""NV"",
@@ -7798,7 +7927,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsOtherJobResponsibilities"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7813,8 +7943,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The EMS personnel's other job responsibilities at the agency beyond their primary role documented in dPersonnel.34 (EMS Personnel's Primary EMS Job Role)."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""JobResponsibilities"",
     ""NV"": ""NV"",
@@ -7872,7 +8002,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsTotalLengthofServiceinYears"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7887,8 +8018,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The personnel's total length of EMS service at any level (years)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""TotalService"",
     ""NV"": """",
@@ -7906,7 +8037,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsDateLengthofServiceDocumented"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7921,8 +8053,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date which the length of EMS service was documented."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateType"",
     ""NV"": """",
@@ -7940,7 +8072,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""EMSPersonnelsPracticeLevel"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -7955,8 +8088,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The EMS certification level at which the individual is providing patient care services for the EMS agency."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""MemberLevel"",
     ""NV"": """",
@@ -8051,7 +8184,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Registered Nurse""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""DateofPersonnelsCertificationorLicensureforAgency"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8066,8 +8200,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date that the Certification/Licensure was achieved for the local EMS agency."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateType"",
     ""NV"": """",
@@ -8085,7 +8219,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""MedicalDeviceSerialNumber"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -8100,8 +8235,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The unique manufacturer's serial number associated with a medical device."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DeviceSerialNumber"",
     ""NV"": """",
@@ -8119,7 +8254,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup""
   },
   ""MedicalDeviceNameorID"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8134,8 +8270,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The local number or configurable Name/ID of the medical device."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DeviceNameorID"",
     ""NV"": """",
@@ -8153,7 +8289,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""MedicalDeviceType"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8168,8 +8305,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of medical device."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""MedicalDeviceType"",
     ""NV"": """",
@@ -8270,7 +8407,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""MedicalDeviceManufacturer"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8285,8 +8423,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The manufacturer of the medical device."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DeviceManufacturer"",
     ""NV"": """",
@@ -8304,7 +8442,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""MedicalDeviceModelNumber"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8319,8 +8458,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The specific manufacturer's model number associated with medical device."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ModelNumber"",
     ""NV"": """",
@@ -8338,7 +8477,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""MedicalDevicePurchaseDate"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8353,8 +8493,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date the device was purchased or placed in service by the EMS agency."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateType"",
     ""NV"": """",
@@ -8372,7 +8512,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""TypeofFacility"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8387,8 +8528,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of facility (healthcare or other) that the EMS agency transports patients to or from."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""TypeOfFacility"",
     ""NV"": """",
@@ -8443,7 +8584,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Dialysis Center""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""FacilityName"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8458,8 +8600,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The name of the facility."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""FacilityName"",
     ""NV"": """",
@@ -8477,7 +8619,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""FacilityLocationCode"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8492,8 +8635,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The code of the facility as assigned by the state or the EMS agency."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""FacilityCode"",
     ""NV"": """",
@@ -8511,7 +8654,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""HospitalDesignations"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8526,8 +8670,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The designation(s) associated with the hospital (e.g., Trauma, STEMI, Peds, etc.)"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""HospitalDesignation"",
     ""NV"": """",
@@ -8612,7 +8756,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""FacilityNationalProviderIdentifier"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8627,8 +8772,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The facility National Provider Identifier associated with National Provider System (NPS)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""NationalProviderIdentifier"",
     ""NV"": """",
@@ -8646,7 +8791,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""FacilityRoomSuiteorApartment"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8661,8 +8807,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The number of the specific room, suite, or apartment of the facility."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""FacilityRoom"",
     ""NV"": """",
@@ -8680,7 +8826,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""FacilityStreetAddress"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8695,8 +8842,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The address where the facility is located."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""StreetAddress"",
     ""NV"": """",
@@ -8716,7 +8863,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""StreetAddress2""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""FacilityCity"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8731,8 +8879,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The city where the facility is located (physical address)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CityGnisCode"",
     ""NV"": """",
@@ -8750,7 +8898,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""FacilityState"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8765,8 +8914,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The state where the facility is located."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSIStateCode"",
     ""NV"": """",
@@ -8784,7 +8933,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""FacilityZIPCode"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8799,8 +8949,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The zip code where the facility is located."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ZIP"",
     ""NV"": """",
@@ -8818,7 +8968,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""FacilityCounty"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8833,8 +8984,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The county where the facility is located."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSICountyCode"",
     ""NV"": """",
@@ -8852,7 +9003,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{5}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""FacilityCountry"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8867,8 +9019,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The country where the facility is located."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSICountryCodesCAMXUS"",
     ""NV"": """",
@@ -8899,7 +9051,8 @@ namespace ThreePointZero.Classes
         ""text"": ""United States""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""FacilityGPSLocation"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8914,8 +9067,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The facility GPS Coordinates."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""GPSLocation"",
     ""NV"": """",
@@ -8933,7 +9086,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""(\\+|-)?(90(\\.[0]{1,6})?|([1-8][0-9]|[0-9])(\\.[0-9]{1,6})?),(\\+|-)?(180(\\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\\.[0-9]{1,6})?)"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""FacilityUSNationalGridCoordinates"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8948,8 +9102,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Facility US National Grid Coordinates"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""USNG"",
     ""NV"": """",
@@ -8967,7 +9121,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[1][0-9][RSTU][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""FacilityPhoneNumber"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -8982,8 +9137,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Facility phone number."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""PhoneNumber"",
     ""NV"": """",
@@ -9004,7 +9159,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PhoneNumberType"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": """"
   },
   ""CustomDataElementResult"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -9019,8 +9175,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The actual value or values chosen (if values listed in eCustomConfiguration.06) or result (free text, Date/Time, or number) documented for the Custom Data Element"",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": ""Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CustomResults"",
     ""NV"": ""NV"",
@@ -9041,7 +9197,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eCustomResults/eCustomResults.ResultsGroup""
   },
   ""CustomElementIDReferenced"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -9056,8 +9213,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""References the CustomElementID attribute for eCustomConfiguration.CustomGroup"",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CorrelationID"",
     ""NV"": """",
@@ -9075,7 +9232,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eCustomResults/eCustomResults.ResultsGroup""
   },
   ""CorrelationIDofDemographicReportElementorGroup"": {
     ""DatasetName"": ""DEMDataSet"",
@@ -9090,8 +9248,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""References the CorrelationID attribute of an element or group in the DemographicReport section"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CorrelationID"",
     ""NV"": """",
@@ -9109,7 +9267,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": """"
   },
   ""PatientCareReportNumber"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -9124,8 +9283,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The unique number automatically assigned by the EMS agency for each Patient Care Report (PCR). This should be a unique number for the EMS agency for all of time."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PatientCareReportNumber"",
     ""NV"": """",
@@ -9143,7 +9302,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eRecord""
   },
   ""SoftwareCreator"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -9158,8 +9318,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The name of the vendor, manufacturer, and developer who designed the application that created this record."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""SoftwareCreator"",
     ""NV"": """",
@@ -9177,7 +9337,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eRecord/eRecord.SoftwareApplicationGroup""
   },
   ""SoftwareName"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -9192,8 +9353,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The name of the application used to create this record."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""SoftwareName"",
     ""NV"": """",
@@ -9211,7 +9372,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eRecord/eRecord.SoftwareApplicationGroup""
   },
   ""SoftwareVersion"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -9226,8 +9388,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The version of the application used to create this record."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""SoftwareVersion"",
     ""NV"": """",
@@ -9245,7 +9407,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eRecord/eRecord.SoftwareApplicationGroup""
   },
   ""IncidentNumber"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -9260,8 +9423,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The incident number assigned by the 911 Dispatch System"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EMSIncidentNumber"",
     ""NV"": ""NV"",
@@ -9281,7 +9444,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""EMSResponseNumber"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -9296,8 +9460,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The internal EMS response number which is unique for each EMS Vehicle's (Unit) response to an incident within an EMS Agency."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EMSResponseNumber"",
     ""NV"": ""NV"",
@@ -9317,7 +9481,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""TypeofServiceRequested"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -9332,8 +9497,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of service or category of service requested of the EMS Agency responding for this specific EMS event"",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EMSServiceCat"",
     ""NV"": """",
@@ -9380,7 +9545,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Standby""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse/eResponse.ServiceGroup""
   },
   ""StandbyPurpose"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -9395,8 +9561,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The main reason the EMS Unit is on Standby as the Primary Type of Service for the EMS event."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EMSStandByReason"",
     ""NV"": """",
@@ -9459,7 +9625,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Public Safety Support""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse/eResponse.ServiceGroup""
   },
   ""PrimaryRoleoftheUnit"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -9474,8 +9641,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The primary role of the EMS Unit which responded to this specific EMS event"",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PrimaryRoleOfUnit"",
     ""NV"": """",
@@ -9518,7 +9685,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Air Transport-Fixed Wing""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""TypeofDispatchDelay"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -9533,8 +9701,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The dispatch delays, if any, associated with the dispatch of the EMS unit to the EMS event."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EMSDispatchDelayReason"",
     ""NV"": ""NV"",
@@ -9592,7 +9760,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""TypeofResponseDelay"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -9607,8 +9776,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The response delays, if any, of the EMS unit associated with the EMS event."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EMSUnitDelayReason"",
     ""NV"": ""NV"",
@@ -9698,7 +9867,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""TypeofSceneDelay"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -9713,8 +9883,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The scene delays, if any, of the EMS unit associated with the EMS event."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EMSSceneUnitDelayReason"",
     ""NV"": ""NV"",
@@ -9816,7 +9986,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""TypeofTransportDelay"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -9831,8 +10002,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The transport delays, if any, of the EMS unit associated with the EMS event."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EMSTransportUnitDelayReason"",
     ""NV"": ""NV"",
@@ -9918,7 +10089,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""TypeofTurnAroundDelay"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -9933,8 +10105,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The turn-around delays, if any, of EMS unit associated with the EMS event."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EMSTurnaroundUnitDelayReason"",
     ""NV"": ""NV"",
@@ -10024,7 +10196,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""EMSVehicleUnitNumber"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10039,8 +10212,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The unique physical vehicle number of the responding unit."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EMSVehicleNumber"",
     ""NV"": """",
@@ -10058,7 +10231,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""LevelofCareofThisUnit"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10073,8 +10247,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The level of care (BLS or ALS) the unit is able to provide based on the units' treatment capabilities for this EMS response."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""UnitLevelOfCare"",
     ""NV"": """",
@@ -10141,7 +10315,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Specialty Critical Care""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""VehicleDispatchLocation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10156,8 +10331,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The EMS location or healthcare facility representing the geographic location of the unit or crew at the time of dispatch."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""VehicleDispatchLocation"",
     ""NV"": """",
@@ -10175,7 +10350,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""VehicleDispatchGPSLocation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10190,8 +10366,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The GPS coordinates associated with the EMS unit at the time of dispatch documented in decimal degrees."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""GPSLocation"",
     ""NV"": """",
@@ -10209,7 +10385,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""(\\+|-)?(90(\\.[0]{1,6})?|([1-8][0-9]|[0-9])(\\.[0-9]{1,6})?),(\\+|-)?(180(\\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\\.[0-9]{1,6})?)"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""VehicleDispatchLocationUSNationalGridCoordinates"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10224,8 +10401,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The US National Grid Coordinates for the EMS Vehicle's Dispatch Location."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""USNG"",
     ""NV"": """",
@@ -10243,7 +10420,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[1][0-9][RSTU][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""BeginningOdometerReadingofRespondingVehicle"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10258,8 +10436,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The mileage (counter or odometer reading) of the vehicle at the beginning of the call (when the wheels begin moving). If EMS vehicle/unit is via water or air travel document the number in \""hours\"" as it relates to the documentation of Boat, Fixed Wing, or Rotor Craft in eDisposition.16 (EMS Transport Method)"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EMSMileageOdometer"",
     ""NV"": """",
@@ -10277,7 +10455,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": ""2"",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""OnSceneOdometerReadingofRespondingVehicle"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10292,8 +10471,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The mileage (counter or odometer reading) of the vehicle when it arrives at the scene. If EMS vehicle/unit is via water or air travel document the number in \""hours\"" as it relates to the documentation of Boat, Fixed Wing, or Rotor Craft in eDisposition.16 (EMS Transport Method)"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EMSMileageOdometer"",
     ""NV"": """",
@@ -10311,7 +10490,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": ""2"",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""PatientDestinationOdometerReadingofRespondingVehicle"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10326,8 +10506,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The mileage (counter or odometer reading) of the vehicle when it arrives at the patient's destination. If EMS vehicle/unit is via water or air travel document the number in \""hours\"" as it relates to the documentation of Boat, Fixed Wing, or Rotor Craft in eDisposition.16 (EMS Transport Method)"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EMSMileageOdometer"",
     ""NV"": """",
@@ -10345,7 +10525,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": ""2"",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""EndingOdometerReadingofRespondingVehicle"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10360,8 +10541,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""If using a counter, this is the mileage traveled beginning with dispatch through the transport of the patient to their destination and ending when back in service, starting from 0. If EMS vehicle/unit is via water or air travel document the number in \""hours\"" as it relates to the documentation of boat, Fixed Wing, or Rotor Craft in eDisposition.16"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EMSMileageOdometer"",
     ""NV"": """",
@@ -10379,7 +10560,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": ""2"",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""ResponseModetoScene"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10394,8 +10576,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The indication whether the response was emergent or non-emergent. An emergent response is an immediate response (typically using lights and sirens)."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EMSResponseMode"",
     ""NV"": """",
@@ -10430,7 +10612,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Non-Emergent Upgraded to Emergent""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""AdditionalResponseModeDescriptors"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10445,8 +10628,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The documentation of response mode techniques used for this EMS response."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EMSAdditionalResponseMode"",
     ""NV"": ""NV"",
@@ -10516,7 +10699,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eResponse""
   },
   ""ComplaintReportedbyDispatch"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10531,8 +10715,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The complaint dispatch reported to the responding unit."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ComplaintReportedByDispatch"",
     ""NV"": """",
@@ -10719,7 +10903,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Airmedical Transport""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDispatch""
   },
   ""EMDPerformed"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10734,8 +10919,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication of whether Emergency Medical Dispatch was performed for this EMS event."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EMDPerformed"",
     ""NV"": ""NV"",
@@ -10772,7 +10957,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDispatch""
   },
   ""EMDCardNumber"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10787,8 +10973,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The EMD card number reported by dispatch, consisting of the card number, dispatch level, and dispatch mode"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EMDCardNumber"",
     ""NV"": """",
@@ -10806,7 +10992,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDispatch""
   },
   ""DispatchCenterNameorID"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10821,8 +11008,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The name or ID of the dispatch center providing electronic data to the PCR for the EMS agency, if applicable."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to the dataset to assist in identifying the CAD / dispatch center providing information to the EMS agency and ePCR when there are multiple dispatch centers sending resources to the same EMS incident."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ComputerAidedDispatchCADNameorID"",
     ""NV"": """",
@@ -10840,7 +11027,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDispatch""
   },
   ""DispatchPriorityPatientAcuity"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10855,8 +11043,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The actual, apparent, or potential acuity of the patient's condition as determined through information obtained during the EMD process."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DispatchPriority"",
     ""NV"": """",
@@ -10891,7 +11079,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Non-Acute [e.g., Scheduled Transfer  or Standby]""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDispatch""
   },
   ""UnitDispatchedCADRecordID"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10906,8 +11095,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The unique ID assigned by the CAD system for the specific unit response."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""UnitDispatchedCADRecordID"",
     ""NV"": """",
@@ -10925,7 +11114,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDispatch""
   },
   ""CrewMemberID"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10940,8 +11130,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The statewide assigned ID number of the EMS crew member confirming the airway placement."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": ""Added to better document airway management."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CrewMemberID"",
     ""NV"": ""NV"",
@@ -10961,7 +11151,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup/eAirway.ConfirmationGroup""
   },
   ""CrewMemberLevel"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -10976,8 +11167,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The functioning level of the crew member ID during this EMS patient encounter."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""MemberLevel"",
     ""NV"": ""NV"",
@@ -11074,7 +11265,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eCrew/eCrew.CrewGroup""
   },
   ""CrewMemberResponseRole"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11089,8 +11281,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The role(s) of the role member during response, at scene treatment, and/or transport."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CrewMemberRoles"",
     ""NV"": ""NV"",
@@ -11140,7 +11332,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eCrew/eCrew.CrewGroup""
   },
   ""PSAPCallDateTime"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11155,8 +11348,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time the phone rings (911 call to public safety answering point or other designated entity) requesting EMS services."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateTimeType"",
     ""NV"": ""NV"",
@@ -11176,7 +11369,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eTimes""
   },
   ""DispatchNotifiedDateTime"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11191,8 +11385,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time dispatch was notified by the 911 call taker (if a separate entity)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -11210,7 +11404,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eTimes""
   },
   ""UnitNotifiedbyDispatchDateTime"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11225,8 +11420,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time the responding unit was notified by dispatch."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -11244,7 +11439,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eTimes""
   },
   ""DispatchAcknowledgedDateTime"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11259,8 +11455,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time the dispatch was acknowledged by the EMS Unit."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -11278,7 +11474,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eTimes""
   },
   ""UnitEnRouteDateTime"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11293,8 +11490,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time the unit responded; that is, the time the vehicle started moving."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateTimeType"",
     ""NV"": ""NV"",
@@ -11314,7 +11511,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eTimes""
   },
   ""UnitArrivedonSceneDateTime"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11329,8 +11527,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time the responding unit arrived on the scene; that is, the time the vehicle stopped moving at the scene."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateTimeType"",
     ""NV"": ""NV"",
@@ -11350,7 +11548,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eTimes""
   },
   ""ArrivedatPatientDateTime"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11365,8 +11564,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time the responding unit arrived at the patient's side."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateTimeType"",
     ""NV"": ""NV"",
@@ -11386,7 +11585,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eTimes""
   },
   ""TransferofEMSPatientCareDateTime"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11401,8 +11601,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time the patient was transferred from this EMS agency to another EMS agency for care."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateTimeType"",
     ""NV"": ""NV"",
@@ -11422,7 +11622,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eTimes""
   },
   ""UnitLeftSceneDateTime"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11437,8 +11638,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time the responding unit left the scene with a patient (started moving)."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateTimeType"",
     ""NV"": ""NV"",
@@ -11458,7 +11659,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eTimes""
   },
   ""ArrivalatDestinationLandingAreaDateTime"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11473,8 +11675,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time the Air Medical vehicle arrived at the destination landing area."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -11492,7 +11694,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eTimes""
   },
   ""PatientArrivedatDestinationDateTime"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11507,8 +11710,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time the responding unit arrived with the patient at the destination or transfer point."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateTimeType"",
     ""NV"": ""NV"",
@@ -11528,7 +11731,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eTimes""
   },
   ""DestinationPatientTransferofCareDateTime"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11543,8 +11747,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time that patient care was transferred to the destination healthcare facilities staff."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateTimeType"",
     ""NV"": ""NV"",
@@ -11564,7 +11768,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eTimes""
   },
   ""UnitBackinServiceDateTime"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11579,8 +11784,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time the unit back was back in service and available for response (finished with call, but not necessarily back in home location)."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -11598,7 +11803,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eTimes""
   },
   ""UnitCanceledDateTime"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11613,8 +11819,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time the unit was canceled."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -11632,7 +11838,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eTimes""
   },
   ""UnitBackatHomeLocationDateTime"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11647,8 +11854,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time the responding unit was back in their service area. With agencies who utilized Agency Status Management, home location means the service area as assigned through the agency status management protocol."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -11666,7 +11873,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eTimes""
   },
   ""EMSCallCompletedDateTime"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11681,8 +11889,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time the responding unit completed all tasks associated with the event including transfer of the patient, and such things as cleaning and restocking."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -11700,7 +11908,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eTimes""
   },
   ""EMSPatientID"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11715,8 +11924,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The unique ID for the patient within the Agency"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PatientID"",
     ""NV"": """",
@@ -11734,7 +11943,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient""
   },
   ""LastName"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11749,8 +11959,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's last (family) name"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""PersonLastName"",
     ""NV"": ""NV"",
@@ -11771,7 +11981,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient/ePatient.PatientNameGroup""
   },
   ""FirstName"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11786,8 +11997,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's first (given) name"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""PersonFirstName"",
     ""NV"": ""NV"",
@@ -11808,7 +12019,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient/ePatient.PatientNameGroup""
   },
   ""MiddleInitialName"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11823,8 +12035,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's middle name, if any"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonMiddleName"",
     ""NV"": """",
@@ -11842,7 +12054,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient/ePatient.PatientNameGroup""
   },
   ""PatientsHomeAddress"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11857,8 +12070,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Patient's address of residence"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""StreetAddress"",
     ""NV"": """",
@@ -11878,7 +12091,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""StreetAddress2""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient""
   },
   ""PatientsHomeCity"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11893,8 +12107,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's primary city or township of residence."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CityGnisCode"",
     ""NV"": """",
@@ -11912,7 +12126,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient""
   },
   ""PatientsHomeCounty"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11927,8 +12142,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's home county or parish of residence."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ANSICountyCode"",
     ""NV"": ""NV"",
@@ -11948,7 +12163,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient""
   },
   ""PatientsHomeState"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11963,8 +12179,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The state, territory, or province where the patient resides."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ANSIStateCode"",
     ""NV"": ""NV"",
@@ -11984,7 +12200,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient""
   },
   ""PatientsHomeZIPCode"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -11999,8 +12216,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's ZIP code of residence."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ZIP"",
     ""NV"": ""NV"",
@@ -12020,7 +12237,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient""
   },
   ""PatientsCountryofResidence"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12035,8 +12253,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The country of residence of the patient."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSICountryCode"",
     ""NV"": """",
@@ -12054,7 +12272,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient""
   },
   ""PatientHomeCensusTract"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12069,8 +12288,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The census tract in which the patient lives"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CensusTracts"",
     ""NV"": """",
@@ -12088,7 +12307,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{11}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient""
   },
   ""SocialSecurityNumber"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12103,8 +12323,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's social security number"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""SocialSecurityNumber"",
     ""NV"": """",
@@ -12122,7 +12342,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{9}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient""
   },
   ""Gender"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12137,8 +12358,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Patient's Gender"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""Gender"",
     ""NV"": ""NV"",
@@ -12171,7 +12392,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient""
   },
   ""Race"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12186,8 +12408,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's race as defined by the OMB (US Office of Management and Budget)"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""Race"",
     ""NV"": ""NV"",
@@ -12233,7 +12455,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient""
   },
   ""Age"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12248,8 +12471,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's age (either calculated from date of birth or best approximation)"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""Age"",
     ""NV"": ""NV"",
@@ -12269,7 +12492,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient/ePatient.AgeGroup""
   },
   ""AgeUnits"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12284,8 +12508,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The unit used to define the patient's age"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AgeUnits"",
     ""NV"": ""NV"",
@@ -12326,7 +12550,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient/ePatient.AgeGroup""
   },
   ""DateofBirth"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12341,8 +12566,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's date of birth"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateOfBirth"",
     ""NV"": ""NV"",
@@ -12363,7 +12588,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient""
   },
   ""PatientsPhoneNumber"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12378,8 +12604,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's phone number"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""PhoneNumber"",
     ""NV"": """",
@@ -12400,7 +12626,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PhoneNumberType"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient""
   },
   ""PatientsEmailAddress"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12415,8 +12642,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The email address of the patient"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""EmailAddress"",
     ""NV"": """",
@@ -12437,7 +12664,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""EmailAddressType"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient""
   },
   ""StateIssuingDriversLicense"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12452,8 +12680,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The state that issued the drivers license"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSIStateCode"",
     ""NV"": """",
@@ -12471,7 +12699,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient""
   },
   ""DriversLicenseNumber"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12486,8 +12715,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's drivers license number"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DriversLicenseNumber"",
     ""NV"": """",
@@ -12505,7 +12734,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePatient""
   },
   ""PrimaryMethodofPayment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12520,8 +12750,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The primary method of payment or type of insurance associated with this EMS encounter"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""PrimaryMethodOfPayment"",
     ""NV"": ""NV"",
@@ -12590,7 +12820,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment""
   },
   ""PhysicianCertificationStatement"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12605,8 +12836,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication of whether a physician certification statement (PCS) is available documenting the medical necessity or the EMS encounter."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""YesNoUnkValues"",
     ""NV"": """",
@@ -12637,7 +12868,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Yes""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.CertificateGroup""
   },
   ""DatePhysicianCertificationStatementSigned"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12652,8 +12884,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date the Physician Certification Statement was signed"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -12671,7 +12903,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.CertificateGroup""
   },
   ""ReasonforPhysicianCertificationStatement"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12686,8 +12919,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The reason for EMS transport noted on the Physician Certification Statement"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""Reason"",
     ""NV"": """",
@@ -12784,7 +13017,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.CertificateGroup""
   },
   ""HealthcareProviderTypeSigningPhysicianCertificationStatement"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12799,8 +13033,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of healthcare provider who signed the Physician Certification Statement"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""HealthcareProviderType"",
     ""NV"": """",
@@ -12843,7 +13077,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Registered Nurse Practitioner""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.CertificateGroup""
   },
   ""LastNameofIndividualSigningPhysicianCertificationStatement"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12858,8 +13093,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The last name of the healthcare provider who signed the Physician Certification Statement."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonLastName"",
     ""NV"": """",
@@ -12877,7 +13112,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.CertificateGroup""
   },
   ""FirstNameofIndividualSigningPhysicianCertificationStatement"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12892,8 +13128,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The first name of the healthcare provider who signed the Physician Certification Statement."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonFirstName"",
     ""NV"": """",
@@ -12911,7 +13147,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.CertificateGroup""
   },
   ""PatientResidesinServiceArea"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12926,8 +13163,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""An indication of whether the patient's current residence is within the EMS agency service area."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ResidencyStatusOfThePatient"",
     ""NV"": """",
@@ -12954,7 +13191,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Not a Resident Within EMS Service Area""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment""
   },
   ""InsuranceCompanyID"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -12969,8 +13207,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The ID Number of the patient's insurance company."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""InsuranceCompanyID"",
     ""NV"": """",
@@ -12988,7 +13226,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup""
   },
   ""InsuranceCompanyName"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13003,8 +13242,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The name of the patient's insurance company."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""InsuranceCompanyName"",
     ""NV"": """",
@@ -13022,7 +13261,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup""
   },
   ""InsuranceCompanyBillingPriority"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13037,8 +13277,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The billing priority or order for the insurance company."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""InsuranceCompanyBillingPriority"",
     ""NV"": """",
@@ -13109,7 +13349,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Unknown""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup""
   },
   ""InsuranceCompanyAddress"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13124,8 +13365,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The mailing address of the Insurance Company"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""StreetAddress"",
     ""NV"": """",
@@ -13145,7 +13386,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""StreetAddress2""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup""
   },
   ""InsuranceCompanyCity"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13160,8 +13402,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The insurance company's city or township used for mailing purposes."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CityGnisCodePayment"",
     ""NV"": """",
@@ -13179,7 +13421,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup""
   },
   ""InsuranceCompanyState"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13194,8 +13437,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The insurance company's state, territory, or province, or District of Columbia."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSIStateCode"",
     ""NV"": """",
@@ -13213,7 +13456,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup""
   },
   ""InsuranceCompanyZIPCode"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13228,8 +13472,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The insurance company's ZIP Code"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ZIP"",
     ""NV"": """",
@@ -13247,7 +13491,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup""
   },
   ""InsuranceCompanyCountry"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13262,8 +13507,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The insurance company's country"",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better document international addresses."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSICountryCode"",
     ""NV"": """",
@@ -13281,7 +13526,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup""
   },
   ""InsuranceGroupID"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13296,8 +13542,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The ID number of the patient's insurance group."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""InsuranceGroupID"",
     ""NV"": """",
@@ -13315,7 +13561,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup""
   },
   ""InsurancePolicyIDNumber"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13330,8 +13577,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The ID number of the patient's insurance policy"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""InsurancePolicyIDNumber"",
     ""NV"": """",
@@ -13349,7 +13596,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup""
   },
   ""LastNameoftheInsured"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13364,8 +13612,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The last (family) name of the person insured by the insurance company."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonLastName"",
     ""NV"": """",
@@ -13383,7 +13631,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup""
   },
   ""FirstNameoftheInsured"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13398,8 +13647,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The first (given) name of the person insured by the insurance company"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonFirstName"",
     ""NV"": """",
@@ -13417,7 +13666,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup""
   },
   ""MiddleInitialNameoftheInsured"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13432,8 +13682,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The middle name, if any, of the person insured by the insurance company."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonMiddleName"",
     ""NV"": """",
@@ -13451,7 +13701,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup""
   },
   ""RelationshiptotheInsured"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13466,8 +13717,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The relationship of the patient to the primary insured person"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""RelationshipToInsured"",
     ""NV"": """",
@@ -13522,7 +13773,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Other Relationship""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup""
   },
   ""InsuranceGroupName"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13537,8 +13789,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The name of the patient's insurance group."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""InsuranceGroupName"",
     ""NV"": """",
@@ -13556,7 +13808,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup""
   },
   ""ClosestRelativeGuardianLastName"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13571,8 +13824,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The last (family) name of the patient's closest relative or guardian"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonLastName"",
     ""NV"": """",
@@ -13590,7 +13843,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup""
   },
   ""ClosestRelativeGuardianFirstName"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13605,8 +13859,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The first (given) name of the patient's closest relative or guardian"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonFirstName"",
     ""NV"": """",
@@ -13624,7 +13878,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup""
   },
   ""ClosestRelativeGuardianMiddleInitialName"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13639,8 +13894,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The middle name/initial, if any, of the closest patient's relative or guardian."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonMiddleName"",
     ""NV"": """",
@@ -13658,7 +13913,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup""
   },
   ""ClosestRelativeGuardianStreetAddress"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13673,8 +13929,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The street address of the residence of the patient's closest relative or guardian."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""StreetAddress"",
     ""NV"": """",
@@ -13694,7 +13950,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""StreetAddress2""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup""
   },
   ""ClosestRelativeGuardianCity"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13709,8 +13966,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The primary city or township of residence of the patient's closest relative or guardian."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CityGnisCodePayment"",
     ""NV"": """",
@@ -13728,7 +13985,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup""
   },
   ""ClosestRelativeGuardianState"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13743,8 +14001,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The state of residence of the patient's closest relative or guardian."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSIStateCode"",
     ""NV"": """",
@@ -13762,7 +14020,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup""
   },
   ""ClosestRelativeGuardianZIPCode"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13777,8 +14036,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The ZIP Code of the residence of the patient's closest relative or guardian."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ZIP"",
     ""NV"": """",
@@ -13796,7 +14055,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup""
   },
   ""ClosestRelativeGuardianCountry"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13811,8 +14071,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The country of residence of the patient's closest relative or guardian."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to improve international compatibility."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSICountryCode"",
     ""NV"": """",
@@ -13830,7 +14090,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup""
   },
   ""ClosestRelativeGuardianPhoneNumber"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13845,8 +14106,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The phone number of the patient's closest relative or guardian"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""PhoneNumber"",
     ""NV"": """",
@@ -13867,7 +14128,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PhoneNumberType"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup""
   },
   ""ClosestRelativeGuardianRelationship"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13882,8 +14144,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The relationship of the patient's closest relative or guardian"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ClosestRelativeGuardianRelationship"",
     ""NV"": """",
@@ -13946,7 +14208,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Unknown""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup""
   },
   ""PatientsEmployer"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13961,8 +14224,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's employers Name"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EmployerName"",
     ""NV"": """",
@@ -13980,7 +14243,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.EmployerGroup""
   },
   ""PatientsEmployersAddress"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -13995,8 +14259,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The street address of the patient's employer"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""StreetAddress"",
     ""NV"": """",
@@ -14016,7 +14280,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""StreetAddress2""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.EmployerGroup""
   },
   ""PatientsEmployersCity"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14031,8 +14296,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The city or township of the patient's employer used for mailing purposes."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CityGnisCodePayment"",
     ""NV"": """",
@@ -14050,7 +14315,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.EmployerGroup""
   },
   ""PatientsEmployersState"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14065,8 +14331,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The state of the patient's employer"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSIStateCode"",
     ""NV"": """",
@@ -14084,7 +14350,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.EmployerGroup""
   },
   ""PatientsEmployersZIPCode"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14099,8 +14366,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The ZIP Code of the patient's employer"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ZIP"",
     ""NV"": """",
@@ -14118,7 +14385,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.EmployerGroup""
   },
   ""PatientsEmployersCountry"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14133,8 +14401,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The country of the patient's employer"",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to improve international compatibility."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSICountryCode"",
     ""NV"": """",
@@ -14152,7 +14420,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.EmployerGroup""
   },
   ""PatientsEmployersPrimaryPhoneNumber"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14167,8 +14436,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The employer's primary phone number."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PhoneNumber"",
     ""NV"": """",
@@ -14188,7 +14457,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""PhoneNumberType""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.EmployerGroup""
   },
   ""ResponseUrgency"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14203,8 +14473,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The urgency in which the EMS agency began to mobilize resources for this EMS encounter."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ResponseUrgency"",
     ""NV"": """",
@@ -14231,7 +14501,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Non-Immediate""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment""
   },
   ""PatientTransportAssessment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14246,8 +14517,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Documentation of the patient's transport need based on mobility and/or physical capability."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""TransportAssessment"",
     ""NV"": """",
@@ -14280,7 +14551,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment""
   },
   ""SpecialtyCareTransportCareProvider"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14295,8 +14567,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Documentation to show the patient care provided to the patient met the Specialty Care Transport Base Rate requirements."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""TransportCareProvider"",
     ""NV"": """",
@@ -14397,7 +14669,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment""
   },
   ""AmbulanceTransportReasonCode"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14412,8 +14685,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The CMS Ambulance Transport Reason Code for the transport."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""AmbulanceReasonCode"",
     ""NV"": """",
@@ -14454,7 +14727,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment""
   },
   ""RoundTripPurposeDescription"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14469,8 +14743,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Free text description providing the purpose of the round trip EMS transport based on CR109 field for CMS."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to improve billing with electronic claims using X12"",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""TripPurposeDesciption"",
     ""NV"": """",
@@ -14488,7 +14762,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment""
   },
   ""StretcherPurposeDescription"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14503,8 +14778,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Free Text Documentation providing the reason for use of a stretcher in the EMS patient transport."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""StretcherPurposeDesciption"",
     ""NV"": """",
@@ -14522,7 +14797,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment""
   },
   ""AmbulanceConditionsIndicator"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14537,8 +14813,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Documentation of the CRC03 through CRC07 requirements for CMS billing using X12 transactions."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to improve billing with electronic claims using X12. The Codes and Descriptors updated Sept 2013 to meet the X12 5010 standard."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""AmbulanceConditionsIndicator"",
     ""NV"": """",
@@ -14591,7 +14867,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment""
   },
   ""MileagetoClosestHospitalFacility"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14606,8 +14883,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The mileage to the closest hospital facility from the scene. Documented only if the patient was transported to a facility farther away than the closest hospital."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added for improved billing documentation."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""Mileage"",
     ""NV"": """",
@@ -14625,7 +14902,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": ""2"",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment""
   },
   ""ALSAssessmentPerformedandWarranted"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14640,8 +14918,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Documentation that the patient required an ALS assessment and it was performed."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to improve billing justification"",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""YesNoValues"",
     ""NV"": """",
@@ -14668,7 +14946,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Yes""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment""
   },
   ""CMSServiceLevel"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14683,8 +14962,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The CMS service level for this EMS encounter."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CMSServiceLevel"",
     ""NV"": ""NV"",
@@ -14741,7 +15020,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment""
   },
   ""EMSConditionCode"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14756,8 +15036,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The condition code associated with the CMS EMS negotiated rule-making process."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""icd10Code"",
     ""NV"": """",
@@ -14777,7 +15057,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment""
   },
   ""CMSTransportationIndicator"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14792,8 +15073,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The CMS Ambulance Fee Schedule Transportation and Air Medical Transportation Indicators are used to better describe why it was necessary for the patient to be transported in a particular way or circumstance."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Name changed from Condition Code Modifier to CMS Transportation Indicator"",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""CMSTransportationIndicator"",
     ""NV"": """",
@@ -14858,7 +15139,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment""
   },
   ""TransportAuthorizationCode"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14873,8 +15155,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Prior authorization code provided by the insurance carrier/payer."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to improve billing documentation."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""AuthorizationCode"",
     ""NV"": """",
@@ -14892,7 +15174,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment""
   },
   ""PriorAuthorizationCodePayer"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14907,8 +15190,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Payer who has provided the Prior Authorization Code."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to improve billing documentation."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonName"",
     ""NV"": """",
@@ -14926,7 +15209,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment""
   },
   ""SupplyItemUsedName"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14941,8 +15225,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The name of the supply used on the patient by the EMS Crew during the EMS event."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to track EMS supplies for billing."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""SupplyUsed"",
     ""NV"": """",
@@ -14960,7 +15244,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.SupplyItemGroup""
   },
   ""NumberofSupplyItemsUsed"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -14975,8 +15260,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The number of the specific supply item used on the patient by the EMS Crew during the EMS event."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to track EMS supplies for billing."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""SupplyCount"",
     ""NV"": """",
@@ -14994,7 +15279,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment/ePayment.SupplyItemGroup""
   },
   ""PayerType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15009,8 +15295,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Payer type according to X12 standard."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PayerType"",
     ""NV"": """",
@@ -15121,7 +15407,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Mutually Defined""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/ePayment""
   },
   ""FirstEMSUnitonScene"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15136,8 +15423,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Documentation that this EMS Unit was the first EMS Unit for the EMS Agency on the Scene"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""YesNoValues"",
     ""NV"": ""NV"",
@@ -15166,7 +15453,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""OtherEMSorPublicSafetyAgenciesatScene"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15181,8 +15469,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Other EMS agency names that were at the scene, if any"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""OtherEMSAgenciesAtScene"",
     ""NV"": """",
@@ -15200,7 +15488,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene/eScene.ResponderGroup""
   },
   ""OtherEMSorPublicSafetyAgencyIDNumber"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15215,8 +15504,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The ID number for the EMS Agency or Other Public Safety listed in eScene.02"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EMSAgencyID"",
     ""NV"": """",
@@ -15234,7 +15523,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene/eScene.ResponderGroup""
   },
   ""TypeofOtherServiceatScene"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15249,8 +15539,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of public safety or EMS service associated with Other Agencies on Scene"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""OtherServicesAtScene"",
     ""NV"": """",
@@ -15309,7 +15599,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Utilities""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene/eScene.ResponderGroup""
   },
   ""DateTimeInitialResponderArrivedonScene"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15324,8 +15615,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The time that the initial responder arrived on the scene, if applicable."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -15343,7 +15634,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""NumberofPatientsatScene"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15358,8 +15650,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indicator of how many total patients were at the scene"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""NumberOfPatientsAtScene"",
     ""NV"": ""NV"",
@@ -15392,7 +15684,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""MassCasualtyIncident"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15407,8 +15700,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indicator if this event would be considered a mass casualty incident (overwhelmed existing EMS resources)"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""YesNoValues"",
     ""NV"": ""NV"",
@@ -15437,7 +15730,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""TriageClassificationforMCIPatient"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15452,8 +15746,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The color associated with the initial triage assessment/classification of the MCI patient."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""TriageClassification"",
     ""NV"": ""NV"",
@@ -15494,7 +15788,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""IncidentLocationType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15509,8 +15804,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The kind of location where the incident happened"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""IncidentLocationType"",
     ""NV"": ""NV"",
@@ -15530,7 +15825,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""IncidentFacilityCode"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15545,8 +15841,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The state, regulatory, or other unique number (code) associated with the facility if the Incident is a Healthcare Facility."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""IncidentFacilityCode"",
     ""NV"": ""NV"",
@@ -15566,7 +15862,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""SceneGPSLocation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15581,8 +15878,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The GPS coordinates associated with the Scene."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""GPSLocation"",
     ""NV"": """",
@@ -15600,7 +15897,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""(\\+|-)?(90(\\.[0]{1,6})?|([1-8][0-9]|[0-9])(\\.[0-9]{1,6})?),(\\+|-)?(180(\\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\\.[0-9]{1,6})?)"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""SceneUSNationalGridCoordinates"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15615,8 +15913,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The US National Grid Coordinates for the Scene."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""USNG"",
     ""NV"": """",
@@ -15634,7 +15932,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[1][0-9][RSTU][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""IncidentFacilityorLocationName"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15649,8 +15948,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The name of the facility, business, building, etc. associated with the scene of the EMS event."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""IncidentFacilityName"",
     ""NV"": """",
@@ -15668,7 +15967,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""MilePostorMajorRoadway"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15683,8 +15983,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The mile post or major roadway associated with the incident locations"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""MilePostOrMajorRoadway"",
     ""NV"": ""NV"",
@@ -15704,7 +16004,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""IncidentStreetAddress"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15719,8 +16020,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The street address where the patient was found, or, if no patient, the address to which the unit responded."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""StreetAddress"",
     ""NV"": ""NV"",
@@ -15741,7 +16042,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""StreetAddress2""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""IncidentApartmentSuiteorRoom"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15756,8 +16058,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The number of the specific apartment, suite, or room where the incident occurred."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""SceneApartment"",
     ""NV"": ""NV"",
@@ -15777,7 +16079,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""IncidentCity"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15792,8 +16095,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The city or township (if applicable) where the patient was found or to which the unit responded (or best approximation)"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CityGnisCode"",
     ""NV"": ""NV"",
@@ -15813,7 +16116,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""IncidentState"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15828,8 +16132,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The state, territory, or province where the patient was found or to which the unit responded (or best approximation)"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ANSIStateCode"",
     ""NV"": ""NV"",
@@ -15849,7 +16153,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""IncidentZIPCode"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15864,8 +16169,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The ZIP code of the incident location"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ZIP"",
     ""NV"": ""NV"",
@@ -15885,7 +16190,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""SceneCrossStreetorDirections"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15900,8 +16206,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The nearest cross street to the incident address or directions from a recognized landmark or the second street name of an intersection."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": ""Added to better locate/document the scene (incident) location."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""SceneCrossStreet"",
     ""NV"": ""NV"",
@@ -15921,7 +16227,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""IncidentCounty"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15936,8 +16243,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The county or parish where the patient was found or to which the unit responded (or best approximation)"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ANSICountyCode"",
     ""NV"": ""NV"",
@@ -15957,7 +16264,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""IncidentCountry"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -15972,8 +16280,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The country of the incident location."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added for international compatibility."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSICountryCode"",
     ""NV"": """",
@@ -15991,7 +16299,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""IncidentCensusTract"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16006,8 +16315,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The census tract in which the incident occurred."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to improve the ability to use census and other demographic information within EMS research."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CensusTracts"",
     ""NV"": """",
@@ -16025,7 +16334,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{11}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eScene""
   },
   ""DateTimeofSymptomOnset"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16040,8 +16350,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date and time the symptom began (or was discovered) as it relates to this EMS event. This is described or estimated by the patient, family, and/or healthcare professionals."",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Added to better define the EMS patient event."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateTimeType"",
     ""NV"": ""NV"",
@@ -16061,7 +16371,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation""
   },
   ""PossibleInjury"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16076,8 +16387,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication whether or not there was an injury"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""YesNoUnkValues"",
     ""NV"": ""NV"",
@@ -16110,7 +16421,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation""
   },
   ""ComplaintType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16125,8 +16437,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of patient healthcare complaint being documented."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": ""Added to improve data integrity."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ComplaintType"",
     ""NV"": ""NV"",
@@ -16159,7 +16471,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation/eSituation.PatientComplaintGroup""
   },
   ""Complaint"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16174,8 +16487,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The statement of the problem by the patient or the history provider."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""Complaint"",
     ""NV"": ""NV"",
@@ -16195,7 +16508,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation/eSituation.PatientComplaintGroup""
   },
   ""DurationofComplaint"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16210,8 +16524,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The duration of the complaint"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DurationComplaint"",
     ""NV"": ""NV"",
@@ -16231,7 +16545,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation/eSituation.PatientComplaintGroup""
   },
   ""TimeUnitsofDurationofComplaint"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16246,8 +16561,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The time units of the duration of the patient's complaint"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""TimeUnitsOfChiefComplaint"",
     ""NV"": ""NV"",
@@ -16296,7 +16611,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation/eSituation.PatientComplaintGroup""
   },
   ""ChiefComplaintAnatomicLocation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16311,8 +16627,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The primary anatomic location of the chief complaint as identified by EMS personnel"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ComplaintAnatomicLocation"",
     ""NV"": ""NV"",
@@ -16369,7 +16685,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation""
   },
   ""ChiefComplaintOrganSystem"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16384,8 +16701,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The primary organ system of the patient injured or medically affected."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ComplaintOrganSystem"",
     ""NV"": ""NV"",
@@ -16450,7 +16767,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation""
   },
   ""PrimarySymptom"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16465,8 +16783,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The primary sign and symptom present in the patient or observed by EMS personnel"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AssociatedSymptoms"",
     ""NV"": ""NV"",
@@ -16486,7 +16804,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation""
   },
   ""OtherAssociatedSymptoms"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16501,8 +16820,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Other symptoms identified by the patient or observed by EMS personnel"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AssociatedSymptoms"",
     ""NV"": ""NV"",
@@ -16523,7 +16842,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation""
   },
   ""ProvidersPrimaryImpression"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16538,8 +16858,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The EMS personnel's impression of the patient's primary problem or most significant condition which led to the management given to the patient (treatments, medications, or procedures)."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ProvidersImpression"",
     ""NV"": ""NV"",
@@ -16559,7 +16879,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation""
   },
   ""ProvidersSecondaryImpressions"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16574,8 +16895,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The EMS personnel's impression of the patient's secondary problem or most significant condition which led to the management given to the patient (treatments, medications, or procedures)."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ProvidersImpression"",
     ""NV"": ""NV"",
@@ -16596,7 +16917,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation""
   },
   ""InitialPatientAcuity"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16611,8 +16933,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The acuity of the patient's condition upon EMS arrival at the scene."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""InitialPatientAcuity"",
     ""NV"": ""NV"",
@@ -16649,7 +16971,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation""
   },
   ""WorkRelatedIllnessInjury"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16664,8 +16987,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication of whether or not the illness or injury is work related."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""YesNoUnkValues"",
     ""NV"": ""NV"",
@@ -16698,7 +17021,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation/eSituation.WorkRelatedGroup""
   },
   ""PatientsOccupationalIndustry"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16713,8 +17037,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The occupational industry of the patient's work."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""OccupationIndustry"",
     ""NV"": """",
@@ -16813,7 +17137,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Wholesale Trade""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation/eSituation.WorkRelatedGroup""
   },
   ""PatientsOccupation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16828,8 +17153,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The occupation of the patient."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better describe work related injury."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PatientsOccupation"",
     ""NV"": """",
@@ -16940,7 +17265,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Transportation and Material Moving Occupations""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation/eSituation.WorkRelatedGroup""
   },
   ""PatientActivity"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16955,8 +17281,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The activity the patient was involved in at the time the patient experienced the onset of symptoms or experienced an injury."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""icd10Activity"",
     ""NV"": ""NV"",
@@ -16977,7 +17303,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""CorrelationID"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation""
   },
   ""DateTimeLastKnownWell"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -16992,8 +17319,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The estimated date and time the patient was last known to be well or in their usual state of health. This is described or estimated by the patient, family, and/or bystanders."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -17011,7 +17338,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eSituation""
   },
   ""CauseofInjury"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17026,8 +17354,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The category of the reported/suspected external cause of the injury."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""icd10CodeInjury"",
     ""NV"": ""NV"",
@@ -17048,7 +17376,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury""
   },
   ""MechanismofInjury"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17063,8 +17392,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The mechanism of the event which caused the injury"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""MechanismOfInjury"",
     ""NV"": ""NV"",
@@ -17102,7 +17431,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury""
   },
   ""TraumaCenterCriteria"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17117,8 +17447,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Field Triage Criteria for transport to a trauma center as defined by the Centers for Disease Control and Prevention and the American College of Surgeons-Committee on Trauma."",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Added to better evaluate the CDC-ACS 2011 Guidelines for the Field Triage of Injured Patients. <br/>Website: http://www.cdc.gov/FieldTriage/"",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""TraumaCenterCriteria"",
     ""NV"": ""NV"",
@@ -17184,7 +17514,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury""
   },
   ""VehicularPedestrianorOtherInjuryRiskFactor"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17199,8 +17530,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Field Triage Criteria for transport to a trauma center as defined by the Centers for Disease Control and Prevention and the American College of Surgeons-Committee on Trauma."",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Added to better evaluate the CDC-ACS 2011 Guidelines for the Field Triage of Injured Patients.  \t\t\t\t\t\t\t<br/>Website: http://www.cdc.gov/FieldTriage/"",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""VehicularInjuryIndicators"",
     ""NV"": ""NV"",
@@ -17278,7 +17609,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury""
   },
   ""MainAreaoftheVehicleImpactedbytheCollision"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17293,8 +17625,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The area or location of initial impact on the vehicle based on 12-point clock diagram."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""AreaOfVehicleImpact"",
     ""NV"": """",
@@ -17312,7 +17644,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury""
   },
   ""LocationofPatientinVehicle"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17327,8 +17660,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The seat row location of the vehicle at the time of the crash with the front seat numbered as 1"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""SeatRowLocation"",
     ""NV"": """",
@@ -17407,7 +17740,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Unknown""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury""
   },
   ""UseofOccupantSafetyEquipment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17422,8 +17756,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Safety equipment in use by the patient at the time of the injury"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""UseOfOccupantSafetyEquipment"",
     ""NV"": ""NV"",
@@ -17497,7 +17831,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury""
   },
   ""AirbagDeployment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17512,8 +17847,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication of Airbag Deployment"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""AirbagDeployment"",
     ""NV"": """",
@@ -17554,7 +17889,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury""
   },
   ""HeightofFallfeet"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17569,8 +17905,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The distance in feet the patient fell, measured from the lowest point of the patient to the ground"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""HeightOfFall"",
     ""NV"": """",
@@ -17588,7 +17924,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury""
   },
   ""OSHAPersonalProtectiveEquipmentUsed"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17603,8 +17940,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Documentation of the use of OSHA required protective equipment used by the patient at the time of injury."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better document personal protection equipment used by the patient associated with an injury."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""EquipmentUsed"",
     ""NV"": """",
@@ -17653,7 +17990,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury""
   },
   ""ACNSystemCompanyProvidingACNData"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17668,8 +18006,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The agency providing the Automated Collision Notification (ACN) Data."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""Company"",
     ""NV"": """",
@@ -17687,7 +18025,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup""
   },
   ""ACNIncidentID"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17702,8 +18041,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Automated Collision Notification Incident ID."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""IncidentID"",
     ""NV"": """",
@@ -17721,7 +18060,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup""
   },
   ""ACNCallBackPhoneNumber"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17736,8 +18076,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Automated Collision Notification Call Back Phone Number (US Only)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""PhoneNumber"",
     ""NV"": """",
@@ -17758,7 +18098,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PhoneNumberType"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup""
   },
   ""DateTimeofACNIncident"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17773,8 +18114,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Automated Collision Notification Incident Date and Time."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -17792,7 +18133,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup""
   },
   ""ACNIncidentLocation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17807,8 +18149,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Automated Collision Notification GPS Location."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""GPSLocation"",
     ""NV"": """",
@@ -17826,7 +18168,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""(\\+|-)?(90(\\.[0]{1,6})?|([1-8][0-9]|[0-9])(\\.[0-9]{1,6})?),(\\+|-)?(180(\\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\\.[0-9]{1,6})?)"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup""
   },
   ""ACNIncidentVehicleBodyType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17841,8 +18184,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Automated Collision Notification Vehicle Body Type."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""BodyType"",
     ""NV"": """",
@@ -17860,7 +18203,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup""
   },
   ""ACNIncidentVehicleManufacturer"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17875,8 +18219,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Automated Collision Notification Vehicle Manufacturer (e.g., General Motors, Ford, BMW, etc.)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""Manufacturer"",
     ""NV"": """",
@@ -17894,7 +18238,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup""
   },
   ""ACNIncidentVehicleMake"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17909,8 +18254,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Automated Collision Notification Vehicle Make (e.g., Cadillac, Ford, BMW, etc.)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""Make"",
     ""NV"": """",
@@ -17928,7 +18273,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup""
   },
   ""ACNIncidentVehicleModel"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17943,8 +18289,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Automated Collision Notification Vehicle Model (e.g., Escalade, Taurus, X6M, etc.)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""Model"",
     ""NV"": """",
@@ -17962,7 +18308,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup""
   },
   ""ACNIncidentVehicleModelYear"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -17977,8 +18324,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Automated Collision Notification Vehicle Model Year (e.g., 2010)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""Year"",
     ""NV"": """",
@@ -17996,7 +18343,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup""
   },
   ""ACNIncidentMultipleImpacts"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18011,8 +18359,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Automated Collision Notification Indication of Multiple Impacts associated with the collision."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""YesNoValues"",
     ""NV"": """",
@@ -18039,7 +18387,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Yes""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup""
   },
   ""ACNIncidentDeltaVelocity"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18054,8 +18403,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Automated Collision Notification Delta Velocity (Delta V) force associated with the crash."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""DeltaVelocity"",
     ""NV"": """",
@@ -18077,7 +18426,8 @@ namespace ThreePointZero.Classes
       ""DeltaVelocityOrdinal"",
       ""VelocityUnit"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup""
   },
   ""ACNHighProbabilityofInjury"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18092,8 +18442,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Automated Collision Notification of the High Probability of Injury."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""YesNoValues"",
     ""NV"": """",
@@ -18120,7 +18470,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Yes""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup""
   },
   ""ACNIncidentPDOF"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18135,8 +18486,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Automated Collision Notification Principal Direction of Force (PDOF)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PDOF"",
     ""NV"": """",
@@ -18154,7 +18505,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup""
   },
   ""ACNIncidentRollover"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18169,8 +18521,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Automated Collision Notification Indication that the Vehicle Rolled Over."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ACNYesNoType"",
     ""NV"": """",
@@ -18197,7 +18549,8 @@ namespace ThreePointZero.Classes
         ""text"": ""No""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup""
   },
   ""ACNVehicleSeatLocation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18212,8 +18565,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Automated Collision Notification Indication of the Occupant(s) Seat Location(s) within the vehicle."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""SeatLocation"",
     ""NV"": """",
@@ -18268,7 +18621,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Third Row Right Seat""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup/eInjury.SeatGroup""
   },
   ""SeatOccupied"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18283,8 +18637,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication if seat is occupied based on seat sensor data."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ACNYesNoType"",
     ""NV"": """",
@@ -18311,7 +18665,8 @@ namespace ThreePointZero.Classes
         ""text"": ""No""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup/eInjury.SeatGroup""
   },
   ""ACNIncidentSeatbeltUse"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18326,8 +18681,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Automated Collision Notification Indication of Seatbelt use by the occupant(s)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ACNYesNoType"",
     ""NV"": """",
@@ -18354,7 +18709,8 @@ namespace ThreePointZero.Classes
         ""text"": ""No""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup/eInjury.SeatGroup""
   },
   ""ACNIncidentAirbagDeployed"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18369,8 +18725,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Automated Collision Notification Indication of Airbag Deployment."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better incorporate advanced automated collision notification information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ACNYesNoType"",
     ""NV"": """",
@@ -18397,7 +18753,8 @@ namespace ThreePointZero.Classes
         ""text"": ""No""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup/eInjury.SeatGroup""
   },
   ""CardiacArrest"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18412,8 +18769,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication of the presence of a cardiac arrest at any time during this EMS event."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CardiacArrest"",
     ""NV"": ""NV"",
@@ -18446,7 +18803,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""CardiacArrestEtiology"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18461,8 +18819,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication of the etiology or cause of the cardiac arrest (classified as cardiac, non-cardiac, etc.)"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CardiacArrestEtiology"",
     ""NV"": ""NV"",
@@ -18515,7 +18873,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""ResuscitationAttemptedByEMS"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18530,8 +18889,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication of an attempt to resuscitate the patient who is in cardiac arrest (attempted, not attempted due to DNR, etc.)"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ResuscitationAttempted"",
     ""NV"": ""NV"",
@@ -18577,7 +18936,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""ArrestWitnessedBy"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18592,8 +18952,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication of who the cardiac arrest was witnessed by"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ArrestWitnessedBy"",
     ""NV"": ""NV"",
@@ -18631,7 +18991,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""CPRCareProvidedPriortoEMSArrival"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18646,8 +19007,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Documentation of the CPR provided prior to EMS arrival"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""YesNoValues"",
     ""NV"": ""NV"",
@@ -18676,7 +19037,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""WhoProvidedCPRPriortoEMSArrival"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18691,8 +19053,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Documentation of who performed CPR prior to this EMS unit's arrival."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""WhoProvided"",
     ""NV"": """",
@@ -18733,7 +19095,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""AEDUsePriortoEMSArrival"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18748,8 +19111,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Documentation of AED use Prior to EMS Arrival"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AEDUse"",
     ""NV"": ""NV"",
@@ -18782,7 +19145,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""WhoUsedAEDPriortoEMSArrival"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18797,8 +19161,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Documentation of who used the AED prior to this EMS unit's arrival."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""WhoUsedAED"",
     ""NV"": """",
@@ -18839,7 +19203,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""TypeofCPRProvided"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18854,8 +19219,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Documentation of the type/technique of CPR used by EMS."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CPRType"",
     ""NV"": ""NV"",
@@ -18917,7 +19282,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""FirstMonitoredArrestRhythmofthePatient"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18932,8 +19298,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Documentation of what the first monitored arrest rhythm which was noted"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""FirstMonitoredRhythm"",
     ""NV"": ""NV"",
@@ -18978,7 +19344,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""AnyReturnofSpontaneousCirculation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -18993,8 +19360,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication whether or not there was any return of spontaneous circulation."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ReturnOfSpontaneousCirculation"",
     ""NV"": ""NV"",
@@ -19032,7 +19399,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""NeurologicalOutcomeatHospitalDischarge"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -19047,8 +19415,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The level of cerebral performance of the patient at the time of discharge from the Hospital"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""NeurologicalOutcomeAtDischarge"",
     ""NV"": """",
@@ -19083,7 +19451,8 @@ namespace ThreePointZero.Classes
         ""text"": ""CPC 4 Coma or Vegetative State""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""DateTimeofCardiacArrest"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -19098,8 +19467,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time of the cardiac arrest (if not known, please estimate)."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateTimeType"",
     ""NV"": ""NV"",
@@ -19119,7 +19488,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""DateTimeResuscitationDiscontinued"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -19134,8 +19504,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time resuscitation was discontinued."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateTimeType"",
     ""NV"": ""NV"",
@@ -19155,7 +19525,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""ReasonCPRResuscitationDiscontinued"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -19170,8 +19541,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The reason that CPR or the resuscitation efforts were discontinued."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ReasonCPRDiscontinued"",
     ""NV"": ""NV"",
@@ -19216,7 +19587,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""CardiacRhythmonArrivalatDestination"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -19231,8 +19603,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's cardiac rhythm upon delivery or transfer to the destination"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CardiacRhythm"",
     ""NV"": ""NV"",
@@ -19398,7 +19770,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""EndofEMSCardiacArrestEvent"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -19413,8 +19786,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's outcome at the end of the EMS event."",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Added to better identify the outcome of EMS cardiac arrest patients."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CardiacArrestOutcome"",
     ""NV"": ""NV"",
@@ -19459,7 +19832,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""DateTimeofInitialCPR"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -19474,8 +19848,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The initial date and time that CPR was started by anyone."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -19493,7 +19867,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eArrest""
   },
   ""BarrierstoPatientCare"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -19508,8 +19883,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication of whether or not there were any patient specific barriers to serving the patient at the scene"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""BarriersToPatientCare"",
     ""NV"": ""NV"",
@@ -19595,7 +19970,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory""
   },
   ""LastNameofPatientsPractitioner"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -19610,8 +19986,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The last name of the patient's practitioner"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonLastName"",
     ""NV"": """",
@@ -19629,7 +20005,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory/eHistory.PractitionerGroup""
   },
   ""FirstNameofPatientsPractitioner"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -19644,8 +20021,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The first name of the patient's practitioner"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonFirstName"",
     ""NV"": """",
@@ -19663,7 +20040,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory/eHistory.PractitionerGroup""
   },
   ""MiddleNameInitialofPatientsPractitioner"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -19678,8 +20056,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The middle name or initial of the patient's practitioner."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonMiddleName"",
     ""NV"": """",
@@ -19697,7 +20075,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory/eHistory.PractitionerGroup""
   },
   ""AdvanceDirectives"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -19712,8 +20091,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The presence of a valid DNR form, living will, or document directing end of life or healthcare treatment decisions."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AdvanceDirectives"",
     ""NV"": ""NV"",
@@ -19759,7 +20138,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory""
   },
   ""MedicationAllergies"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -19774,8 +20154,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's medication allergies"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""MedicationAllergies"",
     ""NV"": ""NV"",
@@ -19798,7 +20178,8 @@ namespace ThreePointZero.Classes
       ""PN"",
       ""CodeType"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory""
   },
   ""EnvironmentalFoodAllergies"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -19813,8 +20194,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's known allergies to food or environmental agents."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""snomed"",
     ""NV"": """",
@@ -19834,7 +20215,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory""
   },
   ""MedicalSurgicalHistory"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -19849,8 +20231,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's pre-existing medical and surgery history of the patient"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""icd10MedSurge"",
     ""NV"": ""NV"",
@@ -19872,7 +20254,8 @@ namespace ThreePointZero.Classes
       ""NV"",
       ""PN"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory""
   },
   ""MedicalHistoryObtainedFrom"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -19887,8 +20270,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Type of person medical history obtained from"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""MedicalHistoryObtainedFrom"",
     ""NV"": """",
@@ -19925,7 +20308,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory""
   },
   ""ThePatientsTypeofImmunization"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -19940,8 +20324,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The immunization type of the patient."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ImmunizationType"",
     ""NV"": """",
@@ -20064,7 +20448,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Yellow Fever""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory/eHistory.ImmunizationsGroup""
   },
   ""ImmunizationYear"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -20079,8 +20464,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The year associated with each immunization type"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""Year"",
     ""NV"": """",
@@ -20098,7 +20483,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory/eHistory.ImmunizationsGroup""
   },
   ""CurrentMedications"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -20113,8 +20499,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The medications the patient currently takes"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""Medication"",
     ""NV"": ""NV"",
@@ -20135,7 +20521,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory/eHistory.CurrentMedsGroup""
   },
   ""CurrentMedicationDose"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -20150,8 +20537,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The numeric dose or amount of the patient's current medication"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CurrentMedicationDose"",
     ""NV"": """",
@@ -20169,7 +20556,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": ""2"",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory/eHistory.CurrentMedsGroup""
   },
   ""CurrentMedicationDosageUnit"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -20184,8 +20572,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The dosage unit of the patient's current medication"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CurrentMedicationDosageUnit"",
     ""NV"": """",
@@ -20312,7 +20700,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Units per Kilogram (units/kg)""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory/eHistory.CurrentMedsGroup""
   },
   ""CurrentMedicationAdministrationRoute"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -20327,8 +20716,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The administration route (po, SQ, etc.) of the patient's current medication"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CurrentMedicationAdministrationRoute"",
     ""NV"": """",
@@ -20471,7 +20860,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Portacath""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory/eHistory.CurrentMedsGroup""
   },
   ""PresenceofEmergencyInformationForm"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -20486,8 +20876,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication of the presence of the Emergency Information Form associated with patient's with special healthcare needs."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""YesNoValues"",
     ""NV"": """",
@@ -20514,7 +20904,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Yes""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory""
   },
   ""AlcoholDrugUseIndicators"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -20529,8 +20920,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indicators for the potential use of alcohol or drugs by the patient related to the patient's current illness or injury."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AlcoholDrugUseIndicators"",
     ""NV"": ""NV"",
@@ -20577,7 +20968,8 @@ namespace ThreePointZero.Classes
       ""PN"",
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory""
   },
   ""Pregnancy"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -20592,8 +20984,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication of the possibility by the patient's history of current pregnancy."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""Pregnancy"",
     ""NV"": """",
@@ -20638,7 +21030,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory""
   },
   ""LastOralIntake"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -20653,8 +21046,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Date and Time of last oral intake."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better document last oral intake."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -20672,7 +21065,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eHistory""
   },
   ""PatientCareReportNarrative"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -20687,8 +21081,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The narrative of the patient care report (PCR)."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""PCRNarrative"",
     ""NV"": ""NV"",
@@ -20708,7 +21102,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eNarrative""
   },
   ""DateTimeVitalSignsTaken"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -20723,8 +21118,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time vital signs were taken on the patient."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateTimeType"",
     ""NV"": ""NV"",
@@ -20744,7 +21139,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup""
   },
   ""ObtainedPriortothisUnitsEMSCare"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -20759,8 +21155,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indicates that the information which is documented was obtained prior to the documenting EMS units care."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""YesNoValues"",
     ""NV"": ""NV"",
@@ -20789,7 +21185,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup""
   },
   ""CardiacRhythmElectrocardiographyECG"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -20804,8 +21201,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The cardiac rhythm / ECG and other electrocardiography findings of the patient as interpreted by EMS personnel."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CardiacRhythm"",
     ""NV"": ""NV"",
@@ -20972,7 +21369,8 @@ namespace ThreePointZero.Classes
       ""PN"",
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.CardiacRhythmGroup""
   },
   ""ECGType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -20987,8 +21385,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of ECG associated with the cardiac rhythm."",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Added to better document ECG results."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ECGType"",
     ""NV"": ""NV"",
@@ -21041,7 +21439,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.CardiacRhythmGroup""
   },
   ""MethodofECGInterpretation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21056,8 +21455,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The method of ECG interpretation."",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Added to better document ECG results."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ECGMethod"",
     ""NV"": ""NV"",
@@ -21095,7 +21494,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.CardiacRhythmGroup""
   },
   ""SBPSystolicBloodPressure"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21110,8 +21510,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's systolic blood pressure."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""SBP"",
     ""NV"": ""NV"",
@@ -21132,7 +21532,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.BloodPressureGroup""
   },
   ""DBPDiastolicBloodPressure"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21147,8 +21548,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's diastolic blood pressure."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DBP"",
     ""NV"": ""NV"",
@@ -21169,7 +21570,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.BloodPressureGroup""
   },
   ""MethodofBloodPressureMeasurement"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21184,8 +21586,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication of method of blood pressure measurement."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""BloodPressureMethod"",
     ""NV"": ""NV"",
@@ -21230,7 +21632,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.BloodPressureGroup""
   },
   ""MeanArterialPressure"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21245,8 +21648,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's mean arterial pressure."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added for additional patient monitoring capability."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""MAP"",
     ""NV"": """",
@@ -21264,7 +21667,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.BloodPressureGroup""
   },
   ""HeartRate"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21279,8 +21683,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's heart rate expressed as a number per minute."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""HeartRate"",
     ""NV"": ""NV"",
@@ -21301,7 +21705,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.HeartRateGroup""
   },
   ""MethodofHeartRateMeasurement"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21316,8 +21721,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The method in which the Heart Rate was measured. Values include auscultated, palpated, electronic monitor)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""This data element was added when Pulse Rate and Electronic Monitor Rate were merged as EVitals.10."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""MethodMeasureHeartRate"",
     ""NV"": """",
@@ -21360,7 +21765,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Palpated""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.HeartRateGroup""
   },
   ""PulseOximetry"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21375,8 +21781,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's oxygen saturation."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""PulseOximetry"",
     ""NV"": ""NV"",
@@ -21397,7 +21803,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup""
   },
   ""PulseRhythm"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21412,8 +21819,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The clinical rhythm of the patient's pulse."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PulseRhythm"",
     ""NV"": """",
@@ -21444,7 +21851,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Regularly Irregular""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup""
   },
   ""RespiratoryRate"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21459,8 +21867,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's respiratory rate expressed as a number per minute."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""RespiratoryRate"",
     ""NV"": ""NV"",
@@ -21481,7 +21889,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup""
   },
   ""RespiratoryEffort"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21496,8 +21905,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's respiratory effort."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""RespiratoryEffort"",
     ""NV"": """",
@@ -21544,7 +21953,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Weak/Agonal""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup""
   },
   ""EndTidalCarbonDioxideETCO2"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21559,8 +21969,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The numeric value of the patient's exhaled end tidal carbon dioxide (ETCO2) level measured as a unit of pressure in millimeters of mercury (mmHg)."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CO2"",
     ""NV"": ""NV"",
@@ -21581,7 +21991,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup""
   },
   ""CarbonMonoxideCO"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21596,8 +22007,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The numeric value of the patient's carbon monoxide level measured as a percentage (%) of carboxyhemoglobin (COHb)."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": ""Added to allow use of new patient monitoring devices."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CarbonMonoxideLevel"",
     ""NV"": ""NV"",
@@ -21618,7 +22029,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup""
   },
   ""BloodGlucoseLevel"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21633,8 +22045,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's blood glucose level."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""BloodGlucoseLevel"",
     ""NV"": ""NV"",
@@ -21655,7 +22067,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup""
   },
   ""GlasgowComaScoreEye"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21670,8 +22083,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's Glasgow Coma Score Eye opening."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""GlasgowComaScoreEyes"",
     ""NV"": ""NV"",
@@ -21709,7 +22122,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.GlasgowScoreGroup""
   },
   ""GlasgowComaScoreVerbal"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21724,8 +22138,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's Glasgow Coma Score Verbal."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""GlasgowComaScoreVerbal"",
     ""NV"": ""NV"",
@@ -21767,7 +22181,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.GlasgowScoreGroup""
   },
   ""GlasgowComaScoreMotor"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21782,8 +22197,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's Glasgow Coma Score Motor"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""GlasgowComaScoreMotor"",
     ""NV"": ""NV"",
@@ -21829,7 +22244,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.GlasgowScoreGroup""
   },
   ""GlasgowComaScoreQualifier"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21844,8 +22260,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Documentation of factors which make the GCS score more meaningful."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""GCSScoreQualifier"",
     ""NV"": ""NV"",
@@ -21887,7 +22303,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.GlasgowScoreGroup""
   },
   ""TotalGlasgowComaScore"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21902,8 +22319,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's total Glasgow Coma Score."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""TotalGCS"",
     ""NV"": ""NV"",
@@ -21924,7 +22341,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.GlasgowScoreGroup""
   },
   ""Temperature"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21939,8 +22357,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's body temperature in degrees Celsius/centigrade."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""BodyTemperature"",
     ""NV"": ""NV"",
@@ -21961,7 +22379,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.TemperatureGroup""
   },
   ""TemperatureMethod"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -21976,8 +22395,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The method used to obtain the patient's body temperature."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""MethodBodyTemp"",
     ""NV"": """",
@@ -22032,7 +22451,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Skin Probe""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.TemperatureGroup""
   },
   ""LevelofResponsivenessAVPU"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22047,8 +22467,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's highest level of responsiveness."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""PatientsHighestLevelResponsiveness"",
     ""NV"": ""NV"",
@@ -22085,7 +22505,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup""
   },
   ""PainScaleScore"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22100,8 +22521,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's indication of pain from a scale of 0-10."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""PainScale"",
     ""NV"": ""NV"",
@@ -22122,7 +22543,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.PainScaleGroup""
   },
   ""PainScaleType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22137,8 +22559,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of pain scale used."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": ""Added to better document the patient's pain level."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""TypeOfPainScale"",
     ""NV"": ""NV"",
@@ -22175,7 +22597,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.PainScaleGroup""
   },
   ""StrokeScaleScore"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22190,8 +22613,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The findings or results of the Stroke Scale Type (eVitals.30) used to assess the patient exhibiting stroke-like symptoms."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""StrokeScale"",
     ""NV"": ""NV"",
@@ -22225,7 +22648,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.StrokeScaleGroup""
   },
   ""StrokeScaleType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22240,8 +22664,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of stroke pain scale used."",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Added to include additional detail on the stroke scale used."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""TypeOfStrokeScale"",
     ""NV"": ""NV"",
@@ -22290,7 +22714,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.StrokeScaleGroup""
   },
   ""ReperfusionChecklist"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22305,8 +22730,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The results of the patient's Reperfusion Checklist for potential Thrombolysis use."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ReperfusionChecklist"",
     ""NV"": ""NV"",
@@ -22340,7 +22765,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup""
   },
   ""APGAR"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22355,8 +22781,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's total APGAR score (0-10)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""APGAR"",
     ""NV"": """",
@@ -22376,7 +22802,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup""
   },
   ""RevisedTraumaScore"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22391,8 +22818,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's Revised Trauma Score."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""RTS"",
     ""NV"": """",
@@ -22412,7 +22839,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup""
   },
   ""DateTimeofLaboratoryorImagingResult"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22427,8 +22855,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The data and time for the specific laboratory result"",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better document patient care."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -22446,7 +22874,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eLabs/eLabs.LabGroup""
   },
   ""StudyResultPriortothisUnitsEMSCare"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22461,8 +22890,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indicates that the laboratory result occurred prior to this EMS units care."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better document EMS care."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""YesNoValues"",
     ""NV"": """",
@@ -22489,7 +22918,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Yes""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eLabs/eLabs.LabGroup""
   },
   ""LaboratoryResultType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22504,8 +22934,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of the laboratory value."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to provide for the documentation of laboratory results obtained prior to or during and EMS patient encounter."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""LaboratoryResultType"",
     ""NV"": """",
@@ -22740,7 +23170,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Tylenol""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eLabs/eLabs.LabGroup/eLabs.LabResultGroup""
   },
   ""LaboratoryResult"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22755,8 +23186,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The value or result of the laboratory test (Units may vary)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better document EMS care."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""LaboratoryResult"",
     ""NV"": """",
@@ -22774,7 +23205,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eLabs/eLabs.LabGroup/eLabs.LabResultGroup""
   },
   ""ImagingStudyType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22789,8 +23221,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of x-ray or imaging study."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better describe the EMS patient care."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ImagingStudyType"",
     ""NV"": """",
@@ -22837,7 +23269,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Angiography""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eLabs/eLabs.LabGroup/eLabs.LabImageGroup""
   },
   ""ImagingStudyResults"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22852,8 +23285,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The description or interpretation of the results of the imaging study."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better describe the EMS Patient Care"",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ImagingStudyResults"",
     ""NV"": """",
@@ -22871,7 +23304,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eLabs/eLabs.LabGroup/eLabs.LabImageGroup""
   },
   ""ImagingStudyFileorWaveformGraphicType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22886,8 +23320,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The description of the image study file or waveform graphic stored in Imaging Study File or Waveform Graphic (eLabs.08)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""GraphicType"",
     ""NV"": """",
@@ -22905,7 +23339,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eLabs/eLabs.LabGroup/eLabs.LabImageGroup/eLabs.WaveformGraphicGroup""
   },
   ""ImagingStudyFileorWaveformGraphic"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22920,8 +23355,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The imaging study file."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""WaveformGraphic"",
     ""NV"": """",
@@ -22939,7 +23374,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eLabs/eLabs.LabGroup/eLabs.LabImageGroup/eLabs.WaveformGraphicGroup""
   },
   ""EstimatedBodyWeightinKilograms"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22954,8 +23390,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's body weight in kilograms either measured or estimated"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EstimatedBodyWeight"",
     ""NV"": ""NV"",
@@ -22976,7 +23412,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam""
   },
   ""LengthBasedTapeMeasure"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -22991,8 +23428,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The length-based color as taken from the tape."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""BroselowLutenColor"",
     ""NV"": ""NV"",
@@ -23050,7 +23487,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam""
   },
   ""DateTimeofAssessment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -23065,8 +23503,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time of the assessment"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -23084,7 +23522,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup""
   },
   ""SkinAssessment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -23099,8 +23538,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The assessment findings associated with the patient's skin."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""SkinAssessment"",
     ""NV"": """",
@@ -23202,7 +23641,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""CorrelationID"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup""
   },
   ""HeadAssessment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -23217,8 +23657,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The assessment findings associated with the patient's head."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""HeadAssessment"",
     ""NV"": """",
@@ -23332,7 +23772,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""CorrelationID"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup""
   },
   ""FaceAssessment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -23347,8 +23788,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The assessment findings associated with the patient's face."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""FaceAssessment"",
     ""NV"": """",
@@ -23462,7 +23903,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""CorrelationID"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup""
   },
   ""NeckAssessment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -23477,8 +23919,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The assessment findings associated with the patient's neck."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""NeckAssessment"",
     ""NV"": """",
@@ -23604,7 +24046,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""CorrelationID"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup""
   },
   ""ChestLungsAssessment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -23619,8 +24062,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The assessment findings associated with the patient's chest/lungs."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""ChestLungsAssessment"",
     ""NV"": """",
@@ -23834,7 +24277,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""CorrelationID"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup""
   },
   ""HeartAssessment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -23849,8 +24293,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The assessment findings associated with the patient's heart."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""HeartAssessment"",
     ""NV"": """",
@@ -23916,7 +24360,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""CorrelationID"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup""
   },
   ""AbdominalAssessmentFindingLocation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -23931,8 +24376,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The location of the patient's abdomen assessment findings."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""AbdominalExamFindingLocation"",
     ""NV"": """",
@@ -23979,7 +24424,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Epigastric""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup/eExam.AbdomenGroup""
   },
   ""AbdomenAssessment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -23994,8 +24440,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The assessment findings associated with the patient's abdomen."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""AbdomenAssessment"",
     ""NV"": """",
@@ -24133,7 +24579,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""CorrelationID"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup/eExam.AbdomenGroup""
   },
   ""PelvisGenitourinaryAssessment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -24148,8 +24595,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The assessment findings associated with the patient's pelvis/genitourinary."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""GUAssessment"",
     ""NV"": """",
@@ -24287,7 +24734,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""CorrelationID"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup""
   },
   ""BackandSpineAssessmentFindingLocation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -24302,8 +24750,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The location of the patient's back and spine assessment findings."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""BackAndSpineAssessmentLocation"",
     ""NV"": """",
@@ -24374,7 +24822,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Sacral-Right""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup/eExam.SpineGroup""
   },
   ""BackandSpineAssessment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -24389,8 +24838,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The assessment findings associated with the patient's spine (Cervical, Thoracic, Lumbar, and Sacral) and back exam."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""BackAndSpineAssessment"",
     ""NV"": """",
@@ -24508,7 +24957,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""CorrelationID"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup/eExam.SpineGroup""
   },
   ""ExtremityAssessmentFindingLocation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -24523,8 +24973,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The location of the patient's extremity assessment findings."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ExtremityAssessmentLocation"",
     ""NV"": """",
@@ -24735,7 +25185,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Wrist-Right""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup/eExam.ExtremityGroup""
   },
   ""ExtremitiesAssessment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -24750,8 +25201,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The assessment findings associated with the patient's extremities."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""ExtremitiesAssessment"",
     ""NV"": """",
@@ -24925,7 +25376,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""CorrelationID"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup/eExam.ExtremityGroup""
   },
   ""EyeAssessmentFindingLocation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -24940,8 +25392,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The location of the patient's eye assessment findings."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EyesAssessmentLocation"",
     ""NV"": """",
@@ -24972,7 +25424,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Right""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup/eExam.EyeGroup""
   },
   ""EyeAssessment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -24987,8 +25440,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The assessment findings of the patient's eye examination."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""EyesAssessment"",
     ""NV"": """",
@@ -25130,7 +25583,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""CorrelationID"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup/eExam.EyeGroup""
   },
   ""MentalStatusAssessment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -25145,8 +25599,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The assessment findings of the patient's mental status examination."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""MentalStatusAssessment"",
     ""NV"": """",
@@ -25224,7 +25678,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""CorrelationID"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup""
   },
   ""NeurologicalAssessment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -25239,8 +25694,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The assessment findings of the patient's neurological examination."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""NeurologicalAssessment"",
     ""NV"": """",
@@ -25362,7 +25817,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""CorrelationID"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup""
   },
   ""StrokeCVASymptomsResolved"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -25377,8 +25833,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication if the Stroke/CVA Symptoms resolved and when."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""StrokeCVASymptomsResolved"",
     ""NV"": ""NV"",
@@ -25412,7 +25868,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eExam""
   },
   ""ProtocolsUsed"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -25427,8 +25884,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The protocol used by EMS personnel to direct the clinical care of the patient"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ProtocolsUsed"",
     ""NV"": ""NV"",
@@ -25897,7 +26354,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eProtocols/eProtocols.ProtocolGroup""
   },
   ""ProtocolAgeCategory"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -25912,8 +26370,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The age group the protocol is written to address"",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Added to better document protocol use."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ProtocolAgeCategory"",
     ""NV"": ""NV"",
@@ -25946,7 +26404,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eProtocols/eProtocols.ProtocolGroup""
   },
   ""DateTimeMedicationAdministered"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -25961,8 +26420,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time medication administered to the patient"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateTimeType"",
     ""NV"": ""NV"",
@@ -25982,7 +26441,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup""
   },
   ""MedicationAdministeredPriortothisUnitsEMSCare"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -25997,8 +26457,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indicates that the medication administration which is documented was administered prior to this EMS units care"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""YesNoValues"",
     ""NV"": ""NV"",
@@ -26027,7 +26487,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup""
   },
   ""MedicationGiven"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -26042,8 +26503,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The medication given to the patient"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""Medication"",
     ""NV"": ""NV"",
@@ -26064,7 +26525,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""PN"",
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup""
   },
   ""MedicationAdministeredRoute"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -26079,8 +26541,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The route medication was administered to the patient"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CurrentMedicationAdministrationRoute"",
     ""NV"": """",
@@ -26223,7 +26685,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Portacath""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup""
   },
   ""MedicationDosage"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -26238,8 +26701,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The dose or amount of the medication given to the patient"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""MedicationDosage"",
     ""NV"": ""NV"",
@@ -26259,7 +26722,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup/eMedications.DosageGroup""
   },
   ""MedicationDosageUnits"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -26274,8 +26738,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The unit of medication dosage given to patient"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""MedicationDosageUnits"",
     ""NV"": ""NV"",
@@ -26404,7 +26868,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup/eMedications.DosageGroup""
   },
   ""ResponsetoMedication"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -26419,8 +26884,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's response to the medication"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""Response"",
     ""NV"": ""NV"",
@@ -26453,7 +26918,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup""
   },
   ""MedicationComplication"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -26468,8 +26934,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Any complication (abnormal effect on the patient) associated with the administration of the medication to the patient by EMS"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""MedicationComplication"",
     ""NV"": ""NV"",
@@ -26579,7 +27045,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup""
   },
   ""MedicationCrewHealthcareProfessionalsID"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -26594,8 +27061,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The statewide assigned ID number of the EMS crew member giving the treatment to the patient"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CrewMemberID"",
     ""NV"": ""NV"",
@@ -26615,7 +27082,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup""
   },
   ""RoleTypeofPersonAdministeringMedication"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -26630,8 +27098,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type (level) of EMS or Healthcare Professional Administering the Medication. For medications administered prior to EMS arrival, this may be a non-EMS healthcare professional."",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Added to better document the type of healthcare professional who administered the medication."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EMSCaregiverLevel"",
     ""NV"": ""NV"",
@@ -26732,7 +27200,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup""
   },
   ""MedicationAuthorization"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -26747,8 +27216,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of treatment authorization obtained"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""TxAuthorization"",
     ""NV"": """",
@@ -26783,7 +27252,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Written Orders (Patient Specific)""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup""
   },
   ""MedicationAuthorizingPhysician"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -26798,8 +27268,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The name of the authorizing physician ordering the medication administration if the order was provided by any manner other than protocol (standing order) in EMedications.11"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonName"",
     ""NV"": """",
@@ -26817,7 +27287,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup""
   },
   ""DateTimeProcedurePerformed"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -26832,8 +27303,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date/time the procedure was performed on the patient"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateTimeType"",
     ""NV"": ""NV"",
@@ -26853,7 +27324,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup""
   },
   ""ProcedurePerformedPriortothisUnitsEMSCare"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -26868,8 +27340,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indicates that the procedure which was performed and documented was performed prior to this EMS units care."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""YesNoValues"",
     ""NV"": ""NV"",
@@ -26898,7 +27370,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup""
   },
   ""Procedure"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -26913,8 +27386,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The procedure performed on the patient."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""snomed"",
     ""NV"": ""NV"",
@@ -26935,7 +27408,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""PN""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup""
   },
   ""SizeofProcedureEquipment"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -26950,8 +27424,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The size of the equipment used in the procedure on the patient"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""SizeOfProcedureEquipment"",
     ""NV"": """",
@@ -26969,7 +27443,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup""
   },
   ""NumberofProcedureAttempts"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -26984,8 +27459,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The number of attempts taken to complete a procedure or intervention regardless of success."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""NumberOfProcedureAttempts"",
     ""NV"": ""NV"",
@@ -27005,7 +27480,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup""
   },
   ""ProcedureSuccessful"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -27020,8 +27496,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indicates that this individual procedure attempt which was performed on the patient was successful."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""YesNoValues"",
     ""NV"": ""NV"",
@@ -27050,7 +27526,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup""
   },
   ""ProcedureComplication"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -27065,8 +27542,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Any complication (abnormal effect on the patient) associated with the performance of the procedure on the patient"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ProcedureComplication"",
     ""NV"": ""NV"",
@@ -27184,7 +27661,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup""
   },
   ""ResponsetoProcedure"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -27199,8 +27677,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's response to the procedure"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""Response"",
     ""NV"": ""NV"",
@@ -27233,7 +27711,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup""
   },
   ""ProcedureCrewMembersID"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -27248,8 +27727,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The statewide assigned ID number of the EMS crew member performing the procedure on the patient"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CrewMemberID"",
     ""NV"": ""NV"",
@@ -27269,7 +27748,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup""
   },
   ""RoleTypeofPersonPerformingtheProcedure"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -27284,8 +27764,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type (level) of EMS or Healthcare Professional performing the procedure. For procedures performed prior to EMS arrival, this may be a non-EMS healthcare professional."",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Added to document the type of healthcare professional performing the procedure."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EMSCaregiverLevel"",
     ""NV"": ""NV"",
@@ -27386,7 +27866,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup""
   },
   ""ProcedureAuthorization"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -27401,8 +27882,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of treatment authorization obtained"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""TxAuthorization"",
     ""NV"": """",
@@ -27437,7 +27918,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Written Orders (Patient Specific)""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup""
   },
   ""ProcedureAuthorizingPhysician"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -27452,8 +27934,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The name of the authorizing physician ordering the procedure, if the order was provided by any manner other than protocol (standing order) in eProcedures.11"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonName"",
     ""NV"": """",
@@ -27471,7 +27953,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup""
   },
   ""VascularAccessLocation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -27486,8 +27969,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The location of the vascular access site attempt on the patient, if applicable."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""VascularAccessLocation"",
     ""NV"": ""NV"",
@@ -27664,7 +28147,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup""
   },
   ""IndicationsforInvasiveAirway"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -27679,8 +28163,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The clinical indication for performing invasive airway management."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": ""Added to better document airway management."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AirwayIndications"",
     ""NV"": ""NV"",
@@ -27730,7 +28214,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup""
   },
   ""DateTimeAirwayDevicePlacementConfirmation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -27745,8 +28230,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date and time the airway device placement was confirmed."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": ""Added to better document airway management."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateTimeType"",
     ""NV"": ""NV"",
@@ -27766,7 +28251,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup/eAirway.ConfirmationGroup""
   },
   ""AirwayDeviceBeingConfirmed"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -27781,8 +28267,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The airway device in which placement is being confirmed."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": ""Added to better document airway management. SAD means Supraglottic Airway  Device."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DeviceBeingConfirmed"",
     ""NV"": ""NV"",
@@ -27835,7 +28321,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup/eAirway.ConfirmationGroup""
   },
   ""AirwayDevicePlacementConfirmedMethod"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -27850,8 +28337,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The method used to confirm the airway device placement."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": ""Added to better document airway management."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DeviceConfirmedMethods"",
     ""NV"": ""NV"",
@@ -27912,7 +28399,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup/eAirway.ConfirmationGroup""
   },
   ""TubeDepth"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -27927,8 +28415,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The measurement at the patient's teeth/lip of the tube depth in centimeters (cm) of the invasive airway placed."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""TubeDepth"",
     ""NV"": """",
@@ -27946,7 +28434,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup/eAirway.ConfirmationGroup""
   },
   ""TypeofIndividualConfirmingAirwayDevicePlacement"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -27961,8 +28450,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of individual who confirmed the airway device placement."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": ""Added to better document airway management."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""IndividualDetails"",
     ""NV"": ""NV"",
@@ -28003,7 +28492,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup/eAirway.ConfirmationGroup""
   },
   ""AirwayComplicationsEncountered"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28018,8 +28508,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The airway management complications encountered during the patient care episode."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": ""Added to better document airway management."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ComplicationsEncountered"",
     ""NV"": ""NV"",
@@ -28089,7 +28579,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup""
   },
   ""SuspectedReasonsforFailedAirwayManagement"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28104,8 +28595,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The reason(s) the airway was unable to be successfully managed."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better document airway management."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""ReasonsForFailure"",
     ""NV"": """",
@@ -28166,7 +28657,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup""
   },
   ""DateTimeDecisiontoManagethePatientwithanInvasiveAirway"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28181,8 +28673,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date and time the decision was made to manage the patient's airway with an invasive airway device."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better document airway management."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -28200,7 +28692,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup""
   },
   ""DateTimeInvasiveAirwayPlacementAttemptsAbandoned"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28215,8 +28708,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date and time that the invasive airway attempts were abandoned for the patient."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better document airway management."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -28234,7 +28727,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup""
   },
   ""DateTimeofEventperMedicalDevice"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28249,8 +28743,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The time of the event recorded by the device's internal clock"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -28268,7 +28762,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup""
   },
   ""MedicalDeviceEventType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28283,8 +28778,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of event documented by the medical device."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""MedicalDeviceEventType"",
     ""NV"": """",
@@ -28405,7 +28900,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup""
   },
   ""MedicalDeviceWaveformGraphicType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28420,8 +28916,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The description of the waveform file stored in Waveform Graphic (eDevice.05)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""GraphicType"",
     ""NV"": """",
@@ -28439,7 +28935,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup/eDevice.WaveformGroup""
   },
   ""MedicalDeviceWaveformGraphic"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28454,8 +28951,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The graphic waveform file."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""WaveformGraphic"",
     ""NV"": """",
@@ -28473,7 +28970,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup/eDevice.WaveformGroup""
   },
   ""MedicalDeviceModeManualAEDPacingCO2O2etc"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28488,8 +28986,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The mode of operation the device is operating in during the defibrillation, pacing, or rhythm analysis by the device (if appropriate for the event)"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""AEDPacingOrCO2Mode"",
     ""NV"": """",
@@ -28536,7 +29034,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Side-Stream""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup/eDevice.WaveformGroup""
   },
   ""MedicalDeviceECGLead"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28551,8 +29050,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The lead or source which the medical device used to obtain the rhythm (if appropriate for the event)"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""ECGLead"",
     ""NV"": """",
@@ -28657,7 +29156,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup""
   },
   ""MedicalDeviceECGInterpretation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28672,8 +29172,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The interpretation of the rhythm by the device (if appropriate for the event)"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ECGInterpretation"",
     ""NV"": """",
@@ -28691,7 +29191,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup""
   },
   ""TypeofShock"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28706,8 +29207,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of shock used by the device for the defibrillation (if appropriate for the event)"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""TypeOfShock"",
     ""NV"": """",
@@ -28734,7 +29235,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Monophasic""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup/eDevice.ShockGroup""
   },
   ""ShockorPacingEnergy"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28749,8 +29251,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The energy (in joules) used for the shock or pacing (if appropriate for the event)"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ShockOrPacingEnergy"",
     ""NV"": """",
@@ -28768,7 +29270,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": ""1"",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup/eDevice.ShockGroup""
   },
   ""TotalNumberofShocksDelivered"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28783,8 +29286,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The number of times the patient was defibrillated, if the patient was defibrillated during the patient encounter."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""TotalNumberOfShocks"",
     ""NV"": """",
@@ -28802,7 +29305,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup/eDevice.ShockGroup""
   },
   ""PacingRate"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28817,8 +29321,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The rate the device was calibrated to pace during the event, if appropriate."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PacingRate"",
     ""NV"": """",
@@ -28836,7 +29340,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup/eDevice.ShockGroup""
   },
   ""DestinationTransferredToName"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28851,8 +29356,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The destination the patient was delivered or transferred to."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DestinationTransferredToName"",
     ""NV"": ""NV"",
@@ -28872,7 +29377,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup""
   },
   ""DestinationTransferredToCode"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28887,8 +29393,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The code of the destination the patient was delivered or transferred to."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DestinationTransferredToCode"",
     ""NV"": ""NV"",
@@ -28908,7 +29414,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup""
   },
   ""DestinationStreetAddress"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28923,8 +29430,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The street address of the destination the patient was delivered or transferred to."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""StreetAddress"",
     ""NV"": """",
@@ -28944,7 +29451,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""StreetAddress2""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup""
   },
   ""DestinationCity"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28959,8 +29467,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The city of the destination the patient was delivered or transferred to (physical address)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CityGnisCode"",
     ""NV"": """",
@@ -28978,7 +29486,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup""
   },
   ""DestinationState"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -28993,8 +29502,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The state of the destination the patient was delivered or transferred to."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ANSIStateCode"",
     ""NV"": ""NV"",
@@ -29014,7 +29523,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup""
   },
   ""DestinationCounty"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -29029,8 +29539,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The destination county in which  the patient was delivered or transferred to."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ANSICountyCode"",
     ""NV"": ""NV"",
@@ -29050,7 +29560,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup""
   },
   ""DestinationZIPCode"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -29065,8 +29576,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The destination ZIP code in which  the patient was delivered or transferred to."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ZIP"",
     ""NV"": ""NV"",
@@ -29086,7 +29597,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup""
   },
   ""DestinationCountry"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -29101,8 +29613,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The country of the destination."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added for improved international compatibility."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ANSICountryCode"",
     ""NV"": """",
@@ -29120,7 +29632,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup""
   },
   ""DestinationGPSLocation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -29135,8 +29648,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The destination GPS Coordinates to which  the patient was delivered or transferred to."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""GPSLocation"",
     ""NV"": """",
@@ -29154,7 +29667,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""(\\+|-)?(90(\\.[0]{1,6})?|([1-8][0-9]|[0-9])(\\.[0-9]{1,6})?),(\\+|-)?(180(\\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\\.[0-9]{1,6})?)"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup""
   },
   ""DestinationLocationUSNationalGridCoordinates"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -29169,8 +29683,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The US National Grid Coordinates for the Destination Location. This may be the Healthcare Facility US National Grid Coordinates."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""USNG"",
     ""NV"": """",
@@ -29188,7 +29702,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[1][0-9][RSTU][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup""
   },
   ""NumberofPatientsTransportedinthisEMSUnit"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -29203,8 +29718,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The number of patients transported by this EMS crew and unit."",
     ""Usage"": ""Recommended"",
     ""V3Changes"": ""Added to document multiple patients being transported with the same vehicle and crew."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""NumberOfPatients"",
     ""NV"": ""NV"",
@@ -29224,7 +29739,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition""
   },
   ""IncidentPatientDisposition"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -29239,8 +29755,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Type of disposition treatment and/or transport of the patient by this EMS Unit."",
     ""Usage"": ""Mandatory"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""IncidentPatientDisposition"",
     ""NV"": """",
@@ -29347,7 +29863,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Transport Non-Patient, Organs, etc.""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition""
   },
   ""HowPatientWasMovedtoAmbulance"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -29362,8 +29879,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The method the patient was moved to the ambulance from the scene"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""HowPatientWasMovedToFromAmbulance"",
     ""NV"": """",
@@ -29416,7 +29933,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition""
   },
   ""PositionofPatientDuringTransport"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -29431,8 +29949,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The position of the patient during transport from the scene"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""PositionOfPatientDuringTransport"",
     ""NV"": """",
@@ -29493,7 +30011,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition""
   },
   ""HowPatientWasTransportedFromAmbulance"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -29508,8 +30027,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The method the patient was moved from the ambulance to the destination"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""HowPatientWasMovedToFromAmbulance"",
     ""NV"": """",
@@ -29560,7 +30079,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Wheelchair""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition""
   },
   ""EMSTransportMethod"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -29575,8 +30095,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Transport method by this EMS Unit."",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Added to better describe Air and Ground Transport methods."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EMSTransportMethod"",
     ""NV"": ""NV"",
@@ -29633,7 +30153,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition""
   },
   ""TransportModefromScene"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -29648,8 +30169,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication whether the transport was emergent or non-emergent."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""TransportModeFromScene"",
     ""NV"": ""NV"",
@@ -29686,7 +30207,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition""
   },
   ""AdditionalTransportModeDescriptors"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -29701,8 +30223,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The documentation of transport mode techniques for this EMS response."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""AdditionalTransportModeDescriptors"",
     ""NV"": ""NV"",
@@ -29764,7 +30286,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition""
   },
   ""FinalPatientAcuity"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -29779,8 +30302,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The acuity of the patient's condition after EMS care."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""FinalPatientAcuity"",
     ""NV"": ""NV"",
@@ -29817,7 +30340,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition""
   },
   ""ReasonforChoosingDestination"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -29832,8 +30356,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The reason the unit chose to deliver or transfer the patient to the destination"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": true,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""ReasonForChoosingDestination"",
     ""NV"": ""NV"",
@@ -29899,7 +30423,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition""
   },
   ""TypeofDestination"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -29914,8 +30439,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of destination the patient was delivered or transferred to"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""TypeOfDestination"",
     ""NV"": ""NV"",
@@ -29984,7 +30509,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition""
   },
   ""HospitalInPatientDestination"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -29999,8 +30525,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The location within the hospital that the patient was taken directly by EMS (e.g., Cath Lab, ICU, etc.)."",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Added to identify the location within the hospital that the patient was directly taken to by EMS."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""HospitalInPatientDestination"",
     ""NV"": ""NV"",
@@ -30129,7 +30655,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition""
   },
   ""HospitalCapability"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -30144,8 +30671,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The primary hospital capability associated with the patient's condition for this transport (e.g., Trauma, STEMI, Peds, etc.)."",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Added to aid in determining if patients are transported to the appropriate hospital based on provider impression, assessment, and treatment."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""HospitalDesignation"",
     ""NV"": ""NV"",
@@ -30230,7 +30757,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition""
   },
   ""DestinationTeamPreArrivalAlertorActivation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -30245,8 +30773,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication that an alert (or activation) was called by EMS to the appropriate destination healthcare facility team. The alert (or activation) should occur prior to the EMS Unit arrival at the destination with the patient."",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Added to better document performance measure for acute time dependent illness and injury systems of care."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DestinationPrearrivalActivation"",
     ""NV"": ""NV"",
@@ -30303,7 +30831,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.HospitalTeamActivationGroup""
   },
   ""DateTimeofDestinationPrearrivalAlertorActivation"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -30318,8 +30847,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Date/Time EMS alerted, notified, or activated the Destination Healthcare Facility prior to EMS arrival. The EMS assessment identified the patient as acutely ill or injured based on exam and possibly specified alert criteria."",
     ""Usage"": ""Required"",
     ""V3Changes"": ""Added to better document performance measure for acute time dependent illness and injury systems of care."",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""DateTimeType"",
     ""NV"": ""NV"",
@@ -30339,7 +30868,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.HospitalTeamActivationGroup""
   },
   ""DispositionInstructionsProvided"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -30354,8 +30884,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Information provided to patient during disposition for patients not transported or treated."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better document instructions given to patients not transported by EMS."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""DispositionInstruction"",
     ""NV"": """",
@@ -30408,7 +30938,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eDisposition""
   },
   ""EmergencyDepartmentDisposition"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -30423,8 +30954,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The known disposition of the patient from the Emergency Department (ED)"",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""EmergencyDepartmentDisposition"",
     ""NV"": ""NV"",
@@ -30529,7 +31060,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOutcome""
   },
   ""HospitalDisposition"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -30544,8 +31076,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The known disposition of the patient from the hospital, if admitted."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""HospitalDisposition"",
     ""NV"": ""NV"",
@@ -30646,7 +31178,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOutcome""
   },
   ""ExternalReportIDNumberType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -30661,8 +31194,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The Type of External Report or Record associated with the Report/ID Number."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to allow documentation of external record and identification numbers."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ExternalReportIDType"",
     ""NV"": """",
@@ -30733,7 +31266,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Trauma Registry""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOutcome/eOutcome.ExternalDataGroup""
   },
   ""ExternalReportIDNumber"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -30748,8 +31282,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The ID or Number of the external report or record in eOutcome.03."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to allow documentation of external record and identification numbers."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ExternalReportID"",
     ""NV"": """",
@@ -30767,7 +31301,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOutcome/eOutcome.ExternalDataGroup""
   },
   ""OtherReportRegistryType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -30782,8 +31317,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of external report/registry that was documented as \""other\"" in eOutcome.03"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""OtherReportRegistryType"",
     ""NV"": """",
@@ -30801,7 +31336,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOutcome/eOutcome.ExternalDataGroup""
   },
   ""EmergencyDepartmentChiefComplaint"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -30816,8 +31352,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's reason for seeking care or attention, expressed in the terms as close as possible to those used by the patient or responsible informant."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better evaluate EMS patient care."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""EmergencyDepartmentChiefComplaint"",
     ""NV"": """",
@@ -30835,7 +31371,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOutcome""
   },
   ""FirstEDSystolicBloodPressure"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -30850,8 +31387,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The first recorded Emergency Department Systolic Blood Pressure."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better evaluate the outcome of EMS care."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""SBP"",
     ""NV"": """",
@@ -30869,7 +31406,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOutcome""
   },
   ""EmergencyDepartmentRecordedCauseofInjury"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -30884,8 +31422,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The documented cause of injury from the emergency department record."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better evaluate EMS care."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""icd10CodeInjury"",
     ""NV"": """",
@@ -30903,7 +31441,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""([TV-Y][0-9]{2})((\\.[0-9A-Z]{1,4})?)"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOutcome""
   },
   ""EmergencyDepartmentProcedures"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -30918,8 +31457,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The procedures performed on the patient during the emergency department visit."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better evaluate EMS care."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""icd10CodeOutcomeProcedures"",
     ""NV"": """",
@@ -30939,7 +31478,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOutcome""
   },
   ""EmergencyDepartmentDiagnosis"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -30954,8 +31494,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The practitioner's description of the condition or problem for which Emergency Department services were provided."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better evaluate EMS care."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""icd10Code"",
     ""NV"": """",
@@ -30975,7 +31515,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOutcome""
   },
   ""DateTimeofHospitalAdmission"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -30990,8 +31531,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date and time the patient was admitted to the hospital."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better evaluate EMS care."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -31009,7 +31550,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOutcome""
   },
   ""HospitalProcedures"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31024,8 +31566,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Hospital Procedures performed on the patient during the hospital admission."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better evaluate EMS care."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""icd10CodeOutcomeProcedures"",
     ""NV"": """",
@@ -31045,7 +31587,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOutcome""
   },
   ""HospitalDiagnosis"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31060,8 +31603,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The hospital diagnosis of the patient associated with the hospital admission."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better evaluate EMS care."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""icd10CodeOutcomeDiagnosis"",
     ""NV"": """",
@@ -31081,7 +31624,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOutcome""
   },
   ""TotalICULengthofStay"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31096,8 +31640,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The total number of patient days in any ICU (including all ICU episodes)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better measure patient outcomes."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""LengthOfStay"",
     ""NV"": """",
@@ -31115,7 +31659,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOutcome""
   },
   ""TotalVentilatorDays"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31130,8 +31675,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The total number of patient days spend on a mechanical ventilator (excluding time in the operating room)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better measure and define patient outcome."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""TotalVentilatorDays"",
     ""NV"": """",
@@ -31149,7 +31694,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOutcome""
   },
   ""DateTimeofHospitalDischarge"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31164,8 +31710,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date the patient was discharged from the hospital."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better measure patient outcome."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -31183,7 +31729,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOutcome""
   },
   ""OutcomeatHospitalDischarge"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31198,8 +31745,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The patient's functional status at time of hospital discharge."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""OutcomeAtHospitalDischarge"",
     ""NV"": """",
@@ -31246,7 +31793,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Dead""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOutcome""
   },
   ""CorrelationIDofPatientCareReportElementorGroup"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31261,8 +31809,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""References the CorrelationID attribute of an element or group in the PatientCareReport section"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CorrelationID"",
     ""NV"": """",
@@ -31280,7 +31828,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eCustomResults/eCustomResults.ResultsGroup""
   },
   ""ReviewRequested"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31295,8 +31844,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication of whether the PCR needs review by anyone."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""YesNoValues"",
     ""NV"": """",
@@ -31323,7 +31872,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Yes""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther""
   },
   ""PotentialSystemofCareSpecialtyRegistryPatient"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31338,8 +31888,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""An indication if the patient may meet the entry criteria for an injury or illness specific registry"",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""PotentialRegistryCandidate"",
     ""NV"": """",
@@ -31400,7 +31950,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther""
   },
   ""PersonalProtectiveEquipmentUsed"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31415,8 +31966,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The personal protective equipment which was used by EMS personnel during this EMS patient contact."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""PersonalProtectiveEquipmentUsed"",
     ""NV"": """",
@@ -31485,7 +32036,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther/eOther.EMSCrewMemberGroup""
   },
   ""EMSProfessionalCrewMemberID"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31500,8 +32052,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The ID number of the EMS Crew Member associated with eOther.03, eOther.05, eOther.06."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better document EMS workplace health and safety issues."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""CrewMemberID"",
     ""NV"": """",
@@ -31519,7 +32071,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther/eOther.EMSCrewMemberGroup""
   },
   ""SuspectedEMSWorkRelatedExposureInjuryorDeath"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31534,8 +32087,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication of an EMS work related exposure, injury, or death associated with this EMS event."",
     ""Usage"": ""Required"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""1"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": true,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""YesNoValues"",
     ""NV"": ""NV"",
@@ -31564,7 +32117,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther/eOther.EMSCrewMemberGroup""
   },
   ""TheTypeofWorkRelatedInjuryDeathorSuspectedExposure"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31579,8 +32133,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The type of exposure or unprotected contact with blood or body fluids"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""TypeOfSuspectedExposureToBodilyFluids"",
     ""NV"": ""NV"",
@@ -31662,7 +32216,8 @@ namespace ThreePointZero.Classes
     ""attributes"": [
       ""NV"",
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther/eOther.EMSCrewMemberGroup""
   },
   ""NaturalSuspectedIntentionalorUnintentionalDisaster"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31677,8 +32232,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Event caused by natural forces or Suspected and Intentional/Unintentional Disasters (terrorism)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""SuspectedIntentionalOrUnintentionalDisaster"",
     ""NV"": """",
@@ -31755,7 +32310,8 @@ namespace ThreePointZero.Classes
     ],
     ""attributes"": [
       ""CorrelationID""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther""
   },
   ""CrewMemberCompletingthisReport"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31770,8 +32326,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The statewide assigned ID number of the EMS crew member which completed this patient care report"",
     ""Usage"": ""Recommended"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": ""Nillable"",
     ""DataType"": ""CrewMemberID"",
     ""NV"": ""NV"",
@@ -31791,7 +32347,8 @@ namespace ThreePointZero.Classes
     ""options"": [],
     ""attributes"": [
       ""NV""
-    ]
+    ],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther""
   },
   ""ExternalElectronicDocumentType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31806,8 +32363,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Document type which has been electronically stored with PCR."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to allow an improved implementation of electronic healthcare records."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""ExternalElectronicDocuments"",
     ""NV"": """",
@@ -31874,7 +32431,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Other Video/Movie""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther/eOther.FileGroup""
   },
   ""FileAttachmentType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31889,8 +32447,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The description of the file attachment stored in File Attachment Image (eOther.11)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to allow an improved implementation of electronic healthcare records."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""GraphicType"",
     ""NV"": """",
@@ -31908,7 +32466,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther/eOther.FileGroup""
   },
   ""FileAttachmentImage"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31923,8 +32482,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The file that is attached electronically to the patient care report."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to allow an improved implementation of electronic healthcare records."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""FileImage"",
     ""NV"": """",
@@ -31942,7 +32501,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther/eOther.FileGroup""
   },
   ""TypeofPersonSigning"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -31957,8 +32517,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The individual's signature associated with eOther.15 (Signature Status)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better document disposition and billing information."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""SignatureType"",
     ""NV"": """",
@@ -32017,7 +32577,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Witness""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup""
   },
   ""SignatureReason"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -32032,8 +32593,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The reason for the individuals signature."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""M"",
+    ""isRequired"": false,
+    ""isList"": true,
     ""IsNillable"": """",
     ""DataType"": ""SignatureReason"",
     ""NV"": """",
@@ -32100,7 +32661,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Other""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup""
   },
   ""TypeOfPatientRepresentative"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -32115,8 +32677,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""If Patient Representative is chosen as the owner of the signature, this documents the relationship of the individual signing to the patient."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to improve documentation on disposition and billing."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""RelationshipSignature"",
     ""NV"": """",
@@ -32239,7 +32801,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Wife""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup""
   },
   ""SignatureStatus"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -32254,8 +32817,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""Indication that a patient or patient representative signature has been collected or attempted to be collected."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better document disposition and billing."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""SignatureStatus"",
     ""NV"": """",
@@ -32342,7 +32905,8 @@ namespace ThreePointZero.Classes
         ""text"": ""Signed-Not Patient""
       }
     ],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup""
   },
   ""SignatureFileName"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -32357,8 +32921,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The name of the graphic file for the signature."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""FileName"",
     ""NV"": """",
@@ -32376,7 +32940,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup""
   },
   ""SignatureFileType"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -32391,8 +32956,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The description of the file attachment stored in Signature Graphic (eOther.18)."",
     ""Usage"": ""Optional"",
     ""V3Changes"": """",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""GraphicType"",
     ""NV"": """",
@@ -32410,7 +32975,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup""
   },
   ""SignatureGraphic"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -32425,8 +32991,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The graphic file for the signature."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better document disposition and billing."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""Graphic"",
     ""NV"": """",
@@ -32444,7 +33010,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup""
   },
   ""DateTimeofSignature"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -32459,8 +33026,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The date and time the signature was captured."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better document disposition and billing."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""DateTimeType"",
     ""NV"": """",
@@ -32478,7 +33045,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": ""[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}"",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup""
   },
   ""SignatureLastName"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -32493,8 +33061,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The last name of the individual who signed the associated signature."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better document disposition and billing."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonLastName"",
     ""NV"": """",
@@ -32512,7 +33080,8 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup""
   },
   ""SignatureFirstName"": {
     ""DatasetName"": ""EMSDataSet"",
@@ -32527,8 +33096,8 @@ namespace ThreePointZero.Classes
     ""Definition"": ""The first name of the individual associated with the signature."",
     ""Usage"": ""Optional"",
     ""V3Changes"": ""Added to better document disposition and billing."",
-    ""MinOccurs"": ""0"",
-    ""MaxOccurs"": ""1"",
+    ""isRequired"": false,
+    ""isList"": false,
     ""IsNillable"": """",
     ""DataType"": ""PersonFirstName"",
     ""NV"": """",
@@ -32546,11 +33115,12 @@ namespace ThreePointZero.Classes
     ""fractionDigits"": """",
     ""pattern"": """",
     ""options"": [],
-    ""attributes"": []
+    ""attributes"": [],
+    ""exportPath"": ""EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup""
   }
 }";
-#endregion
-        public static NemsisMasterObject ElementDefinition = (NemsisMasterObject)JsonConvert.DeserializeObject(definitionString, typeof(NemsisMasterObject));
+        #endregion
+        public static readonly NemsisMasterObject ElementLookup = (NemsisMasterObject)JsonConvert.DeserializeObject(definitionString, typeof(NemsisMasterObject));
 
         
     }

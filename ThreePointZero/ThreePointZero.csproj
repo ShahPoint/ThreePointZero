@@ -232,6 +232,7 @@
     <Content Include="Angular\js\directives\cloudControlDirective.js" />
     <Content Include="Angular\js\directives\cloudTabDirective.js" />
     <Content Include="Angular\js\directives\cloudWidgetDirective.js" />
+    <Content Include="Angular\js\genericJS\helpers.js" />
     <Content Include="Angular\js\genericJS\PcrFormInfo.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />

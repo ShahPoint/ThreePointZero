@@ -12,8 +12,8 @@
     "Definition": "Indicates which elements are required by the state",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "StateRequiredElement",
     "NV": "",
@@ -33,7 +33,8 @@
     "options": [],
     "attributes": [
       "TIMESTAMP"
-    ]
+    ],
+    "exportPath": "EMSDataSet/eState"
   },
   "CustomDataElementTitle": {
     "DatasetName": "EMSDataSet",
@@ -48,8 +49,8 @@
     "Definition": "This is the title of the custom data element created to collect information that is not defined formally in NEMSIS Version 3.",
     "Usage": "Mandatory",
     "V3Changes": "Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CustomTitle",
     "NV": "",
@@ -69,7 +70,8 @@
     "options": [],
     "attributes": [
       "nemsisElement"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup"
   },
   "CustomDefinition": {
     "DatasetName": "EMSDataSet",
@@ -84,8 +86,8 @@
     "Definition": "The definition of the custom element and how it should be used.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CustomDefinition",
     "NV": "",
@@ -103,7 +105,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup"
   },
   "CustomDataType": {
     "DatasetName": "EMSDataSet",
@@ -118,8 +121,8 @@
     "Definition": "The data type of the custom element.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CustomDataType",
     "NV": "",
@@ -162,7 +165,8 @@
         "text": "Boolean"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup"
   },
   "CustomDataElementRecurrence": {
     "DatasetName": "EMSDataSet",
@@ -177,8 +181,8 @@
     "Definition": "Indication if the data element will accept multiple values.",
     "Usage": "Mandatory",
     "V3Changes": "Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "YesNoValues",
     "NV": "",
@@ -205,7 +209,8 @@
         "text": "Yes"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup"
   },
   "CustomDataElementUsage": {
     "DatasetName": "EMSDataSet",
@@ -220,8 +225,8 @@
     "Definition": "The Usage (Mandatory, Required, Recommended or Optional) for the Custom Data Element.",
     "Usage": "Mandatory",
     "V3Changes": "Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ElementUsage",
     "NV": "",
@@ -256,7 +261,8 @@
         "text": "Optional"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup"
   },
   "CustomDataElementPotentialValues": {
     "DatasetName": "EMSDataSet",
@@ -271,8 +277,8 @@
     "Definition": "The values which are associated with the Custom Data Element. Values would be the choices provided to the user when they document the Custom Data Element",
     "Usage": "Optional",
     "V3Changes": "Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "CustomValue",
     "NV": "",
@@ -293,23 +299,24 @@
     "attributes": [
       "nemsisCode",
       "customValueDescription"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup"
   },
-  "CustomDataElementPotentialNOTValues(NV)": {
+  "CustomDataElementPotentialNOTValuesNV": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eCustomConfiguration.07",
     "NemsisName": "Custom Data Element Potential NOT Values (NV)",
     "ElementTitle": "Custom Data Element Potential NOT Values (NV)",
-    "ngModel": "CustomDataElementPotentialNOTValues(NV)",
+    "ngModel": "CustomDataElementPotentialNOTValuesNV",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "NOT Values (NV) associated with the custom element",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "NV",
     "NV": "",
@@ -340,23 +347,24 @@
         "text": "Not Reporting"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup"
   },
-  "CustomDataElementPotentialPertinentNegativeValues(PN)": {
+  "CustomDataElementPotentialPertinentNegativeValuesPN": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eCustomConfiguration.08",
     "NemsisName": "Custom Data Element Potential Pertinent Negative Values (PN)",
     "ElementTitle": "Custom Data Element Potential Pertinent Negative Values (PN)",
-    "ngModel": "CustomDataElementPotentialPertinentNegativeValues(PN)",
+    "ngModel": "CustomDataElementPotentialPertinentNegativeValuesPN",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "Pertinent Negative Values (PN) associated with the custom element",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "PN",
     "NV": "",
@@ -419,7 +427,8 @@
         "text": "Unable to Complete"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup"
   },
   "CustomDataElementGroupingID": {
     "DatasetName": "EMSDataSet",
@@ -434,8 +443,8 @@
     "Definition": "ID for custom element grouping.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CorrelationID",
     "NV": "",
@@ -453,7 +462,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/eCustomConfiguration/eCustomConfiguration.CustomGroup"
   },
   "EMSAgencyUniqueStateID": {
     "DatasetName": "EMSDataSet",
@@ -468,8 +478,8 @@
     "Definition": "The unique ID assigned to the EMS Agency which is associated with all state licensure numbers and information.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EMSAgencyStateID",
     "NV": "",
@@ -487,7 +497,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/DemographicGroup"
   },
   "EMSAgencyNumber": {
     "DatasetName": "EMSDataSet",
@@ -502,8 +513,8 @@
     "Definition": "The state-assigned provider number of the responding agency",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EMSAgencyNumber",
     "NV": "",
@@ -521,7 +532,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse/eResponse.AgencyGroup"
   },
   "EMSAgencyName": {
     "DatasetName": "EMSDataSet",
@@ -536,8 +548,8 @@
     "Definition": "EMS Agency Name",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "EMSAgencyName",
     "NV": "NV",
@@ -557,7 +569,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse/eResponse.AgencyGroup"
   },
   "EMSAgencyState": {
     "DatasetName": "EMSDataSet",
@@ -572,8 +585,8 @@
     "Definition": "The state/territory which assigned the EMS agency number.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSIStateCode",
     "NV": "",
@@ -591,7 +604,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/DemographicGroup"
   },
   "EMSAgencyServiceAreaStates": {
     "DatasetName": "DEMDataSet",
@@ -606,8 +620,8 @@
     "Definition": "The states in which the EMS Agency provides services including the state associated with the EMS Agency Number.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSIStateCode",
     "NV": "",
@@ -625,23 +639,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSAgencyServiceAreaCounty(ies)": {
+  "EMSAgencyServiceAreaCountyies": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dAgency.06",
     "NemsisName": "EMS Agency Service Area County(ies)",
     "ElementTitle": "EMS Agency Service Area County(ies)",
-    "ngModel": "EMSAgencyServiceAreaCounty(ies)",
+    "ngModel": "EMSAgencyServiceAreaCountyies",
     "V2Number": "D01_04",
     "National": "National",
     "State": "State",
     "Definition": "The county(ies) within each state for which the agency formally provides service.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "",
     "DataType": "ANSICountyCode",
     "NV": "",
@@ -661,7 +676,8 @@
     "options": [],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "EMSAgencyCensusTracts": {
     "DatasetName": "DEMDataSet",
@@ -676,8 +692,8 @@
     "Definition": "The US census tracts in which the EMS agency formally provides service.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "CensusTracts",
     "NV": "NV",
@@ -698,7 +714,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "EMSAgencyServiceAreaZIPCodes": {
     "DatasetName": "DEMDataSet",
@@ -713,8 +730,8 @@
     "Definition": "The ZIP codes for the EMS Agency's service area.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "ZIP",
     "NV": "NV",
@@ -735,7 +752,8 @@
     "attributes": [
       "CorrelationID",
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
   "PrimaryTypeofService": {
     "DatasetName": "DEMDataSet",
@@ -750,8 +768,8 @@
     "Definition": "The primary service type provided by the agency.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "TypeOfService",
     "NV": "",
@@ -806,7 +824,8 @@
         "text": "Critical Care (Ground)"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "OtherTypesofService": {
     "DatasetName": "DEMDataSet",
@@ -821,8 +840,8 @@
     "Definition": "The other service type(s) which are provided by the agency.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "TypeOfService",
     "NV": "NV",
@@ -880,7 +899,8 @@
     "attributes": [
       "CorrelationID",
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
   "LevelofService": {
     "DatasetName": "DEMDataSet",
@@ -895,8 +915,8 @@
     "Definition": "The level of service which the agency provides EMS care for every request for service (the minimum certification level). This may be the license level granted by the state EMS office.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "StateCertificationLicensureLevels",
     "NV": "",
@@ -975,7 +995,8 @@
         "text": "Registered Nurse"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "OrganizationStatus": {
     "DatasetName": "DEMDataSet",
@@ -990,8 +1011,8 @@
     "Definition": "The primary organizational status of the agency. The definition of Volunteer or Non-Volunteer is based on state or local definitions.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "OrganizationStatus",
     "NV": "",
@@ -1022,7 +1043,8 @@
         "text": "Volunteer"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "OrganizationalType": {
     "DatasetName": "DEMDataSet",
@@ -1037,8 +1059,8 @@
     "Definition": "The organizational structure from which EMS services are delivered (fire, hospital, county, etc.)",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "OrganizationalType",
     "NV": "",
@@ -1077,7 +1099,8 @@
         "text": "Tribal"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "EMSAgencyOrganizationalTaxStatus": {
     "DatasetName": "DEMDataSet",
@@ -1092,8 +1115,8 @@
     "Definition": "The EMS Agencies business/corporate organizational tax status",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "AgencyOrganizationalTaxStatus",
     "NV": "",
@@ -1124,7 +1147,8 @@
         "text": "Not For Profit"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "StatisticalCalendarYear": {
     "DatasetName": "DEMDataSet",
@@ -1139,8 +1163,8 @@
     "Definition": "The calendar year to which the information pertains for the EMS Agency and the specific EMS Agency Number (dAgency.02).",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "Year",
     "NV": "",
@@ -1158,7 +1182,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "TotalPrimaryServiceAreaSize": {
     "DatasetName": "DEMDataSet",
@@ -1173,8 +1198,8 @@
     "Definition": "The total square miles in the agency's service area.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "AnnualAgencyStatistics",
     "NV": "NV",
@@ -1194,7 +1219,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
   "TotalServiceAreaPopulation": {
     "DatasetName": "DEMDataSet",
@@ -1209,8 +1235,8 @@
     "Definition": "The total population in the agency's service area based if possible on year 2010 census data.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "AnnualAgencyStatistics",
     "NV": "NV",
@@ -1230,23 +1256,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
-  "911EMSCallCenterVolumeperYear": {
+  "_911EMSCallCenterVolumeperYear": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dAgency.18",
     "NemsisName": "911 EMS Call Center Volume per Year",
     "ElementTitle": "911 EMS Call Center Volume per Year",
-    "ngModel": "911EMSCallCenterVolumeperYear",
+    "ngModel": "_911EMSCallCenterVolumeperYear",
     "V2Number": "D01_14",
     "National": "National",
     "State": "State",
     "Definition": "The number of 911 calls received by the call center during the last calendar year",
     "Usage": "Required",
     "V3Changes": "Name Clarified with \"Call Center\"",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "AnnualAgencyStatistics",
     "NV": "NV",
@@ -1266,7 +1293,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
   "EMSDispatchVolumeperYear": {
     "DatasetName": "DEMDataSet",
@@ -1281,8 +1309,8 @@
     "Definition": "The number of EMS dispatches during the last calendar year",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "AnnualAgencyStatistics",
     "NV": "NV",
@@ -1302,7 +1330,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
   "EMSPatientTransportVolumeperYear": {
     "DatasetName": "DEMDataSet",
@@ -1317,8 +1346,8 @@
     "Definition": "The number of EMS transports per year based on last calendar year.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "AnnualAgencyStatistics",
     "NV": "NV",
@@ -1338,7 +1367,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
   "EMSPatientContactVolumeperYear": {
     "DatasetName": "DEMDataSet",
@@ -1353,8 +1383,8 @@
     "Definition": "The number of EMS patient contacts per year based on last calendar year.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "AnnualAgencyStatistics",
     "NV": "NV",
@@ -1374,7 +1404,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
   "EMSBillableCallsperYear": {
     "DatasetName": "DEMDataSet",
@@ -1389,8 +1420,8 @@
     "Definition": "The number of EMS patient encounters which are billable based on the last calendar year.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "AnnualAgencyStatistics",
     "NV": "NV",
@@ -1410,7 +1441,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
   "EMSAgencyTimeZone": {
     "DatasetName": "DEMDataSet",
@@ -1425,8 +1457,8 @@
     "Definition": "The time zone for the EMS Agency.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EMSAgencyTimeZone",
     "NV": "",
@@ -1481,7 +1513,8 @@
         "text": "GMT-11:00 Midway Island, Samoa"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "EMSAgencyDaylightSavingsTimeUse": {
     "DatasetName": "DEMDataSet",
@@ -1496,8 +1529,8 @@
     "Definition": "Indicate if the EMS Agency conforms to Daylight Savings Time.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "YesNoValues",
     "NV": "",
@@ -1524,7 +1557,8 @@
         "text": "Yes"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "NationalProviderIdentifier": {
     "DatasetName": "DEMDataSet",
@@ -1539,8 +1573,8 @@
     "Definition": "The National Provider Identifier issued by CMS.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "NationalProviderIdentifier",
     "NV": "NV",
@@ -1561,7 +1595,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "FireDepartmentIDNumber": {
     "DatasetName": "DEMDataSet",
@@ -1576,8 +1611,8 @@
     "Definition": "The state assigned Fire Department ID Number for EMS Agency(ies) operating within a Fire Department.",
     "Usage": "Required",
     "V3Changes": "Added to better associate Fire and EMS licensure and operational identifiers.",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "FireDepartmentIDNumber",
     "NV": "NV",
@@ -1598,7 +1633,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "AgencyContactType": {
     "DatasetName": "DEMDataSet",
@@ -1613,8 +1649,8 @@
     "Definition": "The contact type within the EMS agency.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "AgencyContactType",
     "NV": "NV",
@@ -1671,7 +1707,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
   "AgencyContactLastName": {
     "DatasetName": "DEMDataSet",
@@ -1686,8 +1723,8 @@
     "Definition": "The Last Name of the agency's primary contact.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "PersonLastName",
     "NV": "NV",
@@ -1707,7 +1744,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
   "AgencyContactFirstName": {
     "DatasetName": "DEMDataSet",
@@ -1722,8 +1760,8 @@
     "Definition": "The first name of the agency's primary contact.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "PersonFirstName",
     "NV": "NV",
@@ -1743,23 +1781,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
-  "AgencyContactMiddleName/Initial": {
+  "AgencyContactMiddleNameInitial": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dContact.04",
     "NemsisName": "Agency Contact Middle Name/Initial",
     "ElementTitle": "Agency Contact Middle Name/Initial",
-    "ngModel": "AgencyContactMiddleName/Initial",
+    "ngModel": "AgencyContactMiddleNameInitial",
     "V2Number": "D02_02",
     "National": "",
     "State": "",
     "Definition": "The middle name or initial of the agency's primary contact.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonMiddleName",
     "NV": "",
@@ -1777,7 +1816,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "AgencyContactAddress": {
     "DatasetName": "DEMDataSet",
@@ -1792,8 +1832,8 @@
     "Definition": "The street address of the agency contact's mailing address.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "StreetAddress",
     "NV": "NV",
@@ -1814,7 +1854,8 @@
     "attributes": [
       "NV",
       "StreetAddress2"
-    ]
+    ],
+    "exportPath": ""
   },
   "AgencyContactCity": {
     "DatasetName": "DEMDataSet",
@@ -1829,8 +1870,8 @@
     "Definition": "The city of the EMS contact's mailing address.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "CityGnisCode",
     "NV": "NV",
@@ -1850,7 +1891,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
   "AgencyContactState": {
     "DatasetName": "DEMDataSet",
@@ -1865,8 +1907,8 @@
     "Definition": "The state of the Agency contact's mailing address.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ANSIStateCode",
     "NV": "NV",
@@ -1886,7 +1928,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
   "AgencyContactZIPCode": {
     "DatasetName": "DEMDataSet",
@@ -1901,8 +1944,8 @@
     "Definition": "The ZIP code of the Agency's contact's mailing address.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ZIP",
     "NV": "NV",
@@ -1922,7 +1965,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
   "AgencyContactCountry": {
     "DatasetName": "DEMDataSet",
@@ -1937,8 +1981,8 @@
     "Definition": "The Country code of the Agency's contact's mailing address.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSICountryCodesCAMXUS",
     "NV": "",
@@ -1969,7 +2013,8 @@
         "text": "United States"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "AgencyContactPhoneNumber": {
     "DatasetName": "DEMDataSet",
@@ -1984,8 +2029,8 @@
     "Definition": "Agency contact phone number.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "PhoneNumber",
     "NV": "NV",
@@ -2007,7 +2052,8 @@
       "PhoneNumberType",
       "CorrelationID",
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
   "AgencyContactEmailAddress": {
     "DatasetName": "DEMDataSet",
@@ -2022,8 +2068,8 @@
     "Definition": "The primary email address of the Agency contact.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "EmailAddress",
     "NV": "NV",
@@ -2045,7 +2091,8 @@
       "NV",
       "EmailAddressType",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "EMSAgencyContactWebAddress": {
     "DatasetName": "DEMDataSet",
@@ -2060,8 +2107,8 @@
     "Definition": "The primary website address of the agency.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "WebAddress",
     "NV": "NV",
@@ -2081,7 +2128,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
   "AgencyMedicalDirectorDegree": {
     "DatasetName": "DEMDataSet",
@@ -2096,8 +2144,8 @@
     "Definition": "The medical school degree type of the EMS Medical Director.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "AgencyMedicalDirectorDegree",
     "NV": "NV",
@@ -2126,7 +2174,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
   "AgencyMedicalDirectorBoardCertificationType": {
     "DatasetName": "DEMDataSet",
@@ -2141,8 +2190,8 @@
     "Definition": "Documentation of the type of board certification of the EMS Agency Medical Director.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "AgencyMedicalDirectorBoardCertificationType",
     "NV": "NV",
@@ -2252,7 +2301,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "MedicalDirectorCompensation": {
     "DatasetName": "DEMDataSet",
@@ -2267,8 +2317,8 @@
     "Definition": "Indication of Medical Director's Compensation.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "MedicalDirectorCompensation",
     "NV": "",
@@ -2295,7 +2345,8 @@
         "text": "Non-Compensated"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "EMSMedicalDirectorFellowshipTrainedStatus": {
     "DatasetName": "DEMDataSet",
@@ -2310,8 +2361,8 @@
     "Definition": "Indication if the EMS Medical Director is Fellowship trained.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "YesNoValues",
     "NV": "",
@@ -2338,23 +2389,24 @@
         "text": "Yes"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "StateAssociatedwiththeCertification/LicensureLevels": {
+  "StateAssociatedwiththeCertificationLicensureLevels": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dConfiguration.01",
     "NemsisName": "State Associated with the Certification/Licensure Levels",
     "ElementTitle": "State Associated with the Certification/Licensure Levels",
-    "ngModel": "StateAssociatedwiththeCertification/LicensureLevels",
+    "ngModel": "StateAssociatedwiththeCertificationLicensureLevels",
     "V2Number": "",
     "National": "National",
     "State": "State",
     "Definition": "The state associated with the state certification/licensure levels.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSIStateCode",
     "NV": "",
@@ -2372,23 +2424,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "StateCertification/LicensureLevels": {
+  "StateCertificationLicensureLevels": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dConfiguration.02",
     "NemsisName": "State Certification/Licensure Levels",
     "ElementTitle": "State Certification/Licensure Levels",
-    "ngModel": "StateCertification/LicensureLevels",
+    "ngModel": "StateCertificationLicensureLevels",
     "V2Number": "D04_01",
     "National": "National",
     "State": "State",
     "Definition": "All of the potential levels of certification/licensure for EMS personnel recognized by the state.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "",
     "DataType": "LicensureLevels",
     "NV": "",
@@ -2473,7 +2526,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "ProceduresPermittedbytheState": {
     "DatasetName": "DEMDataSet",
@@ -2488,8 +2542,8 @@
     "Definition": "A list of all of the procedures permitted by the EMS Agency's licensing state.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "snomed",
     "NV": "NV",
@@ -2510,7 +2564,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "MedicationsPermittedbytheState": {
     "DatasetName": "DEMDataSet",
@@ -2525,8 +2580,8 @@
     "Definition": "A list of all of the medications permitted by the state to be used by each EMS state certification/licensure level.",
     "Usage": "Required",
     "V3Changes": "State EMS systems which have regulatory authority to identify medications to be administered within the state may identify specific RxNorm codes based on medical direction and their own need. \t\t\t\t\t\t\t\t\t\t<br/><br/>List of medications based on RxNorm (RXCUI) code.  \t\t\t\t\t\t\t\t\t\t<br/><br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html\t\t\t\t\t\t\t\t\t\t\t \t\t\t\t\t\t\t\t\t\t<br/><br/>RxNorm \t\t\t\t\t\t\t\t\t\t<br/>Website - http://uts.nlm.nih.gov \t\t\t\t\t\t\t\t\t\t \t\t\t\t\t\t\t\t\t\t<br/><br/>Product - UMLS Metathesaurus \t\t\t\t\t\t\t\t\t\t<br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html \t\t\t\t\t\t\t\t\t\t<br/>Product - RxNorm Full Monthly Release",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "Medication",
     "NV": "NV",
@@ -2547,7 +2602,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "ProtocolsPermittedbytheState": {
     "DatasetName": "DEMDataSet",
@@ -2562,8 +2618,8 @@
     "Definition": "A list of all of the protocols permitted by the state.",
     "Usage": "Required",
     "V3Changes": "Added to better identify states with statewide protocols and define state EMS capability and care.",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "ProtocolsUsed",
     "NV": "NV",
@@ -3033,7 +3089,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "EMSCertificationLevelsPermittedtoPerformEachProcedure": {
     "DatasetName": "DEMDataSet",
@@ -3048,8 +3105,8 @@
     "Definition": "EMS certification levels which are permitted to perform the procedure listed in dConfiguration.07.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "StateCertificationLicensureLevels",
     "NV": "",
@@ -3128,7 +3185,8 @@
         "text": "Registered Nurse"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "EMSAgencyProcedures": {
     "DatasetName": "DEMDataSet",
@@ -3143,8 +3201,8 @@
     "Definition": "A list of all procedures that the agency has implemented and available for use by any/all EMS certification levels.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "",
     "DataType": "snomed",
     "NV": "",
@@ -3164,7 +3222,8 @@
     "options": [],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "EMSCertificationLevelsPermittedtoAdministerEachMedication": {
     "DatasetName": "DEMDataSet",
@@ -3179,8 +3238,8 @@
     "Definition": "All EMS certification levels which are permitted to administer the medications listed in dConfiguration.09 (EMS Agency Medications).",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "StateCertificationLicensureLevels",
     "NV": "",
@@ -3259,7 +3318,8 @@
         "text": "Registered Nurse"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "EMSAgencyMedications": {
     "DatasetName": "DEMDataSet",
@@ -3274,8 +3334,8 @@
     "Definition": "A list of all medications the agency has implemented and have available for use.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "",
     "DataType": "Medication",
     "NV": "",
@@ -3295,7 +3355,8 @@
     "options": [],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "EMSAgencyProtocols": {
     "DatasetName": "DEMDataSet",
@@ -3310,8 +3371,8 @@
     "Definition": "A list of all of the EMS field protocols that the agency has in place and available for use.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "",
     "DataType": "ProtocolsUsed",
     "NV": "",
@@ -3780,7 +3841,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "EMSAgencySpecialtyServiceCapability": {
     "DatasetName": "DEMDataSet",
@@ -3795,8 +3857,8 @@
     "Definition": "Special training or services provided by the EMS Agency and available to the EMS service area/community.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "",
     "DataType": "AgencySpecialtyServiceCapability",
     "NV": "",
@@ -3889,7 +3951,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "BillingStatus": {
     "DatasetName": "DEMDataSet",
@@ -3904,8 +3967,8 @@
     "Definition": "Indication of whether the EMS agency routinely bills for any segment of the patient population.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "YesNoValues",
     "NV": "",
@@ -3932,23 +3995,24 @@
         "text": "Yes"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EmergencyMedicalDispatch(EMD)ProvidedtoEMSAgencyServiceArea": {
+  "EmergencyMedicalDispatchEMDProvidedtoEMSAgencyServiceArea": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dConfiguration.13",
     "NemsisName": "Emergency Medical Dispatch (EMD) Provided to EMS Agency Service Area",
     "ElementTitle": "Emergency Medical Dispatch (EMD) Provided to EMS Agency Service Area",
-    "ngModel": "EmergencyMedicalDispatch(EMD)ProvidedtoEMSAgencyServiceArea",
+    "ngModel": "EmergencyMedicalDispatchEMDProvidedtoEMSAgencyServiceArea",
     "V2Number": "",
     "National": "National",
     "State": "State",
     "Definition": "Indication as to whether Emergency Medical Dispatch is provided to the EMS Agency's service area.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EMDtoAgencyServiceArea",
     "NV": "",
@@ -3979,7 +4043,8 @@
         "text": "Yes, Less than 100% of the EMS Agency's Service Area"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "EMDVendor": {
     "DatasetName": "DEMDataSet",
@@ -3994,8 +4059,8 @@
     "Definition": "The vendor or company associated with the EMD Card set and algorithms.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "EMDVendorType",
     "NV": "NV",
@@ -4016,23 +4081,24 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
-  "PatientMonitoringCapability(ies)": {
+  "PatientMonitoringCapabilityies": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dConfiguration.15",
     "NemsisName": "Patient Monitoring Capability(ies)",
     "ElementTitle": "Patient Monitoring Capability(ies)",
-    "ngModel": "PatientMonitoringCapability(ies)",
+    "ngModel": "PatientMonitoringCapabilityies",
     "V2Number": "",
     "National": "National",
     "State": "State",
     "Definition": "The EMS Agency's patient monitoring capability which can be provided to any/all patients presenting to EMS.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "",
     "DataType": "PatientMonitoringCapability",
     "NV": "",
@@ -4093,7 +4159,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "CrewCallSign": {
     "DatasetName": "DEMDataSet",
@@ -4108,8 +4175,8 @@
     "Definition": "The EMS crew call sign used to dispatch and communicate with the unit.  This may be the same as the EMS Unit/Vehicle Number in many agencies.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "",
     "DataType": "AgencyCallSign",
     "NV": "",
@@ -4129,23 +4196,24 @@
     "options": [],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
-  "DispatchCenter(CAD)NameorID": {
+  "DispatchCenterCADNameorID": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dConfiguration.17",
     "NemsisName": "Dispatch Center (CAD) Name or ID",
     "ElementTitle": "Dispatch Center (CAD) Name or ID",
-    "ngModel": "DispatchCenter(CAD)NameorID",
+    "ngModel": "DispatchCenterCADNameorID",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The name or ID of the dispatch center (Primary or Secondary Service Answering Point - PSAP) that dispatches the EMS agency.",
     "Usage": "Optional",
     "V3Changes": "Added to the dataset to assist in identifying the CAD / dispatch center providing information to the EMS agency and ePCR when there are multiple dispatch centers sending resources to the same EMS incident.",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "DispatchCenterCADNameorID",
     "NV": "",
@@ -4165,7 +4233,8 @@
     "options": [],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "EMSLocationType": {
     "DatasetName": "DEMDataSet",
@@ -4180,8 +4249,8 @@
     "Definition": "The type of EMS Location which could be a fixed station or a pre-determined staging area.",
     "Usage": "Optional",
     "V3Changes": "Added to allow multiple locations to be documented for an EMS Agency.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "LocationType",
     "NV": "",
@@ -4216,7 +4285,8 @@
         "text": "Other"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "EMSLocationName": {
     "DatasetName": "DEMDataSet",
@@ -4231,8 +4301,8 @@
     "Definition": "The name of the EMS Location.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "StationName",
     "NV": "",
@@ -4250,7 +4320,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "EMSLocationNumber": {
     "DatasetName": "DEMDataSet",
@@ -4265,8 +4336,8 @@
     "Definition": "The ID number of the EMS Location.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "StationNumber",
     "NV": "",
@@ -4284,7 +4355,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "EMSLocationGPS": {
     "DatasetName": "DEMDataSet",
@@ -4299,8 +4371,8 @@
     "Definition": "The GPS coordinate of  the EMS location.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "GPSLocation",
     "NV": "",
@@ -4318,7 +4390,8 @@
     "fractionDigits": "",
     "pattern": "(\\+|-)?(90(\\.[0]{1,6})?|([1-8][0-9]|[0-9])(\\.[0-9]{1,6})?),(\\+|-)?(180(\\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\\.[0-9]{1,6})?)",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "EMSLocationUSNationalGridCoordinates": {
     "DatasetName": "DEMDataSet",
@@ -4333,8 +4406,8 @@
     "Definition": "The US National Grid Coordinates of the EMS location.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "USNG",
     "NV": "",
@@ -4352,7 +4425,8 @@
     "fractionDigits": "",
     "pattern": "[1][0-9][RSTU][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "EMSLocationAddress": {
     "DatasetName": "DEMDataSet",
@@ -4367,8 +4441,8 @@
     "Definition": "The address of the EMS Location.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "StreetAddress",
     "NV": "",
@@ -4388,7 +4462,8 @@
     "options": [],
     "attributes": [
       "StreetAddress2"
-    ]
+    ],
+    "exportPath": ""
   },
   "EMSLocationCity": {
     "DatasetName": "DEMDataSet",
@@ -4403,8 +4478,8 @@
     "Definition": "The city of the EMS location type (e.g., Fixed station, sub-station, staging area, etc.).",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CityGnisCode",
     "NV": "",
@@ -4422,7 +4497,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "EMSLocationState": {
     "DatasetName": "DEMDataSet",
@@ -4437,8 +4513,8 @@
     "Definition": "The state of the EMS Location.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSIStateCode",
     "NV": "",
@@ -4456,7 +4532,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "EMSStationorLocationZIPCode": {
     "DatasetName": "DEMDataSet",
@@ -4471,8 +4548,8 @@
     "Definition": "The ZIP code of the EMS Location.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ZIP",
     "NV": "",
@@ -4490,7 +4567,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "EMSLocationCounty": {
     "DatasetName": "DEMDataSet",
@@ -4505,8 +4583,8 @@
     "Definition": "The county of the EMS Location",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSICountyCode",
     "NV": "",
@@ -4524,7 +4602,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{5}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "EMSLocationCountry": {
     "DatasetName": "DEMDataSet",
@@ -4539,8 +4618,8 @@
     "Definition": "The country of the EMS location.",
     "Usage": "Optional",
     "V3Changes": "Added to improve international implementations.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSICountryCodesCAMXUS",
     "NV": "",
@@ -4571,7 +4650,8 @@
         "text": "United States"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "EMSLocationPhoneNumber": {
     "DatasetName": "DEMDataSet",
@@ -4586,8 +4666,8 @@
     "Definition": "The phone number of the EMS Location.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "PhoneNumber",
     "NV": "",
@@ -4608,23 +4688,24 @@
     "attributes": [
       "PhoneNumberType",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
-  "Unit/VehicleNumber": {
+  "UnitVehicleNumber": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dVehicle.01",
     "NemsisName": "Unit/Vehicle Number",
     "ElementTitle": "Unit/Vehicle Number",
-    "ngModel": "Unit/VehicleNumber",
+    "ngModel": "UnitVehicleNumber",
     "V2Number": "D06_01",
     "National": "",
     "State": "State",
     "Definition": "The unique ID number for the unit which is specific for each vehicle. This ID number may be the state's vehicle's permit number.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "VehicleNumber",
     "NV": "NV",
@@ -4644,7 +4725,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
   "VehicleIdentificationNumber": {
     "DatasetName": "DEMDataSet",
@@ -4659,8 +4741,8 @@
     "Definition": "The manufacturer's VIN associated with the vehicle.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "VehicleIdentificationNumber",
     "NV": "",
@@ -4678,7 +4760,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "EMSUnitCallSign": {
     "DatasetName": "EMSDataSet",
@@ -4693,8 +4776,8 @@
     "Definition": "The EMS unit number used to dispatch and communicate with the unit. This may be the same as the EMS Unit/Vehicle Number in many agencies.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EMSUnitCallSign",
     "NV": "",
@@ -4712,7 +4795,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
   "VehicleType": {
     "DatasetName": "DEMDataSet",
@@ -4727,8 +4811,8 @@
     "Definition": "The vehicle type of the unit (ambulance, fire, truck, etc.).",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "VehicleType",
     "NV": "NV",
@@ -4801,23 +4885,24 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
-  "CrewStateCertification/LicensureLevels": {
+  "CrewStateCertificationLicensureLevels": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dVehicle.05",
     "NemsisName": "Crew State Certification/Licensure Levels",
     "ElementTitle": "Crew State Certification/Licensure Levels",
-    "ngModel": "CrewStateCertification/LicensureLevels",
+    "ngModel": "CrewStateCertificationLicensureLevels",
     "V2Number": "D06_04",
     "National": "",
     "State": "",
     "Definition": "The certification/licensure level of the ambulance by the state or the certification/licensure level at which the vehicle is most commonly staffed.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "StateCertificationLicensureLevels",
     "NV": "",
@@ -4896,7 +4981,8 @@
         "text": "Registered Nurse"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "NumberofEachEMSPersonnelLevelonNormal911AmbulanceResponse": {
     "DatasetName": "DEMDataSet",
@@ -4911,8 +4997,8 @@
     "Definition": "The number of each personnel level associated with the vehicle crew.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "NumberofPersonnel",
     "NV": "",
@@ -4930,23 +5016,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "NumberofEachEMSPersonnelLevelonNormal911Response(Non-Transport)Vehicle": {
+  "NumberofEachEMSPersonnelLevelonNormal911ResponseNonTransportVehicle": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dVehicle.07",
     "NemsisName": "Number of Each EMS Personnel Level on Normal 911 Response (Non-Transport) Vehicle",
     "ElementTitle": "Number of Each EMS Personnel Level on Normal 911 Response (Non-Transport) Vehicle",
-    "ngModel": "NumberofEachEMSPersonnelLevelonNormal911Response(Non-Transport)Vehicle",
+    "ngModel": "NumberofEachEMSPersonnelLevelonNormal911ResponseNonTransportVehicle",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The number of each personnel level for your EMS Agency's Medical (Non-911) Non-Transport Ambulance.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "NumberofPersonnel",
     "NV": "",
@@ -4964,23 +5051,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "NumberofEachEMSPersonnelLevelonNormalMedical(Non-911)TransportAmbulance": {
+  "NumberofEachEMSPersonnelLevelonNormalMedicalNon911TransportAmbulance": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dVehicle.08",
     "NemsisName": "Number of Each EMS Personnel Level on Normal Medical (Non-911) Transport Ambulance",
     "ElementTitle": "Number of Each EMS Personnel Level on Normal Medical (Non-911) Transport Ambulance",
-    "ngModel": "NumberofEachEMSPersonnelLevelonNormalMedical(Non-911)TransportAmbulance",
+    "ngModel": "NumberofEachEMSPersonnelLevelonNormalMedicalNon911TransportAmbulance",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The number of each personnel level for your EMS Agency's Medical (Non-911) Transport Ambulance.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "NumberofPersonnel",
     "NV": "",
@@ -4998,7 +5086,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "VehicleInitialCost": {
     "DatasetName": "DEMDataSet",
@@ -5013,8 +5102,8 @@
     "Definition": "Initial costs of vehicles held by agency excluding all medical and other equipment not associated with the vehicle. This cost should be inclusive of all sources of funding including grants, donations, and any other capital.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "VehicleInitialCost",
     "NV": "",
@@ -5032,7 +5121,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "VehicleModelYear": {
     "DatasetName": "DEMDataSet",
@@ -5047,8 +5137,8 @@
     "Definition": "The year the vehicle was manufactured.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "Year",
     "NV": "NV",
@@ -5068,23 +5158,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
-  "YearMiles/KilometersHoursAccrued": {
+  "YearMilesKilometersHoursAccrued": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dVehicle.11",
     "NemsisName": "Year Miles/Kilometers Hours Accrued",
     "ElementTitle": "Year Miles/Kilometers Hours Accrued",
-    "ngModel": "YearMiles/KilometersHoursAccrued",
+    "ngModel": "YearMilesKilometersHoursAccrued",
     "V2Number": "D06_08",
     "National": "",
     "State": "",
     "Definition": "The year the hours and miles/kilometers were accumulated.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "Year",
     "NV": "",
@@ -5102,7 +5193,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "AnnualVehicleHours": {
     "DatasetName": "DEMDataSet",
@@ -5117,8 +5209,8 @@
     "Definition": "The number of hours the vehicle was in service for the agency for the defined year.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "VehicleHours",
     "NV": "",
@@ -5136,23 +5228,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "AnnualVehicleMiles/Kilometers": {
+  "AnnualVehicleMilesKilometers": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dVehicle.13",
     "NemsisName": "Annual Vehicle Miles/Kilometers",
     "ElementTitle": "Annual Vehicle Miles/Kilometers",
-    "ngModel": "AnnualVehicleMiles/Kilometers",
+    "ngModel": "AnnualVehicleMilesKilometers",
     "V2Number": "D06_10",
     "National": "",
     "State": "",
     "Definition": "The number of miles/kilometers the vehicle accumulated in service for the agency for the defined year (Odometer Reading).",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "AnnualOdometerReading",
     "NV": "",
@@ -5172,23 +5265,24 @@
     "options": [],
     "attributes": [
       "DistanceUnit"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sLastName": {
+  "EMSPersonnelsLastName": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.01",
     "NemsisName": "EMS Personnel's Last Name",
     "ElementTitle": "EMS Personnel's Last Name",
-    "ngModel": "EMSPersonnel'sLastName",
+    "ngModel": "EMSPersonnelsLastName",
     "V2Number": "D08_01",
     "National": "",
     "State": "State",
     "Definition": "The last name of the personnel.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "PersonLastName",
     "NV": "NV",
@@ -5208,23 +5302,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sFirstName": {
+  "EMSPersonnelsFirstName": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.02",
     "NemsisName": "EMS Personnel's First Name",
     "ElementTitle": "EMS Personnel's First Name",
-    "ngModel": "EMSPersonnel'sFirstName",
+    "ngModel": "EMSPersonnelsFirstName",
     "V2Number": "D08_03",
     "National": "",
     "State": "State",
     "Definition": "The first name of the personnel.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "PersonFirstName",
     "NV": "NV",
@@ -5244,23 +5339,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sMiddleName/Initial": {
+  "EMSPersonnelsMiddleNameInitial": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.03",
     "NemsisName": "EMS Personnel's Middle Name/Initial",
     "ElementTitle": "EMS Personnel's Middle Name/Initial",
-    "ngModel": "EMSPersonnel'sMiddleName/Initial",
+    "ngModel": "EMSPersonnelsMiddleNameInitial",
     "V2Number": "D08_02",
     "National": "",
     "State": "State",
     "Definition": "The middle name or initial of the personnel.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "PersonMiddleName",
     "NV": "NV",
@@ -5280,23 +5376,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sMailingAddress": {
+  "EMSPersonnelsMailingAddress": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.04",
     "NemsisName": "EMS Personnel's Mailing Address",
     "ElementTitle": "EMS Personnel's Mailing Address",
-    "ngModel": "EMSPersonnel'sMailingAddress",
+    "ngModel": "EMSPersonnelsMailingAddress",
     "V2Number": "D08_04",
     "National": "",
     "State": "",
     "Definition": "The Street or PO Box of the personnel's mailing address.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "StreetAddress",
     "NV": "",
@@ -5316,23 +5413,24 @@
     "options": [],
     "attributes": [
       "StreetAddress2"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sCityofResidence": {
+  "EMSPersonnelsCityofResidence": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.05",
     "NemsisName": "EMS Personnel's City of Residence",
     "ElementTitle": "EMS Personnel's City of Residence",
-    "ngModel": "EMSPersonnel'sCityofResidence",
+    "ngModel": "EMSPersonnelsCityofResidence",
     "V2Number": "D08_05",
     "National": "",
     "State": "",
     "Definition": "The city of the personnel's mailing address.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CityGnisCode",
     "NV": "",
@@ -5350,23 +5448,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sState": {
+  "EMSPersonnelsState": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.06",
     "NemsisName": "EMS Personnel's State",
     "ElementTitle": "EMS Personnel's State",
-    "ngModel": "EMSPersonnel'sState",
+    "ngModel": "EMSPersonnelsState",
     "V2Number": "D08_06",
     "National": "",
     "State": "",
     "Definition": "The state of the personnel's mailing address.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSIStateCode",
     "NV": "",
@@ -5384,23 +5483,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sZIPCode": {
+  "EMSPersonnelsZIPCode": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.07",
     "NemsisName": "EMS Personnel's ZIP Code",
     "ElementTitle": "EMS Personnel's ZIP Code",
-    "ngModel": "EMSPersonnel'sZIPCode",
+    "ngModel": "EMSPersonnelsZIPCode",
     "V2Number": "D08_07",
     "National": "",
     "State": "",
     "Definition": "The ZIP code of the personnel's mailing address.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ZIP",
     "NV": "",
@@ -5418,23 +5518,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sCountry": {
+  "EMSPersonnelsCountry": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.08",
     "NemsisName": "EMS Personnel's Country",
     "ElementTitle": "EMS Personnel's Country",
-    "ngModel": "EMSPersonnel'sCountry",
+    "ngModel": "EMSPersonnelsCountry",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The country of the personnel mailing address.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSICountryCodesCAMXUS",
     "NV": "",
@@ -5465,23 +5566,24 @@
         "text": "United States"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sPhoneNumber": {
+  "EMSPersonnelsPhoneNumber": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.09",
     "NemsisName": "EMS Personnel's Phone Number",
     "ElementTitle": "EMS Personnel's Phone Number",
-    "ngModel": "EMSPersonnel'sPhoneNumber",
+    "ngModel": "EMSPersonnelsPhoneNumber",
     "V2Number": "D08_08",
     "National": "",
     "State": "",
     "Definition": "The phone number for the personnel.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "PhoneNumber",
     "NV": "",
@@ -5502,23 +5604,24 @@
     "attributes": [
       "PhoneNumberType",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sEmailAddress": {
+  "EMSPersonnelsEmailAddress": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.10",
     "NemsisName": "EMS Personnel's Email Address",
     "ElementTitle": "EMS Personnel's Email Address",
-    "ngModel": "EMSPersonnel'sEmailAddress",
+    "ngModel": "EMSPersonnelsEmailAddress",
     "V2Number": "D08_10",
     "National": "",
     "State": "",
     "Definition": "The primary email address of the personnel.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "EmailAddress",
     "NV": "",
@@ -5539,23 +5642,24 @@
     "attributes": [
       "EmailAddressType",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sDateofBirth": {
+  "EMSPersonnelsDateofBirth": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.11",
     "NemsisName": "EMS Personnel's Date of Birth",
     "ElementTitle": "EMS Personnel's Date of Birth",
-    "ngModel": "EMSPersonnel'sDateofBirth",
+    "ngModel": "EMSPersonnelsDateofBirth",
     "V2Number": "D08_11",
     "National": "",
     "State": "State",
     "Definition": "The personnel's date of birth.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateType",
     "NV": "NV",
@@ -5575,23 +5679,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sGender": {
+  "EMSPersonnelsGender": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.12",
     "NemsisName": "EMS Personnel's Gender",
     "ElementTitle": "EMS Personnel's Gender",
-    "ngModel": "EMSPersonnel'sGender",
+    "ngModel": "EMSPersonnelsGender",
     "V2Number": "D08_12",
     "National": "",
     "State": "State",
     "Definition": "The personnel's gender.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "Gender",
     "NV": "NV",
@@ -5624,23 +5729,24 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sRace": {
+  "EMSPersonnelsRace": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.13",
     "NemsisName": "EMS Personnel's Race",
     "ElementTitle": "EMS Personnel's Race",
-    "ngModel": "EMSPersonnel'sRace",
+    "ngModel": "EMSPersonnelsRace",
     "V2Number": "D08_13",
     "National": "",
     "State": "State",
     "Definition": "The personnel's race as defined by the OMB (US Office of Management and Budget).",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "DemographicRace",
     "NV": "NV",
@@ -5686,23 +5792,24 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sCitizenship": {
+  "EMSPersonnelsCitizenship": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.14",
     "NemsisName": "EMS Personnel's Citizenship",
     "ElementTitle": "EMS Personnel's Citizenship",
-    "ngModel": "EMSPersonnel'sCitizenship",
+    "ngModel": "EMSPersonnelsCitizenship",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The documentation of the personnel's citizenship.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSICountryCode",
     "NV": "",
@@ -5720,23 +5827,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sHighestEducationalDegree": {
+  "EMSPersonnelsHighestEducationalDegree": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.15",
     "NemsisName": "EMS Personnel's Highest Educational Degree",
     "ElementTitle": "EMS Personnel's Highest Educational Degree",
-    "ngModel": "EMSPersonnel'sHighestEducationalDegree",
+    "ngModel": "EMSPersonnelsHighestEducationalDegree",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The highest educational degree completed by the personnel.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonnelHighestEducationalDegree",
     "NV": "",
@@ -5819,23 +5927,24 @@
         "text": "Doctorate Degree (i.e. PhD, EdD)"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sDegreeSubject/FieldofStudy": {
+  "EMSPersonnelsDegreeSubjectFieldofStudy": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.16",
     "NemsisName": "EMS Personnel's Degree Subject/Field of Study",
     "ElementTitle": "EMS Personnel's Degree Subject/Field of Study",
-    "ngModel": "EMSPersonnel'sDegreeSubject/FieldofStudy",
+    "ngModel": "EMSPersonnelsDegreeSubjectFieldofStudy",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The area of the personnel's post high-school (post-secondary) degree.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "PersonnelDegreeFieldofStudy",
     "NV": "",
@@ -6000,23 +6109,24 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sMotorVehicleLicenseType": {
+  "EMSPersonnelsMotorVehicleLicenseType": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.17",
     "NemsisName": "EMS Personnel's Motor Vehicle License Type",
     "ElementTitle": "EMS Personnel's Motor Vehicle License Type",
-    "ngModel": "EMSPersonnel'sMotorVehicleLicenseType",
+    "ngModel": "EMSPersonnelsMotorVehicleLicenseType",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The type of motor vehicle license (i.e. Class A, B, Pilot, etc.) of the EMS personnel.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "PersonnelVehicleLicenseType",
     "NV": "",
@@ -6085,23 +6195,24 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sImmunizationStatus": {
+  "EMSPersonnelsImmunizationStatus": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.18",
     "NemsisName": "EMS Personnel's Immunization Status",
     "ElementTitle": "EMS Personnel's Immunization Status",
-    "ngModel": "EMSPersonnel'sImmunizationStatus",
+    "ngModel": "EMSPersonnelsImmunizationStatus",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The type of immunization status.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ImmunizationType",
     "NV": "",
@@ -6224,23 +6335,24 @@
         "text": "Yellow Fever"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sImmunizationYear": {
+  "EMSPersonnelsImmunizationYear": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.19",
     "NemsisName": "EMS Personnel's Immunization Year",
     "ElementTitle": "EMS Personnel's Immunization Year",
-    "ngModel": "EMSPersonnel'sImmunizationYear",
+    "ngModel": "EMSPersonnelsImmunizationYear",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The year associated with each immunization type.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "Year",
     "NV": "",
@@ -6258,23 +6370,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sForeignLanguageAbility": {
+  "EMSPersonnelsForeignLanguageAbility": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.20",
     "NemsisName": "EMS Personnel's Foreign Language Ability",
     "ElementTitle": "EMS Personnel's Foreign Language Ability",
-    "ngModel": "EMSPersonnel'sForeignLanguageAbility",
+    "ngModel": "EMSPersonnelsForeignLanguageAbility",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The languages spoken (other than English) by the personnel with at least an elementary level of proficiency.",
     "Usage": "Optional",
     "V3Changes": "Added to better describe the EMS workforce.",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "PersonnelForeignLanguageAbility",
     "NV": "",
@@ -6495,23 +6608,24 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sAgencyIDNumber": {
+  "EMSPersonnelsAgencyIDNumber": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.21",
     "NemsisName": "EMS Personnel's Agency ID Number",
     "ElementTitle": "EMS Personnel's Agency ID Number",
-    "ngModel": "EMSPersonnel'sAgencyIDNumber",
+    "ngModel": "EMSPersonnelsAgencyIDNumber",
     "V2Number": "D07_01",
     "National": "",
     "State": "",
     "Definition": "The local agency ID number for the personnel.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonnelAgencyIDNumber",
     "NV": "",
@@ -6529,23 +6643,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sStateofLicensure": {
+  "EMSPersonnelsStateofLicensure": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.22",
     "NemsisName": "EMS Personnel's State of Licensure",
     "ElementTitle": "EMS Personnel's State of Licensure",
-    "ngModel": "EMSPersonnel'sStateofLicensure",
+    "ngModel": "EMSPersonnelsStateofLicensure",
     "V2Number": "",
     "National": "",
     "State": "State",
     "Definition": "The state of the certification/licensure ID number assigned to the personnel member.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ANSIStateCode",
     "NV": "NV",
@@ -6565,23 +6680,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sState'sLicensureIDNumber": {
+  "EMSPersonnelsStatesLicensureIDNumber": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.23",
     "NemsisName": "EMS Personnel's State's Licensure ID Number",
     "ElementTitle": "EMS Personnel's State's Licensure ID Number",
-    "ngModel": "EMSPersonnel'sState'sLicensureIDNumber",
+    "ngModel": "EMSPersonnelsStatesLicensureIDNumber",
     "V2Number": "D07_02",
     "National": "",
     "State": "State",
     "Definition": "The state's licensure/certification ID number for the personnel.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "StateLicensureID",
     "NV": "NV",
@@ -6601,23 +6717,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sStateEMSCertificationLicensureLevel": {
+  "EMSPersonnelsStateEMSCertificationLicensureLevel": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.24",
     "NemsisName": "EMS Personnel's State EMS Certification Licensure Level",
     "ElementTitle": "EMS Personnel's State EMS Certification Licensure Level",
-    "ngModel": "EMSPersonnel'sStateEMSCertificationLicensureLevel",
+    "ngModel": "EMSPersonnelsStateEMSCertificationLicensureLevel",
     "V2Number": "D08_15",
     "National": "",
     "State": "State",
     "Definition": "The personnel's state EMS certification level.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "MemberLevel",
     "NV": "NV",
@@ -6714,23 +6831,24 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sStateEMSCurrentCertificationDate": {
+  "EMSPersonnelsStateEMSCurrentCertificationDate": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.25",
     "NemsisName": "EMS Personnel's State EMS Current Certification Date",
     "ElementTitle": "EMS Personnel's State EMS Current Certification Date",
-    "ngModel": "EMSPersonnel'sStateEMSCurrentCertificationDate",
+    "ngModel": "EMSPersonnelsStateEMSCurrentCertificationDate",
     "V2Number": "D08_17",
     "National": "",
     "State": "",
     "Definition": "The date of the personnel's current EMS certification/licensure.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateType",
     "NV": "",
@@ -6748,23 +6866,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sInitialState'sLicensureIssueDate": {
+  "EMSPersonnelsInitialStatesLicensureIssueDate": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.26",
     "NemsisName": "EMS Personnel's Initial State's Licensure Issue Date",
     "ElementTitle": "EMS Personnel's Initial State's Licensure Issue Date",
-    "ngModel": "EMSPersonnel'sInitialState'sLicensureIssueDate",
+    "ngModel": "EMSPersonnelsInitialStatesLicensureIssueDate",
     "V2Number": "D08_18",
     "National": "",
     "State": "",
     "Definition": "The date on which the EMS personnel's state's EMS certification/licensure was originally issued. This is the date of the first certification/licensure for the EMS level.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateType",
     "NV": "",
@@ -6782,23 +6901,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sCurrentState'sLicensureExpirationDate": {
+  "EMSPersonnelsCurrentStatesLicensureExpirationDate": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.27",
     "NemsisName": "EMS Personnel's Current State's Licensure Expiration Date",
     "ElementTitle": "EMS Personnel's Current State's Licensure Expiration Date",
-    "ngModel": "EMSPersonnel'sCurrentState'sLicensureExpirationDate",
+    "ngModel": "EMSPersonnelsCurrentStatesLicensureExpirationDate",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The date on which the EMS personnel's (highest) state EMS certification/licensure expires.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateType",
     "NV": "",
@@ -6816,23 +6936,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sNationalRegistryNumber": {
+  "EMSPersonnelsNationalRegistryNumber": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.28",
     "NemsisName": "EMS Personnel's National Registry Number",
     "ElementTitle": "EMS Personnel's National Registry Number",
-    "ngModel": "EMSPersonnel'sNationalRegistryNumber",
+    "ngModel": "EMSPersonnelsNationalRegistryNumber",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The National Registry number associated with the level of certification/licensure obtained through NREMT.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "NationalRegistryNumber",
     "NV": "",
@@ -6850,23 +6971,24 @@
     "fractionDigits": "",
     "pattern": "[A-Z][A-Z0-9][0-9]{6}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sNationalRegistryCertificationLevel": {
+  "EMSPersonnelsNationalRegistryCertificationLevel": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.29",
     "NemsisName": "EMS Personnel's National Registry Certification Level",
     "ElementTitle": "EMS Personnel's National Registry Certification Level",
-    "ngModel": "EMSPersonnel'sNationalRegistryCertificationLevel",
+    "ngModel": "EMSPersonnelsNationalRegistryCertificationLevel",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The level of the current National Registry of Emergency Medical Technicians (NREMT) certification.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "NationalRegistryCertificationLevel",
     "NV": "",
@@ -6917,23 +7039,24 @@
         "text": "First Responder"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sCurrentNationalRegistryExpirationDate": {
+  "EMSPersonnelsCurrentNationalRegistryExpirationDate": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.30",
     "NemsisName": "EMS Personnel's Current National Registry Expiration Date",
     "ElementTitle": "EMS Personnel's Current National Registry Expiration Date",
-    "ngModel": "EMSPersonnel'sCurrentNationalRegistryExpirationDate",
+    "ngModel": "EMSPersonnelsCurrentNationalRegistryExpirationDate",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The date on which the EMS Personnel's National Registry of EMTs certification/licensure expires",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateType",
     "NV": "",
@@ -6951,23 +7074,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sEmploymentStatus": {
+  "EMSPersonnelsEmploymentStatus": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.31",
     "NemsisName": "EMS Personnel's Employment Status",
     "ElementTitle": "EMS Personnel's Employment Status",
-    "ngModel": "EMSPersonnel'sEmploymentStatus",
+    "ngModel": "EMSPersonnelsEmploymentStatus",
     "V2Number": "D07_03",
     "National": "",
     "State": "State",
     "Definition": "The personnel's primary employment status for this agency.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "EmploymentStatus",
     "NV": "NV",
@@ -7004,23 +7128,24 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sEmploymentStatusDate": {
+  "EMSPersonnelsEmploymentStatusDate": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.32",
     "NemsisName": "EMS Personnel's Employment Status Date",
     "ElementTitle": "EMS Personnel's Employment Status Date",
-    "ngModel": "EMSPersonnel'sEmploymentStatusDate",
+    "ngModel": "EMSPersonnelsEmploymentStatusDate",
     "V2Number": "D07_04",
     "National": "",
     "State": "State",
     "Definition": "The personnel's employment status date.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateType",
     "NV": "NV",
@@ -7040,23 +7165,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sHireDate": {
+  "EMSPersonnelsHireDate": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.33",
     "NemsisName": "EMS Personnel's Hire Date",
     "ElementTitle": "EMS Personnel's Hire Date",
-    "ngModel": "EMSPersonnel'sHireDate",
+    "ngModel": "EMSPersonnelsHireDate",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The date the employee was hired by the EMS agency for this current job.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateType",
     "NV": "",
@@ -7074,23 +7200,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sPrimaryEMSJobRole": {
+  "EMSPersonnelsPrimaryEMSJobRole": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.34",
     "NemsisName": "EMS Personnel's Primary EMS Job Role",
     "ElementTitle": "EMS Personnel's Primary EMS Job Role",
-    "ngModel": "EMSPersonnel'sPrimaryEMSJobRole",
+    "ngModel": "EMSPersonnelsPrimaryEMSJobRole",
     "V2Number": "",
     "National": "",
     "State": "State",
     "Definition": "The individuals primary/main EMS role at the EMS agency. This is the function which is performed the majority of the time for the EMS personnel.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "JobResponsibilities",
     "NV": "NV",
@@ -7147,23 +7274,24 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sOtherJobResponsibilities": {
+  "EMSPersonnelsOtherJobResponsibilities": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.35",
     "NemsisName": "EMS Personnel's Other Job Responsibilities",
     "ElementTitle": "EMS Personnel's Other Job Responsibilities",
-    "ngModel": "EMSPersonnel'sOtherJobResponsibilities",
+    "ngModel": "EMSPersonnelsOtherJobResponsibilities",
     "V2Number": "",
     "National": "",
     "State": "State",
     "Definition": "The EMS personnel's other job responsibilities at the agency beyond their primary role documented in dPersonnel.34 (EMS Personnel's Primary EMS Job Role).",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "JobResponsibilities",
     "NV": "NV",
@@ -7221,23 +7349,24 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
-  "EMSPersonnel'sTotalLengthofServiceinYears": {
+  "EMSPersonnelsTotalLengthofServiceinYears": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.36",
     "NemsisName": "EMS Personnel's Total Length of Service in Years",
     "ElementTitle": "EMS Personnel's Total Length of Service in Years",
-    "ngModel": "EMSPersonnel'sTotalLengthofServiceinYears",
+    "ngModel": "EMSPersonnelsTotalLengthofServiceinYears",
     "V2Number": "D08_19",
     "National": "",
     "State": "",
     "Definition": "The personnel's total length of EMS service at any level (years).",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "TotalService",
     "NV": "",
@@ -7255,23 +7384,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sDateLengthofServiceDocumented": {
+  "EMSPersonnelsDateLengthofServiceDocumented": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.37",
     "NemsisName": "EMS Personnel's Date Length of Service Documented",
     "ElementTitle": "EMS Personnel's Date Length of Service Documented",
-    "ngModel": "EMSPersonnel'sDateLengthofServiceDocumented",
+    "ngModel": "EMSPersonnelsDateLengthofServiceDocumented",
     "V2Number": "D08_20",
     "National": "",
     "State": "",
     "Definition": "The date which the length of EMS service was documented.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateType",
     "NV": "",
@@ -7289,23 +7419,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "EMSPersonnel'sPracticeLevel": {
+  "EMSPersonnelsPracticeLevel": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.38",
     "NemsisName": "EMS Personnel's Practice Level",
     "ElementTitle": "EMS Personnel's Practice Level",
-    "ngModel": "EMSPersonnel'sPracticeLevel",
+    "ngModel": "EMSPersonnelsPracticeLevel",
     "V2Number": "D07_05",
     "National": "",
     "State": "",
     "Definition": "The EMS certification level at which the individual is providing patient care services for the EMS agency.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "MemberLevel",
     "NV": "",
@@ -7400,23 +7531,24 @@
         "text": "Registered Nurse"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "DateofPersonnel'sCertificationorLicensureforAgency": {
+  "DateofPersonnelsCertificationorLicensureforAgency": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dPersonnel.39",
     "NemsisName": "Date of Personnel's Certification or Licensure for Agency",
     "ElementTitle": "Date of Personnel's Certification or Licensure for Agency",
-    "ngModel": "DateofPersonnel'sCertificationorLicensureforAgency",
+    "ngModel": "DateofPersonnelsCertificationorLicensureforAgency",
     "V2Number": "D07_06",
     "National": "",
     "State": "",
     "Definition": "The date that the Certification/Licensure was achieved for the local EMS agency.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateType",
     "NV": "",
@@ -7434,7 +7566,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "MedicalDeviceSerialNumber": {
     "DatasetName": "EMSDataSet",
@@ -7449,8 +7582,8 @@
     "Definition": "The unique manufacturer's serial number associated with a medical device.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DeviceSerialNumber",
     "NV": "",
@@ -7468,7 +7601,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup"
   },
   "MedicalDeviceNameorID": {
     "DatasetName": "DEMDataSet",
@@ -7483,8 +7617,8 @@
     "Definition": "The local number or configurable Name/ID of the medical device.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DeviceNameorID",
     "NV": "",
@@ -7502,7 +7636,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "MedicalDeviceType": {
     "DatasetName": "DEMDataSet",
@@ -7517,8 +7652,8 @@
     "Definition": "The type of medical device.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "MedicalDeviceType",
     "NV": "",
@@ -7619,7 +7754,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "MedicalDeviceManufacturer": {
     "DatasetName": "DEMDataSet",
@@ -7634,8 +7770,8 @@
     "Definition": "The manufacturer of the medical device.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DeviceManufacturer",
     "NV": "",
@@ -7653,7 +7789,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "MedicalDeviceModelNumber": {
     "DatasetName": "DEMDataSet",
@@ -7668,8 +7805,8 @@
     "Definition": "The specific manufacturer's model number associated with medical device.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ModelNumber",
     "NV": "",
@@ -7687,7 +7824,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "MedicalDevicePurchaseDate": {
     "DatasetName": "DEMDataSet",
@@ -7702,8 +7840,8 @@
     "Definition": "The date the device was purchased or placed in service by the EMS agency.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateType",
     "NV": "",
@@ -7721,7 +7859,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "TypeofFacility": {
     "DatasetName": "DEMDataSet",
@@ -7736,8 +7875,8 @@
     "Definition": "The type of facility (healthcare or other) that the EMS agency transports patients to or from.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "TypeOfFacility",
     "NV": "",
@@ -7792,7 +7931,8 @@
         "text": "Dialysis Center"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "FacilityName": {
     "DatasetName": "DEMDataSet",
@@ -7807,8 +7947,8 @@
     "Definition": "The name of the facility.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "FacilityName",
     "NV": "",
@@ -7826,7 +7966,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "FacilityLocationCode": {
     "DatasetName": "DEMDataSet",
@@ -7841,8 +7982,8 @@
     "Definition": "The code of the facility as assigned by the state or the EMS agency.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "FacilityCode",
     "NV": "",
@@ -7860,7 +8001,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "HospitalDesignations": {
     "DatasetName": "DEMDataSet",
@@ -7875,8 +8017,8 @@
     "Definition": "The designation(s) associated with the hospital (e.g., Trauma, STEMI, Peds, etc.)",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "HospitalDesignation",
     "NV": "",
@@ -7961,7 +8103,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "FacilityNationalProviderIdentifier": {
     "DatasetName": "DEMDataSet",
@@ -7976,8 +8119,8 @@
     "Definition": "The facility National Provider Identifier associated with National Provider System (NPS).",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "NationalProviderIdentifier",
     "NV": "",
@@ -7995,23 +8138,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
-  "FacilityRoom,Suite,orApartment": {
+  "FacilityRoomSuiteorApartment": {
     "DatasetName": "DEMDataSet",
     "DatasetType": "element",
     "NemsisNumber": "dFacility.06",
     "NemsisName": "Facility Room, Suite, or Apartment",
     "ElementTitle": "Facility Room, Suite, or Apartment",
-    "ngModel": "FacilityRoom,Suite,orApartment",
+    "ngModel": "FacilityRoomSuiteorApartment",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The number of the specific room, suite, or apartment of the facility.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "FacilityRoom",
     "NV": "",
@@ -8029,7 +8173,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "FacilityStreetAddress": {
     "DatasetName": "DEMDataSet",
@@ -8044,8 +8189,8 @@
     "Definition": "The address where the facility is located.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "StreetAddress",
     "NV": "",
@@ -8065,7 +8210,8 @@
     "options": [],
     "attributes": [
       "StreetAddress2"
-    ]
+    ],
+    "exportPath": ""
   },
   "FacilityCity": {
     "DatasetName": "DEMDataSet",
@@ -8080,8 +8226,8 @@
     "Definition": "The city where the facility is located (physical address).",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CityGnisCode",
     "NV": "",
@@ -8099,7 +8245,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "FacilityState": {
     "DatasetName": "DEMDataSet",
@@ -8114,8 +8261,8 @@
     "Definition": "The state where the facility is located.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSIStateCode",
     "NV": "",
@@ -8133,7 +8280,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "FacilityZIPCode": {
     "DatasetName": "DEMDataSet",
@@ -8148,8 +8296,8 @@
     "Definition": "The zip code where the facility is located.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ZIP",
     "NV": "",
@@ -8167,7 +8315,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "FacilityCounty": {
     "DatasetName": "DEMDataSet",
@@ -8182,8 +8331,8 @@
     "Definition": "The county where the facility is located.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSICountyCode",
     "NV": "",
@@ -8201,7 +8350,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{5}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "FacilityCountry": {
     "DatasetName": "DEMDataSet",
@@ -8216,8 +8366,8 @@
     "Definition": "The country where the facility is located.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSICountryCodesCAMXUS",
     "NV": "",
@@ -8248,7 +8398,8 @@
         "text": "United States"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "FacilityGPSLocation": {
     "DatasetName": "DEMDataSet",
@@ -8263,8 +8414,8 @@
     "Definition": "The facility GPS Coordinates.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "GPSLocation",
     "NV": "",
@@ -8282,7 +8433,8 @@
     "fractionDigits": "",
     "pattern": "(\\+|-)?(90(\\.[0]{1,6})?|([1-8][0-9]|[0-9])(\\.[0-9]{1,6})?),(\\+|-)?(180(\\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\\.[0-9]{1,6})?)",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "FacilityUSNationalGridCoordinates": {
     "DatasetName": "DEMDataSet",
@@ -8297,8 +8449,8 @@
     "Definition": "Facility US National Grid Coordinates",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "USNG",
     "NV": "",
@@ -8316,7 +8468,8 @@
     "fractionDigits": "",
     "pattern": "[1][0-9][RSTU][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "FacilityPhoneNumber": {
     "DatasetName": "DEMDataSet",
@@ -8331,8 +8484,8 @@
     "Definition": "Facility phone number.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "PhoneNumber",
     "NV": "",
@@ -8353,7 +8506,8 @@
     "attributes": [
       "PhoneNumberType",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": ""
   },
   "CustomDataElementResult": {
     "DatasetName": "EMSDataSet",
@@ -8368,8 +8522,8 @@
     "Definition": "The actual value or values chosen (if values listed in eCustomConfiguration.06) or result (free text, Date/Time, or number) documented for the Custom Data Element",
     "Usage": "Mandatory",
     "V3Changes": "Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "CustomResults",
     "NV": "NV",
@@ -8390,7 +8544,8 @@
     "attributes": [
       "NV",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eCustomResults/eCustomResults.ResultsGroup"
   },
   "CustomElementIDReferenced": {
     "DatasetName": "EMSDataSet",
@@ -8405,8 +8560,8 @@
     "Definition": "References the CustomElementID attribute for eCustomConfiguration.CustomGroup",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CorrelationID",
     "NV": "",
@@ -8424,7 +8579,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eCustomResults/eCustomResults.ResultsGroup"
   },
   "CorrelationIDofDemographicReportElementorGroup": {
     "DatasetName": "DEMDataSet",
@@ -8439,8 +8595,8 @@
     "Definition": "References the CorrelationID attribute of an element or group in the DemographicReport section",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CorrelationID",
     "NV": "",
@@ -8458,7 +8614,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": ""
   },
   "PatientCareReportNumber": {
     "DatasetName": "EMSDataSet",
@@ -8473,8 +8630,8 @@
     "Definition": "The unique number automatically assigned by the EMS agency for each Patient Care Report (PCR). This should be a unique number for the EMS agency for all of time.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PatientCareReportNumber",
     "NV": "",
@@ -8492,7 +8649,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eRecord"
   },
   "SoftwareCreator": {
     "DatasetName": "EMSDataSet",
@@ -8507,8 +8665,8 @@
     "Definition": "The name of the vendor, manufacturer, and developer who designed the application that created this record.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "SoftwareCreator",
     "NV": "",
@@ -8526,7 +8684,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eRecord/eRecord.SoftwareApplicationGroup"
   },
   "SoftwareName": {
     "DatasetName": "EMSDataSet",
@@ -8541,8 +8700,8 @@
     "Definition": "The name of the application used to create this record.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "SoftwareName",
     "NV": "",
@@ -8560,7 +8719,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eRecord/eRecord.SoftwareApplicationGroup"
   },
   "SoftwareVersion": {
     "DatasetName": "EMSDataSet",
@@ -8575,8 +8735,8 @@
     "Definition": "The version of the application used to create this record.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "SoftwareVersion",
     "NV": "",
@@ -8594,7 +8754,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eRecord/eRecord.SoftwareApplicationGroup"
   },
   "IncidentNumber": {
     "DatasetName": "EMSDataSet",
@@ -8609,8 +8770,8 @@
     "Definition": "The incident number assigned by the 911 Dispatch System",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "EMSIncidentNumber",
     "NV": "NV",
@@ -8630,7 +8791,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
   "EMSResponseNumber": {
     "DatasetName": "EMSDataSet",
@@ -8645,8 +8807,8 @@
     "Definition": "The internal EMS response number which is unique for each EMS Vehicle's (Unit) response to an incident within an EMS Agency.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "EMSResponseNumber",
     "NV": "NV",
@@ -8666,7 +8828,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
   "TypeofServiceRequested": {
     "DatasetName": "EMSDataSet",
@@ -8681,8 +8844,8 @@
     "Definition": "The type of service or category of service requested of the EMS Agency responding for this specific EMS event",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EMSServiceCat",
     "NV": "",
@@ -8729,7 +8892,8 @@
         "text": "Standby"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse/eResponse.ServiceGroup"
   },
   "StandbyPurpose": {
     "DatasetName": "EMSDataSet",
@@ -8744,8 +8908,8 @@
     "Definition": "The main reason the EMS Unit is on Standby as the Primary Type of Service for the EMS event.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EMSStandByReason",
     "NV": "",
@@ -8808,7 +8972,8 @@
         "text": "Public Safety Support"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse/eResponse.ServiceGroup"
   },
   "PrimaryRoleoftheUnit": {
     "DatasetName": "EMSDataSet",
@@ -8823,8 +8988,8 @@
     "Definition": "The primary role of the EMS Unit which responded to this specific EMS event",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PrimaryRoleOfUnit",
     "NV": "",
@@ -8867,7 +9032,8 @@
         "text": "Air Transport-Fixed Wing"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
   "TypeofDispatchDelay": {
     "DatasetName": "EMSDataSet",
@@ -8882,8 +9048,8 @@
     "Definition": "The dispatch delays, if any, associated with the dispatch of the EMS unit to the EMS event.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "EMSDispatchDelayReason",
     "NV": "NV",
@@ -8941,7 +9107,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
   "TypeofResponseDelay": {
     "DatasetName": "EMSDataSet",
@@ -8956,8 +9123,8 @@
     "Definition": "The response delays, if any, of the EMS unit associated with the EMS event.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "EMSUnitDelayReason",
     "NV": "NV",
@@ -9047,7 +9214,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
   "TypeofSceneDelay": {
     "DatasetName": "EMSDataSet",
@@ -9062,8 +9230,8 @@
     "Definition": "The scene delays, if any, of the EMS unit associated with the EMS event.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "EMSSceneUnitDelayReason",
     "NV": "NV",
@@ -9165,7 +9333,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
   "TypeofTransportDelay": {
     "DatasetName": "EMSDataSet",
@@ -9180,8 +9349,8 @@
     "Definition": "The transport delays, if any, of the EMS unit associated with the EMS event.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "EMSTransportUnitDelayReason",
     "NV": "NV",
@@ -9267,23 +9436,24 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
-  "TypeofTurn-AroundDelay": {
+  "TypeofTurnAroundDelay": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eResponse.12",
     "NemsisName": "Type of Turn-Around Delay",
     "ElementTitle": "Type of Turn-Around Delay",
-    "ngModel": "TypeofTurn-AroundDelay",
+    "ngModel": "TypeofTurnAroundDelay",
     "V2Number": "E02_10",
     "National": "National",
     "State": "State",
     "Definition": "The turn-around delays, if any, of EMS unit associated with the EMS event.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "EMSTurnaroundUnitDelayReason",
     "NV": "NV",
@@ -9373,23 +9543,24 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
-  "EMSVehicle(Unit)Number": {
+  "EMSVehicleUnitNumber": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eResponse.13",
     "NemsisName": "EMS Vehicle (Unit) Number",
     "ElementTitle": "EMS Vehicle (Unit) Number",
-    "ngModel": "EMSVehicle(Unit)Number",
+    "ngModel": "EMSVehicleUnitNumber",
     "V2Number": "E02_11",
     "National": "National",
     "State": "State",
     "Definition": "The unique physical vehicle number of the responding unit.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EMSVehicleNumber",
     "NV": "",
@@ -9407,7 +9578,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
   "LevelofCareofThisUnit": {
     "DatasetName": "EMSDataSet",
@@ -9422,8 +9594,8 @@
     "Definition": "The level of care (BLS or ALS) the unit is able to provide based on the units' treatment capabilities for this EMS response.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "UnitLevelOfCare",
     "NV": "",
@@ -9490,7 +9662,8 @@
         "text": "Specialty Critical Care"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
   "VehicleDispatchLocation": {
     "DatasetName": "EMSDataSet",
@@ -9505,8 +9678,8 @@
     "Definition": "The EMS location or healthcare facility representing the geographic location of the unit or crew at the time of dispatch.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "VehicleDispatchLocation",
     "NV": "",
@@ -9524,7 +9697,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
   "VehicleDispatchGPSLocation": {
     "DatasetName": "EMSDataSet",
@@ -9539,8 +9713,8 @@
     "Definition": "The GPS coordinates associated with the EMS unit at the time of dispatch documented in decimal degrees.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "GPSLocation",
     "NV": "",
@@ -9558,7 +9732,8 @@
     "fractionDigits": "",
     "pattern": "(\\+|-)?(90(\\.[0]{1,6})?|([1-8][0-9]|[0-9])(\\.[0-9]{1,6})?),(\\+|-)?(180(\\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\\.[0-9]{1,6})?)",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
   "VehicleDispatchLocationUSNationalGridCoordinates": {
     "DatasetName": "EMSDataSet",
@@ -9573,8 +9748,8 @@
     "Definition": "The US National Grid Coordinates for the EMS Vehicle's Dispatch Location.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "USNG",
     "NV": "",
@@ -9592,7 +9767,8 @@
     "fractionDigits": "",
     "pattern": "[1][0-9][RSTU][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
   "BeginningOdometerReadingofRespondingVehicle": {
     "DatasetName": "EMSDataSet",
@@ -9607,8 +9783,8 @@
     "Definition": "The mileage (counter or odometer reading) of the vehicle at the beginning of the call (when the wheels begin moving). If EMS vehicle/unit is via water or air travel document the number in \"hours\" as it relates to the documentation of Boat, Fixed Wing, or Rotor Craft in eDisposition.16 (EMS Transport Method)",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EMSMileageOdometer",
     "NV": "",
@@ -9626,23 +9802,24 @@
     "fractionDigits": "2",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
-  "On-SceneOdometerReadingofRespondingVehicle": {
+  "OnSceneOdometerReadingofRespondingVehicle": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eResponse.20",
     "NemsisName": "On-Scene Odometer Reading of Responding Vehicle",
     "ElementTitle": "On-Scene Odometer Reading of Responding Vehicle",
-    "ngModel": "On-SceneOdometerReadingofRespondingVehicle",
+    "ngModel": "OnSceneOdometerReadingofRespondingVehicle",
     "V2Number": "E02_17",
     "National": "",
     "State": "State",
     "Definition": "The mileage (counter or odometer reading) of the vehicle when it arrives at the scene. If EMS vehicle/unit is via water or air travel document the number in \"hours\" as it relates to the documentation of Boat, Fixed Wing, or Rotor Craft in eDisposition.16 (EMS Transport Method)",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EMSMileageOdometer",
     "NV": "",
@@ -9660,7 +9837,8 @@
     "fractionDigits": "2",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
   "PatientDestinationOdometerReadingofRespondingVehicle": {
     "DatasetName": "EMSDataSet",
@@ -9675,8 +9853,8 @@
     "Definition": "The mileage (counter or odometer reading) of the vehicle when it arrives at the patient's destination. If EMS vehicle/unit is via water or air travel document the number in \"hours\" as it relates to the documentation of Boat, Fixed Wing, or Rotor Craft in eDisposition.16 (EMS Transport Method)",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EMSMileageOdometer",
     "NV": "",
@@ -9694,7 +9872,8 @@
     "fractionDigits": "2",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
   "EndingOdometerReadingofRespondingVehicle": {
     "DatasetName": "EMSDataSet",
@@ -9709,8 +9888,8 @@
     "Definition": "If using a counter, this is the mileage traveled beginning with dispatch through the transport of the patient to their destination and ending when back in service, starting from 0. If EMS vehicle/unit is via water or air travel document the number in \"hours\" as it relates to the documentation of boat, Fixed Wing, or Rotor Craft in eDisposition.16",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EMSMileageOdometer",
     "NV": "",
@@ -9728,7 +9907,8 @@
     "fractionDigits": "2",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
   "ResponseModetoScene": {
     "DatasetName": "EMSDataSet",
@@ -9743,8 +9923,8 @@
     "Definition": "The indication whether the response was emergent or non-emergent. An emergent response is an immediate response (typically using lights and sirens).",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EMSResponseMode",
     "NV": "",
@@ -9779,7 +9959,8 @@
         "text": "Non-Emergent Upgraded to Emergent"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
   "AdditionalResponseModeDescriptors": {
     "DatasetName": "EMSDataSet",
@@ -9794,8 +9975,8 @@
     "Definition": "The documentation of response mode techniques used for this EMS response.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "EMSAdditionalResponseMode",
     "NV": "NV",
@@ -9865,7 +10046,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eResponse"
   },
   "ComplaintReportedbyDispatch": {
     "DatasetName": "EMSDataSet",
@@ -9880,8 +10062,8 @@
     "Definition": "The complaint dispatch reported to the responding unit.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ComplaintReportedByDispatch",
     "NV": "",
@@ -10068,7 +10250,8 @@
         "text": "Airmedical Transport"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDispatch"
   },
   "EMDPerformed": {
     "DatasetName": "EMSDataSet",
@@ -10083,8 +10266,8 @@
     "Definition": "Indication of whether Emergency Medical Dispatch was performed for this EMS event.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "EMDPerformed",
     "NV": "NV",
@@ -10121,7 +10304,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDispatch"
   },
   "EMDCardNumber": {
     "DatasetName": "EMSDataSet",
@@ -10136,8 +10320,8 @@
     "Definition": "The EMD card number reported by dispatch, consisting of the card number, dispatch level, and dispatch mode",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EMDCardNumber",
     "NV": "",
@@ -10155,7 +10339,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDispatch"
   },
   "DispatchCenterNameorID": {
     "DatasetName": "EMSDataSet",
@@ -10170,8 +10355,8 @@
     "Definition": "The name or ID of the dispatch center providing electronic data to the PCR for the EMS agency, if applicable.",
     "Usage": "Optional",
     "V3Changes": "Added to the dataset to assist in identifying the CAD / dispatch center providing information to the EMS agency and ePCR when there are multiple dispatch centers sending resources to the same EMS incident.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ComputerAidedDispatchCADNameorID",
     "NV": "",
@@ -10189,23 +10374,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDispatch"
   },
-  "DispatchPriority(PatientAcuity)": {
+  "DispatchPriorityPatientAcuity": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eDispatch.05",
     "NemsisName": "Dispatch Priority (Patient Acuity)",
     "ElementTitle": "Dispatch Priority (Patient Acuity)",
-    "ngModel": "DispatchPriority(PatientAcuity)",
+    "ngModel": "DispatchPriorityPatientAcuity",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The actual, apparent, or potential acuity of the patient's condition as determined through information obtained during the EMD process.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DispatchPriority",
     "NV": "",
@@ -10240,7 +10426,8 @@
         "text": "Non-Acute [e.g., Scheduled Transfer  or Standby]"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDispatch"
   },
   "UnitDispatchedCADRecordID": {
     "DatasetName": "EMSDataSet",
@@ -10255,8 +10442,8 @@
     "Definition": "The unique ID assigned by the CAD system for the specific unit response.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "UnitDispatchedCADRecordID",
     "NV": "",
@@ -10274,7 +10461,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDispatch"
   },
   "CrewMemberID": {
     "DatasetName": "EMSDataSet",
@@ -10289,8 +10477,8 @@
     "Definition": "The statewide assigned ID number of the EMS crew member confirming the airway placement.",
     "Usage": "Recommended",
     "V3Changes": "Added to better document airway management.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "CrewMemberID",
     "NV": "NV",
@@ -10310,7 +10498,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup/eAirway.ConfirmationGroup"
   },
   "CrewMemberLevel": {
     "DatasetName": "EMSDataSet",
@@ -10325,8 +10514,8 @@
     "Definition": "The functioning level of the crew member ID during this EMS patient encounter.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "MemberLevel",
     "NV": "NV",
@@ -10423,7 +10612,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eCrew/eCrew.CrewGroup"
   },
   "CrewMemberResponseRole": {
     "DatasetName": "EMSDataSet",
@@ -10438,8 +10628,8 @@
     "Definition": "The role(s) of the role member during response, at scene treatment, and/or transport.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "CrewMemberRoles",
     "NV": "NV",
@@ -10489,23 +10679,24 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eCrew/eCrew.CrewGroup"
   },
-  "PSAPCallDate/Time": {
+  "PSAPCallDateTime": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eTimes.01",
     "NemsisName": "PSAP Call Date/Time",
     "ElementTitle": "PSAP Call Date/Time",
-    "ngModel": "PSAPCallDate/Time",
+    "ngModel": "PSAPCallDateTime",
     "V2Number": "E05_02",
     "National": "National",
     "State": "State",
     "Definition": "The date/time the phone rings (911 call to public safety answering point or other designated entity) requesting EMS services.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateTimeType",
     "NV": "NV",
@@ -10525,23 +10716,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eTimes"
   },
-  "DispatchNotifiedDate/Time": {
+  "DispatchNotifiedDateTime": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eTimes.02",
     "NemsisName": "Dispatch Notified Date/Time",
     "ElementTitle": "Dispatch Notified Date/Time",
-    "ngModel": "DispatchNotifiedDate/Time",
+    "ngModel": "DispatchNotifiedDateTime",
     "V2Number": "E05_03",
     "National": "",
     "State": "",
     "Definition": "The date/time dispatch was notified by the 911 call taker (if a separate entity).",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -10559,23 +10751,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eTimes"
   },
-  "UnitNotifiedbyDispatchDate/Time": {
+  "UnitNotifiedbyDispatchDateTime": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eTimes.03",
     "NemsisName": "Unit Notified by Dispatch Date/Time",
     "ElementTitle": "Unit Notified by Dispatch Date/Time",
-    "ngModel": "UnitNotifiedbyDispatchDate/Time",
+    "ngModel": "UnitNotifiedbyDispatchDateTime",
     "V2Number": "E05_04",
     "National": "National",
     "State": "State",
     "Definition": "The date/time the responding unit was notified by dispatch.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -10593,23 +10786,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eTimes"
   },
-  "DispatchAcknowledgedDate/Time": {
+  "DispatchAcknowledgedDateTime": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eTimes.04",
     "NemsisName": "Dispatch Acknowledged Date/Time",
     "ElementTitle": "Dispatch Acknowledged Date/Time",
-    "ngModel": "DispatchAcknowledgedDate/Time",
+    "ngModel": "DispatchAcknowledgedDateTime",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The date/time the dispatch was acknowledged by the EMS Unit.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -10627,23 +10821,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eTimes"
   },
-  "UnitEnRouteDate/Time": {
+  "UnitEnRouteDateTime": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eTimes.05",
     "NemsisName": "Unit En Route Date/Time",
     "ElementTitle": "Unit En Route Date/Time",
-    "ngModel": "UnitEnRouteDate/Time",
+    "ngModel": "UnitEnRouteDateTime",
     "V2Number": "E05_05",
     "National": "National",
     "State": "State",
     "Definition": "The date/time the unit responded; that is, the time the vehicle started moving.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateTimeType",
     "NV": "NV",
@@ -10663,23 +10858,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eTimes"
   },
-  "UnitArrivedonSceneDate/Time": {
+  "UnitArrivedonSceneDateTime": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eTimes.06",
     "NemsisName": "Unit Arrived on Scene Date/Time",
     "ElementTitle": "Unit Arrived on Scene Date/Time",
-    "ngModel": "UnitArrivedonSceneDate/Time",
+    "ngModel": "UnitArrivedonSceneDateTime",
     "V2Number": "E05_06",
     "National": "National",
     "State": "State",
     "Definition": "The date/time the responding unit arrived on the scene; that is, the time the vehicle stopped moving at the scene.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateTimeType",
     "NV": "NV",
@@ -10699,23 +10895,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eTimes"
   },
-  "ArrivedatPatientDate/Time": {
+  "ArrivedatPatientDateTime": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eTimes.07",
     "NemsisName": "Arrived at Patient Date/Time",
     "ElementTitle": "Arrived at Patient Date/Time",
-    "ngModel": "ArrivedatPatientDate/Time",
+    "ngModel": "ArrivedatPatientDateTime",
     "V2Number": "E05_07",
     "National": "National",
     "State": "State",
     "Definition": "The date/time the responding unit arrived at the patient's side.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateTimeType",
     "NV": "NV",
@@ -10735,23 +10932,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eTimes"
   },
-  "TransferofEMSPatientCareDate/Time": {
+  "TransferofEMSPatientCareDateTime": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eTimes.08",
     "NemsisName": "Transfer of EMS Patient Care Date/Time",
     "ElementTitle": "Transfer of EMS Patient Care Date/Time",
-    "ngModel": "TransferofEMSPatientCareDate/Time",
+    "ngModel": "TransferofEMSPatientCareDateTime",
     "V2Number": "E05_08",
     "National": "",
     "State": "State",
     "Definition": "The date/time the patient was transferred from this EMS agency to another EMS agency for care.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateTimeType",
     "NV": "NV",
@@ -10771,23 +10969,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eTimes"
   },
-  "UnitLeftSceneDate/Time": {
+  "UnitLeftSceneDateTime": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eTimes.09",
     "NemsisName": "Unit Left Scene Date/Time",
     "ElementTitle": "Unit Left Scene Date/Time",
-    "ngModel": "UnitLeftSceneDate/Time",
+    "ngModel": "UnitLeftSceneDateTime",
     "V2Number": "E05_09",
     "National": "National",
     "State": "State",
     "Definition": "The date/time the responding unit left the scene with a patient (started moving).",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateTimeType",
     "NV": "NV",
@@ -10807,23 +11006,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eTimes"
   },
-  "ArrivalatDestinationLandingAreaDate/Time": {
+  "ArrivalatDestinationLandingAreaDateTime": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eTimes.10",
     "NemsisName": "Arrival at Destination Landing Area Date/Time",
     "ElementTitle": "Arrival at Destination Landing Area Date/Time",
-    "ngModel": "ArrivalatDestinationLandingAreaDate/Time",
+    "ngModel": "ArrivalatDestinationLandingAreaDateTime",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The date/time the Air Medical vehicle arrived at the destination landing area.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -10841,23 +11041,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eTimes"
   },
-  "PatientArrivedatDestinationDate/Time": {
+  "PatientArrivedatDestinationDateTime": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eTimes.11",
     "NemsisName": "Patient Arrived at Destination Date/Time",
     "ElementTitle": "Patient Arrived at Destination Date/Time",
-    "ngModel": "PatientArrivedatDestinationDate/Time",
+    "ngModel": "PatientArrivedatDestinationDateTime",
     "V2Number": "E05_10",
     "National": "National",
     "State": "State",
     "Definition": "The date/time the responding unit arrived with the patient at the destination or transfer point.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateTimeType",
     "NV": "NV",
@@ -10877,23 +11078,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eTimes"
   },
-  "DestinationPatientTransferofCareDate/Time": {
+  "DestinationPatientTransferofCareDateTime": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eTimes.12",
     "NemsisName": "Destination Patient Transfer of Care Date/Time",
     "ElementTitle": "Destination Patient Transfer of Care Date/Time",
-    "ngModel": "DestinationPatientTransferofCareDate/Time",
+    "ngModel": "DestinationPatientTransferofCareDateTime",
     "V2Number": "",
     "National": "National",
     "State": "State",
     "Definition": "The date/time that patient care was transferred to the destination healthcare facilities staff.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateTimeType",
     "NV": "NV",
@@ -10913,23 +11115,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eTimes"
   },
-  "UnitBackinServiceDate/Time": {
+  "UnitBackinServiceDateTime": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eTimes.13",
     "NemsisName": "Unit Back in Service Date/Time",
     "ElementTitle": "Unit Back in Service Date/Time",
-    "ngModel": "UnitBackinServiceDate/Time",
+    "ngModel": "UnitBackinServiceDateTime",
     "V2Number": "E05_11",
     "National": "National",
     "State": "State",
     "Definition": "The date/time the unit back was back in service and available for response (finished with call, but not necessarily back in home location).",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -10947,23 +11150,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eTimes"
   },
-  "UnitCanceledDate/Time": {
+  "UnitCanceledDateTime": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eTimes.14",
     "NemsisName": "Unit Canceled Date/Time",
     "ElementTitle": "Unit Canceled Date/Time",
-    "ngModel": "UnitCanceledDate/Time",
+    "ngModel": "UnitCanceledDateTime",
     "V2Number": "E05_12",
     "National": "",
     "State": "State",
     "Definition": "The date/time the unit was canceled.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -10981,23 +11185,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eTimes"
   },
-  "UnitBackatHomeLocationDate/Time": {
+  "UnitBackatHomeLocationDateTime": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eTimes.15",
     "NemsisName": "Unit Back at Home Location Date/Time",
     "ElementTitle": "Unit Back at Home Location Date/Time",
-    "ngModel": "UnitBackatHomeLocationDate/Time",
+    "ngModel": "UnitBackatHomeLocationDateTime",
     "V2Number": "E05_13",
     "National": "",
     "State": "",
     "Definition": "The date/time the responding unit was back in their service area. With agencies who utilized Agency Status Management, home location means the service area as assigned through the agency status management protocol.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -11015,23 +11220,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eTimes"
   },
-  "EMSCallCompletedDate/Time": {
+  "EMSCallCompletedDateTime": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eTimes.16",
     "NemsisName": "EMS Call Completed Date/Time",
     "ElementTitle": "EMS Call Completed Date/Time",
-    "ngModel": "EMSCallCompletedDate/Time",
+    "ngModel": "EMSCallCompletedDateTime",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The date/time the responding unit completed all tasks associated with the event including transfer of the patient, and such things as cleaning and restocking.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -11049,7 +11255,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eTimes"
   },
   "EMSPatientID": {
     "DatasetName": "EMSDataSet",
@@ -11064,8 +11271,8 @@
     "Definition": "The unique ID for the patient within the Agency",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PatientID",
     "NV": "",
@@ -11083,7 +11290,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient"
   },
   "LastName": {
     "DatasetName": "EMSDataSet",
@@ -11098,8 +11306,8 @@
     "Definition": "The patient's last (family) name",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "PersonLastName",
     "NV": "NV",
@@ -11120,7 +11328,8 @@
     "attributes": [
       "NV",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient/ePatient.PatientNameGroup"
   },
   "FirstName": {
     "DatasetName": "EMSDataSet",
@@ -11135,8 +11344,8 @@
     "Definition": "The patient's first (given) name",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "PersonFirstName",
     "NV": "NV",
@@ -11157,23 +11366,24 @@
     "attributes": [
       "NV",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient/ePatient.PatientNameGroup"
   },
-  "MiddleInitial/Name": {
+  "MiddleInitialName": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePatient.04",
     "NemsisName": "Middle Initial/Name",
     "ElementTitle": "Middle Initial/Name",
-    "ngModel": "MiddleInitial/Name",
+    "ngModel": "MiddleInitialName",
     "V2Number": "E06_03",
     "National": "",
     "State": "",
     "Definition": "The patient's middle name, if any",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonMiddleName",
     "NV": "",
@@ -11191,23 +11401,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient/ePatient.PatientNameGroup"
   },
-  "Patient'sHomeAddress": {
+  "PatientsHomeAddress": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePatient.05",
     "NemsisName": "Patient's Home Address",
     "ElementTitle": "Patient's Home Address",
-    "ngModel": "Patient'sHomeAddress",
+    "ngModel": "PatientsHomeAddress",
     "V2Number": "E06_04",
     "National": "",
     "State": "State",
     "Definition": "Patient's address of residence",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "StreetAddress",
     "NV": "",
@@ -11227,23 +11438,24 @@
     "options": [],
     "attributes": [
       "StreetAddress2"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient"
   },
-  "Patient'sHomeCity": {
+  "PatientsHomeCity": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePatient.06",
     "NemsisName": "Patient's Home City",
     "ElementTitle": "Patient's Home City",
-    "ngModel": "Patient'sHomeCity",
+    "ngModel": "PatientsHomeCity",
     "V2Number": "E06_05",
     "National": "",
     "State": "State",
     "Definition": "The patient's primary city or township of residence.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CityGnisCode",
     "NV": "",
@@ -11261,23 +11473,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient"
   },
-  "Patient'sHomeCounty": {
+  "PatientsHomeCounty": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePatient.07",
     "NemsisName": "Patient's Home County",
     "ElementTitle": "Patient's Home County",
-    "ngModel": "Patient'sHomeCounty",
+    "ngModel": "PatientsHomeCounty",
     "V2Number": "E06_06",
     "National": "National",
     "State": "State",
     "Definition": "The patient's home county or parish of residence.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ANSICountyCode",
     "NV": "NV",
@@ -11297,23 +11510,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient"
   },
-  "Patient'sHomeState": {
+  "PatientsHomeState": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePatient.08",
     "NemsisName": "Patient's Home State",
     "ElementTitle": "Patient's Home State",
-    "ngModel": "Patient'sHomeState",
+    "ngModel": "PatientsHomeState",
     "V2Number": "E06_07",
     "National": "National",
     "State": "State",
     "Definition": "The state, territory, or province where the patient resides.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ANSIStateCode",
     "NV": "NV",
@@ -11333,23 +11547,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient"
   },
-  "Patient'sHomeZIPCode": {
+  "PatientsHomeZIPCode": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePatient.09",
     "NemsisName": "Patient's Home ZIP Code",
     "ElementTitle": "Patient's Home ZIP Code",
-    "ngModel": "Patient'sHomeZIPCode",
+    "ngModel": "PatientsHomeZIPCode",
     "V2Number": "E06_08",
     "National": "National",
     "State": "State",
     "Definition": "The patient's ZIP code of residence.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ZIP",
     "NV": "NV",
@@ -11369,23 +11584,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient"
   },
-  "Patient'sCountryofResidence": {
+  "PatientsCountryofResidence": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePatient.10",
     "NemsisName": "Patient's Country of Residence",
     "ElementTitle": "Patient's Country of Residence",
-    "ngModel": "Patient'sCountryofResidence",
+    "ngModel": "PatientsCountryofResidence",
     "V2Number": "E06_09",
     "National": "",
     "State": "State",
     "Definition": "The country of residence of the patient.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSICountryCode",
     "NV": "",
@@ -11403,7 +11619,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient"
   },
   "PatientHomeCensusTract": {
     "DatasetName": "EMSDataSet",
@@ -11418,8 +11635,8 @@
     "Definition": "The census tract in which the patient lives",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CensusTracts",
     "NV": "",
@@ -11437,7 +11654,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{11}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient"
   },
   "SocialSecurityNumber": {
     "DatasetName": "EMSDataSet",
@@ -11452,8 +11670,8 @@
     "Definition": "The patient's social security number",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "SocialSecurityNumber",
     "NV": "",
@@ -11471,7 +11689,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{9}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient"
   },
   "Gender": {
     "DatasetName": "EMSDataSet",
@@ -11486,8 +11705,8 @@
     "Definition": "The Patient's Gender",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "Gender",
     "NV": "NV",
@@ -11520,7 +11739,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient"
   },
   "Race": {
     "DatasetName": "EMSDataSet",
@@ -11535,8 +11755,8 @@
     "Definition": "The patient's race as defined by the OMB (US Office of Management and Budget)",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "Race",
     "NV": "NV",
@@ -11582,7 +11802,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient"
   },
   "Age": {
     "DatasetName": "EMSDataSet",
@@ -11597,8 +11818,8 @@
     "Definition": "The patient's age (either calculated from date of birth or best approximation)",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "Age",
     "NV": "NV",
@@ -11618,7 +11839,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient/ePatient.AgeGroup"
   },
   "AgeUnits": {
     "DatasetName": "EMSDataSet",
@@ -11633,8 +11855,8 @@
     "Definition": "The unit used to define the patient's age",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "AgeUnits",
     "NV": "NV",
@@ -11675,7 +11897,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient/ePatient.AgeGroup"
   },
   "DateofBirth": {
     "DatasetName": "EMSDataSet",
@@ -11690,8 +11913,8 @@
     "Definition": "The patient's date of birth",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateOfBirth",
     "NV": "NV",
@@ -11712,23 +11935,24 @@
     "attributes": [
       "NV",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient"
   },
-  "Patient'sPhoneNumber": {
+  "PatientsPhoneNumber": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePatient.18",
     "NemsisName": "Patient's Phone Number",
     "ElementTitle": "Patient's Phone Number",
-    "ngModel": "Patient'sPhoneNumber",
+    "ngModel": "PatientsPhoneNumber",
     "V2Number": "E06_17",
     "National": "",
     "State": "",
     "Definition": "The patient's phone number",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "PhoneNumber",
     "NV": "",
@@ -11749,23 +11973,24 @@
     "attributes": [
       "PhoneNumberType",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient"
   },
-  "Patient'sEmailAddress": {
+  "PatientsEmailAddress": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePatient.19",
     "NemsisName": "Patient's Email Address",
     "ElementTitle": "Patient's Email Address",
-    "ngModel": "Patient'sEmailAddress",
+    "ngModel": "PatientsEmailAddress",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The email address of the patient",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "EmailAddress",
     "NV": "",
@@ -11786,23 +12011,24 @@
     "attributes": [
       "EmailAddressType",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient"
   },
-  "StateIssuingDriver'sLicense": {
+  "StateIssuingDriversLicense": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePatient.20",
     "NemsisName": "State Issuing Driver's License",
     "ElementTitle": "State Issuing Driver's License",
-    "ngModel": "StateIssuingDriver'sLicense",
+    "ngModel": "StateIssuingDriversLicense",
     "V2Number": "E06_18",
     "National": "",
     "State": "",
     "Definition": "The state that issued the drivers license",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSIStateCode",
     "NV": "",
@@ -11820,23 +12046,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient"
   },
-  "Driver'sLicenseNumber": {
+  "DriversLicenseNumber": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePatient.21",
     "NemsisName": "Driver's License Number",
     "ElementTitle": "Driver's License Number",
-    "ngModel": "Driver'sLicenseNumber",
+    "ngModel": "DriversLicenseNumber",
     "V2Number": "E06_19",
     "National": "",
     "State": "",
     "Definition": "The patient's drivers license number",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DriversLicenseNumber",
     "NV": "",
@@ -11854,7 +12081,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePatient"
   },
   "PrimaryMethodofPayment": {
     "DatasetName": "EMSDataSet",
@@ -11869,8 +12097,8 @@
     "Definition": "The primary method of payment or type of insurance associated with this EMS encounter",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "PrimaryMethodOfPayment",
     "NV": "NV",
@@ -11939,7 +12167,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment"
   },
   "PhysicianCertificationStatement": {
     "DatasetName": "EMSDataSet",
@@ -11954,8 +12183,8 @@
     "Definition": "Indication of whether a physician certification statement (PCS) is available documenting the medical necessity or the EMS encounter.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "YesNoUnkValues",
     "NV": "",
@@ -11986,7 +12215,8 @@
         "text": "Yes"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.CertificateGroup"
   },
   "DatePhysicianCertificationStatementSigned": {
     "DatasetName": "EMSDataSet",
@@ -12001,8 +12231,8 @@
     "Definition": "The date the Physician Certification Statement was signed",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -12020,7 +12250,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.CertificateGroup"
   },
   "ReasonforPhysicianCertificationStatement": {
     "DatasetName": "EMSDataSet",
@@ -12035,8 +12266,8 @@
     "Definition": "The reason for EMS transport noted on the Physician Certification Statement",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "Reason",
     "NV": "",
@@ -12133,7 +12364,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.CertificateGroup"
   },
   "HealthcareProviderTypeSigningPhysicianCertificationStatement": {
     "DatasetName": "EMSDataSet",
@@ -12148,8 +12380,8 @@
     "Definition": "The type of healthcare provider who signed the Physician Certification Statement",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "HealthcareProviderType",
     "NV": "",
@@ -12192,7 +12424,8 @@
         "text": "Registered Nurse Practitioner"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.CertificateGroup"
   },
   "LastNameofIndividualSigningPhysicianCertificationStatement": {
     "DatasetName": "EMSDataSet",
@@ -12207,8 +12440,8 @@
     "Definition": "The last name of the healthcare provider who signed the Physician Certification Statement.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonLastName",
     "NV": "",
@@ -12226,7 +12459,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.CertificateGroup"
   },
   "FirstNameofIndividualSigningPhysicianCertificationStatement": {
     "DatasetName": "EMSDataSet",
@@ -12241,8 +12475,8 @@
     "Definition": "The first name of the healthcare provider who signed the Physician Certification Statement.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonFirstName",
     "NV": "",
@@ -12260,7 +12494,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.CertificateGroup"
   },
   "PatientResidesinServiceArea": {
     "DatasetName": "EMSDataSet",
@@ -12275,8 +12510,8 @@
     "Definition": "An indication of whether the patient's current residence is within the EMS agency service area.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ResidencyStatusOfThePatient",
     "NV": "",
@@ -12303,7 +12538,8 @@
         "text": "Not a Resident Within EMS Service Area"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment"
   },
   "InsuranceCompanyID": {
     "DatasetName": "EMSDataSet",
@@ -12318,8 +12554,8 @@
     "Definition": "The ID Number of the patient's insurance company.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "InsuranceCompanyID",
     "NV": "",
@@ -12337,7 +12573,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup"
   },
   "InsuranceCompanyName": {
     "DatasetName": "EMSDataSet",
@@ -12352,8 +12589,8 @@
     "Definition": "The name of the patient's insurance company.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "InsuranceCompanyName",
     "NV": "",
@@ -12371,7 +12608,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup"
   },
   "InsuranceCompanyBillingPriority": {
     "DatasetName": "EMSDataSet",
@@ -12386,8 +12624,8 @@
     "Definition": "The billing priority or order for the insurance company.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "InsuranceCompanyBillingPriority",
     "NV": "",
@@ -12458,7 +12696,8 @@
         "text": "Unknown"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup"
   },
   "InsuranceCompanyAddress": {
     "DatasetName": "EMSDataSet",
@@ -12473,8 +12712,8 @@
     "Definition": "The mailing address of the Insurance Company",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "StreetAddress",
     "NV": "",
@@ -12494,7 +12733,8 @@
     "options": [],
     "attributes": [
       "StreetAddress2"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup"
   },
   "InsuranceCompanyCity": {
     "DatasetName": "EMSDataSet",
@@ -12509,8 +12749,8 @@
     "Definition": "The insurance company's city or township used for mailing purposes.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CityGnisCodePayment",
     "NV": "",
@@ -12528,7 +12768,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup"
   },
   "InsuranceCompanyState": {
     "DatasetName": "EMSDataSet",
@@ -12543,8 +12784,8 @@
     "Definition": "The insurance company's state, territory, or province, or District of Columbia.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSIStateCode",
     "NV": "",
@@ -12562,7 +12803,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup"
   },
   "InsuranceCompanyZIPCode": {
     "DatasetName": "EMSDataSet",
@@ -12577,8 +12819,8 @@
     "Definition": "The insurance company's ZIP Code",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ZIP",
     "NV": "",
@@ -12596,7 +12838,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup"
   },
   "InsuranceCompanyCountry": {
     "DatasetName": "EMSDataSet",
@@ -12611,8 +12854,8 @@
     "Definition": "The insurance company's country",
     "Usage": "Optional",
     "V3Changes": "Added to better document international addresses.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSICountryCode",
     "NV": "",
@@ -12630,7 +12873,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup"
   },
   "InsuranceGroupID": {
     "DatasetName": "EMSDataSet",
@@ -12645,8 +12889,8 @@
     "Definition": "The ID number of the patient's insurance group.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "InsuranceGroupID",
     "NV": "",
@@ -12664,7 +12908,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup"
   },
   "InsurancePolicyIDNumber": {
     "DatasetName": "EMSDataSet",
@@ -12679,8 +12924,8 @@
     "Definition": "The ID number of the patient's insurance policy",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "InsurancePolicyIDNumber",
     "NV": "",
@@ -12698,7 +12943,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup"
   },
   "LastNameoftheInsured": {
     "DatasetName": "EMSDataSet",
@@ -12713,8 +12959,8 @@
     "Definition": "The last (family) name of the person insured by the insurance company.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonLastName",
     "NV": "",
@@ -12732,7 +12978,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup"
   },
   "FirstNameoftheInsured": {
     "DatasetName": "EMSDataSet",
@@ -12747,8 +12994,8 @@
     "Definition": "The first (given) name of the person insured by the insurance company",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonFirstName",
     "NV": "",
@@ -12766,23 +13013,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup"
   },
-  "MiddleInitial/NameoftheInsured": {
+  "MiddleInitialNameoftheInsured": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.21",
     "NemsisName": "Middle Initial/Name of the Insured",
     "ElementTitle": "Middle Initial/Name of the Insured",
-    "ngModel": "MiddleInitial/NameoftheInsured",
+    "ngModel": "MiddleInitialNameoftheInsured",
     "V2Number": "E07_13",
     "National": "",
     "State": "",
     "Definition": "The middle name, if any, of the person insured by the insurance company.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonMiddleName",
     "NV": "",
@@ -12800,7 +13048,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup"
   },
   "RelationshiptotheInsured": {
     "DatasetName": "EMSDataSet",
@@ -12815,8 +13064,8 @@
     "Definition": "The relationship of the patient to the primary insured person",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "RelationshipToInsured",
     "NV": "",
@@ -12871,7 +13120,8 @@
         "text": "Other Relationship"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup"
   },
   "InsuranceGroupName": {
     "DatasetName": "EMSDataSet",
@@ -12886,8 +13136,8 @@
     "Definition": "The name of the patient's insurance group.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "InsuranceGroupName",
     "NV": "",
@@ -12905,23 +13155,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.InsuranceGroup"
   },
-  "ClosestRelative/GuardianLastName": {
+  "ClosestRelativeGuardianLastName": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.23",
     "NemsisName": "Closest Relative/Guardian Last Name",
     "ElementTitle": "Closest Relative/Guardian Last Name",
-    "ngModel": "ClosestRelative/GuardianLastName",
+    "ngModel": "ClosestRelativeGuardianLastName",
     "V2Number": "E07_18",
     "National": "",
     "State": "",
     "Definition": "The last (family) name of the patient's closest relative or guardian",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonLastName",
     "NV": "",
@@ -12939,23 +13190,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup"
   },
-  "ClosestRelative/GuardianFirstName": {
+  "ClosestRelativeGuardianFirstName": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.24",
     "NemsisName": "Closest Relative/ Guardian First Name",
     "ElementTitle": "Closest Relative/ Guardian First Name",
-    "ngModel": "ClosestRelative/GuardianFirstName",
+    "ngModel": "ClosestRelativeGuardianFirstName",
     "V2Number": "E07_19",
     "National": "",
     "State": "",
     "Definition": "The first (given) name of the patient's closest relative or guardian",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonFirstName",
     "NV": "",
@@ -12973,23 +13225,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup"
   },
-  "ClosestRelative/GuardianMiddleInitial/Name": {
+  "ClosestRelativeGuardianMiddleInitialName": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.25",
     "NemsisName": "Closest Relative/ Guardian Middle Initial/Name",
     "ElementTitle": "Closest Relative/ Guardian Middle Initial/Name",
-    "ngModel": "ClosestRelative/GuardianMiddleInitial/Name",
+    "ngModel": "ClosestRelativeGuardianMiddleInitialName",
     "V2Number": "E07_20",
     "National": "",
     "State": "",
     "Definition": "The middle name/initial, if any, of the closest patient's relative or guardian.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonMiddleName",
     "NV": "",
@@ -13007,23 +13260,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup"
   },
-  "ClosestRelative/GuardianStreetAddress": {
+  "ClosestRelativeGuardianStreetAddress": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.26",
     "NemsisName": "Closest Relative/ Guardian Street Address",
     "ElementTitle": "Closest Relative/ Guardian Street Address",
-    "ngModel": "ClosestRelative/GuardianStreetAddress",
+    "ngModel": "ClosestRelativeGuardianStreetAddress",
     "V2Number": "E07_21",
     "National": "",
     "State": "",
     "Definition": "The street address of the residence of the patient's closest relative or guardian.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "StreetAddress",
     "NV": "",
@@ -13043,23 +13297,24 @@
     "options": [],
     "attributes": [
       "StreetAddress2"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup"
   },
-  "ClosestRelative/GuardianCity": {
+  "ClosestRelativeGuardianCity": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.27",
     "NemsisName": "Closest Relative/ Guardian City",
     "ElementTitle": "Closest Relative/ Guardian City",
-    "ngModel": "ClosestRelative/GuardianCity",
+    "ngModel": "ClosestRelativeGuardianCity",
     "V2Number": "E07_22",
     "National": "",
     "State": "",
     "Definition": "The primary city or township of residence of the patient's closest relative or guardian.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CityGnisCodePayment",
     "NV": "",
@@ -13077,23 +13332,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup"
   },
-  "ClosestRelative/GuardianState": {
+  "ClosestRelativeGuardianState": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.28",
     "NemsisName": "Closest Relative/ Guardian State",
     "ElementTitle": "Closest Relative/ Guardian State",
-    "ngModel": "ClosestRelative/GuardianState",
+    "ngModel": "ClosestRelativeGuardianState",
     "V2Number": "E07_23",
     "National": "",
     "State": "",
     "Definition": "The state of residence of the patient's closest relative or guardian.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSIStateCode",
     "NV": "",
@@ -13111,23 +13367,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup"
   },
-  "ClosestRelative/GuardianZIPCode": {
+  "ClosestRelativeGuardianZIPCode": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.29",
     "NemsisName": "Closest Relative/ Guardian ZIP Code",
     "ElementTitle": "Closest Relative/ Guardian ZIP Code",
-    "ngModel": "ClosestRelative/GuardianZIPCode",
+    "ngModel": "ClosestRelativeGuardianZIPCode",
     "V2Number": "E07_24",
     "National": "",
     "State": "",
     "Definition": "The ZIP Code of the residence of the patient's closest relative or guardian.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ZIP",
     "NV": "",
@@ -13145,23 +13402,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup"
   },
-  "ClosestRelative/GuardianCountry": {
+  "ClosestRelativeGuardianCountry": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.30",
     "NemsisName": "Closest Relative/ Guardian Country",
     "ElementTitle": "Closest Relative/ Guardian Country",
-    "ngModel": "ClosestRelative/GuardianCountry",
+    "ngModel": "ClosestRelativeGuardianCountry",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The country of residence of the patient's closest relative or guardian.",
     "Usage": "Optional",
     "V3Changes": "Added to improve international compatibility.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSICountryCode",
     "NV": "",
@@ -13179,23 +13437,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup"
   },
-  "ClosestRelative/GuardianPhoneNumber": {
+  "ClosestRelativeGuardianPhoneNumber": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.31",
     "NemsisName": "Closest Relative/ Guardian Phone Number",
     "ElementTitle": "Closest Relative/ Guardian Phone Number",
-    "ngModel": "ClosestRelative/GuardianPhoneNumber",
+    "ngModel": "ClosestRelativeGuardianPhoneNumber",
     "V2Number": "E07_25",
     "National": "",
     "State": "",
     "Definition": "The phone number of the patient's closest relative or guardian",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "PhoneNumber",
     "NV": "",
@@ -13216,23 +13475,24 @@
     "attributes": [
       "PhoneNumberType",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup"
   },
-  "ClosestRelative/GuardianRelationship": {
+  "ClosestRelativeGuardianRelationship": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.32",
     "NemsisName": "Closest Relative/ Guardian Relationship",
     "ElementTitle": "Closest Relative/ Guardian Relationship",
-    "ngModel": "ClosestRelative/GuardianRelationship",
+    "ngModel": "ClosestRelativeGuardianRelationship",
     "V2Number": "E07_26",
     "National": "",
     "State": "",
     "Definition": "The relationship of the patient's closest relative or guardian",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ClosestRelativeGuardianRelationship",
     "NV": "",
@@ -13295,23 +13555,24 @@
         "text": "Unknown"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.ClosestRelativeGroup"
   },
-  "Patient'sEmployer": {
+  "PatientsEmployer": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.33",
     "NemsisName": "Patient's Employer",
     "ElementTitle": "Patient's Employer",
-    "ngModel": "Patient'sEmployer",
+    "ngModel": "PatientsEmployer",
     "V2Number": "E07_27",
     "National": "",
     "State": "",
     "Definition": "The patient's employers Name",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EmployerName",
     "NV": "",
@@ -13329,23 +13590,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.EmployerGroup"
   },
-  "Patient'sEmployer'sAddress": {
+  "PatientsEmployersAddress": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.34",
     "NemsisName": "Patient's Employer's Address",
     "ElementTitle": "Patient's Employer's Address",
-    "ngModel": "Patient'sEmployer'sAddress",
+    "ngModel": "PatientsEmployersAddress",
     "V2Number": "E07_28",
     "National": "",
     "State": "",
     "Definition": "The street address of the patient's employer",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "StreetAddress",
     "NV": "",
@@ -13365,23 +13627,24 @@
     "options": [],
     "attributes": [
       "StreetAddress2"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.EmployerGroup"
   },
-  "Patient'sEmployer'sCity": {
+  "PatientsEmployersCity": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.35",
     "NemsisName": "Patient's Employer's City",
     "ElementTitle": "Patient's Employer's City",
-    "ngModel": "Patient'sEmployer'sCity",
+    "ngModel": "PatientsEmployersCity",
     "V2Number": "E07_29",
     "National": "",
     "State": "",
     "Definition": "The city or township of the patient's employer used for mailing purposes.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CityGnisCodePayment",
     "NV": "",
@@ -13399,23 +13662,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.EmployerGroup"
   },
-  "Patient'sEmployer'sState": {
+  "PatientsEmployersState": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.36",
     "NemsisName": "Patient's Employer's State",
     "ElementTitle": "Patient's Employer's State",
-    "ngModel": "Patient'sEmployer'sState",
+    "ngModel": "PatientsEmployersState",
     "V2Number": "E07_30",
     "National": "",
     "State": "",
     "Definition": "The state of the patient's employer",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSIStateCode",
     "NV": "",
@@ -13433,23 +13697,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.EmployerGroup"
   },
-  "Patient'sEmployer'sZIPCode": {
+  "PatientsEmployersZIPCode": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.37",
     "NemsisName": "Patient's Employer's ZIP Code",
     "ElementTitle": "Patient's Employer's ZIP Code",
-    "ngModel": "Patient'sEmployer'sZIPCode",
+    "ngModel": "PatientsEmployersZIPCode",
     "V2Number": "E07_31",
     "National": "",
     "State": "",
     "Definition": "The ZIP Code of the patient's employer",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ZIP",
     "NV": "",
@@ -13467,23 +13732,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.EmployerGroup"
   },
-  "Patient'sEmployer'sCountry": {
+  "PatientsEmployersCountry": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.38",
     "NemsisName": "Patient's Employer's Country",
     "ElementTitle": "Patient's Employer's Country",
-    "ngModel": "Patient'sEmployer'sCountry",
+    "ngModel": "PatientsEmployersCountry",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The country of the patient's employer",
     "Usage": "Optional",
     "V3Changes": "Added to improve international compatibility.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSICountryCode",
     "NV": "",
@@ -13501,23 +13767,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.EmployerGroup"
   },
-  "Patient'sEmployer'sPrimaryPhoneNumber": {
+  "PatientsEmployersPrimaryPhoneNumber": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.39",
     "NemsisName": "Patient's Employer's Primary Phone Number",
     "ElementTitle": "Patient's Employer's Primary Phone Number",
-    "ngModel": "Patient'sEmployer'sPrimaryPhoneNumber",
+    "ngModel": "PatientsEmployersPrimaryPhoneNumber",
     "V2Number": "E07_32",
     "National": "",
     "State": "",
     "Definition": "The employer's primary phone number.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PhoneNumber",
     "NV": "",
@@ -13537,7 +13804,8 @@
     "options": [],
     "attributes": [
       "PhoneNumberType"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.EmployerGroup"
   },
   "ResponseUrgency": {
     "DatasetName": "EMSDataSet",
@@ -13552,8 +13820,8 @@
     "Definition": "The urgency in which the EMS agency began to mobilize resources for this EMS encounter.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ResponseUrgency",
     "NV": "",
@@ -13580,7 +13848,8 @@
         "text": "Non-Immediate"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment"
   },
   "PatientTransportAssessment": {
     "DatasetName": "EMSDataSet",
@@ -13595,8 +13864,8 @@
     "Definition": "Documentation of the patient's transport need based on mobility and/or physical capability.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "TransportAssessment",
     "NV": "",
@@ -13629,7 +13898,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment"
   },
   "SpecialtyCareTransportCareProvider": {
     "DatasetName": "EMSDataSet",
@@ -13644,8 +13914,8 @@
     "Definition": "Documentation to show the patient care provided to the patient met the Specialty Care Transport Base Rate requirements.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "TransportCareProvider",
     "NV": "",
@@ -13746,7 +14016,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment"
   },
   "AmbulanceTransportReasonCode": {
     "DatasetName": "EMSDataSet",
@@ -13761,8 +14032,8 @@
     "Definition": "The CMS Ambulance Transport Reason Code for the transport.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "AmbulanceReasonCode",
     "NV": "",
@@ -13803,7 +14074,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment"
   },
   "RoundTripPurposeDescription": {
     "DatasetName": "EMSDataSet",
@@ -13818,8 +14090,8 @@
     "Definition": "Free text description providing the purpose of the round trip EMS transport based on CR109 field for CMS.",
     "Usage": "Optional",
     "V3Changes": "Added to improve billing with electronic claims using X12",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "TripPurposeDesciption",
     "NV": "",
@@ -13837,7 +14109,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment"
   },
   "StretcherPurposeDescription": {
     "DatasetName": "EMSDataSet",
@@ -13852,8 +14125,8 @@
     "Definition": "Free Text Documentation providing the reason for use of a stretcher in the EMS patient transport.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "StretcherPurposeDesciption",
     "NV": "",
@@ -13871,7 +14144,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment"
   },
   "AmbulanceConditionsIndicator": {
     "DatasetName": "EMSDataSet",
@@ -13886,8 +14160,8 @@
     "Definition": "Documentation of the CRC03 through CRC07 requirements for CMS billing using X12 transactions.",
     "Usage": "Optional",
     "V3Changes": "Added to improve billing with electronic claims using X12. The Codes and Descriptors updated Sept 2013 to meet the X12 5010 standard.",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "AmbulanceConditionsIndicator",
     "NV": "",
@@ -13940,7 +14214,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment"
   },
   "MileagetoClosestHospitalFacility": {
     "DatasetName": "EMSDataSet",
@@ -13955,8 +14230,8 @@
     "Definition": "The mileage to the closest hospital facility from the scene. Documented only if the patient was transported to a facility farther away than the closest hospital.",
     "Usage": "Optional",
     "V3Changes": "Added for improved billing documentation.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "Mileage",
     "NV": "",
@@ -13974,7 +14249,8 @@
     "fractionDigits": "2",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment"
   },
   "ALSAssessmentPerformedandWarranted": {
     "DatasetName": "EMSDataSet",
@@ -13989,8 +14265,8 @@
     "Definition": "Documentation that the patient required an ALS assessment and it was performed.",
     "Usage": "Optional",
     "V3Changes": "Added to improve billing justification",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "YesNoValues",
     "NV": "",
@@ -14017,7 +14293,8 @@
         "text": "Yes"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment"
   },
   "CMSServiceLevel": {
     "DatasetName": "EMSDataSet",
@@ -14032,8 +14309,8 @@
     "Definition": "The CMS service level for this EMS encounter.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "CMSServiceLevel",
     "NV": "NV",
@@ -14090,7 +14367,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment"
   },
   "EMSConditionCode": {
     "DatasetName": "EMSDataSet",
@@ -14105,8 +14383,8 @@
     "Definition": "The condition code associated with the CMS EMS negotiated rule-making process.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "icd10Code",
     "NV": "",
@@ -14126,7 +14404,8 @@
     "options": [],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment"
   },
   "CMSTransportationIndicator": {
     "DatasetName": "EMSDataSet",
@@ -14141,8 +14420,8 @@
     "Definition": "The CMS Ambulance Fee Schedule Transportation and Air Medical Transportation Indicators are used to better describe why it was necessary for the patient to be transported in a particular way or circumstance.",
     "Usage": "Optional",
     "V3Changes": "Name changed from Condition Code Modifier to CMS Transportation Indicator",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "CMSTransportationIndicator",
     "NV": "",
@@ -14207,7 +14486,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment"
   },
   "TransportAuthorizationCode": {
     "DatasetName": "EMSDataSet",
@@ -14222,8 +14502,8 @@
     "Definition": "Prior authorization code provided by the insurance carrier/payer.",
     "Usage": "Optional",
     "V3Changes": "Added to improve billing documentation.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "AuthorizationCode",
     "NV": "",
@@ -14241,7 +14521,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment"
   },
   "PriorAuthorizationCodePayer": {
     "DatasetName": "EMSDataSet",
@@ -14256,8 +14537,8 @@
     "Definition": "The Payer who has provided the Prior Authorization Code.",
     "Usage": "Optional",
     "V3Changes": "Added to improve billing documentation.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonName",
     "NV": "",
@@ -14275,7 +14556,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment"
   },
   "SupplyItemUsedName": {
     "DatasetName": "EMSDataSet",
@@ -14290,8 +14572,8 @@
     "Definition": "The name of the supply used on the patient by the EMS Crew during the EMS event.",
     "Usage": "Optional",
     "V3Changes": "Added to track EMS supplies for billing.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "SupplyUsed",
     "NV": "",
@@ -14309,23 +14591,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.SupplyItemGroup"
   },
-  "NumberofSupplyItem(s)Used": {
+  "NumberofSupplyItemsUsed": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "ePayment.56",
     "NemsisName": "Number of Supply Item(s) Used",
     "ElementTitle": "Number of Supply Item(s) Used",
-    "ngModel": "NumberofSupplyItem(s)Used",
+    "ngModel": "NumberofSupplyItemsUsed",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The number of the specific supply item used on the patient by the EMS Crew during the EMS event.",
     "Usage": "Optional",
     "V3Changes": "Added to track EMS supplies for billing.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "SupplyCount",
     "NV": "",
@@ -14343,7 +14626,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment/ePayment.SupplyItemGroup"
   },
   "PayerType": {
     "DatasetName": "EMSDataSet",
@@ -14358,8 +14642,8 @@
     "Definition": "Payer type according to X12 standard.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PayerType",
     "NV": "",
@@ -14470,7 +14754,8 @@
         "text": "Mutually Defined"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/ePayment"
   },
   "FirstEMSUnitonScene": {
     "DatasetName": "EMSDataSet",
@@ -14485,8 +14770,8 @@
     "Definition": "Documentation that this EMS Unit was the first EMS Unit for the EMS Agency on the Scene",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "YesNoValues",
     "NV": "NV",
@@ -14515,7 +14800,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "OtherEMSorPublicSafetyAgenciesatScene": {
     "DatasetName": "EMSDataSet",
@@ -14530,8 +14816,8 @@
     "Definition": "Other EMS agency names that were at the scene, if any",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "OtherEMSAgenciesAtScene",
     "NV": "",
@@ -14549,7 +14835,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene/eScene.ResponderGroup"
   },
   "OtherEMSorPublicSafetyAgencyIDNumber": {
     "DatasetName": "EMSDataSet",
@@ -14564,8 +14851,8 @@
     "Definition": "The ID number for the EMS Agency or Other Public Safety listed in eScene.02",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EMSAgencyID",
     "NV": "",
@@ -14583,7 +14870,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene/eScene.ResponderGroup"
   },
   "TypeofOtherServiceatScene": {
     "DatasetName": "EMSDataSet",
@@ -14598,8 +14886,8 @@
     "Definition": "The type of public safety or EMS service associated with Other Agencies on Scene",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "OtherServicesAtScene",
     "NV": "",
@@ -14658,23 +14946,24 @@
         "text": "Utilities"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene/eScene.ResponderGroup"
   },
-  "Date/TimeInitialResponderArrivedonScene": {
+  "DateTimeInitialResponderArrivedonScene": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eScene.05",
     "NemsisName": "Date/Time Initial Responder Arrived on Scene",
     "ElementTitle": "Date/Time Initial Responder Arrived on Scene",
-    "ngModel": "Date/TimeInitialResponderArrivedonScene",
+    "ngModel": "DateTimeInitialResponderArrivedonScene",
     "V2Number": "E08_04",
     "National": "",
     "State": "",
     "Definition": "The time that the initial responder arrived on the scene, if applicable.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -14692,7 +14981,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "NumberofPatientsatScene": {
     "DatasetName": "EMSDataSet",
@@ -14707,8 +14997,8 @@
     "Definition": "Indicator of how many total patients were at the scene",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "NumberOfPatientsAtScene",
     "NV": "NV",
@@ -14741,7 +15031,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "MassCasualtyIncident": {
     "DatasetName": "EMSDataSet",
@@ -14756,8 +15047,8 @@
     "Definition": "Indicator if this event would be considered a mass casualty incident (overwhelmed existing EMS resources)",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "YesNoValues",
     "NV": "NV",
@@ -14786,7 +15077,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "TriageClassificationforMCIPatient": {
     "DatasetName": "EMSDataSet",
@@ -14801,8 +15093,8 @@
     "Definition": "The color associated with the initial triage assessment/classification of the MCI patient.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "TriageClassification",
     "NV": "NV",
@@ -14843,7 +15135,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "IncidentLocationType": {
     "DatasetName": "EMSDataSet",
@@ -14858,8 +15151,8 @@
     "Definition": "The kind of location where the incident happened",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "IncidentLocationType",
     "NV": "NV",
@@ -14876,12 +15169,11 @@
     "totalDigits": "",
     "fractionDigits": "",
     "pattern": "Y92\\.[0-9]{1,3}",
-    "options": [
-        { id: "0123456789", text: "Some ICD10 Code" }
-    ],
+    "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "IncidentFacilityCode": {
     "DatasetName": "EMSDataSet",
@@ -14896,8 +15188,8 @@
     "Definition": "The state, regulatory, or other unique number (code) associated with the facility if the Incident is a Healthcare Facility.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "IncidentFacilityCode",
     "NV": "NV",
@@ -14917,7 +15209,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "SceneGPSLocation": {
     "DatasetName": "EMSDataSet",
@@ -14932,8 +15225,8 @@
     "Definition": "The GPS coordinates associated with the Scene.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "GPSLocation",
     "NV": "",
@@ -14951,7 +15244,8 @@
     "fractionDigits": "",
     "pattern": "(\\+|-)?(90(\\.[0]{1,6})?|([1-8][0-9]|[0-9])(\\.[0-9]{1,6})?),(\\+|-)?(180(\\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\\.[0-9]{1,6})?)",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "SceneUSNationalGridCoordinates": {
     "DatasetName": "EMSDataSet",
@@ -14966,8 +15260,8 @@
     "Definition": "The US National Grid Coordinates for the Scene.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "USNG",
     "NV": "",
@@ -14985,7 +15279,8 @@
     "fractionDigits": "",
     "pattern": "[1][0-9][RSTU][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "IncidentFacilityorLocationName": {
     "DatasetName": "EMSDataSet",
@@ -15000,8 +15295,8 @@
     "Definition": "The name of the facility, business, building, etc. associated with the scene of the EMS event.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "IncidentFacilityName",
     "NV": "",
@@ -15019,7 +15314,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "MilePostorMajorRoadway": {
     "DatasetName": "EMSDataSet",
@@ -15034,8 +15330,8 @@
     "Definition": "The mile post or major roadway associated with the incident locations",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "MilePostOrMajorRoadway",
     "NV": "NV",
@@ -15055,7 +15351,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "IncidentStreetAddress": {
     "DatasetName": "EMSDataSet",
@@ -15070,8 +15367,8 @@
     "Definition": "The street address where the patient was found, or, if no patient, the address to which the unit responded.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "StreetAddress",
     "NV": "NV",
@@ -15092,23 +15389,24 @@
     "attributes": [
       "NV",
       "StreetAddress2"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
-  "IncidentApartment,Suite,orRoom": {
+  "IncidentApartmentSuiteorRoom": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eScene.16",
     "NemsisName": "Incident Apartment, Suite, or Room",
     "ElementTitle": "Incident Apartment, Suite, or Room",
-    "ngModel": "IncidentApartment,Suite,orRoom",
+    "ngModel": "IncidentApartmentSuiteorRoom",
     "V2Number": "",
     "National": "",
     "State": "State",
     "Definition": "The number of the specific apartment, suite, or room where the incident occurred.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "SceneApartment",
     "NV": "NV",
@@ -15128,7 +15426,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "IncidentCity": {
     "DatasetName": "EMSDataSet",
@@ -15143,8 +15442,8 @@
     "Definition": "The city or township (if applicable) where the patient was found or to which the unit responded (or best approximation)",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "CityGnisCode",
     "NV": "NV",
@@ -15164,7 +15463,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "IncidentState": {
     "DatasetName": "EMSDataSet",
@@ -15179,8 +15479,8 @@
     "Definition": "The state, territory, or province where the patient was found or to which the unit responded (or best approximation)",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ANSIStateCode",
     "NV": "NV",
@@ -15200,7 +15500,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "IncidentZIPCode": {
     "DatasetName": "EMSDataSet",
@@ -15215,8 +15516,8 @@
     "Definition": "The ZIP code of the incident location",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ZIP",
     "NV": "NV",
@@ -15236,7 +15537,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "SceneCrossStreetorDirections": {
     "DatasetName": "EMSDataSet",
@@ -15251,8 +15553,8 @@
     "Definition": "The nearest cross street to the incident address or directions from a recognized landmark or the second street name of an intersection.",
     "Usage": "Recommended",
     "V3Changes": "Added to better locate/document the scene (incident) location.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "SceneCrossStreet",
     "NV": "NV",
@@ -15272,7 +15574,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "IncidentCounty": {
     "DatasetName": "EMSDataSet",
@@ -15287,8 +15590,8 @@
     "Definition": "The county or parish where the patient was found or to which the unit responded (or best approximation)",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ANSICountyCode",
     "NV": "NV",
@@ -15308,7 +15611,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "IncidentCountry": {
     "DatasetName": "EMSDataSet",
@@ -15323,8 +15627,8 @@
     "Definition": "The country of the incident location.",
     "Usage": "Optional",
     "V3Changes": "Added for international compatibility.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSICountryCode",
     "NV": "",
@@ -15342,7 +15646,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
   "IncidentCensusTract": {
     "DatasetName": "EMSDataSet",
@@ -15357,8 +15662,8 @@
     "Definition": "The census tract in which the incident occurred.",
     "Usage": "Optional",
     "V3Changes": "Added to improve the ability to use census and other demographic information within EMS research.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CensusTracts",
     "NV": "",
@@ -15376,23 +15681,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{11}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eScene"
   },
-  "Date/TimeofSymptomOnset": {
+  "DateTimeofSymptomOnset": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eSituation.01",
     "NemsisName": "Date/Time of Symptom Onset",
     "ElementTitle": "Date/Time of Symptom Onset",
-    "ngModel": "Date/TimeofSymptomOnset",
+    "ngModel": "DateTimeofSymptomOnset",
     "V2Number": "E05_01",
     "National": "National",
     "State": "State",
     "Definition": "The date and time the symptom began (or was discovered) as it relates to this EMS event. This is described or estimated by the patient, family, and/or healthcare professionals.",
     "Usage": "Required",
     "V3Changes": "Added to better define the EMS patient event.",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateTimeType",
     "NV": "NV",
@@ -15412,7 +15718,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation"
   },
   "PossibleInjury": {
     "DatasetName": "EMSDataSet",
@@ -15427,8 +15734,8 @@
     "Definition": "Indication whether or not there was an injury",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "YesNoUnkValues",
     "NV": "NV",
@@ -15461,7 +15768,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation"
   },
   "ComplaintType": {
     "DatasetName": "EMSDataSet",
@@ -15476,8 +15784,8 @@
     "Definition": "The type of patient healthcare complaint being documented.",
     "Usage": "Recommended",
     "V3Changes": "Added to improve data integrity.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ComplaintType",
     "NV": "NV",
@@ -15510,7 +15818,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation/eSituation.PatientComplaintGroup"
   },
   "Complaint": {
     "DatasetName": "EMSDataSet",
@@ -15525,8 +15834,8 @@
     "Definition": "The statement of the problem by the patient or the history provider.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "Complaint",
     "NV": "NV",
@@ -15546,7 +15855,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation/eSituation.PatientComplaintGroup"
   },
   "DurationofComplaint": {
     "DatasetName": "EMSDataSet",
@@ -15561,8 +15871,8 @@
     "Definition": "The duration of the complaint",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DurationComplaint",
     "NV": "NV",
@@ -15582,7 +15892,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation/eSituation.PatientComplaintGroup"
   },
   "TimeUnitsofDurationofComplaint": {
     "DatasetName": "EMSDataSet",
@@ -15597,8 +15908,8 @@
     "Definition": "The time units of the duration of the patient's complaint",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "TimeUnitsOfChiefComplaint",
     "NV": "NV",
@@ -15647,7 +15958,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation/eSituation.PatientComplaintGroup"
   },
   "ChiefComplaintAnatomicLocation": {
     "DatasetName": "EMSDataSet",
@@ -15662,8 +15974,8 @@
     "Definition": "The primary anatomic location of the chief complaint as identified by EMS personnel",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ComplaintAnatomicLocation",
     "NV": "NV",
@@ -15720,7 +16032,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation"
   },
   "ChiefComplaintOrganSystem": {
     "DatasetName": "EMSDataSet",
@@ -15735,8 +16048,8 @@
     "Definition": "The primary organ system of the patient injured or medically affected.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ComplaintOrganSystem",
     "NV": "NV",
@@ -15801,7 +16114,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation"
   },
   "PrimarySymptom": {
     "DatasetName": "EMSDataSet",
@@ -15816,8 +16130,8 @@
     "Definition": "The primary sign and symptom present in the patient or observed by EMS personnel",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "AssociatedSymptoms",
     "NV": "NV",
@@ -15837,7 +16151,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation"
   },
   "OtherAssociatedSymptoms": {
     "DatasetName": "EMSDataSet",
@@ -15852,8 +16167,8 @@
     "Definition": "Other symptoms identified by the patient or observed by EMS personnel",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "AssociatedSymptoms",
     "NV": "NV",
@@ -15874,23 +16189,24 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation"
   },
-  "Provider'sPrimaryImpression": {
+  "ProvidersPrimaryImpression": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eSituation.11",
     "NemsisName": "Provider's Primary Impression",
     "ElementTitle": "Provider's Primary Impression",
-    "ngModel": "Provider'sPrimaryImpression",
+    "ngModel": "ProvidersPrimaryImpression",
     "V2Number": "E09_15",
     "National": "National",
     "State": "State",
     "Definition": "The EMS personnel's impression of the patient's primary problem or most significant condition which led to the management given to the patient (treatments, medications, or procedures).",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ProvidersImpression",
     "NV": "NV",
@@ -15910,23 +16226,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation"
   },
-  "Provider'sSecondaryImpressions": {
+  "ProvidersSecondaryImpressions": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eSituation.12",
     "NemsisName": "Provider's Secondary Impressions",
     "ElementTitle": "Provider's Secondary Impressions",
-    "ngModel": "Provider'sSecondaryImpressions",
+    "ngModel": "ProvidersSecondaryImpressions",
     "V2Number": "E09_16",
     "National": "National",
     "State": "State",
     "Definition": "The EMS personnel's impression of the patient's secondary problem or most significant condition which led to the management given to the patient (treatments, medications, or procedures).",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "ProvidersImpression",
     "NV": "NV",
@@ -15947,7 +16264,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation"
   },
   "InitialPatientAcuity": {
     "DatasetName": "EMSDataSet",
@@ -15962,8 +16280,8 @@
     "Definition": "The acuity of the patient's condition upon EMS arrival at the scene.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "InitialPatientAcuity",
     "NV": "NV",
@@ -16000,23 +16318,24 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation"
   },
-  "Work-RelatedIllness/Injury": {
+  "WorkRelatedIllnessInjury": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eSituation.14",
     "NemsisName": "Work-Related Illness/Injury",
     "ElementTitle": "Work-Related Illness/Injury",
-    "ngModel": "Work-RelatedIllness/Injury",
+    "ngModel": "WorkRelatedIllnessInjury",
     "V2Number": "E07_15",
     "National": "",
     "State": "State",
     "Definition": "Indication of whether or not the illness or injury is work related.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "YesNoUnkValues",
     "NV": "NV",
@@ -16049,23 +16368,24 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation/eSituation.WorkRelatedGroup"
   },
-  "Patient'sOccupationalIndustry": {
+  "PatientsOccupationalIndustry": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eSituation.15",
     "NemsisName": "Patient's Occupational Industry",
     "ElementTitle": "Patient's Occupational Industry",
-    "ngModel": "Patient'sOccupationalIndustry",
+    "ngModel": "PatientsOccupationalIndustry",
     "V2Number": "E07_16",
     "National": "",
     "State": "",
     "Definition": "The occupational industry of the patient's work.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "OccupationIndustry",
     "NV": "",
@@ -16164,23 +16484,24 @@
         "text": "Wholesale Trade"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation/eSituation.WorkRelatedGroup"
   },
-  "Patient'sOccupation": {
+  "PatientsOccupation": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eSituation.16",
     "NemsisName": "Patient's Occupation",
     "ElementTitle": "Patient's Occupation",
-    "ngModel": "Patient'sOccupation",
+    "ngModel": "PatientsOccupation",
     "V2Number": "E07_17",
     "National": "",
     "State": "",
     "Definition": "The occupation of the patient.",
     "Usage": "Optional",
     "V3Changes": "Added to better describe work related injury.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PatientsOccupation",
     "NV": "",
@@ -16291,7 +16612,8 @@
         "text": "Transportation and Material Moving Occupations"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation/eSituation.WorkRelatedGroup"
   },
   "PatientActivity": {
     "DatasetName": "EMSDataSet",
@@ -16306,8 +16628,8 @@
     "Definition": "The activity the patient was involved in at the time the patient experienced the onset of symptoms or experienced an injury.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "icd10Activity",
     "NV": "NV",
@@ -16328,23 +16650,24 @@
     "attributes": [
       "CorrelationID",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation"
   },
-  "Date/TimeLastKnownWell": {
+  "DateTimeLastKnownWell": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eSituation.18",
     "NemsisName": "Date/Time Last Known Well",
     "ElementTitle": "Date/Time Last Known Well",
-    "ngModel": "Date/TimeLastKnownWell",
+    "ngModel": "DateTimeLastKnownWell",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The estimated date and time the patient was last known to be well or in their usual state of health. This is described or estimated by the patient, family, and/or bystanders.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -16362,7 +16685,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eSituation"
   },
   "CauseofInjury": {
     "DatasetName": "EMSDataSet",
@@ -16377,8 +16701,8 @@
     "Definition": "The category of the reported/suspected external cause of the injury.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "icd10CodeInjury",
     "NV": "NV",
@@ -16399,7 +16723,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury"
   },
   "MechanismofInjury": {
     "DatasetName": "EMSDataSet",
@@ -16414,8 +16739,8 @@
     "Definition": "The mechanism of the event which caused the injury",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "MechanismOfInjury",
     "NV": "NV",
@@ -16453,7 +16778,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury"
   },
   "TraumaCenterCriteria": {
     "DatasetName": "EMSDataSet",
@@ -16468,8 +16794,8 @@
     "Definition": "Field Triage Criteria for transport to a trauma center as defined by the Centers for Disease Control and Prevention and the American College of Surgeons-Committee on Trauma.",
     "Usage": "Required",
     "V3Changes": "Added to better evaluate the CDC-ACS 2011 Guidelines for the Field Triage of Injured Patients. <br/>Website: http://www.cdc.gov/FieldTriage/",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "TraumaCenterCriteria",
     "NV": "NV",
@@ -16535,23 +16861,24 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury"
   },
-  "Vehicular,Pedestrian,orOtherInjuryRiskFactor": {
+  "VehicularPedestrianorOtherInjuryRiskFactor": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eInjury.04",
     "NemsisName": "Vehicular, Pedestrian, or Other Injury Risk Factor",
     "ElementTitle": "Vehicular, Pedestrian, or Other Injury Risk Factor",
-    "ngModel": "Vehicular,Pedestrian,orOtherInjuryRiskFactor",
+    "ngModel": "VehicularPedestrianorOtherInjuryRiskFactor",
     "V2Number": "E10_04",
     "National": "National",
     "State": "State",
     "Definition": "Field Triage Criteria for transport to a trauma center as defined by the Centers for Disease Control and Prevention and the American College of Surgeons-Committee on Trauma.",
     "Usage": "Required",
     "V3Changes": "Added to better evaluate the CDC-ACS 2011 Guidelines for the Field Triage of Injured Patients.  \t\t\t\t\t\t\t<br/>Website: http://www.cdc.gov/FieldTriage/",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "VehicularInjuryIndicators",
     "NV": "NV",
@@ -16629,7 +16956,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury"
   },
   "MainAreaoftheVehicleImpactedbytheCollision": {
     "DatasetName": "EMSDataSet",
@@ -16644,8 +16972,8 @@
     "Definition": "The area or location of initial impact on the vehicle based on 12-point clock diagram.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "AreaOfVehicleImpact",
     "NV": "",
@@ -16663,7 +16991,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury"
   },
   "LocationofPatientinVehicle": {
     "DatasetName": "EMSDataSet",
@@ -16678,8 +17007,8 @@
     "Definition": "The seat row location of the vehicle at the time of the crash with the front seat numbered as 1",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "SeatRowLocation",
     "NV": "",
@@ -16758,7 +17087,8 @@
         "text": "Unknown"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury"
   },
   "UseofOccupantSafetyEquipment": {
     "DatasetName": "EMSDataSet",
@@ -16773,8 +17103,8 @@
     "Definition": "Safety equipment in use by the patient at the time of the injury",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "UseOfOccupantSafetyEquipment",
     "NV": "NV",
@@ -16848,7 +17178,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury"
   },
   "AirbagDeployment": {
     "DatasetName": "EMSDataSet",
@@ -16863,8 +17194,8 @@
     "Definition": "Indication of Airbag Deployment",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "AirbagDeployment",
     "NV": "",
@@ -16905,23 +17236,24 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury"
   },
-  "HeightofFall(feet)": {
+  "HeightofFallfeet": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eInjury.09",
     "NemsisName": "Height of Fall (feet)",
     "ElementTitle": "Height of Fall (feet)",
-    "ngModel": "HeightofFall(feet)",
+    "ngModel": "HeightofFallfeet",
     "V2Number": "E10_10",
     "National": "",
     "State": "State",
     "Definition": "The distance in feet the patient fell, measured from the lowest point of the patient to the ground",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "HeightOfFall",
     "NV": "",
@@ -16939,7 +17271,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury"
   },
   "OSHAPersonalProtectiveEquipmentUsed": {
     "DatasetName": "EMSDataSet",
@@ -16954,8 +17287,8 @@
     "Definition": "Documentation of the use of OSHA required protective equipment used by the patient at the time of injury.",
     "Usage": "Optional",
     "V3Changes": "Added to better document personal protection equipment used by the patient associated with an injury.",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "EquipmentUsed",
     "NV": "",
@@ -17004,23 +17337,24 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury"
   },
-  "ACNSystem/CompanyProvidingACNData": {
+  "ACNSystemCompanyProvidingACNData": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eInjury.11",
     "NemsisName": "ACN System/Company Providing ACN Data",
     "ElementTitle": "ACN System/Company Providing ACN Data",
-    "ngModel": "ACNSystem/CompanyProvidingACNData",
+    "ngModel": "ACNSystemCompanyProvidingACNData",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The agency providing the Automated Collision Notification (ACN) Data.",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "Company",
     "NV": "",
@@ -17038,7 +17372,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup"
   },
   "ACNIncidentID": {
     "DatasetName": "EMSDataSet",
@@ -17053,8 +17388,8 @@
     "Definition": "The Automated Collision Notification Incident ID.",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "IncidentID",
     "NV": "",
@@ -17072,7 +17407,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup"
   },
   "ACNCallBackPhoneNumber": {
     "DatasetName": "EMSDataSet",
@@ -17087,8 +17423,8 @@
     "Definition": "The Automated Collision Notification Call Back Phone Number (US Only).",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "PhoneNumber",
     "NV": "",
@@ -17109,23 +17445,24 @@
     "attributes": [
       "PhoneNumberType",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup"
   },
-  "Date/TimeofACNIncident": {
+  "DateTimeofACNIncident": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eInjury.14",
     "NemsisName": "Date/Time of ACN Incident",
     "ElementTitle": "Date/Time of ACN Incident",
-    "ngModel": "Date/TimeofACNIncident",
+    "ngModel": "DateTimeofACNIncident",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The Automated Collision Notification Incident Date and Time.",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -17143,7 +17480,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup"
   },
   "ACNIncidentLocation": {
     "DatasetName": "EMSDataSet",
@@ -17158,8 +17496,8 @@
     "Definition": "The Automated Collision Notification GPS Location.",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "GPSLocation",
     "NV": "",
@@ -17177,7 +17515,8 @@
     "fractionDigits": "",
     "pattern": "(\\+|-)?(90(\\.[0]{1,6})?|([1-8][0-9]|[0-9])(\\.[0-9]{1,6})?),(\\+|-)?(180(\\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\\.[0-9]{1,6})?)",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup"
   },
   "ACNIncidentVehicleBodyType": {
     "DatasetName": "EMSDataSet",
@@ -17192,8 +17531,8 @@
     "Definition": "The Automated Collision Notification Vehicle Body Type.",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "BodyType",
     "NV": "",
@@ -17211,7 +17550,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup"
   },
   "ACNIncidentVehicleManufacturer": {
     "DatasetName": "EMSDataSet",
@@ -17226,8 +17566,8 @@
     "Definition": "The Automated Collision Notification Vehicle Manufacturer (e.g., General Motors, Ford, BMW, etc.).",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "Manufacturer",
     "NV": "",
@@ -17245,7 +17585,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup"
   },
   "ACNIncidentVehicleMake": {
     "DatasetName": "EMSDataSet",
@@ -17260,8 +17601,8 @@
     "Definition": "The Automated Collision Notification Vehicle Make (e.g., Cadillac, Ford, BMW, etc.).",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "Make",
     "NV": "",
@@ -17279,7 +17620,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup"
   },
   "ACNIncidentVehicleModel": {
     "DatasetName": "EMSDataSet",
@@ -17294,8 +17636,8 @@
     "Definition": "The Automated Collision Notification Vehicle Model (e.g., Escalade, Taurus, X6M, etc.).",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "Model",
     "NV": "",
@@ -17313,7 +17655,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup"
   },
   "ACNIncidentVehicleModelYear": {
     "DatasetName": "EMSDataSet",
@@ -17328,8 +17671,8 @@
     "Definition": "The Automated Collision Notification Vehicle Model Year (e.g., 2010).",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "Year",
     "NV": "",
@@ -17347,7 +17690,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup"
   },
   "ACNIncidentMultipleImpacts": {
     "DatasetName": "EMSDataSet",
@@ -17362,8 +17706,8 @@
     "Definition": "The Automated Collision Notification Indication of Multiple Impacts associated with the collision.",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "YesNoValues",
     "NV": "",
@@ -17390,7 +17734,8 @@
         "text": "Yes"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup"
   },
   "ACNIncidentDeltaVelocity": {
     "DatasetName": "EMSDataSet",
@@ -17405,8 +17750,8 @@
     "Definition": "The Automated Collision Notification Delta Velocity (Delta V) force associated with the crash.",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "DeltaVelocity",
     "NV": "",
@@ -17428,7 +17773,8 @@
       "DeltaVelocityOrdinal",
       "VelocityUnit",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup"
   },
   "ACNHighProbabilityofInjury": {
     "DatasetName": "EMSDataSet",
@@ -17443,8 +17789,8 @@
     "Definition": "The Automated Collision Notification of the High Probability of Injury.",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "YesNoValues",
     "NV": "",
@@ -17471,7 +17817,8 @@
         "text": "Yes"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup"
   },
   "ACNIncidentPDOF": {
     "DatasetName": "EMSDataSet",
@@ -17486,8 +17833,8 @@
     "Definition": "The Automated Collision Notification Principal Direction of Force (PDOF).",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PDOF",
     "NV": "",
@@ -17505,7 +17852,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup"
   },
   "ACNIncidentRollover": {
     "DatasetName": "EMSDataSet",
@@ -17520,8 +17868,8 @@
     "Definition": "The Automated Collision Notification Indication that the Vehicle Rolled Over.",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ACNYesNoType",
     "NV": "",
@@ -17548,7 +17896,8 @@
         "text": "No"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup"
   },
   "ACNVehicleSeatLocation": {
     "DatasetName": "EMSDataSet",
@@ -17563,8 +17912,8 @@
     "Definition": "The Automated Collision Notification Indication of the Occupant(s) Seat Location(s) within the vehicle.",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "SeatLocation",
     "NV": "",
@@ -17619,7 +17968,8 @@
         "text": "Third Row Right Seat"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup/eInjury.SeatGroup"
   },
   "SeatOccupied": {
     "DatasetName": "EMSDataSet",
@@ -17634,8 +17984,8 @@
     "Definition": "Indication if seat is occupied based on seat sensor data.",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ACNYesNoType",
     "NV": "",
@@ -17662,7 +18012,8 @@
         "text": "No"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup/eInjury.SeatGroup"
   },
   "ACNIncidentSeatbeltUse": {
     "DatasetName": "EMSDataSet",
@@ -17677,8 +18028,8 @@
     "Definition": "The Automated Collision Notification Indication of Seatbelt use by the occupant(s).",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ACNYesNoType",
     "NV": "",
@@ -17705,7 +18056,8 @@
         "text": "No"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup/eInjury.SeatGroup"
   },
   "ACNIncidentAirbagDeployed": {
     "DatasetName": "EMSDataSet",
@@ -17720,8 +18072,8 @@
     "Definition": "The Automated Collision Notification Indication of Airbag Deployment.",
     "Usage": "Optional",
     "V3Changes": "Added to better incorporate advanced automated collision notification information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ACNYesNoType",
     "NV": "",
@@ -17748,7 +18100,8 @@
         "text": "No"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eInjury/eInjury.CollisionGroup/eInjury.SeatGroup"
   },
   "CardiacArrest": {
     "DatasetName": "EMSDataSet",
@@ -17763,8 +18116,8 @@
     "Definition": "Indication of the presence of a cardiac arrest at any time during this EMS event.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "CardiacArrest",
     "NV": "NV",
@@ -17797,7 +18150,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
   "CardiacArrestEtiology": {
     "DatasetName": "EMSDataSet",
@@ -17812,8 +18166,8 @@
     "Definition": "Indication of the etiology or cause of the cardiac arrest (classified as cardiac, non-cardiac, etc.)",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "CardiacArrestEtiology",
     "NV": "NV",
@@ -17866,7 +18220,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
   "ResuscitationAttemptedByEMS": {
     "DatasetName": "EMSDataSet",
@@ -17881,8 +18236,8 @@
     "Definition": "Indication of an attempt to resuscitate the patient who is in cardiac arrest (attempted, not attempted due to DNR, etc.)",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "ResuscitationAttempted",
     "NV": "NV",
@@ -17928,7 +18283,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
   "ArrestWitnessedBy": {
     "DatasetName": "EMSDataSet",
@@ -17943,8 +18299,8 @@
     "Definition": "Indication of who the cardiac arrest was witnessed by",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "ArrestWitnessedBy",
     "NV": "NV",
@@ -17982,7 +18338,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
   "CPRCareProvidedPriortoEMSArrival": {
     "DatasetName": "EMSDataSet",
@@ -17997,8 +18354,8 @@
     "Definition": "Documentation of the CPR provided prior to EMS arrival",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "YesNoValues",
     "NV": "NV",
@@ -18027,7 +18384,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
   "WhoProvidedCPRPriortoEMSArrival": {
     "DatasetName": "EMSDataSet",
@@ -18042,8 +18400,8 @@
     "Definition": "Documentation of who performed CPR prior to this EMS unit's arrival.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "WhoProvided",
     "NV": "",
@@ -18084,7 +18442,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
   "AEDUsePriortoEMSArrival": {
     "DatasetName": "EMSDataSet",
@@ -18099,8 +18458,8 @@
     "Definition": "Documentation of AED use Prior to EMS Arrival",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "AEDUse",
     "NV": "NV",
@@ -18133,7 +18492,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
   "WhoUsedAEDPriortoEMSArrival": {
     "DatasetName": "EMSDataSet",
@@ -18148,8 +18508,8 @@
     "Definition": "Documentation of who used the AED prior to this EMS unit's arrival.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "WhoUsedAED",
     "NV": "",
@@ -18190,7 +18550,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
   "TypeofCPRProvided": {
     "DatasetName": "EMSDataSet",
@@ -18205,8 +18566,8 @@
     "Definition": "Documentation of the type/technique of CPR used by EMS.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "CPRType",
     "NV": "NV",
@@ -18268,7 +18629,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
   "FirstMonitoredArrestRhythmofthePatient": {
     "DatasetName": "EMSDataSet",
@@ -18283,8 +18645,8 @@
     "Definition": "Documentation of what the first monitored arrest rhythm which was noted",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "FirstMonitoredRhythm",
     "NV": "NV",
@@ -18329,7 +18691,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
   "AnyReturnofSpontaneousCirculation": {
     "DatasetName": "EMSDataSet",
@@ -18344,8 +18707,8 @@
     "Definition": "Indication whether or not there was any return of spontaneous circulation.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "ReturnOfSpontaneousCirculation",
     "NV": "NV",
@@ -18383,7 +18746,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
   "NeurologicalOutcomeatHospitalDischarge": {
     "DatasetName": "EMSDataSet",
@@ -18398,8 +18762,8 @@
     "Definition": "The level of cerebral performance of the patient at the time of discharge from the Hospital",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "NeurologicalOutcomeAtDischarge",
     "NV": "",
@@ -18434,23 +18798,24 @@
         "text": "CPC 4 Coma or Vegetative State"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
-  "Date/TimeofCardiacArrest": {
+  "DateTimeofCardiacArrest": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eArrest.14",
     "NemsisName": "Date/Time of Cardiac Arrest",
     "ElementTitle": "Date/Time of Cardiac Arrest",
-    "ngModel": "Date/TimeofCardiacArrest",
+    "ngModel": "DateTimeofCardiacArrest",
     "V2Number": "E11_08",
     "National": "National",
     "State": "State",
     "Definition": "The date/time of the cardiac arrest (if not known, please estimate).",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateTimeType",
     "NV": "NV",
@@ -18470,23 +18835,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
-  "Date/TimeResuscitationDiscontinued": {
+  "DateTimeResuscitationDiscontinued": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eArrest.15",
     "NemsisName": "Date/Time Resuscitation Discontinued",
     "ElementTitle": "Date/Time Resuscitation Discontinued",
-    "ngModel": "Date/TimeResuscitationDiscontinued",
+    "ngModel": "DateTimeResuscitationDiscontinued",
     "V2Number": "E11_09",
     "National": "",
     "State": "State",
     "Definition": "The date/time resuscitation was discontinued.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateTimeType",
     "NV": "NV",
@@ -18506,23 +18872,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
-  "ReasonCPR/ResuscitationDiscontinued": {
+  "ReasonCPRResuscitationDiscontinued": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eArrest.16",
     "NemsisName": "Reason CPR/Resuscitation Discontinued",
     "ElementTitle": "Reason CPR/Resuscitation Discontinued",
-    "ngModel": "ReasonCPR/ResuscitationDiscontinued",
+    "ngModel": "ReasonCPRResuscitationDiscontinued",
     "V2Number": "E11_10",
     "National": "National",
     "State": "State",
     "Definition": "The reason that CPR or the resuscitation efforts were discontinued.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ReasonCPRDiscontinued",
     "NV": "NV",
@@ -18567,7 +18934,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
   "CardiacRhythmonArrivalatDestination": {
     "DatasetName": "EMSDataSet",
@@ -18582,8 +18950,8 @@
     "Definition": "The patient's cardiac rhythm upon delivery or transfer to the destination",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "CardiacRhythm",
     "NV": "NV",
@@ -18749,7 +19117,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
   "EndofEMSCardiacArrestEvent": {
     "DatasetName": "EMSDataSet",
@@ -18764,8 +19133,8 @@
     "Definition": "The patient's outcome at the end of the EMS event.",
     "Usage": "Required",
     "V3Changes": "Added to better identify the outcome of EMS cardiac arrest patients.",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "CardiacArrestOutcome",
     "NV": "NV",
@@ -18810,23 +19179,24 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
-  "Date/TimeofInitialCPR": {
+  "DateTimeofInitialCPR": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eArrest.19",
     "NemsisName": "Date/Time of Initial CPR",
     "ElementTitle": "Date/Time of Initial CPR",
-    "ngModel": "Date/TimeofInitialCPR",
+    "ngModel": "DateTimeofInitialCPR",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The initial date and time that CPR was started by anyone.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -18844,7 +19214,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eArrest"
   },
   "BarrierstoPatientCare": {
     "DatasetName": "EMSDataSet",
@@ -18859,8 +19230,8 @@
     "Definition": "Indication of whether or not there were any patient specific barriers to serving the patient at the scene",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "BarriersToPatientCare",
     "NV": "NV",
@@ -18946,23 +19317,24 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory"
   },
-  "LastNameofPatient'sPractitioner": {
+  "LastNameofPatientsPractitioner": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eHistory.02",
     "NemsisName": "Last Name of Patient's Practitioner",
     "ElementTitle": "Last Name of Patient's Practitioner",
-    "ngModel": "LastNameofPatient'sPractitioner",
+    "ngModel": "LastNameofPatientsPractitioner",
     "V2Number": "E12_06",
     "National": "",
     "State": "",
     "Definition": "The last name of the patient's practitioner",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonLastName",
     "NV": "",
@@ -18980,23 +19352,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory/eHistory.PractitionerGroup"
   },
-  "FirstNameofPatient'sPractitioner": {
+  "FirstNameofPatientsPractitioner": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eHistory.03",
     "NemsisName": "First Name of Patient's Practitioner",
     "ElementTitle": "First Name of Patient's Practitioner",
-    "ngModel": "FirstNameofPatient'sPractitioner",
+    "ngModel": "FirstNameofPatientsPractitioner",
     "V2Number": "E12_04",
     "National": "",
     "State": "",
     "Definition": "The first name of the patient's practitioner",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonFirstName",
     "NV": "",
@@ -19014,23 +19387,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory/eHistory.PractitionerGroup"
   },
-  "MiddleName/InitialofPatient'sPractitioner": {
+  "MiddleNameInitialofPatientsPractitioner": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eHistory.04",
     "NemsisName": "Middle Name/Initial of Patient's Practitioner",
     "ElementTitle": "Middle Name/Initial of Patient's Practitioner",
-    "ngModel": "MiddleName/InitialofPatient'sPractitioner",
+    "ngModel": "MiddleNameInitialofPatientsPractitioner",
     "V2Number": "E12_05",
     "National": "",
     "State": "",
     "Definition": "The middle name or initial of the patient's practitioner.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonMiddleName",
     "NV": "",
@@ -19048,7 +19422,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory/eHistory.PractitionerGroup"
   },
   "AdvanceDirectives": {
     "DatasetName": "EMSDataSet",
@@ -19063,8 +19438,8 @@
     "Definition": "The presence of a valid DNR form, living will, or document directing end of life or healthcare treatment decisions.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "AdvanceDirectives",
     "NV": "NV",
@@ -19110,7 +19485,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory"
   },
   "MedicationAllergies": {
     "DatasetName": "EMSDataSet",
@@ -19125,8 +19501,8 @@
     "Definition": "The patient's medication allergies",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "MedicationAllergies",
     "NV": "NV",
@@ -19149,23 +19525,24 @@
       "PN",
       "CodeType",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory"
   },
-  "Environmental/FoodAllergies": {
+  "EnvironmentalFoodAllergies": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eHistory.07",
     "NemsisName": "Environmental/Food Allergies",
     "ElementTitle": "Environmental/Food Allergies",
-    "ngModel": "Environmental/FoodAllergies",
+    "ngModel": "EnvironmentalFoodAllergies",
     "V2Number": "E12_09",
     "National": "",
     "State": "",
     "Definition": "The patient's known allergies to food or environmental agents.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "snomed",
     "NV": "",
@@ -19185,23 +19562,24 @@
     "options": [],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory"
   },
-  "Medical/SurgicalHistory": {
+  "MedicalSurgicalHistory": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eHistory.08",
     "NemsisName": "Medical/Surgical History",
     "ElementTitle": "Medical/Surgical History",
-    "ngModel": "Medical/SurgicalHistory",
+    "ngModel": "MedicalSurgicalHistory",
     "V2Number": "E12_10",
     "National": "",
     "State": "State",
     "Definition": "The patient's pre-existing medical and surgery history of the patient",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "icd10MedSurge",
     "NV": "NV",
@@ -19223,7 +19601,8 @@
       "NV",
       "PN",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory"
   },
   "MedicalHistoryObtainedFrom": {
     "DatasetName": "EMSDataSet",
@@ -19238,8 +19617,8 @@
     "Definition": "Type of person medical history obtained from",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "MedicalHistoryObtainedFrom",
     "NV": "",
@@ -19276,23 +19655,24 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory"
   },
-  "ThePatient'sTypeofImmunization": {
+  "ThePatientsTypeofImmunization": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eHistory.10",
     "NemsisName": "The Patient's Type of Immunization",
     "ElementTitle": "The Patient's Type of Immunization",
-    "ngModel": "ThePatient'sTypeofImmunization",
+    "ngModel": "ThePatientsTypeofImmunization",
     "V2Number": "E12_12",
     "National": "",
     "State": "",
     "Definition": "The immunization type of the patient.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ImmunizationType",
     "NV": "",
@@ -19415,7 +19795,8 @@
         "text": "Yellow Fever"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory/eHistory.ImmunizationsGroup"
   },
   "ImmunizationYear": {
     "DatasetName": "EMSDataSet",
@@ -19430,8 +19811,8 @@
     "Definition": "The year associated with each immunization type",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "Year",
     "NV": "",
@@ -19449,7 +19830,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory/eHistory.ImmunizationsGroup"
   },
   "CurrentMedications": {
     "DatasetName": "EMSDataSet",
@@ -19464,8 +19846,8 @@
     "Definition": "The medications the patient currently takes",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "Medication",
     "NV": "NV",
@@ -19486,7 +19868,8 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory/eHistory.CurrentMedsGroup"
   },
   "CurrentMedicationDose": {
     "DatasetName": "EMSDataSet",
@@ -19501,8 +19884,8 @@
     "Definition": "The numeric dose or amount of the patient's current medication",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CurrentMedicationDose",
     "NV": "",
@@ -19520,7 +19903,8 @@
     "fractionDigits": "2",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory/eHistory.CurrentMedsGroup"
   },
   "CurrentMedicationDosageUnit": {
     "DatasetName": "EMSDataSet",
@@ -19535,8 +19919,8 @@
     "Definition": "The dosage unit of the patient's current medication",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CurrentMedicationDosageUnit",
     "NV": "",
@@ -19663,7 +20047,8 @@
         "text": "Units per Kilogram (units/kg)"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory/eHistory.CurrentMedsGroup"
   },
   "CurrentMedicationAdministrationRoute": {
     "DatasetName": "EMSDataSet",
@@ -19678,8 +20063,8 @@
     "Definition": "The administration route (po, SQ, etc.) of the patient's current medication",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CurrentMedicationAdministrationRoute",
     "NV": "",
@@ -19822,7 +20207,8 @@
         "text": "Portacath"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory/eHistory.CurrentMedsGroup"
   },
   "PresenceofEmergencyInformationForm": {
     "DatasetName": "EMSDataSet",
@@ -19837,8 +20223,8 @@
     "Definition": "Indication of the presence of the Emergency Information Form associated with patient's with special healthcare needs.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "YesNoValues",
     "NV": "",
@@ -19865,23 +20251,24 @@
         "text": "Yes"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory"
   },
-  "Alcohol/DrugUseIndicators": {
+  "AlcoholDrugUseIndicators": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eHistory.17",
     "NemsisName": "Alcohol/Drug Use Indicators",
     "ElementTitle": "Alcohol/Drug Use Indicators",
-    "ngModel": "Alcohol/DrugUseIndicators",
+    "ngModel": "AlcoholDrugUseIndicators",
     "V2Number": "E12_19",
     "National": "National",
     "State": "State",
     "Definition": "Indicators for the potential use of alcohol or drugs by the patient related to the patient's current illness or injury.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "AlcoholDrugUseIndicators",
     "NV": "NV",
@@ -19928,7 +20315,8 @@
       "PN",
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory"
   },
   "Pregnancy": {
     "DatasetName": "EMSDataSet",
@@ -19943,8 +20331,8 @@
     "Definition": "Indication of the possibility by the patient's history of current pregnancy.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "Pregnancy",
     "NV": "",
@@ -19989,7 +20377,8 @@
     ],
     "attributes": [
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory"
   },
   "LastOralIntake": {
     "DatasetName": "EMSDataSet",
@@ -20004,8 +20393,8 @@
     "Definition": "Date and Time of last oral intake.",
     "Usage": "Optional",
     "V3Changes": "Added to better document last oral intake.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -20023,7 +20412,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eHistory"
   },
   "PatientCareReportNarrative": {
     "DatasetName": "EMSDataSet",
@@ -20038,8 +20428,8 @@
     "Definition": "The narrative of the patient care report (PCR).",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "PCRNarrative",
     "NV": "NV",
@@ -20059,23 +20449,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eNarrative"
   },
-  "Date/TimeVitalSignsTaken": {
+  "DateTimeVitalSignsTaken": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eVitals.01",
     "NemsisName": "Date/Time Vital Signs Taken",
     "ElementTitle": "Date/Time Vital Signs Taken",
-    "ngModel": "Date/TimeVitalSignsTaken",
+    "ngModel": "DateTimeVitalSignsTaken",
     "V2Number": "E14_01",
     "National": "National",
     "State": "State",
     "Definition": "The date/time vital signs were taken on the patient.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateTimeType",
     "NV": "NV",
@@ -20095,23 +20486,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup"
   },
-  "ObtainedPriortothisUnit'sEMSCare": {
+  "ObtainedPriortothisUnitsEMSCare": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eVitals.02",
     "NemsisName": "Obtained Prior to this Unit's EMS Care",
     "ElementTitle": "Obtained Prior to this Unit's EMS Care",
-    "ngModel": "ObtainedPriortothisUnit'sEMSCare",
+    "ngModel": "ObtainedPriortothisUnitsEMSCare",
     "V2Number": "E14_02",
     "National": "National",
     "State": "State",
     "Definition": "Indicates that the information which is documented was obtained prior to the documenting EMS units care.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "YesNoValues",
     "NV": "NV",
@@ -20140,23 +20532,24 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup"
   },
-  "CardiacRhythm/Electrocardiography(ECG)": {
+  "CardiacRhythmElectrocardiographyECG": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eVitals.03",
     "NemsisName": "Cardiac Rhythm / Electrocardiography (ECG)",
     "ElementTitle": "Cardiac Rhythm / Electrocardiography (ECG)",
-    "ngModel": "CardiacRhythm/Electrocardiography(ECG)",
+    "ngModel": "CardiacRhythmElectrocardiographyECG",
     "V2Number": "E14_03",
     "National": "National",
     "State": "State",
     "Definition": "The cardiac rhythm / ECG and other electrocardiography findings of the patient as interpreted by EMS personnel.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "CardiacRhythm",
     "NV": "NV",
@@ -20323,7 +20716,8 @@
       "PN",
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.CardiacRhythmGroup"
   },
   "ECGType": {
     "DatasetName": "EMSDataSet",
@@ -20338,8 +20732,8 @@
     "Definition": "The type of ECG associated with the cardiac rhythm.",
     "Usage": "Required",
     "V3Changes": "Added to better document ECG results.",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ECGType",
     "NV": "NV",
@@ -20392,7 +20786,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.CardiacRhythmGroup"
   },
   "MethodofECGInterpretation": {
     "DatasetName": "EMSDataSet",
@@ -20407,8 +20802,8 @@
     "Definition": "The method of ECG interpretation.",
     "Usage": "Required",
     "V3Changes": "Added to better document ECG results.",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "ECGMethod",
     "NV": "NV",
@@ -20446,23 +20841,24 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.CardiacRhythmGroup"
   },
-  "SBP(SystolicBloodPressure)": {
+  "SBPSystolicBloodPressure": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eVitals.06",
     "NemsisName": "SBP (Systolic Blood Pressure)",
     "ElementTitle": "SBP (Systolic Blood Pressure)",
-    "ngModel": "SBP(SystolicBloodPressure)",
+    "ngModel": "SBPSystolicBloodPressure",
     "V2Number": "E14_04",
     "National": "National",
     "State": "State",
     "Definition": "The patient's systolic blood pressure.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "SBP",
     "NV": "NV",
@@ -20483,23 +20879,24 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.BloodPressureGroup"
   },
-  "DBP(DiastolicBloodPressure)": {
+  "DBPDiastolicBloodPressure": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eVitals.07",
     "NemsisName": "DBP (Diastolic Blood Pressure)",
     "ElementTitle": "DBP (Diastolic Blood Pressure)",
-    "ngModel": "DBP(DiastolicBloodPressure)",
+    "ngModel": "DBPDiastolicBloodPressure",
     "V2Number": "E14_05",
     "National": "",
     "State": "State",
     "Definition": "The patient's diastolic blood pressure.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DBP",
     "NV": "NV",
@@ -20520,7 +20917,8 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.BloodPressureGroup"
   },
   "MethodofBloodPressureMeasurement": {
     "DatasetName": "EMSDataSet",
@@ -20535,8 +20933,8 @@
     "Definition": "Indication of method of blood pressure measurement.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "BloodPressureMethod",
     "NV": "NV",
@@ -20581,7 +20979,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.BloodPressureGroup"
   },
   "MeanArterialPressure": {
     "DatasetName": "EMSDataSet",
@@ -20596,8 +20995,8 @@
     "Definition": "The patient's mean arterial pressure.",
     "Usage": "Optional",
     "V3Changes": "Added for additional patient monitoring capability.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "MAP",
     "NV": "",
@@ -20615,7 +21014,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.BloodPressureGroup"
   },
   "HeartRate": {
     "DatasetName": "EMSDataSet",
@@ -20630,8 +21030,8 @@
     "Definition": "The patient's heart rate expressed as a number per minute.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "HeartRate",
     "NV": "NV",
@@ -20652,7 +21052,8 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.HeartRateGroup"
   },
   "MethodofHeartRateMeasurement": {
     "DatasetName": "EMSDataSet",
@@ -20667,8 +21068,8 @@
     "Definition": "The method in which the Heart Rate was measured. Values include auscultated, palpated, electronic monitor).",
     "Usage": "Optional",
     "V3Changes": "This data element was added when Pulse Rate and Electronic Monitor Rate were merged as EVitals.10.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "MethodMeasureHeartRate",
     "NV": "",
@@ -20711,7 +21112,8 @@
         "text": "Palpated"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.HeartRateGroup"
   },
   "PulseOximetry": {
     "DatasetName": "EMSDataSet",
@@ -20726,8 +21128,8 @@
     "Definition": "The patient's oxygen saturation.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "PulseOximetry",
     "NV": "NV",
@@ -20748,7 +21150,8 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup"
   },
   "PulseRhythm": {
     "DatasetName": "EMSDataSet",
@@ -20763,8 +21166,8 @@
     "Definition": "The clinical rhythm of the patient's pulse.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PulseRhythm",
     "NV": "",
@@ -20795,7 +21198,8 @@
         "text": "Regularly Irregular"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup"
   },
   "RespiratoryRate": {
     "DatasetName": "EMSDataSet",
@@ -20810,8 +21214,8 @@
     "Definition": "The patient's respiratory rate expressed as a number per minute.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "RespiratoryRate",
     "NV": "NV",
@@ -20832,7 +21236,8 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup"
   },
   "RespiratoryEffort": {
     "DatasetName": "EMSDataSet",
@@ -20847,8 +21252,8 @@
     "Definition": "The patient's respiratory effort.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "RespiratoryEffort",
     "NV": "",
@@ -20895,23 +21300,24 @@
         "text": "Weak/Agonal"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup"
   },
-  "EndTidalCarbonDioxide(ETCO2)": {
+  "EndTidalCarbonDioxideETCO2": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eVitals.16",
     "NemsisName": "End Tidal Carbon Dioxide (ETCO2)",
     "ElementTitle": "End Tidal Carbon Dioxide (ETCO2)",
-    "ngModel": "EndTidalCarbonDioxide(ETCO2)",
+    "ngModel": "EndTidalCarbonDioxideETCO2",
     "V2Number": "E14_13",
     "National": "National",
     "State": "State",
     "Definition": "The numeric value of the patient's exhaled end tidal carbon dioxide (ETCO2) level measured as a unit of pressure in millimeters of mercury (mmHg).",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "CO2",
     "NV": "NV",
@@ -20932,23 +21338,24 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup"
   },
-  "CarbonMonoxide(CO)": {
+  "CarbonMonoxideCO": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eVitals.17",
     "NemsisName": "Carbon Monoxide (CO)",
     "ElementTitle": "Carbon Monoxide (CO)",
-    "ngModel": "CarbonMonoxide(CO)",
+    "ngModel": "CarbonMonoxideCO",
     "V2Number": "",
     "National": "",
     "State": "State",
     "Definition": "The numeric value of the patient's carbon monoxide level measured as a percentage (%) of carboxyhemoglobin (COHb).",
     "Usage": "Recommended",
     "V3Changes": "Added to allow use of new patient monitoring devices.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "CarbonMonoxideLevel",
     "NV": "NV",
@@ -20969,7 +21376,8 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup"
   },
   "BloodGlucoseLevel": {
     "DatasetName": "EMSDataSet",
@@ -20984,8 +21392,8 @@
     "Definition": "The patient's blood glucose level.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "BloodGlucoseLevel",
     "NV": "NV",
@@ -21006,23 +21414,24 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup"
   },
-  "GlasgowComaScore-Eye": {
+  "GlasgowComaScoreEye": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eVitals.19",
     "NemsisName": "Glasgow Coma Score-Eye",
     "ElementTitle": "Glasgow Coma Score-Eye",
-    "ngModel": "GlasgowComaScore-Eye",
+    "ngModel": "GlasgowComaScoreEye",
     "V2Number": "E14_15",
     "National": "National",
     "State": "State",
     "Definition": "The patient's Glasgow Coma Score Eye opening.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "GlasgowComaScoreEyes",
     "NV": "NV",
@@ -21060,23 +21469,24 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.GlasgowScoreGroup"
   },
-  "GlasgowComaScore-Verbal": {
+  "GlasgowComaScoreVerbal": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eVitals.20",
     "NemsisName": "Glasgow Coma Score-Verbal",
     "ElementTitle": "Glasgow Coma Score-Verbal",
-    "ngModel": "GlasgowComaScore-Verbal",
+    "ngModel": "GlasgowComaScoreVerbal",
     "V2Number": "E14_16",
     "National": "National",
     "State": "State",
     "Definition": "The patient's Glasgow Coma Score Verbal.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "GlasgowComaScoreVerbal",
     "NV": "NV",
@@ -21118,23 +21528,24 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.GlasgowScoreGroup"
   },
-  "GlasgowComaScore-Motor": {
+  "GlasgowComaScoreMotor": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eVitals.21",
     "NemsisName": "Glasgow Coma Score-Motor",
     "ElementTitle": "Glasgow Coma Score-Motor",
-    "ngModel": "GlasgowComaScore-Motor",
+    "ngModel": "GlasgowComaScoreMotor",
     "V2Number": "E14_17",
     "National": "National",
     "State": "State",
     "Definition": "The patient's Glasgow Coma Score Motor",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "GlasgowComaScoreMotor",
     "NV": "NV",
@@ -21180,23 +21591,24 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.GlasgowScoreGroup"
   },
-  "GlasgowComaScore-Qualifier": {
+  "GlasgowComaScoreQualifier": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eVitals.22",
     "NemsisName": "Glasgow Coma Score-Qualifier",
     "ElementTitle": "Glasgow Coma Score-Qualifier",
-    "ngModel": "GlasgowComaScore-Qualifier",
+    "ngModel": "GlasgowComaScoreQualifier",
     "V2Number": "E14_18",
     "National": "National",
     "State": "State",
     "Definition": "Documentation of factors which make the GCS score more meaningful.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "GCSScoreQualifier",
     "NV": "NV",
@@ -21238,7 +21650,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.GlasgowScoreGroup"
   },
   "TotalGlasgowComaScore": {
     "DatasetName": "EMSDataSet",
@@ -21253,8 +21666,8 @@
     "Definition": "The patient's total Glasgow Coma Score.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "TotalGCS",
     "NV": "NV",
@@ -21275,7 +21688,8 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.GlasgowScoreGroup"
   },
   "Temperature": {
     "DatasetName": "EMSDataSet",
@@ -21290,8 +21704,8 @@
     "Definition": "The patient's body temperature in degrees Celsius/centigrade.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "BodyTemperature",
     "NV": "NV",
@@ -21312,7 +21726,8 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.TemperatureGroup"
   },
   "TemperatureMethod": {
     "DatasetName": "EMSDataSet",
@@ -21327,8 +21742,8 @@
     "Definition": "The method used to obtain the patient's body temperature.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "MethodBodyTemp",
     "NV": "",
@@ -21383,23 +21798,24 @@
         "text": "Skin Probe"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.TemperatureGroup"
   },
-  "LevelofResponsiveness(AVPU)": {
+  "LevelofResponsivenessAVPU": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eVitals.26",
     "NemsisName": "Level of Responsiveness (AVPU)",
     "ElementTitle": "Level of Responsiveness (AVPU)",
-    "ngModel": "LevelofResponsiveness(AVPU)",
+    "ngModel": "LevelofResponsivenessAVPU",
     "V2Number": "E14_22",
     "National": "National",
     "State": "State",
     "Definition": "The patient's highest level of responsiveness.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "PatientsHighestLevelResponsiveness",
     "NV": "NV",
@@ -21436,7 +21852,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup"
   },
   "PainScaleScore": {
     "DatasetName": "EMSDataSet",
@@ -21451,8 +21868,8 @@
     "Definition": "The patient's indication of pain from a scale of 0-10.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "PainScale",
     "NV": "NV",
@@ -21473,7 +21890,8 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.PainScaleGroup"
   },
   "PainScaleType": {
     "DatasetName": "EMSDataSet",
@@ -21488,8 +21906,8 @@
     "Definition": "The type of pain scale used.",
     "Usage": "Recommended",
     "V3Changes": "Added to better document the patient's pain level.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "TypeOfPainScale",
     "NV": "NV",
@@ -21526,7 +21944,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.PainScaleGroup"
   },
   "StrokeScaleScore": {
     "DatasetName": "EMSDataSet",
@@ -21541,8 +21960,8 @@
     "Definition": "The findings or results of the Stroke Scale Type (eVitals.30) used to assess the patient exhibiting stroke-like symptoms.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "StrokeScale",
     "NV": "NV",
@@ -21576,7 +21995,8 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.StrokeScaleGroup"
   },
   "StrokeScaleType": {
     "DatasetName": "EMSDataSet",
@@ -21591,8 +22011,8 @@
     "Definition": "The type of stroke pain scale used.",
     "Usage": "Required",
     "V3Changes": "Added to include additional detail on the stroke scale used.",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "TypeOfStrokeScale",
     "NV": "NV",
@@ -21641,7 +22061,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup/eVitals.StrokeScaleGroup"
   },
   "ReperfusionChecklist": {
     "DatasetName": "EMSDataSet",
@@ -21656,8 +22077,8 @@
     "Definition": "The results of the patient's Reperfusion Checklist for potential Thrombolysis use.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ReperfusionChecklist",
     "NV": "NV",
@@ -21691,7 +22112,8 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup"
   },
   "APGAR": {
     "DatasetName": "EMSDataSet",
@@ -21706,8 +22128,8 @@
     "Definition": "The patient's total APGAR score (0-10).",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "APGAR",
     "NV": "",
@@ -21727,7 +22149,8 @@
     "options": [],
     "attributes": [
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup"
   },
   "RevisedTraumaScore": {
     "DatasetName": "EMSDataSet",
@@ -21742,8 +22165,8 @@
     "Definition": "The patient's Revised Trauma Score.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "RTS",
     "NV": "",
@@ -21763,23 +22186,24 @@
     "options": [],
     "attributes": [
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eVitals/eVitals.VitalGroup"
   },
-  "Date/TimeofLaboratoryorImagingResult": {
+  "DateTimeofLaboratoryorImagingResult": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eLabs.01",
     "NemsisName": "Date/Time of Laboratory or Imaging Result",
     "ElementTitle": "Date/Time of Laboratory or Imaging Result",
-    "ngModel": "Date/TimeofLaboratoryorImagingResult",
+    "ngModel": "DateTimeofLaboratoryorImagingResult",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The data and time for the specific laboratory result",
     "Usage": "Optional",
     "V3Changes": "Added to better document patient care.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -21797,23 +22221,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eLabs/eLabs.LabGroup"
   },
-  "Study/ResultPriortothisUnit'sEMSCare": {
+  "StudyResultPriortothisUnitsEMSCare": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eLabs.02",
     "NemsisName": "Study/Result Prior to this Unit's EMS Care",
     "ElementTitle": "Study/Result Prior to this Unit's EMS Care",
-    "ngModel": "Study/ResultPriortothisUnit'sEMSCare",
+    "ngModel": "StudyResultPriortothisUnitsEMSCare",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "Indicates that the laboratory result occurred prior to this EMS units care.",
     "Usage": "Optional",
     "V3Changes": "Added to better document EMS care.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "YesNoValues",
     "NV": "",
@@ -21840,7 +22265,8 @@
         "text": "Yes"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eLabs/eLabs.LabGroup"
   },
   "LaboratoryResultType": {
     "DatasetName": "EMSDataSet",
@@ -21855,8 +22281,8 @@
     "Definition": "The type of the laboratory value.",
     "Usage": "Optional",
     "V3Changes": "Added to provide for the documentation of laboratory results obtained prior to or during and EMS patient encounter.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "LaboratoryResultType",
     "NV": "",
@@ -22091,7 +22517,8 @@
         "text": "Tylenol"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eLabs/eLabs.LabGroup/eLabs.LabResultGroup"
   },
   "LaboratoryResult": {
     "DatasetName": "EMSDataSet",
@@ -22106,8 +22533,8 @@
     "Definition": "The value or result of the laboratory test (Units may vary).",
     "Usage": "Optional",
     "V3Changes": "Added to better document EMS care.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "LaboratoryResult",
     "NV": "",
@@ -22125,7 +22552,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eLabs/eLabs.LabGroup/eLabs.LabResultGroup"
   },
   "ImagingStudyType": {
     "DatasetName": "EMSDataSet",
@@ -22140,8 +22568,8 @@
     "Definition": "The type of x-ray or imaging study.",
     "Usage": "Optional",
     "V3Changes": "Added to better describe the EMS patient care.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ImagingStudyType",
     "NV": "",
@@ -22188,7 +22616,8 @@
         "text": "Angiography"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eLabs/eLabs.LabGroup/eLabs.LabImageGroup"
   },
   "ImagingStudyResults": {
     "DatasetName": "EMSDataSet",
@@ -22203,8 +22632,8 @@
     "Definition": "The description or interpretation of the results of the imaging study.",
     "Usage": "Optional",
     "V3Changes": "Added to better describe the EMS Patient Care",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ImagingStudyResults",
     "NV": "",
@@ -22222,7 +22651,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eLabs/eLabs.LabGroup/eLabs.LabImageGroup"
   },
   "ImagingStudyFileorWaveformGraphicType": {
     "DatasetName": "EMSDataSet",
@@ -22237,8 +22667,8 @@
     "Definition": "The description of the image study file or waveform graphic stored in Imaging Study File or Waveform Graphic (eLabs.08).",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "GraphicType",
     "NV": "",
@@ -22256,7 +22686,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eLabs/eLabs.LabGroup/eLabs.LabImageGroup/eLabs.WaveformGraphicGroup"
   },
   "ImagingStudyFileorWaveformGraphic": {
     "DatasetName": "EMSDataSet",
@@ -22271,8 +22702,8 @@
     "Definition": "The imaging study file.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "WaveformGraphic",
     "NV": "",
@@ -22290,7 +22721,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eLabs/eLabs.LabGroup/eLabs.LabImageGroup/eLabs.WaveformGraphicGroup"
   },
   "EstimatedBodyWeightinKilograms": {
     "DatasetName": "EMSDataSet",
@@ -22305,8 +22737,8 @@
     "Definition": "The patient's body weight in kilograms either measured or estimated",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "EstimatedBodyWeight",
     "NV": "NV",
@@ -22327,7 +22759,8 @@
     "attributes": [
       "NV",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam"
   },
   "LengthBasedTapeMeasure": {
     "DatasetName": "EMSDataSet",
@@ -22342,8 +22775,8 @@
     "Definition": "The length-based color as taken from the tape.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "BroselowLutenColor",
     "NV": "NV",
@@ -22401,23 +22834,24 @@
     "attributes": [
       "NV",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam"
   },
-  "Date/TimeofAssessment": {
+  "DateTimeofAssessment": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eExam.03",
     "NemsisName": "Date/Time of Assessment",
     "ElementTitle": "Date/Time of Assessment",
-    "ngModel": "Date/TimeofAssessment",
+    "ngModel": "DateTimeofAssessment",
     "V2Number": "E16_03",
     "National": "",
     "State": "",
     "Definition": "The date/time of the assessment",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -22435,7 +22869,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup"
   },
   "SkinAssessment": {
     "DatasetName": "EMSDataSet",
@@ -22450,8 +22885,8 @@
     "Definition": "The assessment findings associated with the patient's skin.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "SkinAssessment",
     "NV": "",
@@ -22553,7 +22988,8 @@
     "attributes": [
       "CorrelationID",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup"
   },
   "HeadAssessment": {
     "DatasetName": "EMSDataSet",
@@ -22568,8 +23004,8 @@
     "Definition": "The assessment findings associated with the patient's head.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "HeadAssessment",
     "NV": "",
@@ -22683,7 +23119,8 @@
     "attributes": [
       "CorrelationID",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup"
   },
   "FaceAssessment": {
     "DatasetName": "EMSDataSet",
@@ -22698,8 +23135,8 @@
     "Definition": "The assessment findings associated with the patient's face.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "FaceAssessment",
     "NV": "",
@@ -22813,7 +23250,8 @@
     "attributes": [
       "CorrelationID",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup"
   },
   "NeckAssessment": {
     "DatasetName": "EMSDataSet",
@@ -22828,8 +23266,8 @@
     "Definition": "The assessment findings associated with the patient's neck.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "NeckAssessment",
     "NV": "",
@@ -22955,23 +23393,24 @@
     "attributes": [
       "CorrelationID",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup"
   },
-  "Chest/LungsAssessment": {
+  "ChestLungsAssessment": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eExam.08",
     "NemsisName": "Chest/Lungs Assessment",
     "ElementTitle": "Chest/Lungs Assessment",
-    "ngModel": "Chest/LungsAssessment",
+    "ngModel": "ChestLungsAssessment",
     "V2Number": "E16_07",
     "National": "",
     "State": "",
     "Definition": "The assessment findings associated with the patient's chest/lungs.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "ChestLungsAssessment",
     "NV": "",
@@ -23185,7 +23624,8 @@
     "attributes": [
       "CorrelationID",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup"
   },
   "HeartAssessment": {
     "DatasetName": "EMSDataSet",
@@ -23200,8 +23640,8 @@
     "Definition": "The assessment findings associated with the patient's heart.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "HeartAssessment",
     "NV": "",
@@ -23267,7 +23707,8 @@
     "attributes": [
       "CorrelationID",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup"
   },
   "AbdominalAssessmentFindingLocation": {
     "DatasetName": "EMSDataSet",
@@ -23282,8 +23723,8 @@
     "Definition": "The location of the patient's abdomen assessment findings.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "AbdominalExamFindingLocation",
     "NV": "",
@@ -23330,7 +23771,8 @@
         "text": "Epigastric"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup/eExam.AbdomenGroup"
   },
   "AbdomenAssessment": {
     "DatasetName": "EMSDataSet",
@@ -23345,8 +23787,8 @@
     "Definition": "The assessment findings associated with the patient's abdomen.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "AbdomenAssessment",
     "NV": "",
@@ -23484,23 +23926,24 @@
     "attributes": [
       "CorrelationID",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup/eExam.AbdomenGroup"
   },
-  "Pelvis/GenitourinaryAssessment": {
+  "PelvisGenitourinaryAssessment": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eExam.12",
     "NemsisName": "Pelvis/Genitourinary Assessment",
     "ElementTitle": "Pelvis/Genitourinary Assessment",
-    "ngModel": "Pelvis/GenitourinaryAssessment",
+    "ngModel": "PelvisGenitourinaryAssessment",
     "V2Number": "E16_13",
     "National": "",
     "State": "",
     "Definition": "The assessment findings associated with the patient's pelvis/genitourinary.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "GUAssessment",
     "NV": "",
@@ -23638,7 +24081,8 @@
     "attributes": [
       "CorrelationID",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup"
   },
   "BackandSpineAssessmentFindingLocation": {
     "DatasetName": "EMSDataSet",
@@ -23653,8 +24097,8 @@
     "Definition": "The location of the patient's back and spine assessment findings.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "BackAndSpineAssessmentLocation",
     "NV": "",
@@ -23725,7 +24169,8 @@
         "text": "Sacral-Right"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup/eExam.SpineGroup"
   },
   "BackandSpineAssessment": {
     "DatasetName": "EMSDataSet",
@@ -23740,8 +24185,8 @@
     "Definition": "The assessment findings associated with the patient's spine (Cervical, Thoracic, Lumbar, and Sacral) and back exam.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "BackAndSpineAssessment",
     "NV": "",
@@ -23859,7 +24304,8 @@
     "attributes": [
       "CorrelationID",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup/eExam.SpineGroup"
   },
   "ExtremityAssessmentFindingLocation": {
     "DatasetName": "EMSDataSet",
@@ -23874,8 +24320,8 @@
     "Definition": "The location of the patient's extremity assessment findings.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ExtremityAssessmentLocation",
     "NV": "",
@@ -24086,7 +24532,8 @@
         "text": "Wrist-Right"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup/eExam.ExtremityGroup"
   },
   "ExtremitiesAssessment": {
     "DatasetName": "EMSDataSet",
@@ -24101,8 +24548,8 @@
     "Definition": "The assessment findings associated with the patient's extremities.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "ExtremitiesAssessment",
     "NV": "",
@@ -24276,7 +24723,8 @@
     "attributes": [
       "CorrelationID",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup/eExam.ExtremityGroup"
   },
   "EyeAssessmentFindingLocation": {
     "DatasetName": "EMSDataSet",
@@ -24291,8 +24739,8 @@
     "Definition": "The location of the patient's eye assessment findings.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EyesAssessmentLocation",
     "NV": "",
@@ -24323,7 +24771,8 @@
         "text": "Right"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup/eExam.EyeGroup"
   },
   "EyeAssessment": {
     "DatasetName": "EMSDataSet",
@@ -24338,8 +24787,8 @@
     "Definition": "The assessment findings of the patient's eye examination.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "EyesAssessment",
     "NV": "",
@@ -24481,7 +24930,8 @@
     "attributes": [
       "CorrelationID",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup/eExam.EyeGroup"
   },
   "MentalStatusAssessment": {
     "DatasetName": "EMSDataSet",
@@ -24496,8 +24946,8 @@
     "Definition": "The assessment findings of the patient's mental status examination.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "MentalStatusAssessment",
     "NV": "",
@@ -24575,7 +25025,8 @@
     "attributes": [
       "CorrelationID",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup"
   },
   "NeurologicalAssessment": {
     "DatasetName": "EMSDataSet",
@@ -24590,8 +25041,8 @@
     "Definition": "The assessment findings of the patient's neurological examination.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "NeurologicalAssessment",
     "NV": "",
@@ -24713,23 +25164,24 @@
     "attributes": [
       "CorrelationID",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam/eExam.AssessmentGroup"
   },
-  "Stroke/CVASymptomsResolved": {
+  "StrokeCVASymptomsResolved": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eExam.21",
     "NemsisName": "Stroke/CVA Symptoms Resolved",
     "ElementTitle": "Stroke/CVA Symptoms Resolved",
-    "ngModel": "Stroke/CVASymptomsResolved",
+    "ngModel": "StrokeCVASymptomsResolved",
     "V2Number": "",
     "National": "",
     "State": "State",
     "Definition": "Indication if the Stroke/CVA Symptoms resolved and when.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "StrokeCVASymptomsResolved",
     "NV": "NV",
@@ -24763,7 +25215,8 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eExam"
   },
   "ProtocolsUsed": {
     "DatasetName": "EMSDataSet",
@@ -24778,8 +25231,8 @@
     "Definition": "The protocol used by EMS personnel to direct the clinical care of the patient",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ProtocolsUsed",
     "NV": "NV",
@@ -25248,7 +25701,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eProtocols/eProtocols.ProtocolGroup"
   },
   "ProtocolAgeCategory": {
     "DatasetName": "EMSDataSet",
@@ -25263,8 +25717,8 @@
     "Definition": "The age group the protocol is written to address",
     "Usage": "Required",
     "V3Changes": "Added to better document protocol use.",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ProtocolAgeCategory",
     "NV": "NV",
@@ -25297,23 +25751,24 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eProtocols/eProtocols.ProtocolGroup"
   },
-  "Date/TimeMedicationAdministered": {
+  "DateTimeMedicationAdministered": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eMedications.01",
     "NemsisName": "Date/Time Medication Administered",
     "ElementTitle": "Date/Time Medication Administered",
-    "ngModel": "Date/TimeMedicationAdministered",
+    "ngModel": "DateTimeMedicationAdministered",
     "V2Number": "E18_01",
     "National": "National",
     "State": "State",
     "Definition": "The date/time medication administered to the patient",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateTimeType",
     "NV": "NV",
@@ -25333,23 +25788,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup"
   },
-  "MedicationAdministeredPriortothisUnit'sEMSCare": {
+  "MedicationAdministeredPriortothisUnitsEMSCare": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eMedications.02",
     "NemsisName": "Medication Administered Prior to this Unit's EMS Care",
     "ElementTitle": "Medication Administered Prior to this Unit's EMS Care",
-    "ngModel": "MedicationAdministeredPriortothisUnit'sEMSCare",
+    "ngModel": "MedicationAdministeredPriortothisUnitsEMSCare",
     "V2Number": "E18_02",
     "National": "National",
     "State": "State",
     "Definition": "Indicates that the medication administration which is documented was administered prior to this EMS units care",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "YesNoValues",
     "NV": "NV",
@@ -25378,7 +25834,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup"
   },
   "MedicationGiven": {
     "DatasetName": "EMSDataSet",
@@ -25393,8 +25850,8 @@
     "Definition": "The medication given to the patient",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "Medication",
     "NV": "NV",
@@ -25415,7 +25872,8 @@
     "attributes": [
       "PN",
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup"
   },
   "MedicationAdministeredRoute": {
     "DatasetName": "EMSDataSet",
@@ -25430,8 +25888,8 @@
     "Definition": "The route medication was administered to the patient",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CurrentMedicationAdministrationRoute",
     "NV": "",
@@ -25574,7 +26032,8 @@
         "text": "Portacath"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup"
   },
   "MedicationDosage": {
     "DatasetName": "EMSDataSet",
@@ -25589,8 +26048,8 @@
     "Definition": "The dose or amount of the medication given to the patient",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "MedicationDosage",
     "NV": "NV",
@@ -25610,7 +26069,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup/eMedications.DosageGroup"
   },
   "MedicationDosageUnits": {
     "DatasetName": "EMSDataSet",
@@ -25625,8 +26085,8 @@
     "Definition": "The unit of medication dosage given to patient",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "MedicationDosageUnits",
     "NV": "NV",
@@ -25755,7 +26215,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup/eMedications.DosageGroup"
   },
   "ResponsetoMedication": {
     "DatasetName": "EMSDataSet",
@@ -25770,8 +26231,8 @@
     "Definition": "The patient's response to the medication",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "Response",
     "NV": "NV",
@@ -25804,7 +26265,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup"
   },
   "MedicationComplication": {
     "DatasetName": "EMSDataSet",
@@ -25819,8 +26281,8 @@
     "Definition": "Any complication (abnormal effect on the patient) associated with the administration of the medication to the patient by EMS",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "MedicationComplication",
     "NV": "NV",
@@ -25930,23 +26392,24 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup"
   },
-  "MedicationCrew(HealthcareProfessionals)ID": {
+  "MedicationCrewHealthcareProfessionalsID": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eMedications.09",
     "NemsisName": "Medication Crew (Healthcare Professionals) ID",
     "ElementTitle": "Medication Crew (Healthcare Professionals) ID",
-    "ngModel": "MedicationCrew(HealthcareProfessionals)ID",
+    "ngModel": "MedicationCrewHealthcareProfessionalsID",
     "V2Number": "E18_09",
     "National": "",
     "State": "State",
     "Definition": "The statewide assigned ID number of the EMS crew member giving the treatment to the patient",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "CrewMemberID",
     "NV": "NV",
@@ -25966,23 +26429,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup"
   },
-  "Role/TypeofPersonAdministeringMedication": {
+  "RoleTypeofPersonAdministeringMedication": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eMedications.10",
     "NemsisName": "Role/Type of Person Administering Medication",
     "ElementTitle": "Role/Type of Person Administering Medication",
-    "ngModel": "Role/TypeofPersonAdministeringMedication",
+    "ngModel": "RoleTypeofPersonAdministeringMedication",
     "V2Number": "",
     "National": "National",
     "State": "State",
     "Definition": "The type (level) of EMS or Healthcare Professional Administering the Medication. For medications administered prior to EMS arrival, this may be a non-EMS healthcare professional.",
     "Usage": "Required",
     "V3Changes": "Added to better document the type of healthcare professional who administered the medication.",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "EMSCaregiverLevel",
     "NV": "NV",
@@ -26083,7 +26547,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup"
   },
   "MedicationAuthorization": {
     "DatasetName": "EMSDataSet",
@@ -26098,8 +26563,8 @@
     "Definition": "The type of treatment authorization obtained",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "TxAuthorization",
     "NV": "",
@@ -26134,7 +26599,8 @@
         "text": "Written Orders (Patient Specific)"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup"
   },
   "MedicationAuthorizingPhysician": {
     "DatasetName": "EMSDataSet",
@@ -26149,8 +26615,8 @@
     "Definition": "The name of the authorizing physician ordering the medication administration if the order was provided by any manner other than protocol (standing order) in EMedications.11",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonName",
     "NV": "",
@@ -26168,23 +26634,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eMedications/eMedications.MedicationGroup"
   },
-  "Date/TimeProcedurePerformed": {
+  "DateTimeProcedurePerformed": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eProcedures.01",
     "NemsisName": "Date/Time Procedure Performed",
     "ElementTitle": "Date/Time Procedure Performed",
-    "ngModel": "Date/TimeProcedurePerformed",
+    "ngModel": "DateTimeProcedurePerformed",
     "V2Number": "E19_01",
     "National": "National",
     "State": "State",
     "Definition": "The date/time the procedure was performed on the patient",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateTimeType",
     "NV": "NV",
@@ -26204,23 +26671,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup"
   },
-  "ProcedurePerformedPriortothisUnit'sEMSCare": {
+  "ProcedurePerformedPriortothisUnitsEMSCare": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eProcedures.02",
     "NemsisName": "Procedure Performed Prior to this Unit's EMS Care",
     "ElementTitle": "Procedure Performed Prior to this Unit's EMS Care",
-    "ngModel": "ProcedurePerformedPriortothisUnit'sEMSCare",
+    "ngModel": "ProcedurePerformedPriortothisUnitsEMSCare",
     "V2Number": "E19_02",
     "National": "National",
     "State": "State",
     "Definition": "Indicates that the procedure which was performed and documented was performed prior to this EMS units care.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "YesNoValues",
     "NV": "NV",
@@ -26249,7 +26717,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup"
   },
   "Procedure": {
     "DatasetName": "EMSDataSet",
@@ -26264,8 +26733,8 @@
     "Definition": "The procedure performed on the patient.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "snomed",
     "NV": "NV",
@@ -26286,7 +26755,8 @@
     "attributes": [
       "NV",
       "PN"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup"
   },
   "SizeofProcedureEquipment": {
     "DatasetName": "EMSDataSet",
@@ -26301,8 +26771,8 @@
     "Definition": "The size of the equipment used in the procedure on the patient",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "SizeOfProcedureEquipment",
     "NV": "",
@@ -26320,7 +26790,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup"
   },
   "NumberofProcedureAttempts": {
     "DatasetName": "EMSDataSet",
@@ -26335,8 +26806,8 @@
     "Definition": "The number of attempts taken to complete a procedure or intervention regardless of success.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "NumberOfProcedureAttempts",
     "NV": "NV",
@@ -26356,7 +26827,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup"
   },
   "ProcedureSuccessful": {
     "DatasetName": "EMSDataSet",
@@ -26371,8 +26843,8 @@
     "Definition": "Indicates that this individual procedure attempt which was performed on the patient was successful.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "YesNoValues",
     "NV": "NV",
@@ -26401,7 +26873,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup"
   },
   "ProcedureComplication": {
     "DatasetName": "EMSDataSet",
@@ -26416,8 +26889,8 @@
     "Definition": "Any complication (abnormal effect on the patient) associated with the performance of the procedure on the patient",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "ProcedureComplication",
     "NV": "NV",
@@ -26535,7 +27008,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup"
   },
   "ResponsetoProcedure": {
     "DatasetName": "EMSDataSet",
@@ -26550,8 +27024,8 @@
     "Definition": "The patient's response to the procedure",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "Response",
     "NV": "NV",
@@ -26584,7 +27058,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup"
   },
   "ProcedureCrewMembersID": {
     "DatasetName": "EMSDataSet",
@@ -26599,8 +27074,8 @@
     "Definition": "The statewide assigned ID number of the EMS crew member performing the procedure on the patient",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "CrewMemberID",
     "NV": "NV",
@@ -26620,23 +27095,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup"
   },
-  "Role/TypeofPersonPerformingtheProcedure": {
+  "RoleTypeofPersonPerformingtheProcedure": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eProcedures.10",
     "NemsisName": "Role/Type of Person Performing the Procedure",
     "ElementTitle": "Role/Type of Person Performing the Procedure",
-    "ngModel": "Role/TypeofPersonPerformingtheProcedure",
+    "ngModel": "RoleTypeofPersonPerformingtheProcedure",
     "V2Number": "",
     "National": "National",
     "State": "State",
     "Definition": "The type (level) of EMS or Healthcare Professional performing the procedure. For procedures performed prior to EMS arrival, this may be a non-EMS healthcare professional.",
     "Usage": "Required",
     "V3Changes": "Added to document the type of healthcare professional performing the procedure.",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "EMSCaregiverLevel",
     "NV": "NV",
@@ -26737,7 +27213,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup"
   },
   "ProcedureAuthorization": {
     "DatasetName": "EMSDataSet",
@@ -26752,8 +27229,8 @@
     "Definition": "The type of treatment authorization obtained",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "TxAuthorization",
     "NV": "",
@@ -26788,7 +27265,8 @@
         "text": "Written Orders (Patient Specific)"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup"
   },
   "ProcedureAuthorizingPhysician": {
     "DatasetName": "EMSDataSet",
@@ -26803,8 +27281,8 @@
     "Definition": "The name of the authorizing physician ordering the procedure, if the order was provided by any manner other than protocol (standing order) in eProcedures.11",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonName",
     "NV": "",
@@ -26822,7 +27300,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup"
   },
   "VascularAccessLocation": {
     "DatasetName": "EMSDataSet",
@@ -26837,8 +27316,8 @@
     "Definition": "The location of the vascular access site attempt on the patient, if applicable.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "VascularAccessLocation",
     "NV": "NV",
@@ -27015,7 +27494,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eProcedures/eProcedures.ProcedureGroup"
   },
   "IndicationsforInvasiveAirway": {
     "DatasetName": "EMSDataSet",
@@ -27030,8 +27510,8 @@
     "Definition": "The clinical indication for performing invasive airway management.",
     "Usage": "Recommended",
     "V3Changes": "Added to better document airway management.",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "AirwayIndications",
     "NV": "NV",
@@ -27081,23 +27561,24 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup"
   },
-  "Date/TimeAirwayDevicePlacementConfirmation": {
+  "DateTimeAirwayDevicePlacementConfirmation": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eAirway.02",
     "NemsisName": "Date/Time Airway Device Placement Confirmation",
     "ElementTitle": "Date/Time Airway Device Placement Confirmation",
-    "ngModel": "Date/TimeAirwayDevicePlacementConfirmation",
+    "ngModel": "DateTimeAirwayDevicePlacementConfirmation",
     "V2Number": "",
     "National": "",
     "State": "State",
     "Definition": "The date and time the airway device placement was confirmed.",
     "Usage": "Recommended",
     "V3Changes": "Added to better document airway management.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateTimeType",
     "NV": "NV",
@@ -27117,7 +27598,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup/eAirway.ConfirmationGroup"
   },
   "AirwayDeviceBeingConfirmed": {
     "DatasetName": "EMSDataSet",
@@ -27132,8 +27614,8 @@
     "Definition": "The airway device in which placement is being confirmed.",
     "Usage": "Recommended",
     "V3Changes": "Added to better document airway management. SAD means Supraglottic Airway  Device.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DeviceBeingConfirmed",
     "NV": "NV",
@@ -27186,7 +27668,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup/eAirway.ConfirmationGroup"
   },
   "AirwayDevicePlacementConfirmedMethod": {
     "DatasetName": "EMSDataSet",
@@ -27201,8 +27684,8 @@
     "Definition": "The method used to confirm the airway device placement.",
     "Usage": "Recommended",
     "V3Changes": "Added to better document airway management.",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "DeviceConfirmedMethods",
     "NV": "NV",
@@ -27263,7 +27746,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup/eAirway.ConfirmationGroup"
   },
   "TubeDepth": {
     "DatasetName": "EMSDataSet",
@@ -27278,8 +27762,8 @@
     "Definition": "The measurement at the patient's teeth/lip of the tube depth in centimeters (cm) of the invasive airway placed.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "TubeDepth",
     "NV": "",
@@ -27297,7 +27781,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup/eAirway.ConfirmationGroup"
   },
   "TypeofIndividualConfirmingAirwayDevicePlacement": {
     "DatasetName": "EMSDataSet",
@@ -27312,8 +27797,8 @@
     "Definition": "The type of individual who confirmed the airway device placement.",
     "Usage": "Recommended",
     "V3Changes": "Added to better document airway management.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "IndividualDetails",
     "NV": "NV",
@@ -27354,7 +27839,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup/eAirway.ConfirmationGroup"
   },
   "AirwayComplicationsEncountered": {
     "DatasetName": "EMSDataSet",
@@ -27369,8 +27855,8 @@
     "Definition": "The airway management complications encountered during the patient care episode.",
     "Usage": "Recommended",
     "V3Changes": "Added to better document airway management.",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "ComplicationsEncountered",
     "NV": "NV",
@@ -27440,7 +27926,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup"
   },
   "SuspectedReasonsforFailedAirwayManagement": {
     "DatasetName": "EMSDataSet",
@@ -27455,8 +27942,8 @@
     "Definition": "The reason(s) the airway was unable to be successfully managed.",
     "Usage": "Optional",
     "V3Changes": "Added to better document airway management.",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "ReasonsForFailure",
     "NV": "",
@@ -27517,23 +28004,24 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup"
   },
-  "Date/TimeDecisiontoManagethePatientwithanInvasiveAirway": {
+  "DateTimeDecisiontoManagethePatientwithanInvasiveAirway": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eAirway.10",
     "NemsisName": "Date/Time Decision to Manage the Patient with an Invasive Airway",
     "ElementTitle": "Date/Time Decision to Manage the Patient with an Invasive Airway",
-    "ngModel": "Date/TimeDecisiontoManagethePatientwithanInvasiveAirway",
+    "ngModel": "DateTimeDecisiontoManagethePatientwithanInvasiveAirway",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The date and time the decision was made to manage the patient's airway with an invasive airway device.",
     "Usage": "Optional",
     "V3Changes": "Added to better document airway management.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -27551,23 +28039,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup"
   },
-  "Date/TimeInvasiveAirwayPlacementAttemptsAbandoned": {
+  "DateTimeInvasiveAirwayPlacementAttemptsAbandoned": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eAirway.11",
     "NemsisName": "Date/Time Invasive Airway Placement Attempts Abandoned",
     "ElementTitle": "Date/Time Invasive Airway Placement Attempts Abandoned",
-    "ngModel": "Date/TimeInvasiveAirwayPlacementAttemptsAbandoned",
+    "ngModel": "DateTimeInvasiveAirwayPlacementAttemptsAbandoned",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The date and time that the invasive airway attempts were abandoned for the patient.",
     "Usage": "Optional",
     "V3Changes": "Added to better document airway management.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -27585,23 +28074,24 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eAirway/eAirway.AirwayGroup"
   },
-  "Date/TimeofEvent(perMedicalDevice)": {
+  "DateTimeofEventperMedicalDevice": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eDevice.02",
     "NemsisName": "Date/Time of Event (per Medical Device)",
     "ElementTitle": "Date/Time of Event (per Medical Device)",
-    "ngModel": "Date/TimeofEvent(perMedicalDevice)",
+    "ngModel": "DateTimeofEventperMedicalDevice",
     "V2Number": "E21_01",
     "National": "",
     "State": "",
     "Definition": "The time of the event recorded by the device's internal clock",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -27619,7 +28109,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup"
   },
   "MedicalDeviceEventType": {
     "DatasetName": "EMSDataSet",
@@ -27634,8 +28125,8 @@
     "Definition": "The type of event documented by the medical device.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "MedicalDeviceEventType",
     "NV": "",
@@ -27756,7 +28247,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup"
   },
   "MedicalDeviceWaveformGraphicType": {
     "DatasetName": "EMSDataSet",
@@ -27771,8 +28263,8 @@
     "Definition": "The description of the waveform file stored in Waveform Graphic (eDevice.05).",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "GraphicType",
     "NV": "",
@@ -27790,7 +28282,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup/eDevice.WaveformGroup"
   },
   "MedicalDeviceWaveformGraphic": {
     "DatasetName": "EMSDataSet",
@@ -27805,8 +28298,8 @@
     "Definition": "The graphic waveform file.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "WaveformGraphic",
     "NV": "",
@@ -27824,23 +28317,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup/eDevice.WaveformGroup"
   },
-  "MedicalDeviceMode(Manual,AED,Pacing,CO2,O2,etc)": {
+  "MedicalDeviceModeManualAEDPacingCO2O2etc": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eDevice.06",
     "NemsisName": "Medical Device Mode (Manual, AED, Pacing, CO2, O2, etc)",
     "ElementTitle": "Medical Device Mode (Manual, AED, Pacing, CO2, O2, etc)",
-    "ngModel": "MedicalDeviceMode(Manual,AED,Pacing,CO2,O2,etc)",
+    "ngModel": "MedicalDeviceModeManualAEDPacingCO2O2etc",
     "V2Number": "E21_05",
     "National": "",
     "State": "",
     "Definition": "The mode of operation the device is operating in during the defibrillation, pacing, or rhythm analysis by the device (if appropriate for the event)",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "AEDPacingOrCO2Mode",
     "NV": "",
@@ -27887,7 +28381,8 @@
         "text": "Side-Stream"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup/eDevice.WaveformGroup"
   },
   "MedicalDeviceECGLead": {
     "DatasetName": "EMSDataSet",
@@ -27902,8 +28397,8 @@
     "Definition": "The lead or source which the medical device used to obtain the rhythm (if appropriate for the event)",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "ECGLead",
     "NV": "",
@@ -28008,7 +28503,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup"
   },
   "MedicalDeviceECGInterpretation": {
     "DatasetName": "EMSDataSet",
@@ -28023,8 +28519,8 @@
     "Definition": "The interpretation of the rhythm by the device (if appropriate for the event)",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ECGInterpretation",
     "NV": "",
@@ -28042,7 +28538,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup"
   },
   "TypeofShock": {
     "DatasetName": "EMSDataSet",
@@ -28057,8 +28554,8 @@
     "Definition": "The type of shock used by the device for the defibrillation (if appropriate for the event)",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "TypeOfShock",
     "NV": "",
@@ -28085,7 +28582,8 @@
         "text": "Monophasic"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup/eDevice.ShockGroup"
   },
   "ShockorPacingEnergy": {
     "DatasetName": "EMSDataSet",
@@ -28100,8 +28598,8 @@
     "Definition": "The energy (in joules) used for the shock or pacing (if appropriate for the event)",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ShockOrPacingEnergy",
     "NV": "",
@@ -28119,7 +28617,8 @@
     "fractionDigits": "1",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup/eDevice.ShockGroup"
   },
   "TotalNumberofShocksDelivered": {
     "DatasetName": "EMSDataSet",
@@ -28134,8 +28633,8 @@
     "Definition": "The number of times the patient was defibrillated, if the patient was defibrillated during the patient encounter.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "TotalNumberOfShocks",
     "NV": "",
@@ -28153,7 +28652,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup/eDevice.ShockGroup"
   },
   "PacingRate": {
     "DatasetName": "EMSDataSet",
@@ -28168,8 +28668,8 @@
     "Definition": "The rate the device was calibrated to pace during the event, if appropriate.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PacingRate",
     "NV": "",
@@ -28187,23 +28687,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDevice/eDevice.DeviceGroup/eDevice.ShockGroup"
   },
-  "Destination/TransferredTo,Name": {
+  "DestinationTransferredToName": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eDisposition.01",
     "NemsisName": "Destination/Transferred To, Name",
     "ElementTitle": "Destination/Transferred To, Name",
-    "ngModel": "Destination/TransferredTo,Name",
+    "ngModel": "DestinationTransferredToName",
     "V2Number": "E20_01",
     "National": "",
     "State": "State",
     "Definition": "The destination the patient was delivered or transferred to.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DestinationTransferredToName",
     "NV": "NV",
@@ -28223,23 +28724,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup"
   },
-  "Destination/TransferredTo,Code": {
+  "DestinationTransferredToCode": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eDisposition.02",
     "NemsisName": "Destination/Transferred To, Code",
     "ElementTitle": "Destination/Transferred To, Code",
-    "ngModel": "Destination/TransferredTo,Code",
+    "ngModel": "DestinationTransferredToCode",
     "V2Number": "E20_02",
     "National": "",
     "State": "State",
     "Definition": "The code of the destination the patient was delivered or transferred to.",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DestinationTransferredToCode",
     "NV": "NV",
@@ -28259,7 +28761,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup"
   },
   "DestinationStreetAddress": {
     "DatasetName": "EMSDataSet",
@@ -28274,8 +28777,8 @@
     "Definition": "The street address of the destination the patient was delivered or transferred to.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "StreetAddress",
     "NV": "",
@@ -28295,7 +28798,8 @@
     "options": [],
     "attributes": [
       "StreetAddress2"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup"
   },
   "DestinationCity": {
     "DatasetName": "EMSDataSet",
@@ -28310,8 +28814,8 @@
     "Definition": "The city of the destination the patient was delivered or transferred to (physical address).",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CityGnisCode",
     "NV": "",
@@ -28329,7 +28833,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup"
   },
   "DestinationState": {
     "DatasetName": "EMSDataSet",
@@ -28344,8 +28849,8 @@
     "Definition": "The state of the destination the patient was delivered or transferred to.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ANSIStateCode",
     "NV": "NV",
@@ -28365,7 +28870,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup"
   },
   "DestinationCounty": {
     "DatasetName": "EMSDataSet",
@@ -28380,8 +28886,8 @@
     "Definition": "The destination county in which  the patient was delivered or transferred to.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ANSICountyCode",
     "NV": "NV",
@@ -28401,7 +28907,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup"
   },
   "DestinationZIPCode": {
     "DatasetName": "EMSDataSet",
@@ -28416,8 +28923,8 @@
     "Definition": "The destination ZIP code in which  the patient was delivered or transferred to.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "ZIP",
     "NV": "NV",
@@ -28437,7 +28944,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup"
   },
   "DestinationCountry": {
     "DatasetName": "EMSDataSet",
@@ -28452,8 +28960,8 @@
     "Definition": "The country of the destination.",
     "Usage": "Optional",
     "V3Changes": "Added for improved international compatibility.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ANSICountryCode",
     "NV": "",
@@ -28471,7 +28979,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup"
   },
   "DestinationGPSLocation": {
     "DatasetName": "EMSDataSet",
@@ -28486,8 +28995,8 @@
     "Definition": "The destination GPS Coordinates to which  the patient was delivered or transferred to.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "GPSLocation",
     "NV": "",
@@ -28505,7 +29014,8 @@
     "fractionDigits": "",
     "pattern": "(\\+|-)?(90(\\.[0]{1,6})?|([1-8][0-9]|[0-9])(\\.[0-9]{1,6})?),(\\+|-)?(180(\\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\\.[0-9]{1,6})?)",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup"
   },
   "DestinationLocationUSNationalGridCoordinates": {
     "DatasetName": "EMSDataSet",
@@ -28520,8 +29030,8 @@
     "Definition": "The US National Grid Coordinates for the Destination Location. This may be the Healthcare Facility US National Grid Coordinates.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "USNG",
     "NV": "",
@@ -28539,7 +29049,8 @@
     "fractionDigits": "",
     "pattern": "[1][0-9][RSTU][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.DestinationGroup"
   },
   "NumberofPatientsTransportedinthisEMSUnit": {
     "DatasetName": "EMSDataSet",
@@ -28554,8 +29065,8 @@
     "Definition": "The number of patients transported by this EMS crew and unit.",
     "Usage": "Recommended",
     "V3Changes": "Added to document multiple patients being transported with the same vehicle and crew.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "NumberOfPatients",
     "NV": "NV",
@@ -28575,23 +29086,24 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition"
   },
-  "Incident/PatientDisposition": {
+  "IncidentPatientDisposition": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eDisposition.12",
     "NemsisName": "Incident/Patient Disposition",
     "ElementTitle": "Incident/Patient Disposition",
-    "ngModel": "Incident/PatientDisposition",
+    "ngModel": "IncidentPatientDisposition",
     "V2Number": "E20_10",
     "National": "National",
     "State": "State",
     "Definition": "Type of disposition treatment and/or transport of the patient by this EMS Unit.",
     "Usage": "Mandatory",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "",
     "DataType": "IncidentPatientDisposition",
     "NV": "",
@@ -28698,7 +29210,8 @@
         "text": "Transport Non-Patient, Organs, etc."
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition"
   },
   "HowPatientWasMovedtoAmbulance": {
     "DatasetName": "EMSDataSet",
@@ -28713,8 +29226,8 @@
     "Definition": "The method the patient was moved to the ambulance from the scene",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "HowPatientWasMovedToFromAmbulance",
     "NV": "",
@@ -28767,7 +29280,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition"
   },
   "PositionofPatientDuringTransport": {
     "DatasetName": "EMSDataSet",
@@ -28782,8 +29296,8 @@
     "Definition": "The position of the patient during transport from the scene",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "PositionOfPatientDuringTransport",
     "NV": "",
@@ -28844,7 +29358,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition"
   },
   "HowPatientWasTransportedFromAmbulance": {
     "DatasetName": "EMSDataSet",
@@ -28859,8 +29374,8 @@
     "Definition": "The method the patient was moved from the ambulance to the destination",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "HowPatientWasMovedToFromAmbulance",
     "NV": "",
@@ -28911,7 +29426,8 @@
         "text": "Wheelchair"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition"
   },
   "EMSTransportMethod": {
     "DatasetName": "EMSDataSet",
@@ -28926,8 +29442,8 @@
     "Definition": "Transport method by this EMS Unit.",
     "Usage": "Required",
     "V3Changes": "Added to better describe Air and Ground Transport methods.",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "EMSTransportMethod",
     "NV": "NV",
@@ -28984,7 +29500,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition"
   },
   "TransportModefromScene": {
     "DatasetName": "EMSDataSet",
@@ -28999,8 +29516,8 @@
     "Definition": "Indication whether the transport was emergent or non-emergent.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "TransportModeFromScene",
     "NV": "NV",
@@ -29037,7 +29554,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition"
   },
   "AdditionalTransportModeDescriptors": {
     "DatasetName": "EMSDataSet",
@@ -29052,8 +29570,8 @@
     "Definition": "The documentation of transport mode techniques for this EMS response.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "AdditionalTransportModeDescriptors",
     "NV": "NV",
@@ -29115,7 +29633,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition"
   },
   "FinalPatientAcuity": {
     "DatasetName": "EMSDataSet",
@@ -29130,8 +29649,8 @@
     "Definition": "The acuity of the patient's condition after EMS care.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "FinalPatientAcuity",
     "NV": "NV",
@@ -29168,7 +29687,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition"
   },
   "ReasonforChoosingDestination": {
     "DatasetName": "EMSDataSet",
@@ -29183,8 +29703,8 @@
     "Definition": "The reason the unit chose to deliver or transfer the patient to the destination",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "M",
+    "isRequired": true,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "ReasonForChoosingDestination",
     "NV": "NV",
@@ -29250,7 +29770,8 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition"
   },
   "TypeofDestination": {
     "DatasetName": "EMSDataSet",
@@ -29265,8 +29786,8 @@
     "Definition": "The type of destination the patient was delivered or transferred to",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "TypeOfDestination",
     "NV": "NV",
@@ -29335,23 +29856,24 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition"
   },
-  "HospitalIn-PatientDestination": {
+  "HospitalInPatientDestination": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eDisposition.22",
     "NemsisName": "Hospital In-Patient Destination",
     "ElementTitle": "Hospital In-Patient Destination",
-    "ngModel": "HospitalIn-PatientDestination",
+    "ngModel": "HospitalInPatientDestination",
     "V2Number": "",
     "National": "National",
     "State": "State",
     "Definition": "The location within the hospital that the patient was taken directly by EMS (e.g., Cath Lab, ICU, etc.).",
     "Usage": "Required",
     "V3Changes": "Added to identify the location within the hospital that the patient was directly taken to by EMS.",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "HospitalInPatientDestination",
     "NV": "NV",
@@ -29480,7 +30002,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition"
   },
   "HospitalCapability": {
     "DatasetName": "EMSDataSet",
@@ -29495,8 +30018,8 @@
     "Definition": "The primary hospital capability associated with the patient's condition for this transport (e.g., Trauma, STEMI, Peds, etc.).",
     "Usage": "Required",
     "V3Changes": "Added to aid in determining if patients are transported to the appropriate hospital based on provider impression, assessment, and treatment.",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "HospitalDesignation",
     "NV": "NV",
@@ -29581,23 +30104,24 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition"
   },
-  "DestinationTeamPre-ArrivalAlertorActivation": {
+  "DestinationTeamPreArrivalAlertorActivation": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eDisposition.24",
     "NemsisName": "Destination Team Pre-Arrival Alert or Activation",
     "ElementTitle": "Destination Team Pre-Arrival Alert or Activation",
-    "ngModel": "DestinationTeamPre-ArrivalAlertorActivation",
+    "ngModel": "DestinationTeamPreArrivalAlertorActivation",
     "V2Number": "",
     "National": "National",
     "State": "State",
     "Definition": "Indication that an alert (or activation) was called by EMS to the appropriate destination healthcare facility team. The alert (or activation) should occur prior to the EMS Unit arrival at the destination with the patient.",
     "Usage": "Required",
     "V3Changes": "Added to better document performance measure for acute time dependent illness and injury systems of care.",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DestinationPrearrivalActivation",
     "NV": "NV",
@@ -29654,23 +30178,24 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.HospitalTeamActivationGroup"
   },
-  "Date/TimeofDestinationPrearrivalAlertorActivation": {
+  "DateTimeofDestinationPrearrivalAlertorActivation": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eDisposition.25",
     "NemsisName": "Date/Time of Destination Prearrival Alert or Activation",
     "ElementTitle": "Date/Time of Destination Prearrival Alert or Activation",
-    "ngModel": "Date/TimeofDestinationPrearrivalAlertorActivation",
+    "ngModel": "DateTimeofDestinationPrearrivalAlertorActivation",
     "V2Number": "",
     "National": "National",
     "State": "State",
     "Definition": "The Date/Time EMS alerted, notified, or activated the Destination Healthcare Facility prior to EMS arrival. The EMS assessment identified the patient as acutely ill or injured based on exam and possibly specified alert criteria.",
     "Usage": "Required",
     "V3Changes": "Added to better document performance measure for acute time dependent illness and injury systems of care.",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "DateTimeType",
     "NV": "NV",
@@ -29690,7 +30215,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition/eDisposition.HospitalTeamActivationGroup"
   },
   "DispositionInstructionsProvided": {
     "DatasetName": "EMSDataSet",
@@ -29705,8 +30231,8 @@
     "Definition": "Information provided to patient during disposition for patients not transported or treated.",
     "Usage": "Optional",
     "V3Changes": "Added to better document instructions given to patients not transported by EMS.",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "DispositionInstruction",
     "NV": "",
@@ -29759,7 +30285,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eDisposition"
   },
   "EmergencyDepartmentDisposition": {
     "DatasetName": "EMSDataSet",
@@ -29774,8 +30301,8 @@
     "Definition": "The known disposition of the patient from the Emergency Department (ED)",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "EmergencyDepartmentDisposition",
     "NV": "NV",
@@ -29880,7 +30407,8 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOutcome"
   },
   "HospitalDisposition": {
     "DatasetName": "EMSDataSet",
@@ -29895,8 +30423,8 @@
     "Definition": "The known disposition of the patient from the hospital, if admitted.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "HospitalDisposition",
     "NV": "NV",
@@ -29997,23 +30525,24 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOutcome"
   },
-  "ExternalReportID/NumberType": {
+  "ExternalReportIDNumberType": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eOutcome.03",
     "NemsisName": "External Report ID/Number Type",
     "ElementTitle": "External Report ID/Number Type",
-    "ngModel": "ExternalReportID/NumberType",
+    "ngModel": "ExternalReportIDNumberType",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The Type of External Report or Record associated with the Report/ID Number.",
     "Usage": "Optional",
     "V3Changes": "Added to allow documentation of external record and identification numbers.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ExternalReportIDType",
     "NV": "",
@@ -30084,23 +30613,24 @@
         "text": "Trauma Registry"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOutcome/eOutcome.ExternalDataGroup"
   },
-  "ExternalReportID/Number": {
+  "ExternalReportIDNumber": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eOutcome.04",
     "NemsisName": "External Report ID/Number",
     "ElementTitle": "External Report ID/Number",
-    "ngModel": "ExternalReportID/Number",
+    "ngModel": "ExternalReportIDNumber",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The ID or Number of the external report or record in eOutcome.03.",
     "Usage": "Optional",
     "V3Changes": "Added to allow documentation of external record and identification numbers.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ExternalReportID",
     "NV": "",
@@ -30118,7 +30648,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOutcome/eOutcome.ExternalDataGroup"
   },
   "OtherReportRegistryType": {
     "DatasetName": "EMSDataSet",
@@ -30133,8 +30664,8 @@
     "Definition": "The type of external report/registry that was documented as \"other\" in eOutcome.03",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "OtherReportRegistryType",
     "NV": "",
@@ -30152,7 +30683,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOutcome/eOutcome.ExternalDataGroup"
   },
   "EmergencyDepartmentChiefComplaint": {
     "DatasetName": "EMSDataSet",
@@ -30167,8 +30699,8 @@
     "Definition": "The patient's reason for seeking care or attention, expressed in the terms as close as possible to those used by the patient or responsible informant.",
     "Usage": "Optional",
     "V3Changes": "Added to better evaluate EMS patient care.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "EmergencyDepartmentChiefComplaint",
     "NV": "",
@@ -30186,7 +30718,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOutcome"
   },
   "FirstEDSystolicBloodPressure": {
     "DatasetName": "EMSDataSet",
@@ -30201,8 +30734,8 @@
     "Definition": "The first recorded Emergency Department Systolic Blood Pressure.",
     "Usage": "Optional",
     "V3Changes": "Added to better evaluate the outcome of EMS care.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "SBP",
     "NV": "",
@@ -30220,7 +30753,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOutcome"
   },
   "EmergencyDepartmentRecordedCauseofInjury": {
     "DatasetName": "EMSDataSet",
@@ -30235,8 +30769,8 @@
     "Definition": "The documented cause of injury from the emergency department record.",
     "Usage": "Optional",
     "V3Changes": "Added to better evaluate EMS care.",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "icd10CodeInjury",
     "NV": "",
@@ -30254,7 +30788,8 @@
     "fractionDigits": "",
     "pattern": "([TV-Y][0-9]{2})((\\.[0-9A-Z]{1,4})?)",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOutcome"
   },
   "EmergencyDepartmentProcedures": {
     "DatasetName": "EMSDataSet",
@@ -30269,8 +30804,8 @@
     "Definition": "The procedures performed on the patient during the emergency department visit.",
     "Usage": "Optional",
     "V3Changes": "Added to better evaluate EMS care.",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "icd10CodeOutcomeProcedures",
     "NV": "",
@@ -30290,7 +30825,8 @@
     "options": [],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOutcome"
   },
   "EmergencyDepartmentDiagnosis": {
     "DatasetName": "EMSDataSet",
@@ -30305,8 +30841,8 @@
     "Definition": "The practitioner's description of the condition or problem for which Emergency Department services were provided.",
     "Usage": "Optional",
     "V3Changes": "Added to better evaluate EMS care.",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "icd10Code",
     "NV": "",
@@ -30326,23 +30862,24 @@
     "options": [],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOutcome"
   },
-  "Date/TimeofHospitalAdmission": {
+  "DateTimeofHospitalAdmission": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eOutcome.11",
     "NemsisName": "Date/Time of Hospital Admission",
     "ElementTitle": "Date/Time of Hospital Admission",
-    "ngModel": "Date/TimeofHospitalAdmission",
+    "ngModel": "DateTimeofHospitalAdmission",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The date and time the patient was admitted to the hospital.",
     "Usage": "Optional",
     "V3Changes": "Added to better evaluate EMS care.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -30360,7 +30897,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOutcome"
   },
   "HospitalProcedures": {
     "DatasetName": "EMSDataSet",
@@ -30375,8 +30913,8 @@
     "Definition": "Hospital Procedures performed on the patient during the hospital admission.",
     "Usage": "Optional",
     "V3Changes": "Added to better evaluate EMS care.",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "icd10CodeOutcomeProcedures",
     "NV": "",
@@ -30396,7 +30934,8 @@
     "options": [],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOutcome"
   },
   "HospitalDiagnosis": {
     "DatasetName": "EMSDataSet",
@@ -30411,8 +30950,8 @@
     "Definition": "The hospital diagnosis of the patient associated with the hospital admission.",
     "Usage": "Optional",
     "V3Changes": "Added to better evaluate EMS care.",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "icd10CodeOutcomeDiagnosis",
     "NV": "",
@@ -30432,7 +30971,8 @@
     "options": [],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOutcome"
   },
   "TotalICULengthofStay": {
     "DatasetName": "EMSDataSet",
@@ -30447,8 +30987,8 @@
     "Definition": "The total number of patient days in any ICU (including all ICU episodes).",
     "Usage": "Optional",
     "V3Changes": "Added to better measure patient outcomes.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "LengthOfStay",
     "NV": "",
@@ -30466,7 +31006,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOutcome"
   },
   "TotalVentilatorDays": {
     "DatasetName": "EMSDataSet",
@@ -30481,8 +31022,8 @@
     "Definition": "The total number of patient days spend on a mechanical ventilator (excluding time in the operating room).",
     "Usage": "Optional",
     "V3Changes": "Added to better measure and define patient outcome.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "TotalVentilatorDays",
     "NV": "",
@@ -30500,23 +31041,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOutcome"
   },
-  "Date/TimeofHospitalDischarge": {
+  "DateTimeofHospitalDischarge": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eOutcome.16",
     "NemsisName": "Date/Time of Hospital Discharge",
     "ElementTitle": "Date/Time of Hospital Discharge",
-    "ngModel": "Date/TimeofHospitalDischarge",
+    "ngModel": "DateTimeofHospitalDischarge",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The date the patient was discharged from the hospital.",
     "Usage": "Optional",
     "V3Changes": "Added to better measure patient outcome.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -30534,7 +31076,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOutcome"
   },
   "OutcomeatHospitalDischarge": {
     "DatasetName": "EMSDataSet",
@@ -30549,8 +31092,8 @@
     "Definition": "The patient's functional status at time of hospital discharge.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "OutcomeAtHospitalDischarge",
     "NV": "",
@@ -30597,7 +31140,8 @@
         "text": "Dead"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOutcome"
   },
   "CorrelationIDofPatientCareReportElementorGroup": {
     "DatasetName": "EMSDataSet",
@@ -30612,8 +31156,8 @@
     "Definition": "References the CorrelationID attribute of an element or group in the PatientCareReport section",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CorrelationID",
     "NV": "",
@@ -30631,7 +31175,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eCustomResults/eCustomResults.ResultsGroup"
   },
   "ReviewRequested": {
     "DatasetName": "EMSDataSet",
@@ -30646,8 +31191,8 @@
     "Definition": "Indication of whether the PCR needs review by anyone.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "YesNoValues",
     "NV": "",
@@ -30674,23 +31219,24 @@
         "text": "Yes"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther"
   },
-  "PotentialSystemofCare/Specialty/RegistryPatient": {
+  "PotentialSystemofCareSpecialtyRegistryPatient": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eOther.02",
     "NemsisName": "Potential System of Care/Specialty/Registry Patient",
     "ElementTitle": "Potential System of Care/Specialty/Registry Patient",
-    "ngModel": "PotentialSystemofCare/Specialty/RegistryPatient",
+    "ngModel": "PotentialSystemofCareSpecialtyRegistryPatient",
     "V2Number": "E23_02",
     "National": "",
     "State": "",
     "Definition": "An indication if the patient may meet the entry criteria for an injury or illness specific registry",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "PotentialRegistryCandidate",
     "NV": "",
@@ -30751,7 +31297,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther"
   },
   "PersonalProtectiveEquipmentUsed": {
     "DatasetName": "EMSDataSet",
@@ -30766,8 +31313,8 @@
     "Definition": "The personal protective equipment which was used by EMS personnel during this EMS patient contact.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "PersonalProtectiveEquipmentUsed",
     "NV": "",
@@ -30836,23 +31383,24 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther/eOther.EMSCrewMemberGroup"
   },
-  "EMSProfessional(CrewMember)ID": {
+  "EMSProfessionalCrewMemberID": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eOther.04",
     "NemsisName": "EMS Professional (Crew Member) ID",
     "ElementTitle": "EMS Professional (Crew Member) ID",
-    "ngModel": "EMSProfessional(CrewMember)ID",
+    "ngModel": "EMSProfessionalCrewMemberID",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The ID number of the EMS Crew Member associated with eOther.03, eOther.05, eOther.06.",
     "Usage": "Optional",
     "V3Changes": "Added to better document EMS workplace health and safety issues.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "CrewMemberID",
     "NV": "",
@@ -30870,23 +31418,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther/eOther.EMSCrewMemberGroup"
   },
-  "SuspectedEMSWorkRelatedExposure,Injury,orDeath": {
+  "SuspectedEMSWorkRelatedExposureInjuryorDeath": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eOther.05",
     "NemsisName": "Suspected EMS Work Related Exposure, Injury, or Death",
     "ElementTitle": "Suspected EMS Work Related Exposure, Injury, or Death",
-    "ngModel": "SuspectedEMSWorkRelatedExposure,Injury,orDeath",
+    "ngModel": "SuspectedEMSWorkRelatedExposureInjuryorDeath",
     "V2Number": "E23_05",
     "National": "National",
     "State": "State",
     "Definition": "Indication of an EMS work related exposure, injury, or death associated with this EMS event.",
     "Usage": "Required",
     "V3Changes": "",
-    "MinOccurs": "1",
-    "MaxOccurs": "1",
+    "isRequired": true,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "YesNoValues",
     "NV": "NV",
@@ -30915,23 +31464,24 @@
     ],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther/eOther.EMSCrewMemberGroup"
   },
-  "TheTypeofWork-RelatedInjury,DeathorSuspectedExposure": {
+  "TheTypeofWorkRelatedInjuryDeathorSuspectedExposure": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eOther.06",
     "NemsisName": "The Type of Work-Related Injury, Death or Suspected Exposure",
     "ElementTitle": "The Type of Work-Related Injury, Death or Suspected Exposure",
-    "ngModel": "TheTypeofWork-RelatedInjury,DeathorSuspectedExposure",
+    "ngModel": "TheTypeofWorkRelatedInjuryDeathorSuspectedExposure",
     "V2Number": "E23_06",
     "National": "",
     "State": "State",
     "Definition": "The type of exposure or unprotected contact with blood or body fluids",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "Nillable",
     "DataType": "TypeOfSuspectedExposureToBodilyFluids",
     "NV": "NV",
@@ -31013,23 +31563,24 @@
     "attributes": [
       "NV",
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther/eOther.EMSCrewMemberGroup"
   },
-  "Natural,Suspected,Intentional,orUnintentionalDisaster": {
+  "NaturalSuspectedIntentionalorUnintentionalDisaster": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eOther.07",
     "NemsisName": "Natural, Suspected, Intentional, or Unintentional Disaster",
     "ElementTitle": "Natural, Suspected, Intentional, or Unintentional Disaster",
-    "ngModel": "Natural,Suspected,Intentional,orUnintentionalDisaster",
+    "ngModel": "NaturalSuspectedIntentionalorUnintentionalDisaster",
     "V2Number": "E23_04",
     "National": "",
     "State": "",
     "Definition": "Event caused by natural forces or Suspected and Intentional/Unintentional Disasters (terrorism).",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "SuspectedIntentionalOrUnintentionalDisaster",
     "NV": "",
@@ -31106,7 +31657,8 @@
     ],
     "attributes": [
       "CorrelationID"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther"
   },
   "CrewMemberCompletingthisReport": {
     "DatasetName": "EMSDataSet",
@@ -31121,8 +31673,8 @@
     "Definition": "The statewide assigned ID number of the EMS crew member which completed this patient care report",
     "Usage": "Recommended",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "Nillable",
     "DataType": "CrewMemberID",
     "NV": "NV",
@@ -31142,7 +31694,8 @@
     "options": [],
     "attributes": [
       "NV"
-    ]
+    ],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther"
   },
   "ExternalElectronicDocumentType": {
     "DatasetName": "EMSDataSet",
@@ -31157,8 +31710,8 @@
     "Definition": "Document type which has been electronically stored with PCR.",
     "Usage": "Optional",
     "V3Changes": "Added to allow an improved implementation of electronic healthcare records.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "ExternalElectronicDocuments",
     "NV": "",
@@ -31225,7 +31778,8 @@
         "text": "Other Video/Movie"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther/eOther.FileGroup"
   },
   "FileAttachmentType": {
     "DatasetName": "EMSDataSet",
@@ -31240,8 +31794,8 @@
     "Definition": "The description of the file attachment stored in File Attachment Image (eOther.11).",
     "Usage": "Optional",
     "V3Changes": "Added to allow an improved implementation of electronic healthcare records.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "GraphicType",
     "NV": "",
@@ -31259,7 +31813,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther/eOther.FileGroup"
   },
   "FileAttachmentImage": {
     "DatasetName": "EMSDataSet",
@@ -31274,8 +31829,8 @@
     "Definition": "The file that is attached electronically to the patient care report.",
     "Usage": "Optional",
     "V3Changes": "Added to allow an improved implementation of electronic healthcare records.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "FileImage",
     "NV": "",
@@ -31293,7 +31848,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther/eOther.FileGroup"
   },
   "TypeofPersonSigning": {
     "DatasetName": "EMSDataSet",
@@ -31308,8 +31864,8 @@
     "Definition": "The individual's signature associated with eOther.15 (Signature Status).",
     "Usage": "Optional",
     "V3Changes": "Added to better document disposition and billing information.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "SignatureType",
     "NV": "",
@@ -31368,7 +31924,8 @@
         "text": "Witness"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup"
   },
   "SignatureReason": {
     "DatasetName": "EMSDataSet",
@@ -31383,8 +31940,8 @@
     "Definition": "The reason for the individuals signature.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "M",
+    "isRequired": false,
+    "isList": true,
     "IsNillable": "",
     "DataType": "SignatureReason",
     "NV": "",
@@ -31451,7 +32008,8 @@
         "text": "Other"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup"
   },
   "TypeOfPatientRepresentative": {
     "DatasetName": "EMSDataSet",
@@ -31466,8 +32024,8 @@
     "Definition": "If Patient Representative is chosen as the owner of the signature, this documents the relationship of the individual signing to the patient.",
     "Usage": "Optional",
     "V3Changes": "Added to improve documentation on disposition and billing.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "RelationshipSignature",
     "NV": "",
@@ -31590,7 +32148,8 @@
         "text": "Wife"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup"
   },
   "SignatureStatus": {
     "DatasetName": "EMSDataSet",
@@ -31605,8 +32164,8 @@
     "Definition": "Indication that a patient or patient representative signature has been collected or attempted to be collected.",
     "Usage": "Optional",
     "V3Changes": "Added to better document disposition and billing.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "SignatureStatus",
     "NV": "",
@@ -31693,7 +32252,8 @@
         "text": "Signed-Not Patient"
       }
     ],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup"
   },
   "SignatureFileName": {
     "DatasetName": "EMSDataSet",
@@ -31708,8 +32268,8 @@
     "Definition": "The name of the graphic file for the signature.",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "FileName",
     "NV": "",
@@ -31727,7 +32287,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup"
   },
   "SignatureFileType": {
     "DatasetName": "EMSDataSet",
@@ -31742,8 +32303,8 @@
     "Definition": "The description of the file attachment stored in Signature Graphic (eOther.18).",
     "Usage": "Optional",
     "V3Changes": "",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "GraphicType",
     "NV": "",
@@ -31761,7 +32322,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup"
   },
   "SignatureGraphic": {
     "DatasetName": "EMSDataSet",
@@ -31776,8 +32338,8 @@
     "Definition": "The graphic file for the signature.",
     "Usage": "Optional",
     "V3Changes": "Added to better document disposition and billing.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "Graphic",
     "NV": "",
@@ -31795,23 +32357,24 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup"
   },
-  "Date/TimeofSignature": {
+  "DateTimeofSignature": {
     "DatasetName": "EMSDataSet",
     "DatasetType": "element",
     "NemsisNumber": "eOther.19",
     "NemsisName": "Date/Time of Signature",
     "ElementTitle": "Date/Time of Signature",
-    "ngModel": "Date/TimeofSignature",
+    "ngModel": "DateTimeofSignature",
     "V2Number": "",
     "National": "",
     "State": "",
     "Definition": "The date and time the signature was captured.",
     "Usage": "Optional",
     "V3Changes": "Added to better document disposition and billing.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "DateTimeType",
     "NV": "",
@@ -31829,7 +32392,8 @@
     "fractionDigits": "",
     "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.\\d+)?(\\+|-)[0-9]{2}:[0-9]{2}",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup"
   },
   "SignatureLastName": {
     "DatasetName": "EMSDataSet",
@@ -31844,8 +32408,8 @@
     "Definition": "The last name of the individual who signed the associated signature.",
     "Usage": "Optional",
     "V3Changes": "Added to better document disposition and billing.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonLastName",
     "NV": "",
@@ -31863,7 +32427,8 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup"
   },
   "SignatureFirstName": {
     "DatasetName": "EMSDataSet",
@@ -31878,8 +32443,8 @@
     "Definition": "The first name of the individual associated with the signature.",
     "Usage": "Optional",
     "V3Changes": "Added to better document disposition and billing.",
-    "MinOccurs": "0",
-    "MaxOccurs": "1",
+    "isRequired": false,
+    "isList": false,
     "IsNillable": "",
     "DataType": "PersonFirstName",
     "NV": "",
@@ -31897,6 +32462,7 @@
     "fractionDigits": "",
     "pattern": "",
     "options": [],
-    "attributes": []
+    "attributes": [],
+    "exportPath": "EMSDataSet/Header/PatientCareReport/eOther/eOther.SignatureGroup"
   }
 }

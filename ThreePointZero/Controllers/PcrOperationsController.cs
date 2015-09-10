@@ -5,77 +5,15 @@ using System.Web.Http;
 using System.Xml;
 using System.Xml.Linq;
 using ThreePointZero.Classes;
+using Newtonsoft.Json;
 
 namespace ThreePointZero.Controllers
 {
     public class PcrOperationsController : ApiController
     {
-
-        [HttpPost]
-        [Route("api/PcrOperations/PCRs")]
-        public IHttpActionResult PostPcr(dynamic ob)
-        {
-
-            return Ok();
-        }
-
-        [HttpPost]
-        [Route("api/PcrOperations/Export")]
-        public IHttpActionResult ExportPcr(dynamic ob) // change to GET, change to ID and retrieve from database
-        {
-            
-            return Ok(Export(ob));
-        }
-
-        [HttpGet]
-        [Route("api/PcrOperations/xmlData")]
-        public IHttpActionResult xmlData()
-        {
-            XDocument xml = XDocument.Load(XmlReader.Create(new StringReader(samplexml)), LoadOptions.PreserveWhitespace | LoadOptions.SetLineInfo | LoadOptions.SetBaseUri);
-            var info = new Dictionary<string, string>();
-
-            var def = NemsisDefinitionObject.ElementDefinition;
-
-            foreach (KeyValuePair<string, ThreePointZero.Classes.NemsisDefinitionObject.NemsisDataElement> pair in def.toDictionary())
-            {
-                XElement elem = null;
-                var descendants = xml.Root.Descendants(xml.Root.Name.Namespace + pair.Value.NemsisNumber);
-
-                var count = 0;
-                foreach (XElement element in descendants)
-                {
-                    count++;
-                    elem = element;
-                }
-                var path = "";
-                if (count > 0)
-                {
-
-                    while (elem.Name.LocalName != xml.Root.Name.LocalName)
-                    {
-                        elem = elem.Parent;
-                        path = elem.Name.LocalName + (path.Length > 0 ? "/" + path : "");
-                    }
-                }
-                info.Add(pair.Key, path);
-            }
-
-            return Ok(info);
-        }
-
-        public string Export(DateTime minDate, DateTime maxDate)
-        {
-            return "";
-        }
-
-        public string Export(dynamic ob) 
-        {
-            return "";
-        }
-
-        
-private static string samplexml = 
-@"<EMSDataSet xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.nemsis.org http://nemsis.org/media/nemsis_v3/release-3.4.0/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd"" xmlns=""http://www.nemsis.org"">
+        private static string samplexml =
+        #region xml
+ @"<EMSDataSet xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:schemaLocation=""http://www.nemsis.org http://nemsis.org/media/nemsis_v3/release-3.4.0/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd"" xmlns=""http://www.nemsis.org"">
     <eState>
         <eState.01></eState.01>
     </eState>
@@ -765,6 +703,113 @@ private static string samplexml =
         </PatientCareReport>
     </Header>
 </EMSDataSet>";
+        #endregion
+        
+
+        [HttpPost]
+        [Route("api/PcrOperations/Pcr")]
+        public IHttpActionResult PostPcr(dynamic ob)
+        {
+            return Ok(DateTime.Now.ToString("yyyy-mm-ddThh:mm:sszzz"));
+        }
+
+        [HttpPost]
+        [Route("api/PcrOperations/Export")]
+        public IHttpActionResult ExportPcr([FromBody] dynamic ob) // change to GET, change to ID and retrieve from database
+        {
+
+            var def = NemsisDefinitionObject.ElementLookup;
+            return Ok(Export(ob));
+        }
+
+        [HttpGet]
+        [Route("api/PcrOperations/xmlData")]
+        public IHttpActionResult xmlData()
+        {
+            var info = new Dictionary<string, string>();
+
+            var def = NemsisDefinitionObject.ElementLookup;
+
+            XElement xml = XDocument.Parse(samplexml).Root;
+
+            foreach (string key in def)
+            {
+                XElement elem = null;
+                var descendants = xml.Descendants(xml.Name.Namespace + def[key].NemsisNumber);
+                foreach (XElement node in descendants)
+                {
+                    elem = node;
+                    break;
+                }
+
+                var path = "";
+                if (elem != null)
+                {
+                    while (elem.Name.LocalName != "EMSDataSet")
+                    {
+                        elem = elem.Parent;
+                        path = elem.Name.LocalName + (path.Length > 0 ? "/" + path : "");
+                    }
+                }
+                info.Add(key, path);
+            }
+
+            return Ok(info);
+        }
+
+        public string Export(DateTime minDate, DateTime maxDate)
+        {
+            return "";
+        }
+
+        public string Export(dynamic ob) // replace ob with hard-typed PCR
+        {
+            var data = JsonConvert.DeserializeXmlNode(JsonConvert.SerializeObject(ob), "EMSDataSet");
+            XDocument doc = XDocument.Parse(data.InnerXml);
+            return doc.ToString();
+            //var root = getNemsisElement("EMSDataSet", true);
+
+            // 
+
+            var def = NemsisDefinitionObject.ElementLookup;
+
+            foreach (string key in def)
+            {
+
+            }
+
+            return "";
+        }
+
+        private void constructPath(string path, ref XNode xml)
+        {
+            var nodeNames = path.Split('/');
+        }
+
+        private XNode buildNode(dynamic ob)
+        {
+
+            return XDocument.Parse("").Root;
+        }
+
+        private XElement getNemsisElement(string name)
+        {
+            XDocument sampleDoc = XDocument.Parse(samplexml);//XDocument.Load(XmlReader.Create(new StringReader(samplexml)), LoadOptions.PreserveWhitespace | LoadOptions.SetLineInfo | LoadOptions.SetBaseUri);
+            XNamespace nameSpace = sampleDoc.Root.Name.Namespace;
+            foreach (XNode node in sampleDoc.Root.Descendants(nameSpace + name))
+                return XDocument.Parse(node.ToString()).Root;
+            return null;
+        }
+
+        private XElement getNemsisElement(string name, bool empty)
+        {
+            var node = getNemsisElement(name);
+            if (node == null)
+                return null;
+            if (empty)
+                node.RemoveAll();
+            return node;
+        }
 
     }
 }

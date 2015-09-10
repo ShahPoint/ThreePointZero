@@ -1,11 +1,43 @@
 ﻿<div class="page-content" id="content" style="padding: 20px;">
     <div class="row">
+        <div class="col-xs-3">
+            Paths:
+            <input type="radio" ng-model="text" value="path" />
+        </div>
+        <div class="col-xs-3">
+            JSON:
+            <input type="radio" ng-model="text" value="json" />
+        </div>
+        <div class="col-xs-3">
+            C# Classes:
+            <input type="radio" ng-model="text" value="classes" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-3">
+            Textarea:
+            <input type="radio" ng-model="textType" value="textarea" />
+        </div>
+        <div class="col-xs-3">
+            Preformatted:
+            <input type="radio" ng-model="textType" value="pre" />
+        </div>
+    </div>
+
+    <div class="row" ng-show="text == 'json'">
         <div class="col-xs-10">
             <input class="form-control" ng-model="query" ng-change="queryData(true)" />
         </div>
         <button class="btn col-xs-2" ng-click="cs = !cs; queryData(true)"><span ng-show="cs">C#</span><span ng-hide="cs">JSON</span></button>
     </div>
-    <textarea>{{ajaxObject | json}}</textarea>
-    <textarea>{{nemsisJson}}</textarea>
-    <textarea>{{objects}}</textarea>
+
+    <div style="height:100%; width: 100%">
+        <textarea ng-show="textType == 'textarea' && text == 'path'" style="height:100%; width: 100%">{{ajaxObject | json}}</textarea>
+        <pre ng-show="textType == 'pre' && text == 'path'" style="width: 100%">{{ajaxObject | json}}</pre>
+        <textarea ng-show="textType == 'textarea' && text == 'json'" style="height:100%; width: 100%">{{nemsisJson}}</textarea>
+        <pre ng-show="textType == 'pre' && text == 'json'" style="width: 100%">{{nemsisJson}}</pre>
+        <textarea ng-show="textType == 'textarea' && text == 'classes'" style="height:100%; width: 100%">{{objects}}</textarea>
+        <pre ng-show="textType == 'pre' && text == 'classes'" style="width: 100%">{{objects}}</pre>
+    </div>
 </div>

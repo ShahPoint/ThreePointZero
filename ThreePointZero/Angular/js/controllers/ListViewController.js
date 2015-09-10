@@ -1,6 +1,8 @@
 ﻿angular.module('CloudPcr').controller("ListViewController", ['$scope', '$filter', '$timeout', function ($scope, $filter, $timeout) {
 
-    $scope.ajaxObject;
+    $scope.text = "json";
+    $scope.textType = "pre";
+
     $.ajax({
         type: "GET",
         url: "/api/PcrOperations/xmlData"
@@ -62,8 +64,10 @@
                 Definition: line[7].replace(/'/, ""),
                 Usage: line[8].replace(/'/, ""),
                 V3Changes: line[9].replace(/'/, ""),
-                MinOccurs: line[10].replace(/'/, ""),
-                MaxOccurs: line[11].replace(/'/, ""),
+                //MinOccurs: line[10].replace(/'/, ""),
+                //MaxOccurs: line[11].replace(/'/, ""),
+                isRequired: line[10].replace(/'/, "") == "1",
+                isList: line[11].replace(/'/, "") == "M",
                 IsNillable: line[12].replace(/'/, ""),
                 DataType: line[13].replace(/'/, ""),
                 NV: line[14].replace(/'/, ""),
@@ -155,25 +159,29 @@
         }
     }
 
+    var typeMap = {
+        "string": "string",
+        "boolean": "bool"
+    }
+
     function generateObjects() {
         var NemsisDataElement;
         var optionsClass;
-        var masterClass = "private class NemsisMasterObject\n{";
-        var keys = [];
+        var masterClass = "public class NemsisMasterObject\n{";
         
         var generatedSubclasses = false;
         for (var attr in json) {
             if (!generatedSubclasses) {
                 if (json[attr].options.length > 0) {
-                    NemsisDataElement = "private class NemsisDataElement\n{";
+                    NemsisDataElement = "public class NemsisDataElement\n{";
                     for (var subattr in json[attr]) {
-                        if (angular.isString(json[attr][subattr]))
-                            NemsisDataElement += "\n\tpublic string " + subattr + "{ get; set; }";
+                        if (typeMap[typeof json[attr][subattr]])
+                            NemsisDataElement += "\n\tpublic " + typeMap[typeof json[attr][subattr]] + " " + subattr + "{ get; set; }";
                     }
                     NemsisDataElement += "\n\tpublic List<object> options { get; set; }";
                     NemsisDataElement += "\n\tpublic List<string> attributes { get; set; }";
                     NemsisDataElement += "\n}";
-                    optionsClass = "private class NemsisOptions\n{";
+                    optionsClass = "public class NemsisOptions\n{";
                     for (var subattr in json[attr].options[0]) {
                         optionsClass += "\n\tpublic string " + subattr + "{ get; set; }";
                     }
@@ -181,10 +189,8 @@
                     generatedSubclasses = true;
                 }
             }
-            keys.push("\"" + attr + "\"");
             masterClass += "\n\tpublic NemsisDataElement " + attr + " { get; set; }";
         }
-        masterClass += "\n\n\tpublic static List<string> Keys = new List<string>() { " + keys.join(", ") + " }";
         masterClass += "\n}";
         $scope.objects = optionsClass + "\n\n" + NemsisDataElement + "\n\n" + masterClass;
     }

@@ -1,6 +1,11 @@
 ﻿<div class="page-content-wrapper">
 
+    <pre ng-show="returnXml">{{returnXml}}</pre>
     <button ng-click="change()">Change Tab</button>
+    <button ng-click="sendData();">Send to server</button>
+    <textarea ng-model="import" ng-change="importData()"></textarea>
+    <button ng-click="importData(true);">Clear</button>
+    <button ng-click="export(true);">Export</button>
 
     <cloud-tab name="Some Tab" class="active">
 
@@ -22,7 +27,7 @@
             </cloud-widget>
 
             <cloud-widget class="col-xs-12" name="Report" color="yellow">
-                <pre>{{pcr | json}}</pre>
+                <pre>{{EMSDataSet | json}}</pre>
             </cloud-widget>
 
         </article>
@@ -72,42 +77,15 @@
                         <br />
                         <teddyinput name="EMSAgencyState" />
                         <br />
-                        <teddytime name="DispatchNotifiedDate/Time" />
+                        <teddytime name="DispatchNotifiedDateTime" />
                     </article>
                 </div>
             </cloud-widget>
 
             <cloud-widget class="col-xs-12" name="Report" color="yellow">
-                <pre>{{pcr | json}}</pre>
+                <pre>{{EMSDataSet | json}}</pre>
             </cloud-widget>
 
-        </article>
-
-        <article class="col-xs-12 col-sm-6">
-            <cloud-widget class="col-xs-12" name="dConfiguration">
-                <div class="row">
-                    <article class="col-xs-12 col-md-6">
-                        <teddyinput name="StateAssociatedwiththeCertification/LicensureLevels" />
-                        <br />
-                        <teddyinput name="StateCertification/LicensureLevels" />
-                        <br />
-                        <teddyinput name="ProceduresPermittedbytheState" />
-                        <br />
-                        <teddyinput name="MedicationsPermittedbytheState" />
-                    </article>
-                    <article class="col-xs-12 col-md-6">
-                        <teddyinput name="ProtocolsPermittedbytheState" />
-                        <br />
-                        <teddyinput name="EMSCertificationLevelsPermittedtoPerformEachProcedure" />
-                        <br />
-                        <teddyinput name="EMSAgencyProcedures" />
-                        <br />
-                        <teddyinput name="EMSCertificationLevelsPermittedtoAdministerEachMedication" />
-                        <br />
-                        <teddyinput name="EMSAgencyMedications" />
-                    </article>
-                </div>
-            </cloud-widget>
         </article>
 
     </cloud-tab>

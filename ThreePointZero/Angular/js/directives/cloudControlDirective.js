@@ -1,4 +1,4 @@
-﻿angular.module("CloudPcr").directive("teddyinput", [function () {
+﻿angular.module("CloudPcr").directive("teddyinput", ['$compile', function ($compile) {
 
     return {
         require: [/*'^cloudTab', '^cloudWidget'*/],
@@ -9,11 +9,15 @@
         restrict: "E",
         link: function (scope, element, attrs) {
             var controlData = scope.data = pcrFormControls[attrs.name];
+            scope.data.exportPath = scope.data.exportPath.replace(/\./g, '_').replace(/\//g, '.') + "." + scope.data.ngModel;
             if (controlData == null)
                 throw "'" + attrs.name + "' is not a valid element";
             var $input = $("input", element);
+            $input.attr("ng-model", scope.data.exportPath);
 
-            if (!((controlData.minLength.length > 0 || controlData.maxLength.length > 0 || controlData.pattern.length > 0) && controlData.options.length == 0 && controlData.MaxOccurs == "1"))
+            $("input", element).each(function () { $compile(this)(scope); });
+
+            if (!((controlData.minLength.length > 0 || controlData.maxLength.length > 0 || controlData.pattern.length > 0) && controlData.options.length == 0 && !controlData.isList))
                 handleSelect2($input, controlData);
 
             delete controlData;
@@ -26,7 +30,7 @@
     function handleSelect2($input, controlData) {
 
         var options = {
-            multiple: controlData.MaxOccurs == "M",
+            multiple: controlData.isList,
             allowClear: true
         };
 
@@ -60,7 +64,9 @@
 
 }]);
 
-angular.module("CloudPcr").directive("teddytime", [function () {
+var timeRegex = /(\d{1,2}):(\d{2})/;
+var dateRegex = /(\d{2})\/(\d{2})\/(\d{4})/;
+angular.module("CloudPcr").directive("teddytime", ['$compile', '$parse', function ($compile, $parse) {
 
     return {
         require: [/*'^cloudTab', '^cloudWidget'*/],
@@ -71,15 +77,34 @@ angular.module("CloudPcr").directive("teddytime", [function () {
         restrict: "E",
         link: function (scope, element, attrs) {
             var controlData = scope.data = pcrFormControls[attrs.name];
+            scope.data.exportPath = scope.data.exportPath.replace(/\./g, '_').replace(/\//g, '.') + "." + scope.data.ngModel;
             if (controlData == null)
                 throw "'" + attrs.name + "' is not a valid element";
             var $date = $("#date", element);
             var $time = $("#time", element);
+            //$("input", $date).attr("ng-model", scope.data.exportPath + '.date');
+            //$("input", $time).attr("ng-model", scope.data.exportPath + '.time');
+
+            var model = $parse(scope.data.exportPath);
+
+            $("input", $time).change(function () {
+                if (timeRegex.test(scope.time) && dateRegex.test(scope.date)) {
+                    var time = timeRegex.exec(scope.time);
+                    var date = dateRegex.exec(scope.date);
+                    alert(date + " " + time)
+                    var dateOb = new Date(parseInt(date[3]), parseInt(date[1]), parseInt(date[2]), parseInt(time[1]), parseInt(time[2]), 0, 0);
+                    model.assign(scope, dateOb.toNemsisString());
+                } else
+                    model.assign(scope, "");
+            });
+
+            //$("input", element).each(function () { $compile(this)(scope); });
 
             if (controlData.DataType == "DateTimeType") {
                 handleDateTime($date, $time, controlData);
                 scope.showInputIcon = true;
             }
+
 
             delete controlData;
             //delete scope.data;
@@ -101,7 +126,7 @@ angular.module("CloudPcr").directive("teddytime", [function () {
         $("input", $time).timepicker({
             minuteStep: 1,
             showMeridian: false,
-            defaultTime: 'current',
+            defaultTime: null,
             showInputs: false,
             disableMousewheel: true,
             explicitMode: true
@@ -111,7 +136,7 @@ angular.module("CloudPcr").directive("teddytime", [function () {
     }
 }]);
 
-angular.module("CloudPcr").directive("teddytextarea", [function () {
+angular.module("CloudPcr").directive("teddytextarea", ['$compile', function ($compile) {
 
     return {
         require: [/*'^cloudTab', '^cloudWidget'*/],
@@ -122,8 +147,14 @@ angular.module("CloudPcr").directive("teddytextarea", [function () {
         restrict: "E",
         link: function (scope, element, attrs) {
             scope.data = pcrFormControls[attrs.name];
+            scope.data.exportPath = scope.data.exportPath.replace(/\./g, '_').replace(/\//g, '.') + "." + scope.data.ngModel;
             if (scope.data == null)
                 throw "'" + attrs.name + "' is not a valid element";
+
+            var $input = $("textarea", element);
+            $input.attr("ng-model", scope.data.exportPath);
+
+            $("textarea", element).each(function () { $compile(this)(scope); });
 
             //element.replaceWith(element.children());
         }
@@ -131,7 +162,7 @@ angular.module("CloudPcr").directive("teddytextarea", [function () {
 
 }]);
 
-angular.module("CloudPcr").directive("teddyslider", [function () {
+angular.module("CloudPcr").directive("teddyslider", ['$compile', function ($compile) {
 
     return {
         require: [/*'^cloudTab', '^cloudWidget'*/],
@@ -142,9 +173,14 @@ angular.module("CloudPcr").directive("teddyslider", [function () {
         restrict: "E",
         link: function (scope, element, attrs) {
             scope.data = pcrFormControls[attrs.name];
+            scope.data.exportPath = scope.data.exportPath.replace(/\./g, '_').replace(/\//g, '.') + "." + scope.data.ngModel;
             if (scope.data == null)
                 throw "'" + attrs.name + "' is not a valid element";
 
+            var $input = $("input", element);
+            $input.attr("ng-model", scope.data.exportPath);
+
+            $("input", element).each(function () { $compile(this)(scope); });
             //element.replaceWith(element.children());
         }
     };
